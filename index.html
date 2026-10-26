@@ -894,7 +894,7 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion:reduce){.dl-lb,.dl-lb figure,.dl-thumb{transition:none}}
 
 html,body{background:#0a1a2e}
-.dl-site-bg{position:fixed;inset:0;z-index:0;pointer-events:none;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(ellipse 70% 55% at 50% 50%,rgba(0,235,120,.07),transparent 70%),#0a1a2e}
+.dl-site-bg{position:fixed;top:0;left:0;right:0;height:100vh;height:100lvh;transform:translateZ(0);will-change:transform;contain:strict;z-index:0;pointer-events:none;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(ellipse 70% 55% at 50% 50%,rgba(0,235,120,.07),transparent 70%),#0a1a2e}
 section.bg-navy-deep,footer.bg-navy-deep,.bg-background{background-color:transparent!important}
 section.bg-warm-white{background:rgba(10,26,46,.55)!important;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 section.bg-warm-white .text-navy{color:#f5efe4!important}
@@ -903,8 +903,8 @@ section.bg-warm-white .bg-white{background:rgba(16,38,64,.82)!important;border-c
 section.bg-warm-white .border-navy\/20{border-color:rgba(255,190,120,.35)!important}
 svg:has(.wave-fill-warm),svg:has(.wave-fill-navy){display:none!important}
 #features,#support,footer{background:rgba(6,16,30,.35)!important}
-.dl-ship{flex:none;width:min(1150px,150vw);height:auto;opacity:.22;transform:translateY(12vh);overflow:visible;filter:drop-shadow(0 0 3px rgba(0,255,106,.55))}
-@media (max-width:640px){.dl-ship{width:125vw;opacity:.22;transform:translateY(4vh)}}
+.dl-ship{flex:none;width:min(1150px,150vw);height:auto;opacity:.22;transform:translateY(12lvh);overflow:visible;filter:drop-shadow(0 0 3px rgba(0,255,106,.55))}
+@media (max-width:640px){.dl-ship{width:125vw;opacity:.22;transform:translateY(4lvh)}}
 .dl-bob{animation:dlbob 6s ease-in-out infinite;transform-box:view-box}
 @keyframes dlbob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(1.6px) rotate(-.25deg)}}
 .dl-puff{animation:dlpuff 3.6s linear infinite;transform-box:view-box;transform-origin:0 0}
