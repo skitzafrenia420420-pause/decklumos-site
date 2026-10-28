@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Decklumos · Virtual G2 glasses preview</title><meta name="robots" content="noindex">
+<style>
+html,body{margin:0;background:#0b0f14;color:#cfe;font-family:-apple-system,Inter,system-ui,sans-serif;-webkit-text-size-adjust:100%}
+main{max-width:980px;margin:0 auto;padding:calc(env(safe-area-inset-top) + 14px) 14px 30px;box-sizing:border-box}
+h1{font-size:20px;margin:4px 0 2px;color:#fff}p.s{margin:0 0 16px;color:#8aa;font-size:14px;line-height:1.4}
+.glasses{position:relative;padding:4.5% 5%;border-radius:46% 46% 40% 40%/36% 36% 46% 46%;background:radial-gradient(ellipse at 30% 20%,#2b3440,#11161d 70%);box-shadow:inset 0 0 0 6px #2c333c,inset 0 0 30px #000,0 20px 40px rgba(0,0,0,.6)}
+.lens{border-radius:30% 30% 26% 26%/30% 30% 40% 40%;overflow:hidden;background:#000;box-shadow:inset 0 0 40px rgba(0,255,0,.08)}
+canvas{display:block;width:100%;aspect-ratio:2/1}
+.glare{position:absolute;inset:4.5% 5%;border-radius:30% 30% 26% 26%/30% 30% 40% 40%;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.08),transparent 40%)}
+.ring{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:20px}
+.ring button{height:66px;border-radius:18px;border:1px solid #2a3a32;background:#132018;color:#7CFF7C;font:700 15px/1.15 inherit;touch-action:manipulation;-webkit-tap-highlight-color:transparent;transition:transform .08s}
+.ring button:active,.ring button.hit{transform:scale(.94);background:#1e3a26}.ring kbd{display:block;font:500 11px ui-monospace,monospace;color:#5c8;margin-top:4px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.tools button{padding:10px 14px;border-radius:12px;border:1px solid #2a3340;background:#151b23;color:#bcd;font:600 14px inherit}
+#log{margin-top:12px;color:#6a8;font:13px ui-monospace,monospace;min-height:1.4em}
+iframe{position:absolute;width:390px;height:844px;left:-10000px;top:0;border:0}
+@media (max-width:560px){.ring{gap:6px}.ring button{height:60px;font-size:12px;border-radius:14px}.ring kbd{display:none}}
+</style></head><body><main>
+<h1>Virtual G2 glasses</h1><p class="s">This is the real Decklumos glasses screen (576×288), drawn live. Tap the ring buttons below, or use the keys ↑ ↓ to swipe, Enter to press, D to double-press, H to hold.</p>
+<div class="glasses"><div class="lens"><canvas id="g" width="576" height="288"></canvas></div><div class="glare"></div></div>
+<div class="ring">
+<button data-e="SCROLL_TOP_EVENT">▲<br>Swipe up<kbd>↑</kbd></button>
+<button data-e="SCROLL_BOTTOM_EVENT">▼<br>Swipe down<kbd>↓</kbd></button>
+<button data-e="CLICK_EVENT">●<br>Press<kbd>Enter</kbd></button>
+<button data-e="DOUBLE_CLICK_EVENT">●●<br>Double<kbd>D</kbd></button>
+<button data-e="LONG_PRESS_RELEASE_EVENT">◉<br>Hold<kbd>H</kbd></button>
+</div>
+<div class="tools"><button data-go="home">Home</button><button data-go="trips">My Trips</button><button data-go="reset">Start over</button></div>
+<div id="log">Loading the app… (first load can take a few seconds)</div>
+<iframe id="app" src="../index.html" title="Decklumos app (hidden)"></iframe>
+</main>
+<script>
+const f=document.getElementById('app'),cv=document.getElementById('g'),x=cv.getContext('2d'),log=document.getElementById('log');let M=null,img=new Image(),busy=false,last='';
+f.addEventListener('load',()=>{const w=f.contentWindow,t0=Date.now();const wait=()=>{if(w.__ready&&w.__deckmate){M=w.__deckmate;log.textContent='Ready. Swipe to roll through cruise lines, press to open.';loop()}else if(Date.now()-t0<60000)setTimeout(wait,100);else log.textContent='The app did not start. Try Start over.'};wait()});
+function loop(){if(M&&!busy){busy=true;try{const u=M.glassPng();if(u!==last){last=u;img.onload=()=>{x.drawImage(img,0,0);busy=false};img.src=u}else busy=false}catch(e){busy=false;log.textContent='Render error: '+e.message}}setTimeout(()=>requestAnimationFrame(loop),90)}
+const NAME={SCROLL_TOP_EVENT:'Swipe up',SCROLL_BOTTOM_EVENT:'Swipe down',CLICK_EVENT:'Press',DOUBLE_CLICK_EVENT:'Double-press',LONG_PRESS_RELEASE_EVENT:'Hold'};
+function fire(n,btn){if(!M)return;try{M.event(M.E[n]);log.textContent=NAME[n]}catch(e){log.textContent='Event error: '+e.message}if(btn){btn.classList.add('hit');setTimeout(()=>btn.classList.remove('hit'),120)}}
+document.querySelectorAll('.ring button').forEach(b=>b.addEventListener('click',()=>fire(b.dataset.e,b)));
+const K={ArrowUp:'SCROLL_TOP_EVENT',ArrowDown:'SCROLL_BOTTOM_EVENT',Enter:'CLICK_EVENT',' ':'CLICK_EVENT',d:'DOUBLE_CLICK_EVENT',D:'DOUBLE_CLICK_EVENT',h:'LONG_PRESS_RELEASE_EVENT',H:'LONG_PRESS_RELEASE_EVENT'};
+addEventListener('keydown',e=>{const n=K[e.key];if(!n||e.repeat)return;e.preventDefault();fire(n,document.querySelector(`.ring [data-e=${n}]`))});
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>{if(!M&&b.dataset.go!=='reset')return;const g=b.dataset.go;
+  if(g==='reset'){M=null;last='';log.textContent='Loading…';f.contentWindow.location.reload();return}
+  const s=M.store;try{M.trivia&&M.trivia.stop&&M.trivia.stop()}catch(e){}
+  const base={home:true,gtriv:false,gnews:null,gtrip:null,gdir:null,menu:null,spot:null};
+  s.set(g==='trips'?{...base,hstep:'trips',tf:0}:{...base,hstep:'line'});log.textContent=b.textContent}));
+</script></body></html>
