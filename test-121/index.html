@@ -294,7 +294,7 @@ input[type=date]::-webkit-calendar-picker-indicator{filter:invert(1);opacity:.7}
  <div class="cmp-cards" id="cmpCards"></div><p class="muted cmp-foot" id="cmpNote"></p></div></section>
 <section class="view" id="v-news"><h1>Cruise News</h1><div class="scroll" id="newsBody" data-noi18n></div></section>
 <section class="view" id="v-about"><div class="scroll" id="aboutBody">
- <input type="file" accept="image/*" id="pfFile" hidden><div id="pfOut"><div class="pf-hero"><div class="pf-av pf-av0" role="button" aria-label="Add photo"><canvas data-icon="person" data-s="34" data-col="t2" data-w="1.8"></canvas><span class="pf-plus" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="#0B1B30" stroke-width="2.4" stroke-linecap="round"/></svg></span></div><h1 class="pf-h">Ahoy, sailor!</h1><p class="muted">Sign up free to keep your trips, plans and settings safe and on every device.</p></div>
+ <input type="file" accept="image/*" id="pfFile" hidden><div id="pfOut"><div class="pf-hero" style="padding-top:10px"><h1 class="pf-h">Ahoy, sailor!</h1><p class="muted">Sign up free to keep your trips, plans and settings safe and on every device.</p></div>
   <div class="card pf-sign"><div class="pf-perks"><span>⚓ Save trips</span><span>📱 Any device</span><span>🎉 Cruise tips</span></div>
    <p class="pf-free">No account needed: everything works without signing in. Signing in just saves your stuff.</p>
    <label class="pf-l" for="pfEmail">Email</label><input class="pf-in" id="pfEmail" type="email" placeholder="you@example.com" autocomplete="email">
@@ -334,7 +334,7 @@ input[type=date]::-webkit-calendar-picker-indicator{filter:invert(1);opacity:.7}
  <div class="cbtns"><button class="cbtn acc" id="cGlass" aria-label="Glasses view"><canvas data-icon="glasses" data-s="22" data-w="1.6" data-col="accfg"></canvas></button><button class="cbtn" id="cDir" aria-label="Directions"><canvas data-icon="route" data-s="22" data-w="1.6"></canvas></button><button class="cbtn" id="cClose" aria-label="Close"><canvas data-icon="x" data-s="20" data-w="1.6"></canvas></button></div></div>
  <div id="cHours"></div><div id="cWhere"></div><div id="cAlso"></div></div>
 
-<div class="sheet pf-sheet" id="pfSheet" role="dialog" aria-modal="true" aria-labelledby="pfSheetH"><div class="grab"></div><button class="pf-x" id="pfX" type="button" aria-label="Close">✕</button><h2 id="pfSheetH">Create your account</h2>
+<div class="sheet pf-sheet" id="pfSheet" role="dialog" aria-modal="true" aria-labelledby="pfSheetH"><div class="grab"></div><button class="pf-x" id="pfX" type="button" aria-label="Close">✕</button><h2 style="text-align:center" id="pfSheetH">Create your account</h2><div style="margin-top:10px"><div class="pf-av pf-av0" role="button" aria-label="Add photo"><canvas data-icon="person" data-s="34" data-col="t2" data-w="1.8"></canvas><span class="pf-plus" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="#0B1B30" stroke-width="2.4" stroke-linecap="round"/></svg></span></div></div>
  <label class="pf-l" for="pfFirst">First name (optional)</label><input class="pf-in" id="pfFirst" type="text" autocomplete="given-name">
  <label class="pf-l" for="pfLast">Last name (optional)</label><input class="pf-in" id="pfLast" type="text" autocomplete="family-name">
  <label class="pf-l" for="pfEmail2">Email</label><input class="pf-in" id="pfEmail2" type="email" required placeholder="you@example.com" autocomplete="email">
