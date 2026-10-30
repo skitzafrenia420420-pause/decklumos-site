@@ -380,7 +380,7 @@ function heroFind(S){var F=document.getElementById('hfind');if(!F)return;getJ('d
  ms.innerHTML='<option value="">Any month</option>'+Object.keys(M).sort().map(function(k){return '<option value="'+k+'">'+fd(k+'-01',{month:'long',year:'numeric'})+'</option>'}).join('');
  ls.innerHTML='<option value="">Any line</option>'+Object.keys(LN).sort().map(function(l){return '<option value="'+esc(l)+'">'+esc(l)+'</option>'}).join('');
  var pop=A.slice().sort(function(a,b){return b.total-a.total}).slice(0,5);
- function price(a){return fr?'<span class="pkp">Cheapest sailing stopping here: from $'+a.price+' a person</span>':''}
+ function price(a){return fr?(L.classList.contains('pkc')?'<span class="pkp">from $'+a.price+' a person</span>':'<span class="pkp">Cheapest sailing stopping here: from $'+a.price+' a person</span>'):''}
  function score(a,t){if(!t)return 1;if(a.n.indexOf(t)===0)return 4;var w=t.split(' '),hw=a.h.split(' ');var ok=w.every(function(x){return hw.some(function(y){return y.indexOf(x)===0})});if(ok)return 3;return a.h.indexOf(t)>=0?2:0}
  function open(){L.hidden=false;q.setAttribute('aria-expanded','true')}
  function close(){L.hidden=true;q.setAttribute('aria-expanded','false');q.removeAttribute('aria-activedescendant');act=-1}
