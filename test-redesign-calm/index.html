@@ -37,9 +37,9 @@ section{padding:120px 0}
 /* hero */
 .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#0a3a52}
 /* Hero photo: 'Celestyal Journey docked off of Mykonos', CC0 1.0 public domain dedication (no attribution required). Source: https://commons.wikimedia.org/wiki/File:Celestyal_Journey_docked_off_of_Mykonos.jpg */
-.hero .bg{position:absolute;inset:0;background:url(../test-redesign-calm/calm-day-at-sea.jpg) 50% 55%/cover;filter:saturate(.9) brightness(.8)}
+.hero .bg{position:absolute;inset:0;background:url(../test-redesign-calm/calm-day-at-sea.jpg) 50% 55%/cover;filter:brightness(1.06) saturate(1.3) sepia(.12) contrast(1.03)}
 
-.hero::before{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 62% 75% at 22% 48%,rgba(28,20,24,.5) 0%,rgba(28,20,24,0) 72%),linear-gradient(90deg,rgba(34,26,30,.6) 0%,rgba(34,26,30,.42) 50%,rgba(34,26,30,.3) 100%),linear-gradient(180deg,rgba(34,26,30,.35) 0%,rgba(34,26,30,.15) 40%,rgba(30,24,30,.6) 100%)}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 55% 50% at 50% 34%,rgba(10,42,72,.42) 0%,rgba(10,42,72,0) 75%),linear-gradient(180deg,rgba(10,42,72,.28) 0%,rgba(10,42,72,.12) 45%,rgba(10,42,72,.3) 100%)}
 .hero .shimmer{position:absolute;inset:auto 0 0;height:45%;z-index:1;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.13) 45%,transparent 60%);background-size:250% 100%;display:none;mix-blend-mode:overlay;pointer-events:none}
 @keyframes sh{from{background-position:150% 0}to{background-position:-100% 0}}
 .hero .in{position:relative;z-index:2;padding:0 0 120px;width:100%}
