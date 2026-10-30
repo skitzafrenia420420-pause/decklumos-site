@@ -1,228 +1,261 @@
-<!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Decklumos · redesign mockup</title>
-<link rel="icon" href="/favicon.svg">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>Decklumos — From stern to bow, know where to go</title>
+<link rel="icon" href="../assets/logo-evenhub.png">
+<link rel="preload" href="Fredoka.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face{font-family:Fredoka;src:url(Fredoka.woff2) format("woff2");font-weight:300 700;font-display:swap}
 @font-face{font-family:Inter;src:url(Inter-Variable.woff2) format("woff2");font-weight:100 900;font-display:swap}
-/* Tokens copied from ux-121-white src/theme.js (website look) + src/white-theme.css */
-:root{--bg:#F7FAFC;--card:#FFFFFF;--t1:#0F2238;--t2:#3D5470;--t3:#56697F;--acc:#0A7FB5;--accdeep:#075E87;--txtacc:#076A99;--accbg:rgba(10,127,181,.10);
---stroke:#D3DEE8;--line:#E1E9F0;--ring:#CFE3EE;--ring2:#E1EDF4;--edge:#D6E6EF;--hull:#E4F1FA;--sel:#FF6B57;--gold:#FFD58A;--goldtx:#3A2A00;--coral:#C2410C;--coraldeep:#8A2E08;--green:#00866B;--hint:#E3F3FB}
+:root{--t1:#0F2238;--t2:#3D5470;--t3:#56697F;--acc:#0A7FB5;--accE:#075E87;--txtacc:#076A99;--ring:#CFE3EE;--ring2:#E1EDF4;--edge:#D6E6EF;--hint:#E3F3FB;--coral:#C2410C;--coralE:#8A2E08;--sel:#FF6B57;--gold:#FFD58A;--green:#00866B;--c0:#D93A40;--c1:#2F5FD0;--c2:#FFAA00;--c3:#00866B;--sea:#0E9BD4;--sky1:#FF8A5B;--sky2:#FFC46B}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,sans-serif;color:var(--t1);background:linear-gradient(180deg,#FFFFFF 0%,#EEF6FB 100%) fixed,var(--bg);-webkit-font-smoothing:antialiased}
-a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-/* top bar like app .tabs: white, hairline */
-.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1.5px solid var(--line);box-shadow:0 2px 10px rgba(15,34,56,.06);backdrop-filter:blur(8px)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
-.top img{height:30px;width:auto;filter:brightness(0) saturate(100%) invert(14%) sepia(30%) saturate(1500%) hue-rotate(185deg)}
-.nav{display:flex;gap:6px}.nav a{text-decoration:none;font:600 14px Inter;color:#3B5168;padding:8px 12px;border-radius:18px}.nav a:hover{background:var(--hint);color:var(--txtacc)}
-/* buttons: bubble w/ pressed edge (white-theme.css .dkx-btn / #hCount) */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:48px;padding:0 22px;border-radius:24px;border:0;background:var(--acc);color:#fff;font:800 16px Inter;text-decoration:none;box-shadow:0 3px 0 var(--accdeep);cursor:pointer;transition:transform .1s}
-.btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--accdeep)}
-.btn.sun{background:var(--coral);box-shadow:0 4px 0 var(--coraldeep)}
-.btn2{background:#fff;color:var(--txtacc);border:2px solid var(--acc);box-shadow:0 2px 0 #BFE0F0}
-.top .btn{min-height:42px;font-size:14px;padding:0 16px}
-@media(max-width:820px){.nav{display:none}}
+body{margin:0;font:500 16px/1.55 Inter,system-ui,sans-serif;color:var(--t1);background:#FFFDF8;overflow-x:hidden}
+h1,h2,h3,.fz{font-family:Fredoka,Inter,sans-serif;font-weight:700;letter-spacing:-.01em;line-height:1.08}
+h2{font-size:clamp(32px,4.6vw,50px);margin:10px 0 12px}
+a{color:var(--txtacc)}.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:12px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+/* bouncy buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 26px;border-radius:26px;border:0;cursor:pointer;font:600 18px Fredoka,Inter;text-decoration:none;color:#fff;background:var(--acc);box-shadow:0 5px 0 var(--accE);transition:transform .15s cubic-bezier(.3,1.6,.5,1),box-shadow .15s}
+.btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 8px 0 var(--accE)}.btn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--accE)}
+.btn.sun{background:var(--coral);box-shadow:0 5px 0 var(--coralE)}.btn.sun:hover{box-shadow:0 8px 0 var(--coralE)}.btn.sun:active{box-shadow:0 1px 0 var(--coralE)}
+.btn.w{background:#fff;color:var(--txtacc);box-shadow:0 5px 0 #BFD8E6}
+.sticker{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;font:600 15px Fredoka,Inter;background:#fff;color:var(--t1);border:3px solid #fff;box-shadow:0 0 0 2px var(--t1),3px 4px 0 2px var(--t1);transform:rotate(var(--r,-3deg));transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
+.sticker:hover{transform:rotate(0) scale(1.08)}
+.st-gold{background:var(--gold);color:#3A2A00}.st-mint{background:#B9F2DA}.st-pink{background:#FFD3CC}.st-sky{background:#BFE6FA}
+.eyebrow{--r:-2deg}
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(255,253,248,.92);backdrop-filter:blur(8px);border-bottom:2px solid #F1E9DA}
+.top .wrap{display:flex;align-items:center;gap:16px;height:66px}.top img{height:34px;display:block;filter:brightness(0) saturate(100%) invert(12%) sepia(30%) saturate(1500%) hue-rotate(185deg)}
+.nav{display:flex;gap:4px;margin-left:auto}.nav a{font:600 16px Fredoka;color:var(--t2);text-decoration:none;padding:8px 12px;border-radius:16px;transition:background .2s,transform .2s}.nav a:hover{background:var(--hint);transform:translateY(-2px)}
+.top .btn{min-height:42px;padding:0 18px;font-size:16px}
 /* hero */
-.hero{position:relative;overflow:hidden;padding:56px 0 40px}
-.hero::before{content:"";position:absolute;inset:auto -10% -40% -10%;height:70%;background:radial-gradient(closest-side,rgba(255,213,138,.55),rgba(255,107,87,.18) 60%,transparent);pointer-events:none}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-.pill{display:inline-block;padding:6px 14px;border-radius:14px;background:var(--hint);color:var(--txtacc);font:600 13px Inter}
-h1{font:900 clamp(44px,7vw,76px)/1 Inter;letter-spacing:-.03em;margin:16px 0 10px}
-.slogan{font:800 clamp(20px,2.6vw,28px)/1.2 Inter;color:var(--txtacc);margin:0 0 14px}
-.lead{font:500 18px/1.55 Inter;color:var(--t2);max-width:34em;margin:0 0 26px}
-.ctas{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-.fact{background:#fff;border-radius:22px;padding:10px 16px;box-shadow:0 0 0 1.5px var(--ring2),0 4px 0 var(--edge);font:700 14px Inter;color:var(--t1)}
-.fact b{color:var(--txtacc);font-weight:900}
-.waves{display:block;width:100%;height:46px;color:#DDEFF8}
-/* phone mockup (iOS-style) */
-.phone{position:relative;width:min(290px,72vw);aspect-ratio:585/1266;border-radius:46px;background:#0F2238;padding:10px;box-shadow:0 0 0 2px #2B4363 inset,0 30px 60px rgba(15,34,56,.25),0 8px 18px rgba(15,34,56,.18);margin:0 auto}
-.phone img{display:block;width:100%;height:100%;object-fit:cover;border-radius:37px;background:#fff}
-.phone::after{content:"";position:absolute;top:18px;left:50%;transform:translateX(-50%);width:30%;height:22px;border-radius:12px;background:#0F2238}
-.phone.tilt-l{transform:rotate(-3deg)}.phone.tilt-r{transform:rotate(3deg)}
-.hero .phones{position:relative;display:flex;justify-content:center}
-.bubble{position:absolute;background:#fff;border-radius:22px;padding:10px 14px;box-shadow:0 0 0 1.5px var(--ring2),0 4px 0 var(--edge),0 10px 24px rgba(15,34,56,.10);font:800 14px Inter;display:flex;gap:8px;align-items:center;white-space:nowrap}
-.bubble i{font-style:normal;font-size:20px}
-.b1{left:-4%;top:18%}.b2{right:-2%;top:52%}.b3{left:2%;bottom:8%}
-/* sections */
-section{padding:64px 0}
-.eyebrow{display:inline-block;font:800 12px Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--txtacc);background:var(--hint);padding:5px 12px;border-radius:12px}
-h2{font:900 clamp(30px,4.4vw,44px)/1.08 Inter;letter-spacing:-.02em;margin:14px 0 12px}
-.sub{font:500 17px/1.55 Inter;color:var(--t2);margin:0 0 18px;max-width:36em}
-.show{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.show.flip .copy{order:2}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
-.chip{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 14px;border-radius:20px;background:#fff;color:var(--txtacc);border:2px solid var(--acc);font:700 14px Inter;box-shadow:0 2px 0 #BFE0F0}
-.chip.on{background:var(--acc);color:#fff;box-shadow:0 3px 0 var(--accdeep)}
-.tob-row{display:flex;gap:10px;margin:14px 0 6px;max-width:440px}
-.tob{flex:1;min-height:100px;border-radius:22px;background:#fff;box-shadow:0 0 0 1.5px var(--ring2),0 4px 0 var(--edge);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:8px 4px;font:700 14px/1.2 Inter;text-align:center}
-.tob i{font-style:normal;font-size:28px;width:50px;height:50px;border-radius:25px;display:grid;place-items:center;background:var(--hint)}
-.duo{display:flex;justify-content:center;gap:18px}.duo .phone{width:min(250px,42vw)}
-.band{background:linear-gradient(180deg,#E9F5FB,#F7FAFC)}
-.band.sun{background:linear-gradient(180deg,#FFF6EA,#FFFFFF)}
-/* trivia option bubbles (white-theme.css .tv-o colours) */
-.opts{display:grid;gap:10px;max-width:420px;margin:16px 0}
-.opt{display:flex;align-items:center;gap:10px;min-height:52px;padding:0 16px;border-radius:18px;color:#fff;font:800 16px Inter;box-shadow:0 4px 0 rgba(0,0,0,.18)}
-.opt b{width:28px;height:28px;border-radius:14px;background:rgba(255,255,255,.22);display:grid;place-items:center;font-size:13px}
-.c0{background:#D93A40}.c1{background:#2F5FD0}.c2{background:#FFAA00;color:#3A2A00}.c3{background:#00866B}
-.opt .st{margin-left:auto;background:#fff;color:#00866B;border-radius:12px;padding:4px 10px;font:800 13px Inter}
-.note{display:inline-block;margin-top:6px;font:600 13px Inter;color:var(--t3);background:#fff;border:1.5px dashed #9CCBE3;border-radius:14px;padding:8px 12px}
-/* port tiles (.dkx-tile) - gradient, no photos */
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
-.tile{position:relative;height:150px;border-radius:20px;border:3px solid #fff;box-shadow:0 0 0 1.5px var(--ring),0 6px 14px rgba(15,34,56,.16);overflow:hidden}
-.tile .art{position:absolute;inset:0}
-.tile .scrim{position:absolute;left:0;right:0;bottom:0;padding:30px 12px 10px;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.6) 60%)}
-.tile b{color:#fff;font:800 16px/1.15 Inter;text-shadow:0 1px 3px rgba(0,0,0,.5)}
-.g1{background:radial-gradient(circle at 75% 28%,#FFE29A 0 13%,transparent 14%),linear-gradient(180deg,#FFB38A,#FF8A6B 38%,#2BB3C8 62%,#0A7FB5)}
-.g2{background:radial-gradient(circle at 30% 30%,#FFF3C4 0 11%,transparent 12%),linear-gradient(180deg,#9EE3F0,#5BC6DE 50%,#2BA3C2 70%,#F3DDB0 70%,#E9C98E)}
-.g3{background:radial-gradient(circle at 70% 35%,#FFD58A 0 12%,transparent 13%),linear-gradient(180deg,#FFD9A8,#F7A982 40%,#2F7FB8 65%,#155C8E)}
-.g4{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' preserveAspectRatio='none'%3E%3Cpath d='M0 62 L40 30 L62 48 L95 18 L130 52 L155 36 L200 60 L200 66 L0 66Z' fill='%23F4FAFD'/%3E%3Cpath d='M0 66 L40 44 L70 58 L95 38 L130 62 L200 66Z' fill='%239CC3DA'/%3E%3C/svg%3E") center/100% 100% no-repeat,linear-gradient(180deg,#FFD9B8,#BFE3F5 40%,#7DBAD9 60%,#2F6E95 66%,#1B4E70)}
-.g5{background:radial-gradient(circle at 60% 30%,#FFC66B 0 12%,transparent 13%),linear-gradient(180deg,#FF9E6B,#E46A5A 45%,#2E9C8F 66%,#1E6F68)}
-.g6{background:linear-gradient(180deg,#C9DCEB,#9BB8CF 50%,#3E6584 66%,#22445F)}
-.g7{background:radial-gradient(circle at 50% 70%,#FFF 0 4%,transparent 5%),linear-gradient(180deg,#F6C9A0,#E7A27A 45%,#3A78A6 66%,#244F75)}
-.g8{background:radial-gradient(circle at 25% 30%,#FFE8A3 0 12%,transparent 13%),linear-gradient(180deg,#FFCF94,#F59C6B 45%,#1F8FB5 66%,#0B5E86)}
-/* my trips card */
-.trip{max-width:440px;background:#fff;border-radius:22px;padding:18px;box-shadow:0 0 0 1.5px var(--ring2),0 6px 14px rgba(15,34,56,.08);display:flex;gap:14px;align-items:center;margin:16px 0}
-.trip i{font-style:normal;font-size:30px;width:56px;height:56px;border-radius:18px;background:var(--hint);display:grid;place-items:center;flex:none}
-.trip b{display:block;font:800 17px Inter}.trip span{font:500 14px Inter;color:var(--t2)}
-.trip em{margin-left:auto;font-style:normal;font-size:24px;color:var(--txtacc)}
-.addtrip{display:flex;align-items:center;gap:12px;max-width:440px;min-height:60px;padding:0 16px;border-radius:20px;border:2.5px dashed #9CCBE3;background:#fff;font:700 15px Inter}
-/* deck maps */
-.search{max-width:440px;height:52px;border-radius:26px;background:#fff;border:2px solid var(--acc);box-shadow:0 4px 14px rgba(10,127,181,.16);display:flex;align-items:center;gap:10px;padding:0 18px;font:500 16px Inter;color:#3B5168;margin:16px 0 10px}
+.hero{position:relative;background:linear-gradient(180deg,#FFB27A 0%,#FFD08A 30%,#FFE9B8 52%,#BFE9FA 70%);overflow:hidden;padding:54px 0 0}
+.hero .wrap{position:relative;z-index:2;text-align:center}
+.hero h1{font-size:clamp(58px,10vw,118px);margin:14px 0 4px;color:#fff;text-shadow:0 5px 0 var(--coral),0 10px 24px rgba(194,65,12,.25)}
+.slogan{font:600 clamp(22px,3vw,32px) Fredoka;color:#7A2A08;margin:0 0 12px}
+.lead{max-width:640px;margin:0 auto 22px;font-size:18px;color:#4A2A12;font-weight:600}
+.ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.stk{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:24px 0 0}
+.sun-disc{position:absolute;left:50%;top:330px;width:240px;height:240px;margin-left:-120px;border-radius:50%;background:radial-gradient(circle,#FFF6C8,#FFD36B 60%,rgba(255,211,107,0) 71%);z-index:0}
+.cloud{position:absolute;z-index:1;background:#fff;border-radius:40px;opacity:.85;height:34px;animation:drift 40s linear infinite}
+.cloud::before,.cloud::after{content:"";position:absolute;background:#fff;border-radius:50%}
+.cloud::before{width:44px;height:44px;left:16px;top:-20px}.cloud::after{width:30px;height:30px;left:50px;top:-12px}
+@keyframes drift{from{transform:translateX(-160px)}to{transform:translateX(110vw)}}
+.scene{position:relative;height:250px;margin-top:20px}
+.scene svg.waves{position:absolute;left:0;bottom:0;width:200%;height:100%}
+.w1{animation:wave 9s linear infinite}.w2{animation:wave 14s linear infinite reverse}.w3{animation:wave 6s linear infinite}
+@keyframes wave{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ship{position:absolute;bottom:92px;left:0;width:190px;z-index:3;animation:sail 26s linear infinite}
+.ship svg{display:block;animation:bob 2.6s ease-in-out infinite;transform-origin:50% 80%}
+@keyframes sail{from{transform:translateX(-220px)}to{transform:translateX(calc(100vw + 40px))}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(2deg)}}
+.floaty{position:absolute;z-index:2;font-size:34px;width:64px;height:64px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.75);box-shadow:0 6px 18px rgba(15,34,56,.12);animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-18px) rotate(6deg)}}
+/* wavy dividers */
+.div{display:block;width:100%;height:60px}
+section{padding:70px 0;position:relative}
+.bg-sea{background:#D9F1FC}.bg-sand{background:#FFF1DC}.bg-mint{background:#DDF6EC}.bg-cream{background:#FFFDF8}.bg-navy{background:#0F2238;color:#fff}
+.sub{font-size:18px;color:var(--t2);max-width:560px;margin:0 0 18px}
+.show{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}.show.flip>.copy{order:2}
+/* phone */
+.phone{width:min(290px,72vw);margin:0 auto;border-radius:44px;background:#0F2238;padding:10px;box-shadow:0 0 0 4px #fff,0 0 0 7px var(--t1),12px 18px 0 0 rgba(15,34,56,.18);transform:rotate(var(--r,3deg));transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.phone:hover{transform:rotate(0) scale(1.03)}.phone img{width:100%;height:auto;display:block;border-radius:34px;aspect-ratio:585/1266;object-fit:cover}
+/* card */
+.card{background:#fff;border-radius:28px;padding:26px;box-shadow:0 0 0 2.5px var(--t1),6px 7px 0 var(--t1)}
+/* wheel */
+.wheelbox{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;margin-top:8px}
+.wheel{position:relative;width:250px;height:250px}
+.wheel svg{width:100%;height:100%;transition:transform 3.2s cubic-bezier(.17,.9,.25,1.03);filter:drop-shadow(5px 6px 0 rgba(15,34,56,.85))}
+.wheel .pin{position:absolute;top:-10px;left:50%;margin-left:-14px;width:28px;height:34px;z-index:2}
+.wheel .hub{position:absolute;inset:50% auto auto 50%;width:56px;height:56px;margin:-28px;border-radius:50%;background:#fff;border:4px solid var(--t1);display:grid;place-items:center;font-size:24px}
+.wres{font:600 26px Fredoka;color:var(--txtacc);min-height:66px;margin:8px 0 14px}
+.tob-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.tob{display:flex;align-items:center;gap:8px;background:#fff;border-radius:22px;padding:10px 16px;font:600 16px Fredoka;box-shadow:0 0 0 2px var(--ring),0 4px 0 var(--edge);transition:transform .2s cubic-bezier(.3,1.6,.5,1)}.tob:hover{transform:translateY(-4px) rotate(-2deg)}
+.tob i{font-style:normal;font-size:22px}
+/* trivia */
+.quiz{max-width:560px}.quiz .q{font:700 28px Fredoka;margin:6px 0 16px}
+.opts{display:grid;gap:12px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;min-height:58px;padding:0 18px;border:0;border-radius:22px;color:#fff;font:600 19px Fredoka;cursor:pointer;text-align:left;transition:transform .15s cubic-bezier(.3,1.6,.5,1),box-shadow .15s,opacity .3s}
+.opt b{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.28);display:grid;place-items:center;font-size:16px;flex:none}
+.opt:hover{transform:translateY(-3px) scale(1.02)}.opt:active{transform:translateY(3px)}
+.o0{background:var(--c0);box-shadow:0 5px 0 #9E2227}.o1{background:var(--c1);box-shadow:0 5px 0 #1D3E91}.o2{background:var(--c2);color:#3A2A00;box-shadow:0 5px 0 #B87A00}.o3{background:var(--c3);box-shadow:0 5px 0 #00574A}
+.opt.dim{opacity:.35}.opt.win{animation:pop .5s cubic-bezier(.3,1.6,.5,1)}.opt.miss{animation:shake .4s}
+@keyframes pop{50%{transform:scale(1.07)}}@keyframes shake{25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.qres{min-height:54px;margin-top:16px;font:700 22px Fredoka;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.qres .good{color:#fff;background:var(--green);padding:8px 18px;border-radius:999px;box-shadow:3px 4px 0 var(--t1);animation:pop .5s}
+.qres .try{color:var(--coral)}
+.burst{position:absolute;pointer-events:none;font-size:26px;animation:burst .9s ease-out forwards}
+@keyframes burst{to{transform:translate(var(--x),var(--y)) scale(.4);opacity:0}}
+.note{display:inline-block;font:600 13px Inter;color:var(--t3);background:rgba(255,255,255,.75);border:1.5px dashed #B9CCDA;border-radius:14px;padding:6px 12px;margin-top:14px}
+/* carousels */
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,1fr);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 4px 18px;scrollbar-width:thin}
+.rail>*{scroll-snap-align:start}
+.tile{position:relative;height:170px;border-radius:24px;overflow:hidden;border:3px solid #fff;box-shadow:0 0 0 2px var(--t1),4px 5px 0 2px var(--t1);transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
+.tile:hover{transform:translateY(-6px) rotate(-1.5deg)}
+.tile b{position:absolute;left:12px;bottom:10px;font:600 19px Fredoka;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.35)}.tile .e{position:absolute;right:12px;top:8px;font-size:34px}
+.g1{background:linear-gradient(160deg,#2EC4E6,#0A7FB5)}.g2{background:linear-gradient(160deg,#FFC46B,#FF8A5B)}.g3{background:linear-gradient(160deg,#5B8DEF,#2F5FD0)}.g4{background:linear-gradient(160deg,#8FD3C8,#1D7A8C)}.g5{background:linear-gradient(160deg,#FF9E6B,#D93A40)}.g6{background:linear-gradient(160deg,#7FB2D9,#3D5470)}.g7{background:linear-gradient(160deg,#F2B04B,#C2410C)}.g8{background:linear-gradient(160deg,#4FC9A0,#00866B)}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.chip{padding:8px 16px;border-radius:999px;border:2px solid var(--acc);color:var(--txtacc);background:#fff;font:600 16px Fredoka}.chip.on{background:var(--acc);color:#fff}
+.search{display:flex;align-items:center;gap:10px;background:#fff;border-radius:26px;height:54px;padding:0 20px;font:500 17px Inter;color:var(--t3);box-shadow:0 0 0 2.5px var(--t1),4px 5px 0 var(--t1);max-width:420px}
+.duo{display:flex;gap:18px;justify-content:center}.duo .phone{width:min(240px,42vw)}
+.trip{display:flex;align-items:center;gap:14px;max-width:440px;margin-top:12px}
+.trip i{font-style:normal;font-size:28px;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--gold)}
+.trip span{display:block;color:var(--t2);font-size:15px}.trip b{font:600 20px Fredoka}
+.addtrip{display:flex;align-items:center;gap:10px;max-width:440px;margin-top:14px;padding:16px 20px;border-radius:22px;border:3px dashed var(--acc);background:#fff;font:600 18px Fredoka;color:var(--txtacc)}
 /* glasses */
-.glass{background:#0F2238;color:#fff;border-radius:32px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;box-shadow:0 20px 50px rgba(15,34,56,.25)}
-.glass h2{color:#fff}.glass .sub{color:#B9CBDD}
-.glass video{width:100%;border-radius:20px;display:block;border:3px solid #22385A}
-.vids{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.vids figure{margin:0}.vids figcaption{font:700 13px Inter;color:#B9CBDD;margin-top:6px}
-/* features */
-.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
-.feat{background:#fff;border-radius:22px;padding:22px;box-shadow:0 0 0 1.5px var(--ring2),0 4px 0 var(--edge)}
-.feat i{font-style:normal;font-size:26px;width:52px;height:52px;border-radius:26px;display:grid;place-items:center;background:var(--hint);margin-bottom:10px}
-.feat:nth-child(3n+2) i{background:#FFF0DC}.feat:nth-child(3n) i{background:#FFE6E1}
-.feat b{display:block;font:800 18px Inter;margin-bottom:6px}.feat p{margin:0;font:500 15px/1.5 Inter;color:var(--t2)}
+.vids{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}
+.vids figure{margin:0;transition:transform .2s cubic-bezier(.3,1.6,.5,1)}.vids figure:hover{transform:translateY(-6px) rotate(-1deg)}
+.vids video{width:100%;border-radius:22px;display:block;border:3px solid #2BA3C2;background:#000}
+.vids figcaption{font:600 17px Fredoka;color:#BFE6FA;margin-top:8px;text-align:center}
+.feat{background:#fff;border-radius:26px;padding:22px;box-shadow:0 0 0 2.5px var(--t1),5px 6px 0 var(--t1);transition:transform .2s cubic-bezier(.3,1.6,.5,1)}.feat:hover{transform:translateY(-6px) rotate(-1deg)}
+.feat i{font-style:normal;font-size:30px;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;margin-bottom:10px}
+.feat b{display:block;font:600 21px Fredoka;margin-bottom:6px}.feat p{margin:0;color:var(--t2);font-size:15px}
 /* waitlist */
-.wl{max-width:620px;margin:0 auto;background:#fff;border-radius:28px;padding:32px;text-align:center;box-shadow:0 0 0 3px #fff,0 0 0 4.5px var(--ring),0 14px 34px rgba(15,34,56,.14)}
-.wl h2{margin-top:0}.wl .sub{margin:0 auto 18px}
+.wl{max-width:640px;margin:0 auto;position:relative;text-align:center}
 .wl-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.wl label.l{display:block;text-align:left;font:700 14px Inter;margin:12px 4px 6px}
-.wl input{width:100%;height:52px;border-radius:26px;border:0;box-shadow:0 0 0 1.5px var(--ring);background:#F7FAFC;padding:0 18px;font:500 16px Inter;color:var(--t1)}
-.wl input:focus{outline:2px solid var(--acc);outline-offset:1px;background:#fff}
-.wl .btn{width:100%;margin-top:16px;min-height:54px;font-size:17px}
-.wl-err{color:#B3262C;font:700 14px Inter;min-height:18px;margin:10px 0 0}
-.wl-ok{color:var(--green);font:800 18px Inter;margin:6px 0 0}
-/* faq */
-.faq{max-width:780px;margin:22px auto 0;display:grid;gap:12px}
-details{background:#fff;border-radius:20px;padding:18px 20px;box-shadow:0 0 0 1.5px var(--ring2),0 3px 0 var(--edge)}
-summary{list-style:none;cursor:pointer;font:800 17px Inter;display:flex;justify-content:space-between;gap:12px}summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--acc);font-weight:900}details[open] summary::after{content:"−"}
-details p{margin:10px 0 0;font:500 15px/1.55 Inter;color:var(--t2)}
+.wl label.l{display:block;text-align:left;font:600 17px Fredoka;margin:14px 4px 6px}
+.wl input{width:100%;height:54px;border-radius:27px;border:2.5px solid var(--t1);background:#F7FBFE;padding:0 20px;font:500 16px Inter;color:var(--t1)}
+.wl input:focus{outline:3px solid var(--acc);outline-offset:2px;background:#fff}
+.wl .btn{width:100%;margin-top:20px;font-size:20px;min-height:58px}
+.wl-err{color:#B3262C;font:700 15px Inter;min-height:20px;margin:12px 0 0}
+.wl-ok{font:700 26px Fredoka;color:var(--green);margin:10px 0}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:50;width:100vw;height:100vh}
+.faq{max-width:780px;margin:24px auto 0;display:grid;gap:14px;text-align:left}
+details{background:#fff;border-radius:22px;padding:18px 22px;box-shadow:0 0 0 2.5px var(--t1),4px 5px 0 var(--t1)}
+summary{list-style:none;cursor:pointer;font:600 20px Fredoka;display:flex;justify-content:space-between;gap:12px}summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:#fff;background:var(--acc);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:none;transition:transform .3s}details[open] summary::after{transform:rotate(45deg)}
+details p{margin:10px 0 0;color:var(--t2)}
 .center{text-align:center}.center .sub{margin-left:auto;margin-right:auto}
-.contact{background:linear-gradient(135deg,#0A7FB5,#2BA3C2 55%,#FF9E6B);color:#fff;border-radius:32px;padding:44px 28px;text-align:center}
-.contact h2{color:#fff;margin-top:0}.contact p{font:500 17px Inter;margin:0 0 18px;opacity:.95}
-.contact a.mail{display:inline-flex;min-height:52px;align-items:center;padding:0 24px;border-radius:26px;background:#fff;color:var(--txtacc);font:800 18px Inter;text-decoration:none;box-shadow:0 4px 0 rgba(0,0,0,.15)}
-footer{padding:36px 0 44px;text-align:center;color:var(--t3);font:500 13px/1.6 Inter}
-footer .s{font:800 15px Inter;color:var(--txtacc);margin:0 0 10px}footer nav a{margin:0 8px;color:var(--t2)}
-footer p.d{max-width:760px;margin:14px auto 0}
-@media(max-width:900px){.hero .wrap,.show,.glass{grid-template-columns:1fr}.show.flip .copy{order:0}.grid{grid-template-columns:repeat(2,1fr)}.feats{grid-template-columns:1fr 1fr}.hero{padding-top:36px}.glass{padding:26px}}
-@media(max-width:560px){.feats{grid-template-columns:1fr}.tile{height:128px}.b1{left:0}.b2{right:0}.bubble{font-size:13px;padding:8px 12px}.wl{padding:24px 18px}.duo{gap:10px}section{padding:48px 0}.vids{grid-template-columns:1fr 1fr}}
+.contact{background:linear-gradient(135deg,#0A7FB5,#2BA3C2 55%,#FF9E6B);color:#fff;border-radius:36px;padding:48px 28px;text-align:center;box-shadow:0 0 0 2.5px var(--t1),7px 8px 0 var(--t1)}
+.contact h2{color:#fff;margin-top:0}.contact p{font-size:18px;margin:0 0 20px;font-weight:600}
+footer{padding:30px 0 44px;text-align:center;color:var(--t3);font-size:13px}footer .s{font:600 20px Fredoka;color:var(--txtacc);margin:0 0 10px}footer nav a{margin:0 8px;color:var(--t2)}footer p.d{max-width:760px;margin:14px auto 0}
+@media(min-width:901px){.rail.feats{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);overflow:visible}.rail.ports{grid-auto-flow:row;grid-template-columns:repeat(4,1fr);overflow:visible}}
+@media(max-width:900px){.show{grid-template-columns:1fr;gap:30px}.show.flip>.copy{order:0}.nav{display:none}.top .btn{margin-left:auto}.vids{grid-template-columns:repeat(4,72%);overflow-x:auto;scroll-snap-type:x mandatory}.vids figure{scroll-snap-align:start}.rail{grid-auto-columns:76%}}
+@media(max-width:560px){section{padding:46px 0}.wheelbox{grid-template-columns:1fr;justify-items:center;text-align:center}.wheel{width:230px;height:230px}.floaty{width:48px;height:48px;font-size:24px}.ship{width:140px;bottom:84px}.scene{height:200px}.card{padding:20px}.quiz .q{font-size:24px}.duo{gap:10px}.lead{font-size:16px}.hero .fA{display:none}.hero .fB{top:auto!important;bottom:120px}.hero{padding-top:34px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.ship{left:12%}html{scroll-behavior:auto}.wheel svg{transition:none!important}}
 </style></head><body>
+<canvas id="confetti" aria-hidden="true"></canvas>
 <header class="top"><div class="wrap"><a href="/"><img src="../assets/logo-evenhub.png" alt="Decklumos"></a>
-<nav class="nav"><a href="#home">Home</a><a href="#trivia">Trivia</a><a href="#ports">Port guides</a><a href="#trips">My Trips</a><a href="#decks">Deck maps</a><a href="#faq">FAQ</a></nav>
+<nav class="nav" aria-label="Sections"><a href="#home">Home</a><a href="#trivia">Trivia</a><a href="#ports">Port guides</a><a href="#trips">My Trips</a><a href="#decks">Deck maps</a><a href="#faq">FAQ</a></nav>
 <a class="btn" href="https://hub.evenrealities.com/hub/com.pause.decklumos" target="_blank" rel="noopener noreferrer">Get on Even Hub</a></div></header>
 
-<div class="hero"><div class="wrap">
- <div><span class="pill">For Even Realities G2 + phone</span>
+<div class="hero">
+ <div class="sun-disc" aria-hidden="true"></div>
+ <div class="cloud" style="top:70px;width:110px;animation-delay:-8s" aria-hidden="true"></div><div class="cloud" style="top:170px;width:90px;animation-delay:-26s;animation-duration:55s" aria-hidden="true"></div>
+ <span class="floaty fA" style="left:6%;top:110px" aria-hidden="true">🌴</span><span class="floaty fA" style="right:7%;top:90px;animation-delay:-2s" aria-hidden="true">🍹</span><span class="floaty fB" style="left:12%;top:330px;animation-delay:-4s" aria-hidden="true">🗺️</span><span class="floaty fB" style="right:11%;top:320px;animation-delay:-1s" aria-hidden="true">🚢</span>
+ <div class="wrap">
+  <span class="sticker st-gold" style="--r:-4deg">For Even Realities G2 + phone</span>
   <h1>Decklumos</h1><p class="slogan">From stern to bow, know where to go</p>
   <p class="lead">Deck-by-deck maps for 10 cruise lines, built into your Even Realities G2 glasses and phone. Maps that work without Wi-Fi. No account. Just your ship.</p>
-  <div class="ctas"><a class="btn sun" href="https://hub.evenrealities.com/hub/com.pause.decklumos" target="_blank" rel="noopener noreferrer">Get it on Even Hub</a><a class="btn btn2" href="#waitlist">Join the waitlist</a></div>
-  <div class="facts"><span class="fact"><b>167</b> ships</span><span class="fact"><b>10</b> cruise lines</span><span class="fact">Works offline</span><span class="fact">Free</span></div></div>
- <div class="phones"><div class="phone tilt-r"><img src="app-home.jpg" alt="Decklumos app home screen: choose your cruise line"></div>
-  <span class="bubble b1"><i>🧭</i>Find your way</span><span class="bubble b2"><i>⚓</i>My Trips</span><span class="bubble b3"><i>📍</i>Port guides</span></div>
-</div></div>
+  <div class="ctas"><a class="btn sun" href="https://hub.evenrealities.com/hub/com.pause.decklumos" target="_blank" rel="noopener noreferrer">Get it on Even Hub</a><a class="btn w" href="#waitlist">Join the waitlist</a></div>
+  <div class="stk"><span class="sticker st-sky" style="--r:-5deg">🚢 167 ships</span><span class="sticker st-pink" style="--r:4deg">⚓ 10 cruise lines</span><span class="sticker st-mint" style="--r:-3deg">📶 Works offline</span><span class="sticker st-gold" style="--r:5deg">🎉 Free</span></div>
+ </div>
+ <div class="scene" aria-hidden="true">
+  <div class="ship"><svg viewBox="0 0 200 120"><path d="M58 22h12v22H58z" fill="#FF6B57"/><path d="M58 22h12v6H58z" fill="#0F2238"/><path d="M82 14h12v30H82z" fill="#FF6B57"/><path d="M82 14h12v6H82z" fill="#0F2238"/><circle cx="64" cy="14" r="5" fill="#fff" opacity=".8"/><circle cx="90" cy="5" r="4" fill="#fff" opacity=".7"/>
+   <rect x="40" y="42" width="110" height="18" rx="6" fill="#fff" stroke="#0F2238" stroke-width="3"/><rect x="52" y="30" width="80" height="16" rx="6" fill="#fff" stroke="#0F2238" stroke-width="3"/>
+   <g fill="#0E9BD4"><circle cx="58" cy="51" r="3.5"/><circle cx="72" cy="51" r="3.5"/><circle cx="86" cy="51" r="3.5"/><circle cx="100" cy="51" r="3.5"/><circle cx="114" cy="51" r="3.5"/><circle cx="128" cy="51" r="3.5"/><rect x="62" y="35" width="10" height="6" rx="2"/><rect x="78" y="35" width="10" height="6" rx="2"/><rect x="94" y="35" width="10" height="6" rx="2"/><rect x="110" y="35" width="10" height="6" rx="2"/></g>
+   <path d="M18 60h168l-22 34H40z" fill="#0A7FB5" stroke="#0F2238" stroke-width="3" stroke-linejoin="round"/><path d="M26 72h152" stroke="#FFD58A" stroke-width="5"/>
+   <circle cx="150" cy="22" r="0"/><path d="M150 42V18l18 6-18 6" fill="#FFD58A" stroke="#0F2238" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
+  <svg class="waves w3" viewBox="0 0 2400 250" preserveAspectRatio="none" style="height:150px;opacity:.55"><path fill="#7FD3F2" d="M0 60 Q150 20 300 60 T600 60 T900 60 T1200 60 T1500 60 T1800 60 T2100 60 T2400 60 V250 H0Z"/></svg>
+  <svg class="waves w2" viewBox="0 0 2400 250" preserveAspectRatio="none" style="height:120px"><path fill="#2BA3C2" d="M0 50 Q150 10 300 50 T600 50 T900 50 T1200 50 T1500 50 T1800 50 T2100 50 T2400 50 V250 H0Z"/></svg>
+  <svg class="waves w1" viewBox="0 0 2400 250" preserveAspectRatio="none" style="height:80px"><path fill="#FFF1DC" d="M0 60 Q150 20 300 60 T600 60 T900 60 T1200 60 T1500 60 T1800 60 T2100 60 T2400 60 V250 H0Z"/></svg>
+ </div>
+</div>
 
-<section id="waitlist" style="padding-top:20px"><div class="wrap"><div class="wl">
- <h2>Get on board early</h2><p class="sub">Early access and a first look at new port guides.</p>
+<section id="waitlist" class="bg-sand" style="padding-top:30px"><div class="wrap"><div class="wl card">
+ <span class="sticker st-pink" style="--r:-4deg">🎟️ Boarding soon</span>
+ <h2>Get on board early</h2><p class="sub" style="margin:0 auto 6px">Early access and a first look at new port guides.</p>
  <form id="wl-form" novalidate><div class="wl-hp" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
   <label class="l" for="wl-email">Email</label><input id="wl-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com">
-  <label class="l" for="wl-ship">What ship are you sailing next? <span style="color:var(--t3);font-weight:500">(optional)</span></label><input id="wl-ship" type="text" name="ship" maxlength="120" autocomplete="off">
+  <label class="l" for="wl-ship">What ship are you sailing next? <span style="color:var(--t3);font-weight:400">(optional)</span></label><input id="wl-ship" type="text" name="ship" maxlength="120" autocomplete="off">
   <button class="btn sun" type="submit">Join the waitlist</button><p id="wl-err" class="wl-err" role="alert"></p></form>
  <p id="wl-ok" class="wl-ok" role="status" hidden>You're on the list. We'll let you know first.</p></div></div></section>
+<svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#FFF1DC"><path d="M0 30 C240 70 480 -10 720 30 S1200 70 1440 30 V60 H0Z" fill="#D9F1FC"/></svg>
 
-<section id="home" class="band"><div class="wrap show">
- <div class="copy"><span class="eyebrow">Home</span><h2>Pick your line, pick your ship</h2>
+<section id="home" class="bg-sea"><div class="wrap show">
+ <div class="copy"><span class="sticker st-sky eyebrow">🏠 Home</span><h2>Pick your line, pick your ship</h2>
   <p class="sub">Swipe through the cruise lines and press to choose yours. Then pick your ship from that line, A–Z.</p>
-  <p class="sub" style="margin-bottom:4px"><b style="color:var(--t1)">Today on board</b></p>
-  <div class="tob-row"><div class="tob"><i>🎲</i>Trivia</div><div class="tob"><i>🗺️</i>Deck map</div><div class="tob"><i>📍</i>Port of the day</div></div></div>
- <div><div class="phone tilt-l"><img src="app-home.jpg" alt="App home: cruise line picker with ship drawing and Today on board"></div></div>
+  <div class="card wheelbox">
+   <div class="wheel"><svg class="pin" viewBox="0 0 28 34" aria-hidden="true"><path d="M14 34 2 10a12 12 0 1 1 24 0z" fill="#FF6B57" stroke="#0F2238" stroke-width="2.5"/></svg>
+    <svg id="wheel" viewBox="-110 -110 220 220" aria-hidden="true"></svg><div class="hub" aria-hidden="true">🚢</div></div>
+   <div><p style="margin:0;font:600 16px Fredoka;color:var(--t3)">Cruise line wheel</p><p class="wres" id="wres" aria-live="polite">Give it a spin!</p>
+    <button class="btn" id="spin" type="button">🎡 Spin the wheel</button></div>
+  </div>
+  <p style="margin:22px 0 0;font:600 20px Fredoka">Today on board</p>
+  <div class="tob-row" style="margin-top:10px"><div class="tob"><i>🎲</i>Trivia</div><div class="tob"><i>🗺️</i>Deck map</div><div class="tob"><i>📍</i>Port of the day</div></div></div>
+ <div><div class="phone" style="--r:-3deg"><img src="app-home.jpg" alt="Decklumos app home: cruise line picker with ship drawing, My Trips and Today on board" width="585" height="1266"></div></div>
 </div></section>
+<svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#D9F1FC"><path d="M0 20 C360 70 720 0 1080 40 S1380 30 1440 20 V60 H0Z" fill="#FFF1DC"/></svg>
 
-<section id="trivia" class="band sun"><div class="wrap show flip">
- <div class="copy"><span class="eyebrow">Trivia</span><h2>Cruise Trivia</h2>
-  <p class="sub">Bright, tappable answers and a friendly nudge when you miss.</p>
-  <div class="opts"><div class="opt c0"><b>A</b>A beach day</div><div class="opt c1"><b>B</b>A swim race</div><div class="opt c2"><b>C</b>A fishing day</div><div class="opt c3"><b>D</b>A day with no port<span class="st">Correct!</span></div></div>
-  <span class="note">Guess the Port: no v3 app screenshot yet</span></div>
- <div><div class="phone tilt-r"><img src="app-trivia-answer.jpg" alt="Cruise Trivia question screen"></div></div>
+<section id="trivia" class="bg-sand"><div class="wrap show flip">
+ <div class="copy quiz"><span class="sticker st-gold eyebrow">🎲 Trivia</span><h2>Cruise Trivia</h2>
+  <p class="sub">Bright, tappable answers and a friendly nudge when you miss. Try one from the app:</p>
+  <div class="card" style="position:relative" id="quiz">
+   <p class="q" id="qq">What is a 'sea day'?</p>
+   <div class="opts" role="group" aria-labelledby="qq">
+    <button class="opt o0" type="button" data-ok="0"><b>A</b>A beach day</button>
+    <button class="opt o1" type="button" data-ok="0"><b>B</b>A swim race</button>
+    <button class="opt o2" type="button" data-ok="0"><b>C</b>A fishing day</button>
+    <button class="opt o3" type="button" data-ok="1"><b>D</b>A day with no port</button></div>
+   <div class="qres" id="qres" aria-live="polite"></div></div>
+  <span class="note">Guess the Port is in the app, but there's no v3 screenshot of it yet.</span></div>
+ <div><div class="phone" style="--r:4deg"><img src="app-trivia-answer.jpg" alt="Cruise Trivia question screen in the app" loading="lazy" width="585" height="1266"></div></div>
 </div></section>
+<svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#FFF1DC"><path d="M0 40 C300 0 600 70 900 30 S1300 0 1440 40 V60 H0Z" fill="#DDF6EC"/></svg>
 
-<section id="ports"><div class="wrap">
- <div class="show"><div class="copy"><span class="eyebrow">Port guides</span><h2>Port guides included</h2>
+<section id="ports" class="bg-mint"><div class="wrap">
+ <div class="show"><div class="copy"><span class="sticker st-mint eyebrow">📍 Port guides</span><h2>Port guides included</h2>
   <p class="sub">Guides for popular stops like Cozumel so you're ready before you step off the ship.</p>
   <div class="chips"><span class="chip on">✓ All regions</span><span class="chip">Caribbean</span><span class="chip">Alaska</span><span class="chip">Mediterranean</span></div></div>
-  <div><div class="phone tilt-l"><img src="app-ports.jpg" alt="Port guides photo grid by region"></div></div></div>
- <div class="grid" aria-label="Regions in the app">
-  <div class="tile"><div class="art g1"></div><div class="scrim"><b>Caribbean</b></div></div>
-  <div class="tile"><div class="art g2"></div><div class="scrim"><b>Bahamas</b></div></div>
-  <div class="tile"><div class="art g3"></div><div class="scrim"><b>Mediterranean</b></div></div>
-  <div class="tile"><div class="art g4"></div><div class="scrim"><b>Alaska</b></div></div>
-  <div class="tile"><div class="art g5"></div><div class="scrim"><b>Mexico &amp; Central America</b></div></div>
-  <div class="tile"><div class="art g6"></div><div class="scrim"><b>Northern Europe</b></div></div>
-  <div class="tile"><div class="art g7"></div><div class="scrim"><b>New England &amp; Canada</b></div></div>
-  <div class="tile"><div class="art g8"></div><div class="scrim"><b>Canary Islands &amp; Atlantic</b></div></div>
- </div></div></section>
+  <div><div class="phone" style="--r:-3deg"><img src="app-ports.jpg" alt="Port guides photo grid by region in the app" loading="lazy" width="585" height="1266"></div></div></div>
+ <div class="rail ports" style="margin-top:30px" aria-label="Regions in the app (swipe)">
+  <div class="tile g1"><span class="e" aria-hidden="true">🏝️</span><b>Caribbean</b></div><div class="tile g2"><span class="e" aria-hidden="true">🐚</span><b>Bahamas</b></div>
+  <div class="tile g3"><span class="e" aria-hidden="true">🏛️</span><b>Mediterranean</b></div><div class="tile g4"><span class="e" aria-hidden="true">🏔️</span><b>Alaska</b></div>
+  <div class="tile g5"><span class="e" aria-hidden="true">🌮</span><b>Mexico &amp; Central America</b></div><div class="tile g6"><span class="e" aria-hidden="true">⛵</span><b>Northern Europe</b></div>
+  <div class="tile g7"><span class="e" aria-hidden="true">🍁</span><b>New England &amp; Canada</b></div><div class="tile g8"><span class="e" aria-hidden="true">🌋</span><b>Canary Islands &amp; Atlantic</b></div></div>
+</div></section>
+<svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#DDF6EC"><path d="M0 30 C240 -10 480 70 720 30 S1200 -10 1440 30 V60 H0Z" fill="#FFFDF8"/></svg>
 
-<section id="trips" class="band"><div class="wrap show flip">
- <div class="copy"><span class="eyebrow">My Trips</span><h2>My Trips</h2>
+<section id="trips" class="bg-cream"><div class="wrap show">
+ <div class="copy"><span class="sticker st-pink eyebrow">🧳 My Trips</span><h2>My Trips</h2>
   <p class="sub">Save your cruise, ship and daily plans. The app opens right to it.</p>
-  <div class="trip"><i>🔖</i><div><b>My Trips</b><span>No trips yet, add your first one</span></div><em>›</em></div>
-  <div class="addtrip">🧳 Add a trip to see your ports <span style="margin-left:auto;color:var(--txtacc);font-size:22px">›</span></div>
-  <p><span class="note">No dedicated v3 My Trips screenshot yet. The phone shows the My Trips card on Home.</span></p></div>
- <div><div class="phone tilt-r"><img src="app-home.jpg" alt="App home with the My Trips card"></div></div>
+  <span class="note">No dedicated v3 My Trips screenshot yet, so this is the My Trips card as it appears on Home.</span></div>
+ <div><div class="card trip"><i>🔖</i><div><b>My Trips</b><span>No trips yet, add your first one</span></div><em style="margin-left:auto;font-style:normal;font-size:26px;color:var(--txtacc)">›</em></div>
+  <div class="addtrip">🧳 Add a trip to see your ports <span style="margin-left:auto;font-size:24px">›</span></div></div>
 </div></section>
 
-<section id="decks"><div class="wrap show">
- <div class="copy"><span class="eyebrow">Deck maps</span><h2>Find your way</h2>
+<section id="decks" class="bg-cream" style="padding-top:20px"><div class="wrap show flip">
+ <div class="copy"><span class="sticker st-sky eyebrow">🗺️ Deck maps</span><h2>Find your way</h2>
   <p class="sub">Every venue on every deck, labeled, with the front of the ship at the top. Save your cabin and find it again in a tap.</p>
   <div class="search">🔍 Find a bar, pool, cabin #</div>
   <div class="chips"><span class="chip on">🛏️ My cabin</span><span class="chip">Food</span><span class="chip">Pools</span><span class="chip">Shows</span></div></div>
- <div class="duo"><div class="phone"><img src="app-deck-found.jpg" alt="Deck map with search bar and a found venue"></div><div class="phone"><img src="app-cabin.jpg" alt="My cabin saved on the deck map"></div></div>
+ <div class="duo"><div class="phone" style="--r:-4deg"><img src="app-deck-found.jpg" alt="Deck map with search bar and a found venue" loading="lazy" width="585" height="1266"></div><div class="phone" style="--r:4deg"><img src="app-cabin.jpg" alt="My cabin saved on the deck map" loading="lazy" width="585" height="1266"></div></div>
 </div></section>
+<svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#FFFDF8"><path d="M0 30 C360 -10 720 70 1080 20 S1380 40 1440 30 V60 H0Z" fill="#0F2238"/></svg>
 
-<section><div class="wrap"><div class="glass">
- <div><span class="eyebrow" style="background:rgba(255,255,255,.12);color:#9FE7C0">On your G2 glasses</span><h2>See it in action</h2>
-  <p class="sub">Everything you need, right in your glasses. Your Even Realities G2 glasses and phone always show the same deck.</p></div>
+<section class="bg-navy"><div class="wrap">
+ <span class="sticker st-mint eyebrow">👓 On your G2 glasses</span><h2>See it in action</h2>
+ <p class="sub" style="color:#C9DCEB">Everything you need, right in your glasses. Your Even Realities G2 glasses and phone always show the same deck.</p>
  <div class="vids">
   <figure><video autoplay muted loop playsinline preload="metadata" poster="../assets/anim-1-cruise-line-poster.jpg"><source src="../assets/anim-1-cruise-line.mp4" type="video/mp4"></video><figcaption>Pick your cruise line</figcaption></figure>
   <figure><video autoplay muted loop playsinline preload="metadata" poster="../assets/anim-2-ship-poster.jpg"><source src="../assets/anim-2-ship.mp4" type="video/mp4"></video><figcaption>Pick your ship</figcaption></figure>
   <figure><video autoplay muted loop playsinline preload="metadata" poster="../assets/anim-3-find-your-way-poster.jpg"><source src="../assets/anim-3-find-your-way.mp4" type="video/mp4"></video><figcaption>Find your way</figcaption></figure>
   <figure><video autoplay muted loop playsinline preload="metadata" poster="../assets/anim-4-plan-your-trip-poster.jpg"><source src="../assets/anim-4-plan-your-trip.mp4" type="video/mp4"></video><figcaption>Plan your trip</figcaption></figure>
- </div></div></div></section>
-
-<section class="band"><div class="wrap center"><span class="eyebrow">Why cruisers love it</span><h2>Made for life at sea</h2>
- <div class="feats" style="text-align:left">
-  <div class="feat"><i>📶</i><b>Works offline</b><p>Every deck is already inside the app, so your maps work with no signal. Made for life at sea.</p></div>
-  <div class="feat"><i>🔒</i><b>No account needed</b><p>No sign-in, no tracking, no location. Your trip stays on your phone.</p></div>
-  <div class="feat"><i>👓</i><b>Glasses + phone in sync</b><p>Your Even Realities G2 glasses and phone always show the same deck.</p></div>
-  <div class="feat"><i>🧭</i><b>Front of the ship at the top</b><p>Easy to read, with the front of the ship at the top.</p></div>
-  <div class="feat"><i>🚢</i><b>10 cruise lines</b><p>Carnival, Celebrity, Disney, MSC, Norwegian, Princess, Royal Caribbean, Viking Ocean, Viking River, and Virgin Voyages.</p></div>
-  <div class="feat"><i>📍</i><b>Port guides included</b><p>Guides for popular stops like Cozumel so you're ready before you step off the ship.</p></div>
  </div></div></section>
+<svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#0F2238"><path d="M0 30 C240 70 480 -10 720 30 S1200 70 1440 30 V60 H0Z" fill="#D9F1FC"/></svg>
 
-<section id="faq"><div class="wrap center"><span class="eyebrow">Questions</span><h2>Quick answers before you sail.</h2>
- <div class="faq" style="text-align:left">
+<section class="bg-sea"><div class="wrap center"><span class="sticker st-gold eyebrow">💙 Why cruisers love it</span><h2>Made for life at sea</h2>
+ <div class="rail feats" style="text-align:left;margin-top:20px" aria-label="Features (swipe)">
+  <div class="feat"><i style="background:#BFE6FA">📶</i><b>Works offline</b><p>Every deck is already inside the app, so your maps work with no signal. Made for life at sea.</p></div>
+  <div class="feat"><i style="background:#FFD3CC">🔒</i><b>No account needed</b><p>No sign-in, no tracking, no location. Your trip stays on your phone.</p></div>
+  <div class="feat"><i style="background:#FFE7B0">👓</i><b>Glasses + phone in sync</b><p>Your Even Realities G2 glasses and phone always show the same deck.</p></div>
+  <div class="feat"><i style="background:#B9F2DA">🧭</i><b>Front of the ship at the top</b><p>Easy to read, with the front of the ship at the top.</p></div>
+  <div class="feat"><i style="background:#D6DDFB">🚢</i><b>10 cruise lines</b><p>Carnival, Celebrity, Disney, MSC, Norwegian, Princess, Royal Caribbean, Viking Ocean, Viking River, and Virgin Voyages.</p></div>
+  <div class="feat"><i style="background:#FFD9C2">📍</i><b>Port guides included</b><p>Guides for popular stops like Cozumel so you're ready before you step off the ship.</p></div>
+ </div></div></section>
+<svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#D9F1FC"><path d="M0 20 C360 70 720 0 1080 40 S1380 30 1440 20 V60 H0Z" fill="#FFFDF8"/></svg>
+
+<section id="faq" class="bg-cream" style="padding-top:30px"><div class="wrap center"><span class="sticker st-pink eyebrow">❓ Questions</span><h2>Quick answers before you sail.</h2>
+ <div class="faq">
   <details open><summary>What is Decklumos?</summary><p>Decklumos puts every deck of your ship in your pocket and on your G2 glasses, with venues, port guides and your trip plans.</p></details>
   <details><summary>Do I need Even Realities G2 glasses to use Decklumos?</summary><p>No, Decklumos works directly on your phone. If you own Even Realities G2 glasses, you can see your travel plans in your field of vision.</p></details>
   <details><summary>Does Decklumos work offline?</summary><p>Yes! Deck maps, port guides and your trips are built into the app, so they work with no Wi-Fi or signal. Cruise News needs a connection to load the latest stories.</p></details>
@@ -230,9 +263,34 @@ footer p.d{max-width:760px;margin:14px auto 0}
   <details><summary>Is Decklumos free to download?</summary><p>Yes! Decklumos is free.</p></details>
  </div></div></section>
 
-<section style="padding-top:10px"><div class="wrap"><div class="contact"><h2>Missing your ship or found a mistake? Email us.</h2><p>We read every message and we'd love to hear from you.</p><a class="mail" href="mailto:support@decklumos.com">support@decklumos.com</a></div></div></section>
+<section style="padding-top:20px"><div class="wrap"><div class="contact"><h2>Missing your ship or found a mistake? Email us.</h2><p>We read every message and we'd love to hear from you.</p><a class="btn w" href="mailto:support@decklumos.com">✉️ support@decklumos.com</a></div></div></section>
 
-<footer><div class="wrap"><p class="s">From stern to bow, know where to go</p><nav><a href="/privacy/">Privacy Policy</a><a href="/support/">Contact</a></nav><p>© 2026 Decklumos · Inter font, SIL Open Font License (<a href="LICENSE-Inter-OFL.txt">license</a>)</p>
+<footer><div class="wrap"><p class="s">From stern to bow, know where to go 🚢</p><nav><a href="/privacy/">Privacy Policy</a><a href="/support/">Contact</a></nav><p>© 2026 Decklumos · Fonts: Fredoka (<a href="LICENSE-Fredoka-OFL.txt">OFL</a>) and Inter (<a href="LICENSE-Inter-OFL.txt">OFL</a>)</p>
 <p class="d">Decklumos is an independent app. It is not affiliated with, endorsed by, or sponsored by any cruise line. All ship and venue information comes from publicly available sources. Venue positions are approximate. Not for navigation or emergencies. Always follow crew directions in an emergency.</p></div></footer>
-<script>(function(){var f=document.getElementById('wl-form'),e=document.getElementById('wl-err'),ok=document.getElementById('wl-ok'),b=f.querySelector('button');f.addEventListener('submit',function(ev){ev.preventDefault();e.textContent='';var em=f.email.value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){e.textContent='Please enter a valid email address.';f.email.focus();return}b.disabled=true;fetch('https://decklumos-waitlist.skitzafrenia420420.workers.dev/signup',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email:em,ship:f.ship.value.trim(),honeypot:f.website.value})}).then(function(r){return r.json().then(function(j){return{s:r.status,j:j}})}).then(function(x){if(x.j&&x.j.ok){f.hidden=true;ok.hidden=false}else{e.textContent=x.s===429?'Too many tries. Please try again in a bit.':'Please check your email and try again.';b.disabled=false}}).catch(function(){e.textContent='Something went wrong. Please try again.';b.disabled=false})})})();</script>
+<script>
+(function(){
+var RM=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* confetti */
+var cv=document.getElementById('confetti'),cx=cv.getContext('2d'),P=[],raf=0;
+function confetti(){if(RM)return;cv.width=innerWidth;cv.height=innerHeight;var C=['#FF6B57','#FFD58A','#0A7FB5','#00866B','#2F5FD0','#FFAA00'];for(var i=0;i<160;i++)P.push({x:innerWidth/2,y:innerHeight*.45,vx:(Math.random()-.5)*16,vy:-Math.random()*15-4,s:6+Math.random()*7,c:C[i%6],r:Math.random()*6,vr:(Math.random()-.5)*.3,l:140});if(!raf)tick()}
+function tick(){cx.clearRect(0,0,cv.width,cv.height);P=P.filter(function(p){return p.l-->0&&p.y<cv.height+20});P.forEach(function(p){p.vy+=.45;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.fillStyle=p.c;cx.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);cx.restore()});raf=P.length?requestAnimationFrame(tick):0;if(!raf)cx.clearRect(0,0,cv.width,cv.height)}
+window.__confetti=confetti;
+/* waitlist (same Worker, copy, honeypot) */
+var f=document.getElementById('wl-form'),e=document.getElementById('wl-err'),ok=document.getElementById('wl-ok'),b=f.querySelector('button');
+f.addEventListener('submit',function(ev){ev.preventDefault();e.textContent='';var em=f.email.value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){e.textContent='Please enter a valid email address.';f.email.focus();return}b.disabled=true;
+fetch('https://decklumos-waitlist.skitzafrenia420420.workers.dev/signup',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email:em,ship:f.ship.value.trim(),honeypot:f.website.value})}).then(function(r){return r.json().then(function(j){return{s:r.status,j:j}})}).then(function(x){if(x.j&&x.j.ok){f.hidden=true;ok.hidden=false;confetti()}else{e.textContent=x.s===429?'Too many tries. Please try again in a bit.':'Please check your email and try again.';b.disabled=false}}).catch(function(){e.textContent='Something went wrong. Please try again.';b.disabled=false})});
+/* trivia */
+var q=document.getElementById('quiz'),res=document.getElementById('qres'),opts=q.querySelectorAll('.opt');
+function burst(el){if(RM)return;var E=['🎉','⭐','🌴','🚢','✨','🍹'];var r=el.getBoundingClientRect(),qr=q.getBoundingClientRect();for(var i=0;i<12;i++){var s=document.createElement('span');s.className='burst';s.setAttribute('aria-hidden','true');s.textContent=E[i%6];s.style.left=(r.right-qr.left-60)+'px';s.style.top=(r.top-qr.top)+'px';var a=Math.PI*2*i/12;s.style.setProperty('--x',Math.cos(a)*110+'px');s.style.setProperty('--y',Math.sin(a)*80+'px');q.appendChild(s);setTimeout(function(n){n.remove()}.bind(null,s),950)}}
+opts.forEach(function(o){o.addEventListener('click',function(){if(o.dataset.ok==='1'){opts.forEach(function(x){if(x!==o)x.classList.add('dim')});o.classList.remove('win');void o.offsetWidth;o.classList.add('win');res.innerHTML='<span class="good">✅ Correct!</span> <span>A day with no port 🌊</span> <button class="btn w" type="button" id="qa" style="min-height:42px;font-size:16px">Play again</button>';burst(o);document.getElementById('qa').onclick=function(){opts.forEach(function(x){x.classList.remove('dim','win')});res.textContent='';opts[0].focus()}}else{o.classList.remove('miss');void o.offsetWidth;o.classList.add('miss');res.innerHTML='<span class="try">Not quite. Try again! 🐬</span>'}})});
+/* wheel: real line names from the site/app */
+var L=['Carnival','Celebrity','Disney','MSC','Norwegian','Princess','Royal Caribbean','Viking Ocean','Viking River','Virgin Voyages'],C=['#FF6B57','#0A7FB5','#FFAA00','#00866B','#2F5FD0','#D93A40','#2BA3C2','#C2410C','#4FC9A0','#7A5AF8'];
+var w=document.getElementById('wheel'),n=L.length,step=360/n,html='';
+for(var i=0;i<n;i++){var a0=(i*step-90-step/2)*Math.PI/180,a1=((i+1)*step-90-step/2)*Math.PI/180;html+='<path d="M0 0L'+(100*Math.cos(a0)).toFixed(2)+' '+(100*Math.sin(a0)).toFixed(2)+'A100 100 0 0 1 '+(100*Math.cos(a1)).toFixed(2)+' '+(100*Math.sin(a1)).toFixed(2)+'Z" fill="'+C[i]+'" stroke="#fff" stroke-width="2.5"/>';
+ html+='<text transform="rotate('+(i*step-90)+') translate(62 0)" text-anchor="middle" dominant-baseline="middle" font-family="Fredoka,Inter" font-weight="600" font-size="'+(L[i].length>10?8.5:10.5)+'" fill="'+(i==2?'#3A2A00':'#fff')+'">'+L[i]+'</text>'}
+w.innerHTML='<circle r="106" fill="#0F2238"/>'+html;
+var rot=0,busy=false,out=document.getElementById('wres');
+document.getElementById('spin').addEventListener('click',function(){if(busy)return;var k=Math.floor(Math.random()*n);rot+=(RM?0:1440)+((360-k*step)-(rot%360)+360)%360;if(rot%360!==((360-k*step)%360))rot+=0;busy=!RM;w.style.transform='rotate('+rot+'deg)';out.textContent=RM?'🎉 '+L[k]+'!':'Spinning…';setTimeout(function(){out.textContent='🎉 '+L[k]+'!';busy=false},RM?0:3250)});
+})();
+</script>
 </body></html>
