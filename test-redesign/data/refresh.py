@@ -58,7 +58,7 @@ for pid,code in CODES.items():
     rows.sort(key=lambda r:r['date'])
     for r in rows: r['port']=pid
     allrows+=rows
-    out['ports'][pid]={'carnivalCode':code,'sailings':rows[:8],'cheapest':min(rows,key=lambda r:r['price']) if rows else None,'total':len(rows)}
+    out['ports'][pid]={'carnivalCode':code,'sailings':rows,'cheapest':min(rows,key=lambda r:r['price']) if rows else None,'total':len(rows)}
     print(pid,len(rows))
     time.sleep(2)
 if not allrows:
@@ -88,3 +88,13 @@ for name,day in HOL:
 out['deals']['holidays']=hol[:6]
 json.dump(out,open(OUT,'w'),indent=1)
 print('regions',[(g['name'],g['best']['perNight']) for g in regions],'dropped',out['deals']['dropped'],'hol',[(h['holiday'],h['day'],h['best']['price']) for h in hol])
+
+# split: full per-port lists in data/sailings/{id}.json, slim summary in sailings.json
+import os as _os
+_os.makedirs(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)),'sailings'),exist_ok=True)
+_p=_os.path.join(_os.path.dirname(_os.path.abspath(__file__)),'sailings.json')
+_d=json.load(open(_p))
+for _id,_v in _d['ports'].items():
+    json.dump({'sailings':_v['sailings'],'total':_v['total']},open(_os.path.join(_os.path.dirname(_p),'sailings',_id+'.json'),'w'),separators=(',',':'))
+    _v['sailings']=_v['sailings'][:8]
+json.dump(_d,open(_p,'w'),separators=(',',':'))

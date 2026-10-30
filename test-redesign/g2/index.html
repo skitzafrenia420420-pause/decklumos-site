@@ -257,6 +257,16 @@ body.hud .btn.glass{border-color:var(--hline)}
 .hudline{display:flex;align-items:center;gap:14px;max-width:1240px;margin:0 auto;padding:0 28px;font:12px ui-monospace,Menlo,Consolas,monospace;letter-spacing:.14em;color:var(--hgt)}
 .hudline::before,.hudline::after{content:"";flex:1;height:1px;background:var(--hline)}
 @media (prefers-reduced-motion:reduce){body.hud main>section:not(.cta)::after{display:none}}
+</style><style id="wlm-css">
+.wlm{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:18px}.wlm[hidden]{display:none}
+.wlm-bd{position:absolute;inset:0;background:rgba(6,16,32,.66);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.wlm-box{position:relative;width:100%;max-width:460px;max-height:calc(100vh - 36px);overflow:auto;background:#fff;color:#0B1F3A;border-radius:24px;padding:34px 30px 28px;box-shadow:0 30px 80px -20px rgba(0,0,0,.55);text-align:left}
+.wlm-box .eyebrow{color:#9a6c1c}.wlm-box h2{font-size:34px;margin:0}.wlm-box p.s{color:#4a5568;margin:10px 0 18px;font-size:16px}
+.wlm-x{position:absolute;top:12px;right:12px;width:44px;height:44px;border-radius:50%;border:0;background:#f3efe6;color:#0B1F3A;font-size:26px;line-height:1;cursor:pointer}.wlm-x:hover{background:#e8e1d3}
+.wlm label{display:block;font-weight:600;font-size:15px;margin:12px 0 6px}.wlm input[type=email],.wlm input[type=text]{width:100%;min-height:50px;border:1.5px solid #d8cfbd;border-radius:14px;padding:0 14px;font:inherit;font-size:16px;color:#0B1F3A;background:#fff}
+.wlm input:focus{border-color:#D9A441;outline:3px solid rgba(217,164,65,.35);outline-offset:0}
+.wlm .btn{width:100%;display:inline-flex;margin-top:18px}.wlm .wl-err{color:#b3261e}.wlm .wl-ok{font:600 24px Fredoka,Inter;text-align:center;padding:14px 0 4px}.wlm .wl-ok small{display:block;font:400 16px Inter;color:#4a5568;margin-top:8px}
+body.wlm-open{overflow:hidden}
 </style></head><body id="top" class="hud">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top" id="hdr"><div class="wrap"><a class="brand" href="../"><span class="dot" aria-hidden="true"></span>Decklumos</a>
@@ -305,7 +315,7 @@ body.hud .btn.glass{border-color:var(--hline)}
 
 <section class="sand" style="padding:100px 0" aria-labelledby="h-h"><div class="wrap"><div class="hub rv">
  <div><span class="eyebrow">Get it</span><h2 id="h-h">Find Decklumos on Even Hub</h2><p>Even Hub is where G2 apps live. Open it in the Even Realities app and look for Decklumos.</p></div>
- <a class="btn gold" href="https://hub.evenrealities.com/hub/com.pause.decklumos" target="_blank" rel="noopener noreferrer">Open Even Hub</a>
+ <a class="btn gold" href="https://hub.evenrealities.com/hub/com.pause.decklumos" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" rel="noopener noreferrer">Open Even Hub</a>
 </div></div></section>
 
 <section id="faq" aria-labelledby="fq-h"><p class="hudline" aria-hidden="true">FWD · · · AFT</p><div class="wrap" style="margin-top:60px"><div style="text-align:center"><span class="eyebrow">Questions</span><h2 id="fq-h">G2 questions</h2></div>
@@ -319,21 +329,19 @@ body.hud .btn.glass{border-color:var(--hline)}
  </div>
 </div></section>
 
-<section class="cta" id="join" aria-labelledby="wl-h"><div class="bg" data-par="0.15" role="img" aria-label="A cruise ship on the horizon at sunset"></div>
- <div class="in wrap"><span class="eyebrow" style="color:var(--gold)">Boarding soon</span><h2 id="wl-h">Come aboard early.</h2><p class="sub">Join the waitlist for early access and a first look at new port guides.</p>
- <div class="wlcard">
+
+</main>
+<div class="wlm" id="wlm" hidden><div class="wlm-bd" data-wlclose></div><div class="wlm-box" role="dialog" aria-modal="true" aria-labelledby="wlm-h"><button class="wlm-x" type="button" data-wlclose aria-label="Close">×</button>
+ <span class="eyebrow">Boarding soon</span><h2 id="wlm-h">Join the waitlist</h2><p class="s">Early access and a first look at new port guides. Just your email; the ship is optional.</p>
  <form id="wl-form" novalidate><div class="wl-hp" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
   <label for="wl-email">Email</label><input id="wl-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com">
   <label for="wl-ship">What ship are you sailing next? <span style="opacity:.75;font-weight:400">(optional)</span></label><input id="wl-ship" type="text" name="ship" maxlength="120" autocomplete="off">
   <button class="btn gold" type="submit">Join the waitlist</button><p id="wl-err" class="wl-err" role="alert"></p></form>
- <p id="wl-ok" class="wl-ok" role="status" hidden>You're on the list! We'll let you know first. 🎉</p></div></div>
- <p class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Cruise_ship_blues_(Unsplash).jpg" target="_blank" rel="noopener noreferrer">Cruise ship blues</a> · Unsplash via Wikimedia Commons (CC0)</p>
-</section>
-
-</main>
+ <div id="wl-ok" class="wl-ok" role="status" hidden>You're on the list! 🎉<small>We'll email you first when Decklumos opens up. See you on board.</small><button class="btn gold" type="button" data-wlclose>Done</button></div>
+</div></div>
 <footer><div class="wrap"><div class="row"><img src="../../assets/logo.png" alt="Decklumos" style="height:40px;width:auto"><nav><a href="/privacy/">Privacy Policy</a><a href="/support/">Contact</a></nav></div>
 <p>From stern to bow, know where to go. © 2026 Decklumos · Fonts: Fredoka (<a href="../LICENSE-Fredoka-OFL.txt">OFL</a>) and Inter (<a href="../LICENSE-Inter-OFL.txt">OFL</a>)</p>
-<p class="cr">Photos via Wikimedia Commons, CC0/public domain: <a href="https://commons.wikimedia.org/wiki/File:Addu_City,_Maldives_(Unsplash_MvT9xneoOGU).jpg" target="_blank" rel="noopener noreferrer">Addu City, Maldives</a>, <a href="https://commons.wikimedia.org/wiki/File:Boathouse_neighborhood_(Unsplash).jpg" target="_blank" rel="noopener noreferrer">Boathouse neighborhood</a>, <a href="https://commons.wikimedia.org/wiki/File:Drone_view_of_ocean_waves_1_(Unsplash).jpg" target="_blank" rel="noopener noreferrer">Drone view of ocean waves</a>, <a href="https://commons.wikimedia.org/wiki/File:Beach_2017-05-13_(Unsplash).jpg" target="_blank" rel="noopener noreferrer">Beach</a>, <a href="https://commons.wikimedia.org/wiki/File:Boat_cruise_in_Phang-nga_(Unsplash).jpg" target="_blank" rel="noopener noreferrer">Boat cruise in Phang-nga</a>, <a href="https://commons.wikimedia.org/wiki/File:Cruise_ship_blues_(Unsplash).jpg" target="_blank" rel="noopener noreferrer">Cruise ship blues</a>, <a href="https://commons.wikimedia.org/wiki/File:Amber_Cove_Sunrise_(31647461387).jpg" target="_blank" rel="noopener noreferrer">Amber Cove Sunrise</a>, <a href="https://commons.wikimedia.org/wiki/File:Flying_over_Stanlel_Cay_(3425540229).jpg" target="_blank" rel="noopener noreferrer">Staniel Cay</a>, <a href="https://commons.wikimedia.org/wiki/File:Hubbard_Glacier_Alaska.jpg" target="_blank" rel="noopener noreferrer">Hubbard Glacier</a>, <a href="https://commons.wikimedia.org/wiki/File:Amalfi_Coast_(247891371).jpeg" target="_blank" rel="noopener noreferrer">Amalfi Coast</a>, <a href="https://commons.wikimedia.org/wiki/File:Nyhavn_17_Copenhagen_Denmark.jpg" target="_blank" rel="noopener noreferrer">Nyhavn</a>, <a href="https://commons.wikimedia.org/wiki/File:Tulum_2001_by_Gary_Todd_01.jpg" target="_blank" rel="noopener noreferrer">Tulum</a>.</p>
+<p class="cr">Photos via Wikimedia Commons, CC0/public domain: <a href="https://commons.wikimedia.org/wiki/File:Addu_City,_Maldives_(Unsplash_MvT9xneoOGU).jpg" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" rel="noopener noreferrer">Addu City, Maldives</a>, <a href="https://commons.wikimedia.org/wiki/File:Boathouse_neighborhood_(Unsplash).jpg" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" rel="noopener noreferrer">Boathouse neighborhood</a>, <a href="https://commons.wikimedia.org/wiki/File:Drone_view_of_ocean_waves_1_(Unsplash).jpg" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" rel="noopener noreferrer">Drone view of ocean waves</a>, <a href="https://commons.wikimedia.org/wiki/File:Beach_2017-05-13_(Unsplash).jpg" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" rel="noopener noreferrer">Beach</a>, <a href="https://commons.wikimedia.org/wiki/File:Boat_cruise_in_Phang-nga_(Unsplash).jpg" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" rel="noopener noreferrer">Boat cruise in Phang-nga</a>, <a href="https://commons.wikimedia.org/wiki/File:Cruise_ship_blues_(Unsplash).jpg" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" rel="noopener noreferrer">Cruise ship blues</a>, <a href="https://commons.wikimedia.org/wiki/File:Amber_Cove_Sunrise_(31647461387).jpg" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" rel="noopener noreferrer">Amber Cove Sunrise</a>, <a href="https://commons.wikimedia.org/wiki/File:Flying_over_Stanlel_Cay_(3425540229).jpg" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" rel="noopener noreferrer">Staniel Cay</a>, <a href="https://commons.wikimedia.org/wiki/File:Hubbard_Glacier_Alaska.jpg" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" rel="noopener noreferrer">Hubbard Glacier</a>, <a href="https://commons.wikimedia.org/wiki/File:Amalfi_Coast_(247891371).jpeg" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" rel="noopener noreferrer">Amalfi Coast</a>, <a href="https://commons.wikimedia.org/wiki/File:Nyhavn_17_Copenhagen_Denmark.jpg" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" rel="noopener noreferrer">Nyhavn</a>, <a href="https://commons.wikimedia.org/wiki/File:Tulum_2001_by_Gary_Todd_01.jpg" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" rel="noopener noreferrer">Tulum</a>.</p>
 <p class="d">Decklumos is an independent app. It is not affiliated with, endorsed by, or sponsored by any cruise line. All ship and venue information comes from publicly available sources. Venue positions are approximate. Not for navigation or emergencies. Always follow crew directions in an emergency.</p></div></footer>
 <script>
 (function(){
@@ -351,4 +359,11 @@ var f=document.getElementById('wl-form'),e=document.getElementById('wl-err'),ok=
 f.addEventListener('submit',function(ev){ev.preventDefault();e.textContent='';var em=f.email.value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){e.textContent='Please enter a valid email address.';f.email.focus();return}b.disabled=true;
 fetch('https://decklumos-waitlist.skitzafrenia420420.workers.dev/signup',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email:em,ship:f.ship.value.trim(),honeypot:f.website.value})}).then(function(r){return r.json().then(function(j){return{s:r.status,j:j}})}).then(function(x){if(x.j&&x.j.ok){f.hidden=true;ok.hidden=false}else{e.textContent=x.s===429?'Too many tries. Please try again in a bit.':'Please check your email and try again.';b.disabled=false}}).catch(function(){e.textContent='Something went wrong. Please try again.';b.disabled=false})});
 })();
-</script></body></html>
+</script><script>(function(){var m=document.getElementById('wlm'),box=m.querySelector('.wlm-box'),last=null;
+function foc(){return [].slice.call(box.querySelectorAll('a[href],button,input:not([tabindex="-1"])')).filter(function(x){return x.offsetParent!==null})}
+function open(ev){if(ev)ev.preventDefault();last=document.activeElement;m.hidden=false;document.body.classList.add('wlm-open');var h=document.getElementById('hdr');if(h)h.classList.remove('open');setTimeout(function(){var e=document.getElementById('wl-email');(e&&e.offsetParent?e:foc()[0]).focus()},30)}
+function close(){m.hidden=true;document.body.classList.remove('wlm-open');if(last&&last.focus)last.focus()}
+document.querySelectorAll('a[href$="#join"],[data-wlopen]').forEach(function(a){a.setAttribute('aria-haspopup','dialog');a.addEventListener('click',open)});
+m.querySelectorAll('[data-wlclose]').forEach(function(x){x.addEventListener('click',close)});
+document.addEventListener('keydown',function(e){if(m.hidden)return;if(e.key==='Escape'){e.preventDefault();close()}else if(e.key==='Tab'){var f=foc(),a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}});
+if(location.hash==='#join')open();window.wlOpen=open})();</script></body></html>
