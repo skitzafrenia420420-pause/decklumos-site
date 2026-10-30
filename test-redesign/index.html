@@ -115,7 +115,7 @@ section{padding:120px 0}
 .ports{background:var(--sand);overflow:hidden}
 .phead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
 .arrows{display:flex;gap:10px}.arrows button{width:54px;height:54px;border-radius:50%;border:1.5px solid var(--navy);background:#fff;cursor:pointer;font-size:22px;color:var(--navy);transition:background .2s,color .2s}.arrows button:hover{background:var(--navy);color:#fff}
-.track{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:50px max(28px,calc((100vw - 1240px)/2 + 28px)) 30px;scrollbar-width:none;scroll-padding:0 max(28px,calc((100vw - 1240px)/2 + 28px))}
+.track{display:flex;gap:22px;overflow-x:auto!important;scroll-snap-type:x mandatory;padding:50px max(28px,calc((100vw - 1240px)/2 + 28px)) 30px;scrollbar-width:none;scroll-padding:0 max(28px,calc((100vw - 1240px)/2 + 28px))}
 .track::-webkit-scrollbar{display:none}
 .card{flex:0 0 330px;height:460px;position:relative;border-radius:var(--r);overflow:hidden;scroll-snap-align:start;color:#fff;box-shadow:var(--sh);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
 .card:hover{transform:translateY(-10px)}
@@ -297,7 +297,14 @@ body.wlm-open{overflow:hidden}
 .trend h3{margin:34px 0 12px;font-size:22px;color:var(--navy)}.fchips{display:flex;flex-wrap:wrap;gap:10px}.fchips a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 16px;border-radius:999px;background:#fff;border:1.5px solid var(--line);color:var(--navy);font-weight:600;text-decoration:none}.fchips a:hover{border-color:var(--gold)}.fchips span{font-size:13px;color:#6b7a86;font-weight:500}.tsrc{margin-top:18px;font-size:14px;color:#5b6b78}
 .snt,.pnight{display:inline-block;margin-left:8px;padding:2px 10px;border-radius:999px;background:#FDE8D2;color:#8a4a0c;font-weight:700;font-size:.9em;white-space:nowrap}
 .sfil{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px}.sfil a{min-height:44px;display:inline-flex;align-items:center;padding:8px 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--navy);font-weight:600;text-decoration:none}.sfil a[aria-current]{background:var(--navy);color:#fff;border-color:var(--navy)}
-.slist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}.slist a{display:flex;flex-direction:column;gap:4px;height:100%;padding:18px;border-radius:18px;background:#fff;border:1.5px solid var(--line);color:var(--navy);text-decoration:none;overflow-wrap:anywhere}.slist a:hover{border-color:var(--gold)}.slist .sd,.slist .ss{font-size:14px;color:#5b6b78}.slist em{font-style:normal;font:700 22px Fredoka,Inter,sans-serif;color:#c46d12}.slist .spr{margin-top:6px}.slist .sgo{margin-top:auto;padding-top:8px;font-weight:700;font-size:14px}@media(max-width:700px){.sc .sp{flex-wrap:wrap;justify-content:flex-start;gap:8px 12px}.sc .sp .ppn{white-space:nowrap}}@media(min-width:0px){.phero.pcompact{padding:96px 0 22px}.pcompact h1{font-size:clamp(32px,4.6vw,52px)}.pcompact p{font-size:17px;margin-top:8px}.pcompact .eyebrow{margin-bottom:6px}.pfrom{font:600 24px Fredoka,Inter,sans-serif;color:#FFD9A8}.pbt{opacity:.85;font-size:15px}.pglink{display:inline-block;margin-left:6px;color:#fff;font-weight:700;font-size:15px;text-decoration:underline}.pcompact .crumbs{margin-bottom:6px}}.gpills{display:grid;gap:12px;margin-top:14px}.gpill{display:flex;align-items:center;gap:14px;padding:14px 22px 14px 14px;border-radius:999px;background:linear-gradient(90deg,#FFF4E6,#FDE8D2);border:1.5px solid #f5cf9f;color:var(--navy);text-decoration:none;flex-wrap:wrap;overflow-wrap:anywhere}.gpill:hover{border-color:var(--gold)}.gpi{width:46px;height:46px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:22px;flex:none}.gpt{display:flex;flex-direction:column;flex:1 1 200px;min-width:0}.gpt span{font-size:14px;color:#5b6b78}.gpp{display:flex;flex-direction:column;align-items:flex-end}.gpp b{font:600 20px Fredoka,Inter,sans-serif;color:#c46d12}.gpp span{font-size:13px;font-weight:700;color:#8a4a0c}@media(max-width:560px){.gpill{border-radius:24px}.gpp{align-items:flex-start;margin-left:60px}}.more .bookp{white-space:normal;max-width:100%;text-align:center}.sdays{margin-top:-6px}.sdays a{font-size:.9rem}.hero .in .wrap{text-align:center}.hero .in .wrap>p{margin-left:auto;margin-right:auto}.hero .flash{margin-left:auto;margin-right:auto}.hjobs{display:flex!important;justify-content:center;grid-template-columns:none!important}.hjobs .hfind{width:100%;max-width:580px;margin:0 auto;text-align:left}.hjobs{margin-left:auto!important;margin-right:auto!important}.hero .in h1{margin-left:auto;margin-right:auto}.hero .in .wrap>p{margin-left:auto!important;margin-right:auto!important}</style></head><body id="top">
+.slist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}.slist a{display:flex;flex-direction:column;gap:4px;height:100%;padding:18px;border-radius:18px;background:#fff;border:1.5px solid var(--line);color:var(--navy);text-decoration:none;overflow-wrap:anywhere}.slist a:hover{border-color:var(--gold)}.slist .sd,.slist .ss{font-size:14px;color:#5b6b78}.slist em{font-style:normal;font:700 22px Fredoka,Inter,sans-serif;color:#c46d12}.slist .spr{margin-top:6px}.slist .sgo{margin-top:auto;padding-top:8px;font-weight:700;font-size:14px}@media(max-width:700px){.sc .sp{flex-wrap:wrap;justify-content:flex-start;gap:8px 12px}.sc .sp .ppn{white-space:nowrap}}@media(min-width:0px){.phero.pcompact{padding:96px 0 22px}.pcompact h1{font-size:clamp(32px,4.6vw,52px)}.pcompact p{font-size:17px;margin-top:8px}.pcompact .eyebrow{margin-bottom:6px}.pfrom{font:600 24px Fredoka,Inter,sans-serif;color:#FFD9A8}.pbt{opacity:.85;font-size:15px}.pglink{display:inline-block;margin-left:6px;color:#fff;font-weight:700;font-size:15px;text-decoration:underline}.pcompact .crumbs{margin-bottom:6px}}.gpills{display:grid;gap:12px;margin-top:14px}.gpill{display:flex;align-items:center;gap:14px;padding:14px 22px 14px 14px;border-radius:999px;background:linear-gradient(90deg,#FFF4E6,#FDE8D2);border:1.5px solid #f5cf9f;color:var(--navy);text-decoration:none;flex-wrap:wrap;overflow-wrap:anywhere}.gpill:hover{border-color:var(--gold)}.gpi{width:46px;height:46px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:22px;flex:none}.gpt{display:flex;flex-direction:column;flex:1 1 200px;min-width:0}.gpt span{font-size:14px;color:#5b6b78}.gpp{display:flex;flex-direction:column;align-items:flex-end}.gpp b{font:600 20px Fredoka,Inter,sans-serif;color:#c46d12}.gpp span{font-size:13px;font-weight:700;color:#8a4a0c}@media(max-width:560px){.gpill{border-radius:24px}.gpp{align-items:flex-start;margin-left:60px}}.more .bookp{white-space:normal;max-width:100%;text-align:center}.sdays{margin-top:-6px}.sdays a{font-size:.9rem}.hero .in .wrap{text-align:center}.hero .in .wrap>p{margin-left:auto;margin-right:auto}.hero .flash{margin-left:auto;margin-right:auto}.hjobs{display:flex!important;justify-content:center;grid-template-columns:none!important}.hjobs .hfind{width:100%;max-width:580px;margin:0 auto;text-align:left}.hjobs{margin-left:auto!important;margin-right:auto!important}.hero .in h1{margin-left:auto;margin-right:auto}.hero .in .wrap>p{margin-left:auto!important;margin-right:auto!important}.car{position:relative;margin-top:28px}.ctrk{display:flex!important;gap:18px;overflow-x:auto!important;scroll-snap-type:x mandatory;scroll-padding:0 2px;padding:4px 2px 14px;margin-top:0!important;grid-template-columns:none!important;scrollbar-width:thin}.ctrk:focus-visible{outline:3px solid var(--gold);outline-offset:4px;border-radius:12px}
+.cc{flex:0 0 300px;scroll-snap-align:start;display:flex;flex-direction:column;background:#fff;color:#14304f;border-radius:22px;overflow:hidden;text-decoration:none;box-shadow:0 10px 30px rgba(6,22,44,.18)}
+.cc .im{height:170px;background-size:cover;background-position:center}.cc .hcol{display:flex;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-size:30px;font-weight:600;color:#fff}.hc0{background:linear-gradient(135deg,#f6a04d,#e8664a)}.hc1{background:linear-gradient(135deg,#2bb3c0,#1f6fb2)}.hc2{background:linear-gradient(135deg,#f2c14e,#f08a4b)}.hc3{background:linear-gradient(135deg,#3fbf8f,#1f8a8f)}
+.cc .cb{padding:16px 18px 18px;display:flex;flex-direction:column;gap:4px;flex:1}.cc h3{margin:0;font-size:22px;color:#14304f}.cc .cs{margin:0;font-size:.92rem;color:#4a5d73}.cc .cd{margin:0;font-size:.92rem;color:#4a5d73}.cc .cp{margin:10px 0 12px;font-family:Fredoka,sans-serif;font-size:30px;font-weight:600;color:#e07a2e}.cc .cp small{font-size:15px;color:#4a5d73;font-weight:500}
+.cc .cbtn{margin-top:auto;display:block;text-align:center;background:#14304f;color:#fff;border-radius:999px;padding:12px;font-weight:600}.cc:hover .cbtn,.cc:focus-visible .cbtn{background:#e07a2e}
+.carb{position:absolute;top:40%;z-index:2;width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:#14304f;font-size:28px;line-height:1;box-shadow:0 6px 18px rgba(6,22,44,.25);cursor:pointer}.carb.prev{left:-20px}.carb.next{right:-20px}.carb:disabled{opacity:0;pointer-events:none}.carb:focus-visible{outline:3px solid var(--gold)}
+@media(max-width:700px){.carb{display:none}.cc{flex-basis:80%}}
+</style></head><body id="top">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top" id="hdr"><div class="wrap"><a class="brand" href="#top"><span class="dot" aria-hidden="true"></span>Decklumos</a>
 <nav aria-label="Main" id="mnav"><a href="deck-maps/">Deck Maps</a><a href="deck-maps/#app">App</a><a href="ports/">Ports</a><a href="faq/">FAQ</a><a class="g2l" href="g2/">G2</a></nav>
@@ -333,8 +340,8 @@ body.wlm-open{overflow:hidden}
 </div></section>
 <section class="deals" id="deals" aria-labelledby="dl-h" hidden><div class="wrap">
  <span class="eyebrow">Fresh fares</span><h2 id="dl-h">The best fares we found today</h2><p class="lead">We checked live fares for every region and ranked them by price per night. Tap one and you'll book right on the cruise line's site. We don't sell cruises, we just help you find a good one.</p>
- <div class="dgrid" id="dgrid"></div>
- <div id="holw" hidden><h3 style="margin-top:56px;font-size:30px;color:#fff">Cruise over the holidays</h3><div class="hrow" id="hrow"></div></div>
+ <div class="car" data-car><button class="carb prev" type="button" aria-label="Previous fares">‹</button><div class="dgrid ctrk" id="dgrid" tabindex="0" role="region" aria-label="Fresh fares, scroll sideways"></div><button class="carb next" type="button" aria-label="More fares">›</button></div>
+ <div id="holw" hidden><h3 style="margin-top:56px;font-size:30px;color:#fff">Cruise over the holidays</h3><div class="car" data-car><button class="carb prev" type="button" aria-label="Previous holiday sailings">‹</button><div class="hrow ctrk" id="hrow" tabindex="0" role="region" aria-label="Holiday sailings, scroll sideways"></div><button class="carb next" type="button" aria-label="More holiday sailings">›</button></div></div>
  <div style="margin-top:40px;display:flex;gap:14px;flex-wrap:wrap"><button class="btn gold" id="nyb" type="button" aria-expanded="false" aria-controls="nyl" style="width:auto;display:inline-flex"></button><a class="btn glass" href="ports/" style="width:auto;display:inline-flex">Browse ports →</a></div>
  <div class="nyl" id="nyl" hidden></div>
  <p class="dsrc" id="dsrc"></p>
@@ -344,96 +351,6 @@ body.wlm-open{overflow:hidden}
  <p style="margin-top:22px"><a href="g2/" style="color:var(--sea);font-weight:700">Got Even Realities G2 glasses? See Decklumos on G2 →</a></p>
 </div></section>
 
-<section id="decks"><div class="wrap"><div class="story">
- <div class="media rv"><img src="deck-pool.jpg" alt="The pool deck on Mariner of the Seas" loading="lazy" width="1200" height="674"><div class="float"><span class="ic" aria-hidden="true">📍</span>Found it: pool deck, two decks up</div></div>
- <div class="rv d1"><span class="eyebrow">Never lost on board</span><h2>Find anything, on any deck.</h2>
- <p class="lead">Pools, dining, the theater, your cabin. Search a venue and Decklumos shows you which deck it's on and roughly where, front to back.</p>
- <ul class="ticks"><li>Deck-by-deck maps for 167 ships</li><li>Search venues by name</li><li>Built in, so it works with no signal</li></ul></div>
-</div></div></section>
-
-<section class="deck" aria-labelledby="dk-h"><div class="wrap" style="text-align:center">
- <span class="eyebrow">Try it</span><h2 id="dk-h">Tap around a deck</h2><p class="lead" style="margin:20px auto 0">A playful sample ship, not a real one. Pick a deck, then tap a spot.</p>
- <div class="deckbox rv">
-  <div class="ship">
-   <div class="tabs" role="tablist" aria-label="Sample decks"><button role="tab" aria-selected="true" data-d="0">Deck 5</button><button role="tab" aria-selected="false" data-d="1">Deck 12</button><button role="tab" aria-selected="false" data-d="2">Deck 15</button></div>
-   <div class="hull">
-    <svg viewBox="0 0 800 200" preserveAspectRatio="none" aria-hidden="true"><path d="M30 100 C30 40 90 20 160 20 L700 20 C750 20 790 70 790 100 C790 130 750 180 700 180 L160 180 C90 180 30 160 30 100Z" fill="#fff" stroke="#0B1F3A" stroke-width="3"/><path d="M200 20 V180 M420 20 V180 M600 20 V180" stroke="#cfe6e8" stroke-width="2" stroke-dasharray="6 6"/></svg>
-    <div class="dg" data-g="0"><button class="spot act" style="left:22%;top:50%" data-t="Main dining room" data-k="Deck 5 · Aft" data-p="Sit-down dinners and breakfast. Head to the back of the ship.">🍽️</button><button class="spot" style="left:52%;top:50%" data-t="Guest services" data-k="Deck 5 · Midship" data-p="Questions, onboard account and lost and found, right in the middle.">💬</button><button class="spot" style="left:82%;top:50%" data-t="Theater" data-k="Deck 5 · Forward" data-p="Evening shows up front. Get there early for good seats.">🎭</button></div>
-    <div class="dg hidden" data-g="1"><button class="spot" style="left:25%;top:50%" data-t="Buffet" data-k="Deck 12 · Aft" data-p="Casual bites all day, toward the back of the ship.">🥐</button><button class="spot" style="left:52%;top:50%" data-t="Main pool" data-k="Deck 12 · Midship" data-p="Sun, splash and loungers in the middle of the ship.">🏊</button><button class="spot" style="left:80%;top:50%" data-t="Kids club" data-k="Deck 12 · Forward" data-p="Fun for the little ones, up front.">🧸</button></div>
-    <div class="dg hidden" data-g="2"><button class="spot" style="left:28%;top:50%" data-t="Sports court" data-k="Deck 15 · Aft" data-p="Shoot hoops with an ocean view.">🏀</button><button class="spot" style="left:55%;top:50%" data-t="Water slides" data-k="Deck 15 · Midship" data-p="Up top for the best thrills.">🌊</button><button class="spot" style="left:80%;top:50%" data-t="Sun deck" data-k="Deck 15 · Forward" data-p="A quieter spot to soak up the view.">☀️</button></div>
-   </div>
-   <div class="legend"><span>← Aft<span class="x"> (back)</span></span><span>Midship</span><span>Forward<span class="x"> (front)</span> →</span></div>
-  </div>
-  <div class="info" aria-live="polite"><div><div class="k" id="dk-k">Deck 5 · Aft</div><h3 id="dk-t">Main dining room</h3><p id="dk-p">Sit-down dinners and breakfast. Head to the back of the ship.</p></div><small>Sample layout for fun. In the app, you'll see your real ship's decks.</small></div>
- </div>
-</div></section>
-
-<section class="dev" id="app" aria-labelledby="dv-h"><div class="wrap">
- <div style="text-align:center"><span class="eyebrow">The app</span><h2 id="dv-h">Easy from the first tap.</h2>
- <p class="lead" style="margin:20px auto 0">Everything you need on board, in one simple app. Tap a feature to see the real screen.</p></div>
- <div class="appgrid">
-  <div class="feats rv" role="group" aria-label="App features">
-   <button aria-pressed="true" data-s="app-deck-found.jpg" data-a="Decklumos showing a venue found on a deck map"><b>🔍 Search a venue</b><span>Type a name and see which deck it's on, front to back.</span></button>
-   <button aria-pressed="false" data-s="app-cabin.jpg" data-a="Decklumos cabin screen"><b>🛏️ Find your cabin</b><span>Save your cabin and find your way back to it.</span></button>
-   <button aria-pressed="false" data-s="app-home.jpg" data-a="Decklumos home screen with My Trips"><b>🗓️ Plan your trip</b><span>Keep your sailing and day plans in one place.</span></button>
-   <button aria-pressed="false" data-s="app-ports.jpg" data-a="Decklumos port guides"><b>⚓ Port guides</b><span>Get to know each stop before you step off.</span></button>
-   <button aria-pressed="false" data-s="app-trivia-answer.jpg" data-a="Decklumos cruise trivia"><b>🧠 Cruise trivia</b><span>Fun questions for sea days with the whole crew.</span></button>
-  </div>
-  <div class="bigphone rv d1"><div class="phone"><img id="ph-a" src="app-deck-found.jpg" alt="Decklumos showing a venue found on a deck map" width="585" height="1266"></div></div>
- </div>
- <ol class="taps">
-  <li class="rv"><span>1</span><div><b>Pick your cruise line</b><p>Choose from 10 cruise lines.</p></div></li>
-  <li class="rv d1"><span>2</span><div><b>Pick your ship</b><p>167 ships with deck-by-deck maps.</p></div></li>
-  <li class="rv d2"><span>3</span><div><b>Find your way</b><p>Search a venue and go. No signal needed.</p></div></li>
- </ol>
-</div></section>
-
-<section class="ports" id="ports" aria-labelledby="pt-h" style="padding-bottom:90px"><div class="wrap phead"><div><span class="eyebrow">Port guides</span><h2 id="pt-h">Where would you love to wake up?</h2></div>
- <div class="arrows"><button id="pv" aria-label="Previous ports">←</button><button id="nx" aria-label="Next ports">→</button></div></div>
- <div class="track" id="track" tabindex="0" aria-label="Cruise regions">
-  <a class="card" href="ports/?r=caribbean"><img src="port-caribbean.jpg" alt="Sunrise over a Caribbean cruise port" loading="lazy"><div class="t"><span>Region</span><h3>Caribbean</h3></div></a>
-  <a class="card" href="ports/?r=bahamas"><img src="port-bahamas.jpg" alt="Islands and clear water in the Bahamas" loading="lazy"><div class="t"><span>Region</span><h3>Bahamas</h3></div></a>
-  <a class="card" href="ports/?r=alaska"><img src="port-alaska.jpg" alt="Hubbard Glacier in Alaska" loading="lazy"><div class="t"><span>Region</span><h3>Alaska</h3></div></a>
-  <a class="card" href="ports/?r=mediterranean"><img src="port-mediterranean.jpg" alt="The Amalfi Coast in Italy" loading="lazy"><div class="t"><span>Region</span><h3>Mediterranean</h3></div></a>
-  <a class="card" href="ports/?r=northern-europe"><img src="port-northern-europe.jpg" alt="Colorful houses at Nyhavn, Copenhagen" loading="lazy"><div class="t"><span>Region</span><h3>Northern Europe</h3></div></a>
-  <a class="card" href="ports/?r=mexico"><img src="port-mexico-central-america.jpg" alt="Ruins above the sea at Tulum, Mexico" loading="lazy"><div class="t"><span>Region</span><h3>Mexico &amp; Central America</h3></div></a>
-  <a class="card" href="ports/"><img src="ship-tender.jpg" alt="A cruise ship tender boat heading to shore" loading="lazy"><div class="t"><span>Ashore</span><h3>All ports</h3></div></a>
- </div>
-</section>
-
-<section class="sand" style="background:#fff"><div class="wrap"><div class="story flip">
- <div class="media rv"><img src="ship-in-port.jpg" alt="Independence of the Seas docked in port" loading="lazy" width="1200" height="674"><div class="float"><span class="ic" aria-hidden="true">🗓️</span>Plan your day, port by port</div></div>
- <div class="rv d1"><span class="eyebrow">Plan the fun</span><h2>Your trip, all in one place.</h2>
- <p class="lead">Add your sailing, keep your plans for each day and check them anytime, right on your phone.</p>
- <ul class="ticks"><li>Port guides for where you're headed</li><li>Your cabin, saved and easy to find</li><li>No sign-up needed (account optional)</li></ul></div>
-</div></div></section>
-
-
-<section class="band" aria-label="Sea days"><div class="bg" data-par="0.18" role="img" aria-label="The pool deck on the Celebrity Beyond"></div><div class="in wrap"><span class="eyebrow" style="color:var(--gold)">Sea days</span><h2>More time for the good stuff.</h2><p>Less wandering the halls. More sunsets, shows and second desserts.</p></div>
- <p class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Pool_Deck_on_the_Celebrity_Beyond_(54357888481).jpg" target="_blank" rel="noopener noreferrer">Pool Deck on the Celebrity Beyond</a> by slgckgc · CC BY 2.0</p></section>
-
-<section class="sand" aria-labelledby="qz-h"><div class="wrap" style="text-align:center"><span class="eyebrow">Sea-day trivia</span><h2 id="qz-h">Quick! Test your cruise smarts</h2>
- <div class="quiz rv"><div class="q">What is a "sea day"?</div>
-  <div class="opts"><button class="opt" data-ok="0">A day at a beach port</button><button class="opt" data-ok="1">A day with no port stop</button><button class="opt" data-ok="0">The first day of a cruise</button><button class="opt" data-ok="0">A day for swimming lessons</button></div><p id="qres" aria-live="polite"></p></div>
-</div></section>
-
-<section class="g2s" aria-labelledby="g2-h"><div class="wrap"><div class="g2box rv">
- <div class="lens"><video autoplay muted loop playsinline preload="none" poster="../assets/anim-3-find-your-way-poster.jpg" aria-label="Decklumos shown on Even Realities G2 glasses"><source src="../assets/anim-3-find-your-way.mp4" type="video/mp4"></video></div>
- <div><span class="eyebrow">Optional extra</span><h2 id="g2-h">Got Even Realities G2 glasses?</h2><p>Decklumos works there too. A nice bonus, never required.</p><a class="more" href="g2/">See what it does on G2 →</a></div>
-</div></div></section>
-
-<section id="faq" aria-labelledby="fq-h"><div class="wrap"><div style="text-align:center"><span class="eyebrow">Questions</span><h2 id="fq-h">Quick answers before you sail</h2></div>
- <div class="faq">
-  <details open><summary>What is Decklumos?</summary><p>Decklumos puts every deck of your ship in your pocket, with venues, port guides and your trip plans.</p></details>
-  
-  <details><summary>Does Decklumos work offline?</summary><p>Yes! Deck maps, port guides and your trips are built into the app, so they work with no Wi-Fi or signal. Cruise News needs a connection to load the latest stories.</p></details>
-  <details><summary>Which cruise ships does Decklumos support?</summary><p>Decklumos supports 167 ships across 10 cruise lines, including Royal Caribbean, Carnival, Celebrity Cruises, Disney Cruise Line, MSC Cruises, Norwegian Cruise Line, and more. Check the app to see if your ship is supported.</p></details>
-  <details><summary>Is Decklumos free to download?</summary><p>Yes! Decklumos is free.</p></details>
-  <details><summary>Do I need an account?</summary><p>No. Everything in Decklumos works without signing in. Creating an account is optional.</p></details>
-  <details><summary>Do I need anything besides my phone?</summary><p>No, Decklumos works right on your phone. If you also have Even Realities G2 glasses, it works there too.</p></details>
- </div>
- <div class="contact rv"><h2>Missing your ship or found a mistake?</h2><p>Email the Owners. We read every message and we'd love to hear from you.</p><a class="btn navy" href="mailto:support@decklumos.com">support@decklumos.com</a></div>
-</div></section>
 </main>
 <div class="wlm" id="wlm" hidden><div class="wlm-bd" data-wlclose></div><div class="wlm-box" role="dialog" aria-modal="true" aria-labelledby="wlm-h"><button class="wlm-x" type="button" data-wlclose aria-label="Close">×</button>
  <span class="eyebrow">Boarding soon</span><h2 id="wlm-h">Join the waitlist</h2><p class="s">Early access and a first look at new port guides. Just your email; the ship is optional.</p>
@@ -543,11 +460,13 @@ function sailingsPage(){var el=document.getElementById('slist');if(!el)return;va
  document.getElementById('smore').onclick=function(){n+=40;draw()};draw()}).catch(function(){})}
 var BOOK={Carnival:function(r){var u=r.url||'';return /^https:\/\/www\.carnival\.com\/booking\?.*sailingID=\d+/.test(u)&&/sailDate=\d{8}/.test(u)?u:u}};
 function bookUrl(r,line){var f=BOOK[line||r.source||r.line||'Carnival'];return f?f(r):r.url}
+function carCard(u,top,name,b){var d1=fd(b.date,{month:'short',day:'numeric'}),d2=fd(b.end,{month:'short',day:'numeric',year:'numeric'});return '<a class="cc" href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+top+'<div class="cb"><h3>'+esc(name)+'</h3><p class="cs">'+esc(b.ship)+' · '+esc(String(b.title||'').replace(/^\d+-Day /,''))+'</p><p class="cd">'+d1+' – '+d2+'</p><p class="cp">from $'+b.price+' <small>a person</small></p><span class="cbtn">Book on Carnival ↗</span><span class="sr"> (opens in a new tab)</span></div></a>'}
+function carInit(){[].forEach.call(document.querySelectorAll('[data-car]'),function(c){if(c.dataset.ok)return;c.dataset.ok=1;var t=c.querySelector('.ctrk'),p=c.querySelector('.prev'),n=c.querySelector('.next');if(!t||!p||!n)return;var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;function go(k){t.scrollBy({left:k*t.clientWidth*.85,behavior:rm?'auto':'smooth'})}function up(){p.disabled=t.scrollLeft<4;n.disabled=t.scrollLeft+t.clientWidth>=t.scrollWidth-4}p.onclick=function(){go(-1)};n.onclick=function(){go(1)};t.addEventListener('scroll',up,{passive:true});addEventListener('resize',up);setTimeout(up,50)})}
 function homeDeals(){getJ('data/sailings.json?v='+Date.now()).then(function(S){var D=S.deals;heroFind(S);if(!D||!D.regions.length||fresh(S)===false)return;
  var f=D.fromPerNight,fl=document.getElementById('flash');
  if(f){fl.href=bookUrl(f.sailing);fl.target='_blank';fl.rel='noopener noreferrer';fl.innerHTML='<span class="tg">Today\'s best</span><b>Cruises from $'+f.value+' a night</b><small>'+esc(f.sailing.nights)+'-night '+esc(f.sailing.title.replace(/^\d+-Day /,''))+' · carnival.com, checked '+ck(S.checked)+'</small>';fl.hidden=false}
- document.getElementById('dgrid').innerHTML=D.regions.map(function(g,i){var b=g.best;return '<a class="dc" href="'+esc(bookUrl(b))+'" target="_blank" rel="noopener noreferrer"><div class="im" style="background-image:url('+esc(g.img)+')" role="img" aria-label="'+esc(g.name)+'"></div>'+(i<3?'<span class="rk">'+['Best value now','No. 2','No. 3'][i]+'</span>':'')+'<div class="bd"><div>'+promoHtml(g.promo||b.promos&&b.promos[0])+'</div><h3>'+esc(g.name)+'</h3><div class="pr">from $'+b.perNight+'<span> a night</span></div><div class="ppn">a person, before taxes</div><div class="mt">$'+b.price+' a person in total · '+b.nights+' nights · '+esc(b.ship)+'<br>'+fd(b.date)+' · from '+esc(b.from)+' · stops at '+esc(g.portName)+'</div><span class="go">See this sailing on carnival.com ↗</span></div></a>'}).join('');
- if(D.holidays&&D.holidays.length){document.getElementById('hrow').innerHTML=D.holidays.map(function(h){var b=h.best;return '<a class="hc" href="'+esc(b.url)+'" target="_blank" rel="noopener noreferrer"><b>'+esc(h.holiday)+' '+h.day.slice(0,4)+'</b><span>'+fd(b.date,{month:'short',day:'numeric'})+' · '+b.nights+' nights · '+esc(b.ship)+'</span><br><em>from $'+b.price+'</em> <small class="ppn">a person, before taxes</small>'+(b.perNight?' <span class="pnight">$'+b.perNight+' a night</span>':'')+' <span>· '+h.count+' sailings at sea that day</span></a>'}).join('');document.getElementById('holw').hidden=false}
+ document.getElementById('dgrid').innerHTML=D.regions.map(function(g,i){var b=g.best;return carCard(bookUrl(b),'<div class="im" style="background-image:url('+esc(g.img)+')" role="img" aria-label="'+esc(g.name)+'"></div>',g.name,b)}).join('');carInit();
+ if(D.holidays&&D.holidays.length){document.getElementById('hrow').innerHTML=D.holidays.map(function(h,i){var b=h.best;return carCard(b.url,'<div class="im hcol hc'+(i%4)+'" aria-hidden="true"><span>'+esc(h.holiday)+'</span></div>',h.holiday+' '+h.day.slice(0,4),b)}).join('');carInit();document.getElementById('holw').hidden=false}
  var ny=D.nextYear,nb=document.getElementById('nyb'),nl=document.getElementById('nyl');
  if(ny&&ny.picks.length){nb.textContent='Browse '+ny.year+' cruises';nl.innerHTML=ny.picks.map(function(b){return '<a href="'+esc(b.url)+'" target="_blank" rel="noopener noreferrer"><span>'+fd(b.date)+' · '+esc(b.title)+' · '+esc(b.ship)+'</span><b>from $'+b.price+' <small>a person, before taxes</small>'+(b.perNight?' <span class="pnight">$'+b.perNight+' a night</span>':'')+' ↗</b></a>'}).join('');nb.onclick=function(){var o=nl.hidden;nl.hidden=!o;nb.setAttribute('aria-expanded',o)}}else nb.remove();
  document.getElementById('dsrc').innerHTML=srcLine(S)+(D.dropped.length?' Not shown (no live fares right now): '+D.dropped.map(esc).join(', ')+'.':'');
