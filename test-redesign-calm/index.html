@@ -305,6 +305,12 @@ body.wlm-open{overflow:hidden}
 .cc .cbtn{margin-top:auto;display:block;text-align:center;background:#14304f;color:#fff;border-radius:999px;padding:12px;font-weight:600}.cc:hover .cbtn,.cc:focus-visible .cbtn{background:#e07a2e}
 .carb{position:absolute;top:40%;z-index:2;width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:#14304f;font-size:28px;line-height:1;box-shadow:0 6px 18px rgba(6,22,44,.25);cursor:pointer}.carb.prev{left:-20px}.carb.next{right:-20px}.carb:disabled{opacity:0;pointer-events:none}.carb:focus-visible{outline:3px solid var(--gold)}
 @media(max-width:700px){.carb{display:none}.cc{flex-basis:80%}}
+@media all{/* left-align text on all widths (Pause, Oct 30); buttons stay centered, hero search card stays a centered block */
+main,main section,main .wrap,.hero .in,.cta,.contact,.stat,.wl-ok,.more,.wlcard,.phero,main [style*="text-align:center"]{text-align:left!important}
+.hero .in h1,main .lead,main section h2{margin-left:0!important}
+main .btn,main button,main .bookp,main .cbtn,main .ship .hull,main .ship .legend{text-align:center!important}
+.hero .hjobs{text-align:center!important}.hero .hfind{text-align:left!important;margin-left:auto!important;margin-right:auto!important}
+}
 </style></head><body id="top">
 <a class="skip" href="../test-redesign-calm/#main">Skip to content</a>
 <header class="top" id="hdr"><div class="wrap"><a class="brand" href="../test-redesign-calm/#top"><span class="dot" aria-hidden="true"></span>Decklumos</a>

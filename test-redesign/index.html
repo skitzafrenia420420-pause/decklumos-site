@@ -177,10 +177,11 @@ footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;
  .cta{padding:110px 0}.cta .bg{background-image:url(cta-cruise-sunset-m.jpg)}.wlcard{padding:22px}
  .top .btn{display:none}.credit{font-size:10px;left:16px}
 }
-@media (max-width:760px){/* phone: left-align text like the app request (Pause, Oct 30); buttons stay centered */
+@media all{/* left-align text on all widths (Pause, Oct 30); buttons stay centered, hero search card stays a centered block */
 main,main section,main .wrap,.hero .in,.cta,.contact,.stat,.wl-ok,.more,.wlcard,.phero,main [style*="text-align:center"]{text-align:left!important}
 .hero .in h1,main .lead,main section h2{margin-left:0!important}
 main .btn,main button,main .bookp,main .cbtn,main .ship .hull,main .ship .legend{text-align:center!important}
+.hero .hjobs{text-align:center!important}.hero .hfind{text-align:left!important;margin-left:auto!important;margin-right:auto!important}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
 
