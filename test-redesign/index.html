@@ -5,7 +5,7 @@
 <style>
 @font-face{font-family:Fredoka;src:url(Fredoka.woff2) format("woff2");font-weight:300 700;font-display:swap}
 @font-face{font-family:Inter;src:url(Inter-Variable.woff2) format("woff2");font-weight:100 900;font-display:swap}
-:root{--t1:#0F2238;--t2:#3D5470;--t3:#56697F;--acc:#0A7FB5;--accE:#075E87;--txtacc:#076A99;--ring:#CFE3EE;--ring2:#E1EDF4;--edge:#D6E6EF;--hint:#E3F3FB;--coral:#C2410C;--coralE:#8A2E08;--sel:#FF6B57;--gold:#FFD58A;--green:#00866B;--c0:#D93A40;--c1:#2F5FD0;--c2:#FFAA00;--c3:#00866B;--sea:#0E9BD4;--sky1:#FF8A5B;--sky2:#FFC46B}
+:root{--sh:0 1px 2px rgba(15,34,56,.06),0 8px 24px rgba(15,34,56,.09);--t1:#0F2238;--t2:#3D5470;--t3:#56697F;--acc:#0A7FB5;--accE:#075E87;--txtacc:#076A99;--ring:#CFE3EE;--ring2:#E1EDF4;--edge:#D6E6EF;--hint:#E3F3FB;--coral:#C2410C;--coralE:#8A2E08;--sel:#FF6B57;--gold:#FFD58A;--green:#00866B;--c0:#D93A40;--c1:#2F5FD0;--c2:#FFAA00;--c3:#00866B;--sea:#0E9BD4;--sky1:#FF8A5B;--sky2:#FFC46B}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;font:500 16px/1.55 Inter,system-ui,sans-serif;color:var(--t1);background:#FFFDF8;overflow-x:hidden}
 h1,h2,h3,.fz{font-family:Fredoka,Inter,sans-serif;font-weight:700;letter-spacing:-.01em;line-height:1.08}
@@ -18,20 +18,19 @@ a{color:var(--txtacc)}.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
 .btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 8px 0 var(--accE)}.btn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--accE)}
 .btn.sun{background:var(--coral);box-shadow:0 5px 0 var(--coralE)}.btn.sun:hover{box-shadow:0 8px 0 var(--coralE)}.btn.sun:active{box-shadow:0 1px 0 var(--coralE)}
 .btn.w{background:#fff;color:var(--txtacc);box-shadow:0 5px 0 #BFD8E6}
-.sticker{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;font:600 15px Fredoka,Inter;background:#fff;color:var(--t1);border:3px solid #fff;box-shadow:0 0 0 2px var(--t1),3px 4px 0 2px var(--t1);transform:rotate(var(--r,-3deg));transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
-.sticker:hover{transform:rotate(0) scale(1.08)}
+.sticker{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:999px;font:600 14px Fredoka,Inter;letter-spacing:.01em;background:#fff;color:var(--t1);box-shadow:0 0 0 1.5px rgba(15,34,56,.12),0 2px 0 rgba(15,34,56,.08);transition:transform .2s ease}
+.sticker:hover{transform:translateY(-2px)}
 .st-gold{background:var(--gold);color:#3A2A00}.st-mint{background:#B9F2DA}.st-pink{background:#FFD3CC}.st-sky{background:#BFE6FA}
-.eyebrow{--r:-2deg}
 /* header */
 .top{position:sticky;top:0;z-index:20;background:rgba(255,253,248,.92);backdrop-filter:blur(8px);border-bottom:2px solid #F1E9DA}
 .top .wrap{display:flex;align-items:center;gap:16px;height:66px}.top img{height:34px;display:block;filter:brightness(0) saturate(100%) invert(12%) sepia(30%) saturate(1500%) hue-rotate(185deg)}
 .nav{display:flex;gap:4px;margin-left:auto}.nav a{font:600 16px Fredoka;color:var(--t2);text-decoration:none;padding:8px 12px;border-radius:16px;transition:background .2s,transform .2s}.nav a:hover{background:var(--hint);transform:translateY(-2px)}
 .top .btn{min-height:42px;padding:0 18px;font-size:16px}
 /* hero */
-.hero{position:relative;background:linear-gradient(180deg,#FFB27A 0%,#FFD08A 30%,#FFE9B8 52%,#BFE9FA 70%);overflow:hidden;padding:54px 0 0}
+.hero{position:relative;background:linear-gradient(180deg,#FFC9A0 0%,#FFE0AE 32%,#FFF1D6 54%,#CDEDF9 72%);overflow:hidden;padding:54px 0 0}
 .hero .wrap{position:relative;z-index:2;text-align:center}
-.hero h1{font-size:clamp(58px,10vw,118px);margin:14px 0 4px;color:#fff;text-shadow:0 5px 0 var(--coral),0 10px 24px rgba(194,65,12,.25)}
-.slogan{font:600 clamp(22px,3vw,32px) Fredoka;color:#7A2A08;margin:0 0 12px}
+.hero h1{font-size:clamp(58px,10vw,118px);margin:14px 0 4px;color:#fff;color:var(--t1);text-shadow:none}
+.slogan{font:600 clamp(22px,3vw,32px) Fredoka;color:#9A3A10;margin:0 0 12px}
 .lead{max-width:640px;margin:0 auto 22px;font-size:18px;color:#4A2A12;font-weight:600}
 .ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 .stk{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:24px 0 0}
@@ -47,29 +46,29 @@ a{color:var(--txtacc)}.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
 .ship{position:absolute;bottom:92px;left:0;width:190px;z-index:3;animation:sail 26s linear infinite}
 .ship svg{display:block;animation:bob 2.6s ease-in-out infinite;transform-origin:50% 80%}
 @keyframes sail{from{transform:translateX(-220px)}to{transform:translateX(calc(100vw + 40px))}}
-@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(2deg)}}
-.floaty{position:absolute;z-index:2;font-size:34px;width:64px;height:64px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.75);box-shadow:0 6px 18px rgba(15,34,56,.12);animation:float 6s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-18px) rotate(6deg)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.floaty{position:absolute;z-index:2;font-size:26px;width:52px;height:52px;opacity:.9;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.75);box-shadow:0 6px 18px rgba(15,34,56,.12);animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 /* wavy dividers */
 .div{display:block;width:100%;height:60px}
-section{padding:70px 0;position:relative}
-.bg-sea{background:#D9F1FC}.bg-sand{background:#FFF1DC}.bg-mint{background:#DDF6EC}.bg-cream{background:#FFFDF8}.bg-navy{background:#0F2238;color:#fff}
+section{padding:64px 0;position:relative}
+.bg-sea{background:#E8F5FB}.bg-sand{background:#FFF6EA}.bg-mint{background:#E8F7F0}.bg-cream{background:#FFFDF8}.bg-navy{background:#0F2238;color:#fff}
 .sub{font-size:18px;color:var(--t2);max-width:560px;margin:0 0 18px}
 .show{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}.show.flip>.copy{order:2}
 /* phone */
-.phone{width:min(290px,72vw);margin:0 auto;border-radius:44px;background:#0F2238;padding:10px;box-shadow:0 0 0 4px #fff,0 0 0 7px var(--t1),12px 18px 0 0 rgba(15,34,56,.18);transform:rotate(var(--r,3deg));transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
-.phone:hover{transform:rotate(0) scale(1.03)}.phone img{width:100%;height:auto;display:block;border-radius:34px;aspect-ratio:585/1266;object-fit:cover}
+.phone{width:min(280px,70vw);margin:0 auto;border-radius:42px;background:#0F2238;padding:9px;box-shadow:0 0 0 3px #fff,0 0 0 4.5px #C9D8E4,var(--sh);transition:transform .25s ease}
+.phone:hover{transform:translateY(-4px)}.phone img{width:100%;height:auto;display:block;border-radius:34px;aspect-ratio:585/1266;object-fit:cover}
 /* card */
-.card{background:#fff;border-radius:28px;padding:26px;box-shadow:0 0 0 2.5px var(--t1),6px 7px 0 var(--t1)}
+.card{background:#fff;border-radius:28px;padding:26px;box-shadow:var(--sh)}
 /* wheel */
 .wheelbox{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;margin-top:8px}
 .wheel{position:relative;width:250px;height:250px}
-.wheel svg{width:100%;height:100%;transition:transform 3.2s cubic-bezier(.17,.9,.25,1.03);filter:drop-shadow(5px 6px 0 rgba(15,34,56,.85))}
+.wheel svg{width:100%;height:100%;transition:transform 3.2s cubic-bezier(.17,.9,.25,1.03);filter:drop-shadow(0 6px 10px rgba(15,34,56,.18))}
 .wheel .pin{position:absolute;top:-10px;left:50%;margin-left:-14px;width:28px;height:34px;z-index:2}
-.wheel .hub{position:absolute;inset:50% auto auto 50%;width:56px;height:56px;margin:-28px;border-radius:50%;background:#fff;border:4px solid var(--t1);display:grid;place-items:center;font-size:24px}
+.wheel .hub{position:absolute;inset:50% auto auto 50%;width:56px;height:56px;margin:-28px;border-radius:50%;background:#fff;border:3px solid #fff;box-shadow:var(--sh);display:grid;place-items:center;font-size:24px}
 .wres{font:600 26px Fredoka;color:var(--txtacc);min-height:66px;margin:8px 0 14px}
 .tob-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-.tob{display:flex;align-items:center;gap:8px;background:#fff;border-radius:22px;padding:10px 16px;font:600 16px Fredoka;box-shadow:0 0 0 2px var(--ring),0 4px 0 var(--edge);transition:transform .2s cubic-bezier(.3,1.6,.5,1)}.tob:hover{transform:translateY(-4px) rotate(-2deg)}
+.tob{display:flex;align-items:center;gap:8px;background:#fff;border-radius:22px;padding:10px 16px;font:600 16px Fredoka;box-shadow:0 0 0 2px var(--ring),0 4px 0 var(--edge);transition:transform .2s cubic-bezier(.3,1.6,.5,1)}.tob:hover{transform:translateY(-3px)}
 .tob i{font-style:normal;font-size:22px}
 /* trivia */
 .quiz{max-width:560px}.quiz .q{font:700 28px Fredoka;margin:6px 0 16px}
@@ -81,7 +80,7 @@ section{padding:70px 0;position:relative}
 .opt.dim{opacity:.35}.opt.win{animation:pop .5s cubic-bezier(.3,1.6,.5,1)}.opt.miss{animation:shake .4s}
 @keyframes pop{50%{transform:scale(1.07)}}@keyframes shake{25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
 .qres{min-height:54px;margin-top:16px;font:700 22px Fredoka;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.qres .good{color:#fff;background:var(--green);padding:8px 18px;border-radius:999px;box-shadow:3px 4px 0 var(--t1);animation:pop .5s}
+.qres .good{color:#fff;background:var(--green);padding:8px 18px;border-radius:999px;animation:pop .5s}
 .qres .try{color:var(--coral)}
 .burst{position:absolute;pointer-events:none;font-size:26px;animation:burst .9s ease-out forwards}
 @keyframes burst{to{transform:translate(var(--x),var(--y)) scale(.4);opacity:0}}
@@ -89,13 +88,13 @@ section{padding:70px 0;position:relative}
 /* carousels */
 .rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,1fr);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 4px 18px;scrollbar-width:thin}
 .rail>*{scroll-snap-align:start}
-.tile{position:relative;height:170px;border-radius:24px;overflow:hidden;border:3px solid #fff;box-shadow:0 0 0 2px var(--t1),4px 5px 0 2px var(--t1);transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
-.tile:hover{transform:translateY(-6px) rotate(-1.5deg)}
+.tile{position:relative;height:160px;border-radius:22px;overflow:hidden;box-shadow:var(--sh);transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
+.tile:hover{transform:translateY(-4px)}
 .tile b{position:absolute;left:12px;bottom:10px;font:600 19px Fredoka;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.35)}.tile .e{position:absolute;right:12px;top:8px;font-size:34px}
 .g1{background:linear-gradient(160deg,#2EC4E6,#0A7FB5)}.g2{background:linear-gradient(160deg,#FFC46B,#FF8A5B)}.g3{background:linear-gradient(160deg,#5B8DEF,#2F5FD0)}.g4{background:linear-gradient(160deg,#8FD3C8,#1D7A8C)}.g5{background:linear-gradient(160deg,#FF9E6B,#D93A40)}.g6{background:linear-gradient(160deg,#7FB2D9,#3D5470)}.g7{background:linear-gradient(160deg,#F2B04B,#C2410C)}.g8{background:linear-gradient(160deg,#4FC9A0,#00866B)}
 .chips{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
 .chip{padding:8px 16px;border-radius:999px;border:2px solid var(--acc);color:var(--txtacc);background:#fff;font:600 16px Fredoka}.chip.on{background:var(--acc);color:#fff}
-.search{display:flex;align-items:center;gap:10px;background:#fff;border-radius:26px;height:54px;padding:0 20px;font:500 17px Inter;color:var(--t3);box-shadow:0 0 0 2.5px var(--t1),4px 5px 0 var(--t1);max-width:420px}
+.search{display:flex;align-items:center;gap:10px;background:#fff;border-radius:26px;height:54px;padding:0 20px;font:500 17px Inter;color:var(--t3);box-shadow:0 0 0 1.5px var(--ring),var(--sh);max-width:420px}
 .duo{display:flex;gap:18px;justify-content:center}.duo .phone{width:min(240px,42vw)}
 .trip{display:flex;align-items:center;gap:14px;max-width:440px;margin-top:12px}
 .trip i{font-style:normal;font-size:28px;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--gold)}
@@ -103,29 +102,29 @@ section{padding:70px 0;position:relative}
 .addtrip{display:flex;align-items:center;gap:10px;max-width:440px;margin-top:14px;padding:16px 20px;border-radius:22px;border:3px dashed var(--acc);background:#fff;font:600 18px Fredoka;color:var(--txtacc)}
 /* glasses */
 .vids{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}
-.vids figure{margin:0;transition:transform .2s cubic-bezier(.3,1.6,.5,1)}.vids figure:hover{transform:translateY(-6px) rotate(-1deg)}
+.vids figure{margin:0;transition:transform .2s cubic-bezier(.3,1.6,.5,1)}.vids figure:hover{transform:translateY(-4px)}
 .vids video{width:100%;border-radius:22px;display:block;border:3px solid #2BA3C2;background:#000}
 .vids figcaption{font:600 17px Fredoka;color:#BFE6FA;margin-top:8px;text-align:center}
-.feat{background:#fff;border-radius:26px;padding:22px;box-shadow:0 0 0 2.5px var(--t1),5px 6px 0 var(--t1);transition:transform .2s cubic-bezier(.3,1.6,.5,1)}.feat:hover{transform:translateY(-6px) rotate(-1deg)}
+.feat{background:#fff;border-radius:26px;padding:22px;box-shadow:var(--sh);transition:transform .2s cubic-bezier(.3,1.6,.5,1)}.feat:hover{transform:translateY(-4px)}
 .feat i{font-style:normal;font-size:30px;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;margin-bottom:10px}
 .feat b{display:block;font:600 21px Fredoka;margin-bottom:6px}.feat p{margin:0;color:var(--t2);font-size:15px}
 /* waitlist */
 .wl{max-width:640px;margin:0 auto;position:relative;text-align:center}
 .wl-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .wl label.l{display:block;text-align:left;font:600 17px Fredoka;margin:14px 4px 6px}
-.wl input{width:100%;height:54px;border-radius:27px;border:2.5px solid var(--t1);background:#F7FBFE;padding:0 20px;font:500 16px Inter;color:var(--t1)}
+.wl input{width:100%;height:54px;border-radius:27px;border:1.5px solid #C9D8E4;background:#F7FBFE;padding:0 20px;font:500 16px Inter;color:var(--t1)}
 .wl input:focus{outline:3px solid var(--acc);outline-offset:2px;background:#fff}
 .wl .btn{width:100%;margin-top:20px;font-size:20px;min-height:58px}
 .wl-err{color:#B3262C;font:700 15px Inter;min-height:20px;margin:12px 0 0}
 .wl-ok{font:700 26px Fredoka;color:var(--green);margin:10px 0}
 #confetti{position:fixed;inset:0;pointer-events:none;z-index:50;width:100vw;height:100vh}
 .faq{max-width:780px;margin:24px auto 0;display:grid;gap:14px;text-align:left}
-details{background:#fff;border-radius:22px;padding:18px 22px;box-shadow:0 0 0 2.5px var(--t1),4px 5px 0 var(--t1)}
+details{background:#fff;border-radius:22px;padding:18px 22px;box-shadow:var(--sh)}
 summary{list-style:none;cursor:pointer;font:600 20px Fredoka;display:flex;justify-content:space-between;gap:12px}summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:#fff;background:var(--acc);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:none;transition:transform .3s}details[open] summary::after{transform:rotate(45deg)}
+summary::after{content:"+";color:#fff;background:var(--acc);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:none;transition:transform .3s}details[open] summary::after{content:"−"}
 details p{margin:10px 0 0;color:var(--t2)}
 .center{text-align:center}.center .sub{margin-left:auto;margin-right:auto}
-.contact{background:linear-gradient(135deg,#0A7FB5,#2BA3C2 55%,#FF9E6B);color:#fff;border-radius:36px;padding:48px 28px;text-align:center;box-shadow:0 0 0 2.5px var(--t1),7px 8px 0 var(--t1)}
+.contact{background:linear-gradient(135deg,#0A7FB5,#2BA3C2 55%,#FF9E6B);color:#fff;border-radius:36px;padding:48px 28px;text-align:center;box-shadow:var(--sh)}
 .contact h2{color:#fff;margin-top:0}.contact p{font-size:18px;margin:0 0 20px;font-weight:600}
 footer{padding:30px 0 44px;text-align:center;color:var(--t3);font-size:13px}footer .s{font:600 20px Fredoka;color:var(--txtacc);margin:0 0 10px}footer nav a{margin:0 8px;color:var(--t2)}footer p.d{max-width:760px;margin:14px auto 0}
 @media(min-width:901px){.rail.feats{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);overflow:visible}.rail.ports{grid-auto-flow:row;grid-template-columns:repeat(4,1fr);overflow:visible}}
@@ -141,13 +140,13 @@ footer{padding:30px 0 44px;text-align:center;color:var(--t3);font-size:13px}foot
 <div class="hero">
  <div class="sun-disc" aria-hidden="true"></div>
  <div class="cloud" style="top:70px;width:110px;animation-delay:-8s" aria-hidden="true"></div><div class="cloud" style="top:170px;width:90px;animation-delay:-26s;animation-duration:55s" aria-hidden="true"></div>
- <span class="floaty fA" style="left:6%;top:110px" aria-hidden="true">🌴</span><span class="floaty fA" style="right:7%;top:90px;animation-delay:-2s" aria-hidden="true">🍹</span><span class="floaty fB" style="left:12%;top:330px;animation-delay:-4s" aria-hidden="true">🗺️</span><span class="floaty fB" style="right:11%;top:320px;animation-delay:-1s" aria-hidden="true">🚢</span>
+ <span class="floaty fA" style="left:6%;top:110px" aria-hidden="true">🌴</span><span class="floaty fB" style="right:11%;top:320px;animation-delay:-1s" aria-hidden="true">🚢</span>
  <div class="wrap">
-  <span class="sticker st-gold" style="--r:-4deg">For Even Realities G2 + phone</span>
+  <span class="sticker st-gold">For Even Realities G2 + phone</span>
   <h1>Decklumos</h1><p class="slogan">From stern to bow, know where to go</p>
   <p class="lead">Deck-by-deck maps for 10 cruise lines, built into your Even Realities G2 glasses and phone. Maps that work without Wi-Fi. No account. Just your ship.</p>
   <div class="ctas"><a class="btn sun" href="https://hub.evenrealities.com/hub/com.pause.decklumos" target="_blank" rel="noopener noreferrer">Get it on Even Hub</a><a class="btn w" href="#waitlist">Join the waitlist</a></div>
-  <div class="stk"><span class="sticker st-sky" style="--r:-5deg">🚢 167 ships</span><span class="sticker st-pink" style="--r:4deg">⚓ 10 cruise lines</span><span class="sticker st-mint" style="--r:-3deg">📶 Works offline</span><span class="sticker st-gold" style="--r:5deg">🎉 Free</span></div>
+  <div class="stk"><span class="sticker st-sky">🚢 167 ships</span><span class="sticker st-pink">⚓ 10 cruise lines</span><span class="sticker st-mint">📶 Works offline</span><span class="sticker st-gold">🎉 Free</span></div>
  </div>
  <div class="scene" aria-hidden="true">
   <div class="ship"><svg viewBox="0 0 200 120"><path d="M58 22h12v22H58z" fill="#FF6B57"/><path d="M58 22h12v6H58z" fill="#0F2238"/><path d="M82 14h12v30H82z" fill="#FF6B57"/><path d="M82 14h12v6H82z" fill="#0F2238"/><circle cx="64" cy="14" r="5" fill="#fff" opacity=".8"/><circle cx="90" cy="5" r="4" fill="#fff" opacity=".7"/>
@@ -157,19 +156,19 @@ footer{padding:30px 0 44px;text-align:center;color:var(--t3);font-size:13px}foot
    <circle cx="150" cy="22" r="0"/><path d="M150 42V18l18 6-18 6" fill="#FFD58A" stroke="#0F2238" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
   <svg class="waves w3" viewBox="0 0 2400 250" preserveAspectRatio="none" style="height:150px;opacity:.55"><path fill="#7FD3F2" d="M0 60 Q150 20 300 60 T600 60 T900 60 T1200 60 T1500 60 T1800 60 T2100 60 T2400 60 V250 H0Z"/></svg>
   <svg class="waves w2" viewBox="0 0 2400 250" preserveAspectRatio="none" style="height:120px"><path fill="#2BA3C2" d="M0 50 Q150 10 300 50 T600 50 T900 50 T1200 50 T1500 50 T1800 50 T2100 50 T2400 50 V250 H0Z"/></svg>
-  <svg class="waves w1" viewBox="0 0 2400 250" preserveAspectRatio="none" style="height:80px"><path fill="#FFF1DC" d="M0 60 Q150 20 300 60 T600 60 T900 60 T1200 60 T1500 60 T1800 60 T2100 60 T2400 60 V250 H0Z"/></svg>
+  <svg class="waves w1" viewBox="0 0 2400 250" preserveAspectRatio="none" style="height:80px"><path fill="#FFF6EA" d="M0 60 Q150 20 300 60 T600 60 T900 60 T1200 60 T1500 60 T1800 60 T2100 60 T2400 60 V250 H0Z"/></svg>
  </div>
 </div>
 
 <section id="waitlist" class="bg-sand" style="padding-top:30px"><div class="wrap"><div class="wl card">
- <span class="sticker st-pink" style="--r:-4deg">🎟️ Boarding soon</span>
+ <span class="sticker st-pink">🎟️ Boarding soon</span>
  <h2>Get on board early</h2><p class="sub" style="margin:0 auto 6px">Early access and a first look at new port guides.</p>
  <form id="wl-form" novalidate><div class="wl-hp" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
   <label class="l" for="wl-email">Email</label><input id="wl-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com">
   <label class="l" for="wl-ship">What ship are you sailing next? <span style="color:var(--t3);font-weight:400">(optional)</span></label><input id="wl-ship" type="text" name="ship" maxlength="120" autocomplete="off">
   <button class="btn sun" type="submit">Join the waitlist</button><p id="wl-err" class="wl-err" role="alert"></p></form>
  <p id="wl-ok" class="wl-ok" role="status" hidden>You're on the list. We'll let you know first.</p></div></div></section>
-<svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#FFF1DC"><path d="M0 30 C240 70 480 -10 720 30 S1200 70 1440 30 V60 H0Z" fill="#D9F1FC"/></svg>
+<svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#FFF6EA"><path d="M0 30 C240 70 480 -10 720 30 S1200 70 1440 30 V60 H0Z" fill="#E8F5FB"/></svg>
 
 <section id="home" class="bg-sea"><div class="wrap show">
  <div class="copy"><span class="sticker st-sky eyebrow">🏠 Home</span><h2>Pick your line, pick your ship</h2>
@@ -182,9 +181,9 @@ footer{padding:30px 0 44px;text-align:center;color:var(--t3);font-size:13px}foot
   </div>
   <p style="margin:22px 0 0;font:600 20px Fredoka">Today on board</p>
   <div class="tob-row" style="margin-top:10px"><div class="tob"><i>🎲</i>Trivia</div><div class="tob"><i>🗺️</i>Deck map</div><div class="tob"><i>📍</i>Port of the day</div></div></div>
- <div><div class="phone" style="--r:-3deg"><img src="app-home.jpg" alt="Decklumos app home: cruise line picker with ship drawing, My Trips and Today on board" width="585" height="1266"></div></div>
+ <div><div class="phone"><img src="app-home.jpg" alt="Decklumos app home: cruise line picker with ship drawing, My Trips and Today on board" width="585" height="1266"></div></div>
 </div></section>
-<svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#D9F1FC"><path d="M0 20 C360 70 720 0 1080 40 S1380 30 1440 20 V60 H0Z" fill="#FFF1DC"/></svg>
+<svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#E8F5FB"><path d="M0 20 C360 70 720 0 1080 40 S1380 30 1440 20 V60 H0Z" fill="#FFF6EA"/></svg>
 
 <section id="trivia" class="bg-sand"><div class="wrap show flip">
  <div class="copy quiz"><span class="sticker st-gold eyebrow">🎲 Trivia</span><h2>Cruise Trivia</h2>
@@ -198,22 +197,22 @@ footer{padding:30px 0 44px;text-align:center;color:var(--t3);font-size:13px}foot
     <button class="opt o3" type="button" data-ok="1"><b>D</b>A day with no port</button></div>
    <div class="qres" id="qres" aria-live="polite"></div></div>
   <span class="note">Guess the Port is in the app, but there's no v3 screenshot of it yet.</span></div>
- <div><div class="phone" style="--r:4deg"><img src="app-trivia-answer.jpg" alt="Cruise Trivia question screen in the app" loading="lazy" width="585" height="1266"></div></div>
+ <div><div class="phone"><img src="app-trivia-answer.jpg" alt="Cruise Trivia question screen in the app" loading="lazy" width="585" height="1266"></div></div>
 </div></section>
-<svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#FFF1DC"><path d="M0 40 C300 0 600 70 900 30 S1300 0 1440 40 V60 H0Z" fill="#DDF6EC"/></svg>
+<svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#FFF6EA"><path d="M0 40 C300 0 600 70 900 30 S1300 0 1440 40 V60 H0Z" fill="#E8F7F0"/></svg>
 
 <section id="ports" class="bg-mint"><div class="wrap">
  <div class="show"><div class="copy"><span class="sticker st-mint eyebrow">📍 Port guides</span><h2>Port guides included</h2>
   <p class="sub">Guides for popular stops like Cozumel so you're ready before you step off the ship.</p>
   <div class="chips"><span class="chip on">✓ All regions</span><span class="chip">Caribbean</span><span class="chip">Alaska</span><span class="chip">Mediterranean</span></div></div>
-  <div><div class="phone" style="--r:-3deg"><img src="app-ports.jpg" alt="Port guides photo grid by region in the app" loading="lazy" width="585" height="1266"></div></div></div>
+  <div><div class="phone"><img src="app-ports.jpg" alt="Port guides photo grid by region in the app" loading="lazy" width="585" height="1266"></div></div></div>
  <div class="rail ports" style="margin-top:30px" aria-label="Regions in the app (swipe)">
   <div class="tile g1"><span class="e" aria-hidden="true">🏝️</span><b>Caribbean</b></div><div class="tile g2"><span class="e" aria-hidden="true">🐚</span><b>Bahamas</b></div>
   <div class="tile g3"><span class="e" aria-hidden="true">🏛️</span><b>Mediterranean</b></div><div class="tile g4"><span class="e" aria-hidden="true">🏔️</span><b>Alaska</b></div>
   <div class="tile g5"><span class="e" aria-hidden="true">🌮</span><b>Mexico &amp; Central America</b></div><div class="tile g6"><span class="e" aria-hidden="true">⛵</span><b>Northern Europe</b></div>
   <div class="tile g7"><span class="e" aria-hidden="true">🍁</span><b>New England &amp; Canada</b></div><div class="tile g8"><span class="e" aria-hidden="true">🌋</span><b>Canary Islands &amp; Atlantic</b></div></div>
 </div></section>
-<svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#DDF6EC"><path d="M0 30 C240 -10 480 70 720 30 S1200 -10 1440 30 V60 H0Z" fill="#FFFDF8"/></svg>
+<svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#E8F7F0"><path d="M0 30 C240 -10 480 70 720 30 S1200 -10 1440 30 V60 H0Z" fill="#FFFDF8"/></svg>
 
 <section id="trips" class="bg-cream"><div class="wrap show">
  <div class="copy"><span class="sticker st-pink eyebrow">🧳 My Trips</span><h2>My Trips</h2>
@@ -228,7 +227,7 @@ footer{padding:30px 0 44px;text-align:center;color:var(--t3);font-size:13px}foot
   <p class="sub">Every venue on every deck, labeled, with the front of the ship at the top. Save your cabin and find it again in a tap.</p>
   <div class="search">🔍 Find a bar, pool, cabin #</div>
   <div class="chips"><span class="chip on">🛏️ My cabin</span><span class="chip">Food</span><span class="chip">Pools</span><span class="chip">Shows</span></div></div>
- <div class="duo"><div class="phone" style="--r:-4deg"><img src="app-deck-found.jpg" alt="Deck map with search bar and a found venue" loading="lazy" width="585" height="1266"></div><div class="phone" style="--r:4deg"><img src="app-cabin.jpg" alt="My cabin saved on the deck map" loading="lazy" width="585" height="1266"></div></div>
+ <div class="duo"><div class="phone"><img src="app-deck-found.jpg" alt="Deck map with search bar and a found venue" loading="lazy" width="585" height="1266"></div><div class="phone"><img src="app-cabin.jpg" alt="My cabin saved on the deck map" loading="lazy" width="585" height="1266"></div></div>
 </div></section>
 <svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#FFFDF8"><path d="M0 30 C360 -10 720 70 1080 20 S1380 40 1440 30 V60 H0Z" fill="#0F2238"/></svg>
 
@@ -241,7 +240,7 @@ footer{padding:30px 0 44px;text-align:center;color:var(--t3);font-size:13px}foot
   <figure><video autoplay muted loop playsinline preload="metadata" poster="../assets/anim-3-find-your-way-poster.jpg"><source src="../assets/anim-3-find-your-way.mp4" type="video/mp4"></video><figcaption>Find your way</figcaption></figure>
   <figure><video autoplay muted loop playsinline preload="metadata" poster="../assets/anim-4-plan-your-trip-poster.jpg"><source src="../assets/anim-4-plan-your-trip.mp4" type="video/mp4"></video><figcaption>Plan your trip</figcaption></figure>
  </div></div></section>
-<svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#0F2238"><path d="M0 30 C240 70 480 -10 720 30 S1200 70 1440 30 V60 H0Z" fill="#D9F1FC"/></svg>
+<svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#0F2238"><path d="M0 30 C240 70 480 -10 720 30 S1200 70 1440 30 V60 H0Z" fill="#E8F5FB"/></svg>
 
 <section class="bg-sea"><div class="wrap center"><span class="sticker st-gold eyebrow">💙 Why cruisers love it</span><h2>Made for life at sea</h2>
  <div class="rail feats" style="text-align:left;margin-top:20px" aria-label="Features (swipe)">
@@ -252,7 +251,7 @@ footer{padding:30px 0 44px;text-align:center;color:var(--t3);font-size:13px}foot
   <div class="feat"><i style="background:#D6DDFB">🚢</i><b>10 cruise lines</b><p>Carnival, Celebrity, Disney, MSC, Norwegian, Princess, Royal Caribbean, Viking Ocean, Viking River, and Virgin Voyages.</p></div>
   <div class="feat"><i style="background:#FFD9C2">📍</i><b>Port guides included</b><p>Guides for popular stops like Cozumel so you're ready before you step off the ship.</p></div>
  </div></div></section>
-<svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#D9F1FC"><path d="M0 20 C360 70 720 0 1080 40 S1380 30 1440 20 V60 H0Z" fill="#FFFDF8"/></svg>
+<svg class="div" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#E8F5FB"><path d="M0 20 C360 70 720 0 1080 40 S1380 30 1440 20 V60 H0Z" fill="#FFFDF8"/></svg>
 
 <section id="faq" class="bg-cream" style="padding-top:30px"><div class="wrap center"><span class="sticker st-pink eyebrow">❓ Questions</span><h2>Quick answers before you sail.</h2>
  <div class="faq">
@@ -273,7 +272,7 @@ var RM=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 /* confetti */
 var cv=document.getElementById('confetti'),cx=cv.getContext('2d'),P=[],raf=0;
 function confetti(){if(RM)return;cv.width=innerWidth;cv.height=innerHeight;var C=['#FF6B57','#FFD58A','#0A7FB5','#00866B','#2F5FD0','#FFAA00'];for(var i=0;i<160;i++)P.push({x:innerWidth/2,y:innerHeight*.45,vx:(Math.random()-.5)*16,vy:-Math.random()*15-4,s:6+Math.random()*7,c:C[i%6],r:Math.random()*6,vr:(Math.random()-.5)*.3,l:140});if(!raf)tick()}
-function tick(){cx.clearRect(0,0,cv.width,cv.height);P=P.filter(function(p){return p.l-->0&&p.y<cv.height+20});P.forEach(function(p){p.vy+=.45;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.fillStyle=p.c;cx.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);cx.restore()});raf=P.length?requestAnimationFrame(tick):0;if(!raf)cx.clearRect(0,0,cv.width,cv.height)}
+function tick(){cx.clearRect(0,0,cv.width,cv.height);P=P.filter(function(p){return p.l-->0&&p.y<cv.height+20});P.forEach(function(p){p.vy+=.45;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;cx.save();cx.translate(p.x,p.y);cx.fillStyle=p.c;cx.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);cx.restore()});raf=P.length?requestAnimationFrame(tick):0;if(!raf)cx.clearRect(0,0,cv.width,cv.height)}
 window.__confetti=confetti;
 /* waitlist (same Worker, copy, honeypot) */
 var f=document.getElementById('wl-form'),e=document.getElementById('wl-err'),ok=document.getElementById('wl-ok'),b=f.querySelector('button');
