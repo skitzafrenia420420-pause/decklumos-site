@@ -36,10 +36,10 @@ section{padding:120px 0}
 .top.scrolled .brand,.top.scrolled nav a{color:var(--navy)}
 /* hero */
 .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#0a3a52}
-.hero .bg{position:absolute;inset:-4%;background:url(img/hero-ship.jpg) center 60%/cover;animation:kb 28s ease-in-out infinite alternate;will-change:transform}
-@keyframes kb{from{transform:scale(1.04) translate3d(0,0,0)}to{transform:scale(1.14) translate3d(-1.5%,-1%,0)}}
-.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(6,22,44,.62) 0%,rgba(6,22,44,.25) 45%,rgba(6,22,44,0) 70%),linear-gradient(180deg,rgba(6,22,44,.5) 0%,rgba(6,22,44,0) 25%,rgba(6,22,44,0) 55%,rgba(6,22,44,.7) 100%)}
-.hero .shimmer{position:absolute;inset:auto 0 0;height:45%;z-index:1;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.13) 45%,transparent 60%);background-size:250% 100%;animation:sh 9s linear infinite;mix-blend-mode:overlay;pointer-events:none}
+.hero .bg{position:absolute;inset:0;background:url(img/hero-ship.jpg) center 60%/cover;filter:saturate(.8) brightness(.85)}
+
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 62% 75% at 22% 48%,rgba(28,20,24,.5) 0%,rgba(28,20,24,0) 72%),linear-gradient(90deg,rgba(34,26,30,.6) 0%,rgba(34,26,30,.42) 50%,rgba(34,26,30,.3) 100%),linear-gradient(180deg,rgba(34,26,30,.35) 0%,rgba(34,26,30,.15) 40%,rgba(30,24,30,.6) 100%)}
+.hero .shimmer{position:absolute;inset:auto 0 0;height:45%;z-index:1;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.13) 45%,transparent 60%);background-size:250% 100%;display:none;mix-blend-mode:overlay;pointer-events:none}
 @keyframes sh{from{background-position:150% 0}to{background-position:-100% 0}}
 .hero .in{position:relative;z-index:2;padding:0 0 120px;width:100%}
 .hero h1{font-size:clamp(52px,8.4vw,120px);font-weight:600;max-width:11ch;text-shadow:0 4px 40px rgba(0,0,0,.25)}
