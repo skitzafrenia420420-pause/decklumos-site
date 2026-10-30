@@ -190,23 +190,69 @@ footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;
  .top.open nav{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#fff;padding:6px 22px 18px;box-shadow:0 18px 30px -18px rgba(11,31,58,.35)}
  .top.open nav a{color:var(--navy);padding:14px 4px;border-bottom:1px solid var(--line);font-size:17px}.top.open nav a:last-child{border-bottom:0}.top.open nav a.cur{color:var(--goldD)}}
 .g2box a.more{display:inline-block;margin-top:14px;font-weight:650;color:var(--goldD);text-decoration:none}.g2box a.more:hover{text-decoration:underline}
+
+.phero{background:linear-gradient(160deg,#0B1F3A,#132d52 60%,#0e4b5a);color:#fff;padding:150px 0 70px}
+.phero h1{font-size:clamp(40px,6vw,72px)}.phero p{font-size:20px;max-width:640px;opacity:.9;margin:18px 0 0}.phero .eyebrow{color:var(--gold)}
+.crumbs{font-size:14px;opacity:.85;margin-bottom:14px}.crumbs a{color:var(--goldL)}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}.rgrid .card{flex:none;height:380px;width:auto}
+.rgrid .card .t small{display:block;font:600 15px Inter;color:var(--goldL);margin-top:6px}
+.plist{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.pc{display:block;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 10px 30px -22px rgba(11,31,58,.5);transition:transform .25s}.pc:hover{transform:translateY(-3px)}
+.pc h3{font-size:24px}.pc .c{font-size:14px;color:var(--t2);margin:4px 0 10px}.pc p{margin:0;color:var(--t2);font-size:15.5px}.pc .fr{margin-top:14px;font-weight:700;color:var(--sea)}.pc .fr.no{color:var(--t2);font-weight:500}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:30px}.kv div{background:var(--sand);border-radius:18px;padding:20px}.kv b{display:block;font:700 12px Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--goldD);margin-bottom:6px}
+.todo{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:12px}.todo li{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}.todo li b{color:var(--sea)}
+.stbl{width:100%;border-collapse:collapse;margin-top:24px;font-size:15.5px}.stbl th,.stbl td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}.stbl th{font:700 12px Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--t2)}
+.stbl a{color:var(--sea);font-weight:700;white-space:nowrap}.src{font-size:14px;color:var(--t2);margin-top:14px}
+@media(max-width:760px){.stbl thead{display:none}.stbl tr{display:block;border-bottom:1px solid var(--line);padding:10px 0}.stbl td{display:block;border:0;padding:2px 0}}
+/* deals */
+.flash{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px 12px;background:rgba(11,31,58,.72);border:1px solid rgba(217,164,65,.7);color:#fff;text-decoration:none;border-radius:999px;padding:8px 18px 8px 8px;margin-bottom:22px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.flash .tg{background:var(--gold);color:var(--navy);font:800 12px Inter;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:6px 12px}
+.flash b{font:600 20px Fredoka,Inter}.flash small{opacity:.8;font-size:13px}
+.deals{background:var(--navy);color:#fff;padding:90px 0}.deals h2{color:#fff}.deals .lead{color:#cfd8e6}
+.dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.dc{position:relative;display:flex;flex-direction:column;border-radius:22px;overflow:hidden;background:#132d52;text-decoration:none;color:#fff;box-shadow:var(--sh);transition:transform .3s}.dc:hover{transform:translateY(-4px)}
+.dc .im{height:170px;background-size:cover;background-position:center}.dc .bd{padding:20px 22px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+.dc .rk{position:absolute;top:14px;left:14px;background:rgba(11,31,58,.85);font:800 12px Inter;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:6px 12px}
+.dc h3{font-size:26px}.dc .pr{font:600 30px Fredoka;color:var(--gold)}.dc .pr span{font:500 15px Inter;color:#cfd8e6}
+.dc .mt{font-size:14.5px;color:#cfd8e6}.dc .go{margin-top:auto;padding-top:10px;font-weight:700;color:var(--goldL)}
+.ptag{display:inline-block;background:var(--aqua);color:var(--navy);font:800 11.5px Inter;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:5px 10px;margin-right:6px}.ptag.end{background:var(--goldL)}
+.hrow{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:22px}
+.hc{display:block;text-decoration:none;border:1px solid rgba(255,255,255,.22);border-radius:18px;padding:16px 18px;color:#fff}.hc:hover{border-color:var(--gold)}.hc b{display:block;font:600 21px Fredoka}.hc span{font-size:14px;color:#cfd8e6}.hc em{font-style:normal;color:var(--gold);font-weight:700}
+.dsrc{font-size:13.5px;color:#aebbd0;margin-top:26px}.dsrc a{color:#fff}
+.nyl{display:grid;gap:10px;margin-top:20px}.nyl a{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;text-decoration:none;color:#fff;border-bottom:1px solid rgba(255,255,255,.15);padding:12px 0}.nyl a b{color:var(--gold)}
+.explore{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}.ex{display:block;text-decoration:none;border-radius:20px;padding:26px;background:var(--sand);border:1px solid var(--line);transition:transform .25s}.ex:hover{transform:translateY(-3px)}.ex h3{font-size:24px}.ex p{margin:6px 0 0;color:var(--t2);font-size:15.5px}.ex .go{display:block;margin-top:12px;font-weight:700;color:var(--sea)}
+@media(max-width:1000px){.dgrid{grid-template-columns:1fr 1fr}.explore{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.dgrid,.explore{grid-template-columns:1fr}.flash b{font-size:17px}}
 </style></head><body id="top">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top" id="hdr"><div class="wrap"><a class="brand" href="#top"><span class="dot" aria-hidden="true"></span>Decklumos</a>
-<nav aria-label="Main" id="mnav"><a href="#decks">Deck maps</a><a href="#app">The app</a><a href="#ports">Ports</a><a href="#faq">FAQ</a><a class="g2l" href="g2/">G2</a></nav>
+<nav aria-label="Main" id="mnav"><a href="deck-maps/">Deck Maps</a><a href="deck-maps/#app">App</a><a href="ports/">Ports</a><a href="faq/">FAQ</a><a class="g2l" href="g2/">G2</a></nav>
 <a class="btn gold" href="#join">Join the waitlist</a><button class="menub" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><span></span></button></div></header>
 <main id="main">
 <section class="hero" aria-label="Welcome"><div class="bg" data-par="0.25" role="img" aria-label="Turquoise lagoon and palm-lined beach"></div><div class="shimmer" aria-hidden="true"></div>
  <div class="in"><div class="wrap">
+  <a class="flash" id="flash" hidden></a>
   <h1>Your ship, <em>stern to bow.</em></h1>
   <p>Every deck, every venue and every port, right on your phone. Search a venue, find your cabin, plan your day. A few taps and you know where to go.</p>
-  <div class="ctas"><a class="btn gold" href="#join">Get on board early →</a><a class="btn glass" href="#decks">Explore a deck</a></div>
+  <div class="ctas"><a class="btn gold" href="#join">Get on board early →</a><a class="btn glass" href="#deals">See today's fares ↓</a></div>
   <div class="chips"><span class="chip"><b>167</b> ships</span><span class="chip"><b>10</b> cruise lines</span><span class="chip">Works offline</span><span class="chip">Free · account optional</span></div>
  </div></div>
  <a class="cue" href="#stats" aria-label="Scroll down"></a>
  <p class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Addu_City,_Maldives_(Unsplash_MvT9xneoOGU).jpg">Addu City, Maldives</a> · Unsplash via Wikimedia Commons (CC0)</p>
 </section>
 
+<section class="deals" id="deals" aria-labelledby="dl-h" hidden><div class="wrap">
+ <span class="eyebrow">Fare alerts</span><h2 id="dl-h">Where the deals are sailing</h2><p class="lead">The lowest live fares we found for every region, ranked by price per night. Tap one to book on the cruise line's site. Decklumos sells nothing.</p>
+ <div class="dgrid" id="dgrid"></div>
+ <div id="holw" hidden><h3 style="margin-top:56px;font-size:30px;color:#fff">Sail on the holidays</h3><div class="hrow" id="hrow"></div></div>
+ <div style="margin-top:40px;display:flex;gap:14px;flex-wrap:wrap"><button class="btn gold" id="nyb" type="button" aria-expanded="false" aria-controls="nyl" style="width:auto;display:inline-flex"></button><a class="btn glass" href="ports/" style="width:auto;display:inline-flex">Browse ports →</a></div>
+ <div class="nyl" id="nyl" hidden></div>
+ <p class="dsrc" id="dsrc"></p>
+</div></section>
+<section class="sand" aria-labelledby="ex-h" style="padding:80px 0"><div class="wrap"><span class="eyebrow">Explore Decklumos</span><h2 id="ex-h">Know where to go, on board and ashore.</h2>
+ <div class="explore"><a class="ex" href="deck-maps/"><h3>Deck Maps</h3><p>Every deck and venue for 167 ships.</p><span class="go">See the maps →</span></a><a class="ex" href="deck-maps/#app"><h3>The App</h3><p>Real screens: search, cabin, port days.</p><span class="go">Look inside →</span></a><a class="ex" href="ports/"><h3>Ports</h3><p>Local tips plus real upcoming sailings.</p><span class="go">Pick a region →</span></a><a class="ex" href="faq/"><h3>FAQ</h3><p>Offline, free, account optional.</p><span class="go">Get answers →</span></a></div>
+ <p style="margin-top:22px"><a href="g2/" style="color:var(--sea);font-weight:700">Got Even Realities G2 glasses? See Decklumos on G2 →</a></p>
+</div></section>
 <section class="stats" id="stats" aria-label="Decklumos at a glance"><div class="wrap">
  <div class="stat rv"><div class="n" data-count="167">167</div><div class="l">ships with deck maps</div></div>
  <div class="stat rv d1"><div class="n" data-count="10">10</div><div class="l">cruise lines</div></div>
@@ -261,13 +307,13 @@ footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;
 <section class="ports" id="ports" aria-labelledby="pt-h" style="padding-bottom:90px"><div class="wrap phead"><div><span class="eyebrow">Port guides</span><h2 id="pt-h">Where will you wake up tomorrow?</h2></div>
  <div class="arrows"><button id="pv" aria-label="Previous ports">←</button><button id="nx" aria-label="Next ports">→</button></div></div>
  <div class="track" id="track" tabindex="0" aria-label="Cruise regions">
-  <a class="card" href="#join"><img src="port-caribbean.jpg" alt="Sunrise over a Caribbean cruise port" loading="lazy"><div class="t"><span>Region</span><h3>Caribbean</h3></div></a>
-  <a class="card" href="#join"><img src="port-bahamas.jpg" alt="Islands and clear water in the Bahamas" loading="lazy"><div class="t"><span>Region</span><h3>Bahamas</h3></div></a>
-  <a class="card" href="#join"><img src="port-alaska.jpg" alt="Hubbard Glacier in Alaska" loading="lazy"><div class="t"><span>Region</span><h3>Alaska</h3></div></a>
-  <a class="card" href="#join"><img src="port-mediterranean.jpg" alt="The Amalfi Coast in Italy" loading="lazy"><div class="t"><span>Region</span><h3>Mediterranean</h3></div></a>
-  <a class="card" href="#join"><img src="port-northern-europe.jpg" alt="Colorful houses at Nyhavn, Copenhagen" loading="lazy"><div class="t"><span>Region</span><h3>Northern Europe</h3></div></a>
-  <a class="card" href="#join"><img src="port-mexico-central-america.jpg" alt="Ruins above the sea at Tulum, Mexico" loading="lazy"><div class="t"><span>Region</span><h3>Mexico &amp; Central America</h3></div></a>
-  <a class="card" href="#join"><img src="beach-palms.jpg" alt="Palm trees on a sunny beach" loading="lazy"><div class="t"><span>Beach days</span><h3>Sun &amp; sand</h3></div></a>
+  <a class="card" href="ports/?r=caribbean"><img src="port-caribbean.jpg" alt="Sunrise over a Caribbean cruise port" loading="lazy"><div class="t"><span>Region</span><h3>Caribbean</h3></div></a>
+  <a class="card" href="ports/?r=bahamas"><img src="port-bahamas.jpg" alt="Islands and clear water in the Bahamas" loading="lazy"><div class="t"><span>Region</span><h3>Bahamas</h3></div></a>
+  <a class="card" href="ports/?r=alaska"><img src="port-alaska.jpg" alt="Hubbard Glacier in Alaska" loading="lazy"><div class="t"><span>Region</span><h3>Alaska</h3></div></a>
+  <a class="card" href="ports/?r=mediterranean"><img src="port-mediterranean.jpg" alt="The Amalfi Coast in Italy" loading="lazy"><div class="t"><span>Region</span><h3>Mediterranean</h3></div></a>
+  <a class="card" href="ports/?r=northern-europe"><img src="port-northern-europe.jpg" alt="Colorful houses at Nyhavn, Copenhagen" loading="lazy"><div class="t"><span>Region</span><h3>Northern Europe</h3></div></a>
+  <a class="card" href="ports/?r=mexico"><img src="port-mexico-central-america.jpg" alt="Ruins above the sea at Tulum, Mexico" loading="lazy"><div class="t"><span>Region</span><h3>Mexico &amp; Central America</h3></div></a>
+  <a class="card" href="ports/"><img src="beach-palms.jpg" alt="Palm trees on a sunny beach" loading="lazy"><div class="t"><span>Beach days</span><h3>Sun &amp; sand</h3></div></a>
  </div>
 </section>
 
@@ -354,4 +400,41 @@ fetch('https://decklumos-waitlist.skitzafrenia420420.workers.dev/signup',{method
 var res=document.getElementById('qres'),opts=document.querySelectorAll('.opt');
 opts.forEach(function(o){o.addEventListener('click',function(){opts.forEach(function(x){x.classList.remove('miss')});if(o.dataset.ok==='1'){opts.forEach(function(x){if(x!==o)x.classList.add('dim')});o.classList.add('win');res.innerHTML='<span class="good">Correct! A day with no port. 🌊</span> <a href="#" id="qa">Play again</a>';document.getElementById('qa').onclick=function(ev){ev.preventDefault();opts.forEach(function(x){x.classList.remove('dim','win')});res.textContent='';opts[0].focus()}}else{o.classList.add('miss');res.innerHTML='<span class="try">Not quite. Try again!</span>'}})});
 })();
-</script></body></html>
+</script><script>var DK={};
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function fd(d,o){return new Date(d+'T12:00:00').toLocaleDateString('en-US',o||{month:'short',day:'numeric',year:'numeric'})}
+function ck(s){return new Date(s).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}
+function getJ(u){return fetch(u,{cache:'no-cache'}).then(function(r){return r.json()})}
+function srcLine(S){return 'Prices and dates from <a href="https://www.carnival.com/" rel="noopener">carnival.com</a>, checked '+ck(S.checked)+'. Per person for 2 guests, taxes and fees not included. Prices change; confirm before you book. Decklumos is not affiliated with any cruise line.'}
+/* promo tags + timers: only when the source supplied them */
+function promoHtml(p){if(!p)return '';var h='<span class="ptag">'+esc(p.text)+'</span>';if(p.limited)h+='<span class="ptag">Limited time</span>';if(p.ends){var e=new Date(p.ends),ms=e-new Date();if(ms>0){if(/T\d/.test(p.ends))h+='<span class="ptag end" data-end="'+esc(p.ends)+'"></span>';else if(ms<3*864e5)h+='<span class="ptag end">Deal ends soon</span>'}}return h}
+function tick(){document.querySelectorAll('[data-end]').forEach(function(el){var ms=new Date(el.dataset.end)-new Date();if(ms<=0){el.remove();return}var d=Math.floor(ms/864e5),hh=Math.floor(ms/36e5)%24,m=Math.floor(ms/6e4)%60;el.textContent='Ends in '+(d?d+'d ':'')+hh+'h '+m+'m'})}
+setInterval(tick,30000);
+function homeDeals(){getJ('data/sailings.json?v='+Date.now()).then(function(S){var D=S.deals;if(!D||!D.regions.length)return;
+ var f=D.fromPerNight,fl=document.getElementById('flash');
+ if(f){fl.href=f.sailing.url;fl.rel='noopener';fl.innerHTML='<span class="tg">Fare alert</span><b>Cruises from $'+f.value+'/night</b><small>'+esc(f.sailing.nights)+'-night '+esc(f.sailing.title.replace(/^\d+-Day /,''))+' · carnival.com, checked '+ck(S.checked)+'</small>';fl.hidden=false}
+ document.getElementById('dgrid').innerHTML=D.regions.map(function(g,i){var b=g.best;return '<a class="dc" href="'+esc(b.url)+'" rel="noopener"><div class="im" style="background-image:url('+esc(g.img)+')" role="img" aria-label="'+esc(g.name)+'"></div>'+(i<3?'<span class="rk">'+['Best value now','No. 2','No. 3'][i]+'</span>':'')+'<div class="bd"><div>'+promoHtml(g.promo||b.promos&&b.promos[0])+'</div><h3>'+esc(g.name)+'</h3><div class="pr">from $'+b.perNight+'<span>/night</span></div><div class="mt">$'+b.price+' pp · '+b.nights+' nights · '+esc(b.ship)+'<br>'+fd(b.date)+' · from '+esc(b.from)+' · stops at '+esc(g.portName)+'</div><span class="go">See this sailing on carnival.com ↗</span></div></a>'}).join('');
+ if(D.holidays&&D.holidays.length){document.getElementById('hrow').innerHTML=D.holidays.map(function(h){var b=h.best;return '<a class="hc" href="'+esc(b.url)+'" rel="noopener"><b>'+esc(h.holiday)+' '+h.day.slice(0,4)+'</b><span>'+fd(b.date,{month:'short',day:'numeric'})+' · '+b.nights+' nights · '+esc(b.ship)+'</span><br><em>from $'+b.price+' pp</em> <span>· '+h.count+' sailings at sea that day</span></a>'}).join('');document.getElementById('holw').hidden=false}
+ var ny=D.nextYear,nb=document.getElementById('nyb'),nl=document.getElementById('nyl');
+ if(ny&&ny.picks.length){nb.textContent='Browse '+ny.year+' cruises';nl.innerHTML=ny.picks.map(function(b){return '<a href="'+esc(b.url)+'" rel="noopener"><span>'+fd(b.date)+' · '+esc(b.title)+' · '+esc(b.ship)+'</span><b>from $'+b.price+' pp ↗</b></a>'}).join('');nb.onclick=function(){var o=nl.hidden;nl.hidden=!o;nb.setAttribute('aria-expanded',o)}}else nb.remove();
+ document.getElementById('dsrc').innerHTML=srcLine(S)+(D.dropped.length?' Not shown (no live fares right now): '+D.dropped.map(esc).join(', ')+'.':'');
+ document.getElementById('deals').hidden=false;tick()}).catch(function(){})}
+function q(k){return new URLSearchParams(location.search).get(k)}
+function portsPage(){Promise.all([getJ('data/ports.json'),getJ('data/sailings.json?v='+Date.now())]).then(function(a){var P=a[0],S=a[1],r=q('r'),v=document.getElementById('pv');
+ var R=P.regions.filter(function(x){return x.id===r})[0];
+ if(!R){v.innerHTML='<div class="rgrid">'+P.regions.map(function(g){var d=(S.deals.regions.filter(function(x){return x.id===g.id})[0]);return '<a class="card" href="ports/?r='+g.id+'"><img src="'+g.img+'" alt="'+esc(g.name)+'" loading="lazy"><div class="t"><span>'+g.ports.length+' ports</span><h3>'+esc(g.name)+'</h3>'+(d?'<small>Sailings from $'+d.best.perNight+'/night</small>':'')+'</div></a>'}).join('')+'</div>';document.getElementById('psrc').innerHTML='Region photos: Wikimedia Commons (credits in the footer). '+srcLine(S);return}
+ document.title=R.name+' ports · Decklumos';document.getElementById('ph1').textContent=R.name;document.getElementById('php').textContent=R.ports.length+' ports. Tap one for local tips and real upcoming sailings.';document.getElementById('crumbs').innerHTML='<a href="ports/">All regions</a> › '+esc(R.name);
+ v.innerHTML='<div class="plist">'+R.ports.map(function(id){var p=P.ports[id],s=S.ports[id];return '<a class="pc" href="ports/port/?id='+id+'"><h3>'+esc(p.name)+'</h3><div class="c">'+esc(p.country)+'</div><p>'+esc(p.summary)+'</p><div class="fr'+(s&&s.cheapest?'':' no')+'">'+(s&&s.cheapest?s.total+' sailings · from $'+s.cheapest.price+' pp':'No sailings found in our sources')+'</div></a>'}).join('')+'</div>';
+ document.getElementById('psrc').innerHTML='Port info from <a href="https://en.wikivoyage.org/">Wikivoyage</a> (CC BY-SA). '+srcLine(S)})}
+function portPage(){Promise.all([getJ('data/ports.json'),getJ('data/sailings.json?v='+Date.now())]).then(function(a){var P=a[0],S=a[1],id=q('id'),p=P.ports[id],el=document.getElementById('pp');
+ if(!p){document.getElementById('ph1').textContent='Port not found';el.innerHTML='<a href="ports/">See all ports →</a>';return}
+ document.title=p.name+' port guide · Decklumos';document.getElementById('ph1').textContent=p.name;document.getElementById('php').textContent=p.summary;document.getElementById('crumbs').innerHTML='<a href="ports/">All regions</a> › <a href="ports/?r='+p.regionId+'">'+esc(p.regionName)+'</a> › '+esc(p.name);
+ var t=p.tips||{},h='<span class="eyebrow">Port info</span><h2>Good to know</h2><div class="kv"><div><b>Country</b>'+esc(p.country)+'</div><div><b>Currency</b>'+esc(p.currency)+'</div><div><b>Language</b>'+esc(p.language)+'</div><div><b>Where ships dock</b>'+esc(t.pierToTown||p.pier)+'</div>'+(t.money?'<div><b>Money</b>'+esc(t.money)+'</div>':'')+(t.safety?'<div><b>Stay safe</b>'+esc(t.safety)+'</div>':'')+'</div>';
+ h+='<h2 style="margin-top:70px">Things to do</h2><ul class="todo">'+p.highlights.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+(t.sight?'<li><b>Sight:</b> '+esc(t.sight)+'</li>':'')+(t.food?'<li><b>Eat:</b> '+esc(t.food)+'</li>':'')+(t.history?'<li><b>History:</b> '+esc(t.history)+'</li>':'')+'</ul>'+(p.tip?'<p class="lead" style="max-width:none"><b>Tip:</b> '+esc(p.tip)+'</p>':'');
+ var srcs=(t.sources||[p.source]).map(function(s){return '<a href="'+esc(s.url)+'">'+esc((s.site||'Wikivoyage')+': '+s.title)+'</a>'}).join(', ');h+='<p class="src">Sources: '+srcs+' (CC BY-SA). Info may change; check locally.</p>';
+ var s=S.ports[id];h+='<h2 style="margin-top:70px">Upcoming sailings</h2>';
+ if(s&&s.sailings.length){h+='<table class="stbl"><thead><tr><th>Date</th><th>Ship &amp; line</th><th>Itinerary</th><th>Nights</th><th>From</th><th></th></tr></thead><tbody>'+s.sailings.map(function(r){return '<tr><td>'+fd(r.date)+'</td><td>'+esc(r.ship)+'<br><small>'+esc(r.line)+'</small></td><td>'+esc(r.title)+'</td><td>'+r.nights+'</td><td>$'+r.price+' pp</td><td><a href="'+esc(r.url)+'" rel="noopener">Book on '+esc(r.source)+' ↗</a></td></tr>'}).join('')+'</tbody></table><p class="src">Next '+s.sailings.length+' of '+s.total+' sailings found. '+srcLine(S)+'</p>'}
+ else h+='<p class="lead">No sailings found in our sources for this port right now. We only list sailings we can confirm.</p>';
+ el.innerHTML=h})}
+
+homeDeals();</script></body></html>
