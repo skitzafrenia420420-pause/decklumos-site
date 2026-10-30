@@ -330,9 +330,9 @@ function heroFind(S){var F=document.getElementById('hfind');if(!F)return;getJ('d
  function close(){L.hidden=true;q.setAttribute('aria-expanded','false');q.removeAttribute('aria-activedescendant');act=-1}
  function mark(i){act=i;[].forEach.call(L.querySelectorAll('[role=option]'),function(o,k){o.classList.toggle('on',k===i);o.setAttribute('aria-selected',k===i?'true':'false');if(k===i){q.setAttribute('aria-activedescendant',o.id);o.scrollIntoView({block:'nearest'})}})}
  function render(){var t=nz(q.value),h='',lastR='';cur=A.map(function(a){return [score(a,t),a]}).filter(function(x){return x[0]>0});
-  if(t)cur.sort(function(a,b){return b[0]-a[0]||b[1].total-a[1].total});cur=cur.map(function(x){return x[1]});
+  if(!t){cur=pop.map(function(a){return [1,a]})}else cur.sort(function(a,b){return b[0]-a[0]||b[1].total-a[1].total});var more=Math.max(0,cur.length-6);cur=cur.slice(0,6).map(function(x){return x[1]});L.classList.toggle('pkc',!t);if(!t)h='<li class="pkg" role="presentation">Popular ports</li>';
   if(!cur.length){h='<li class="pkno" role="presentation"><b>No ports match “'+esc(q.value)+'”.</b> Try a port, island or country name, or one of these:<span class="pksug">'+pop.map(function(a){return '<button type="button" data-id="'+a.id+'">'+esc(a.name)+'</button>'}).join('')+'</span></li>'}
-  else cur.forEach(function(a,i){if(!t&&a.region!==lastR){lastR=a.region;h+='<li class="pkg" role="presentation">'+esc(a.region)+'</li>'}h+='<li role="option" id="pko-'+i+'" data-i="'+i+'" aria-selected="false"><b>'+esc(a.name)+'</b><span class="pkr">'+esc(a.region)+' · '+a.total+' sailings</span>'+price(a)+'</li>'});
+  else cur.forEach(function(a,i){h+='<li role="option" id="pko-'+i+'" data-i="'+i+'" aria-selected="false"><b>'+esc(a.name)+'</b><span class="pkr">'+esc(a.region)+' · '+a.total+' sailings</span>'+price(a)+'</li>'});if(more)h+='<li class="pkmore" role="presentation">'+more+' more ports match. Keep typing to narrow it down.</li>';
   L.innerHTML=h;open();act=-1;if(t&&cur.length)mark(0)}
  function pick(a){hid.value=a.id;q.value=a.name;X.hidden=false;er.textContent='';close()}
  function byId(id){for(var i=0;i<A.length;i++)if(A[i].id===id)return A[i]}
