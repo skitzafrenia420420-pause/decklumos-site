@@ -223,7 +223,41 @@ footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;
 .hub h2{font-size:clamp(30px,3.4vw,42px)}.hub p{color:rgba(255,255,255,.8);margin:12px 0 0}.hub .eyebrow{color:var(--gold)}
 @media (max-width:1000px){.ghero .gg,.pair{grid-template-columns:1fr}.sw{grid-template-columns:1fr}.sw .btns{flex-direction:row;flex-wrap:wrap}.sw .btns button{flex:1 1 40%}.stills{grid-template-columns:1fr 1fr}.does{grid-template-columns:1fr 1fr}}
 @media (max-width:760px){.ghero{padding:130px 0 80px}.ghero h1{font-size:48px}.ghero .ctas .btn{flex:1 1 100%}.does{grid-template-columns:1fr}.sw .btns button{flex:1 1 100%;padding:14px 16px}.sw .btns button small{display:none}.hub{grid-template-columns:1fr;padding:30px 24px}.ctl{grid-template-columns:1fr}}
-</style></head><body id="top">
+
+/* v5 G2 HUD skin (this page only) */
+body.hud{--hg:#00ff00;--hgt:#8dff8d;--hbg:#050806;--hcard:#0a110c;--hline:rgba(0,255,0,.32);background:var(--hbg)}
+body.hud main>section:not(.cta){background:var(--hbg);color:#e9f3ea;position:relative}
+body.hud main>section:not(.cta)::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(180deg,rgba(0,255,0,.035) 0 1px,transparent 1px 4px);z-index:0}
+body.hud main>section:not(.cta)>*{position:relative;z-index:1}
+body.hud main>section.sand{background:#070c08}
+body.hud .ghero{background:radial-gradient(90% 80% at 75% 10%,rgba(0,255,0,.12) 0%,rgba(0,255,0,0) 60%),var(--hbg)}
+body.hud .eyebrow{font:600 12.5px/1.2 ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;letter-spacing:.14em;color:var(--hgt)}
+body.hud .eyebrow::before{background:var(--hg);box-shadow:0 0 8px var(--hg)}
+body.hud main>section:not(.cta) h2,body.hud .ghero h1{color:#fff}
+body.hud .ghero h1 em{color:var(--hg);text-shadow:0 0 24px rgba(0,255,0,.45)}
+body.hud .ghero p.l,body.hud .lead,body.hud .sw .cap,body.hud .steps span,body.hud .stills figcaption,body.hud .does .c p,body.hud .faq p{color:#b9c9bc}
+body.hud .stills figcaption,body.hud .ghero .note{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:var(--hgt)}
+body.hud .lensbig{box-shadow:0 0 0 1px var(--hline),0 0 40px -6px rgba(0,255,0,.28),0 40px 80px -30px #000}
+body.hud .stills img{box-shadow:0 0 0 1px var(--hline)}
+body.hud .sw .btns button,body.hud .does .c,body.hud .ctl div{background:var(--hcard);border:1px solid var(--hline);color:#fff;box-shadow:none}
+body.hud .sw .btns button small,body.hud .ctl span{color:#a9bcae}
+body.hud .sw .btns button[aria-pressed=true]{background:rgba(0,255,0,.1);border-color:var(--hg);box-shadow:0 0 18px -4px rgba(0,255,0,.5);color:var(--hgt)}
+body.hud .sw .btns button[aria-pressed=true] small{color:#d6f5d8}
+body.hud .does .c .k{background:transparent;border:1px solid var(--hg);color:var(--hgt);font-family:ui-monospace,Menlo,Consolas,monospace}
+body.hud .does .c h3,body.hud .ctl b,body.hud .steps b{color:#fff}
+body.hud .ctl b{color:var(--hgt);font-family:ui-monospace,Menlo,Consolas,monospace;font-size:16px;letter-spacing:.06em;text-transform:uppercase}
+body.hud .steps li::before{background:transparent;border:1px solid var(--hg);color:var(--hgt);font-family:ui-monospace,Menlo,Consolas,monospace}
+body.hud .steps li:not(:last-child)::after{content:"";position:absolute;left:21px;top:46px;bottom:4px;width:1px;background:var(--hline)}
+body.hud .hub{background:var(--hcard);border:1px solid var(--hg);box-shadow:0 0 40px -10px rgba(0,255,0,.35)}
+body.hud .faq details{border-color:var(--hline)}body.hud .faq summary{color:#fff}
+body.hud .faq summary::after{background:transparent;border:1px solid var(--hg);color:var(--hgt)}
+body.hud .faq a{color:var(--hgt)}
+body.hud .btn.glass{border-color:var(--hline)}
+.shipart{display:block;width:100%;max-width:760px;height:auto;margin:0 auto;color:var(--hg);opacity:.55}
+.hudline{display:flex;align-items:center;gap:14px;max-width:1240px;margin:0 auto;padding:0 28px;font:12px ui-monospace,Menlo,Consolas,monospace;letter-spacing:.14em;color:var(--hgt)}
+.hudline::before,.hudline::after{content:"";flex:1;height:1px;background:var(--hline)}
+@media (prefers-reduced-motion:reduce){body.hud main>section:not(.cta)::after{display:none}}
+</style></head><body id="top" class="hud">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top" id="hdr"><div class="wrap"><a class="brand" href="../"><span class="dot" aria-hidden="true"></span>Decklumos</a>
 <nav aria-label="Main" id="mnav"><a href="../#decks">Deck maps</a><a href="../#app">The app</a><a href="../#ports">Ports</a><a href="../#faq">FAQ</a><a class="g2l cur" href="./" aria-current="page">G2</a></nav>
@@ -247,7 +281,7 @@ footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;
  </div>
 </div></section>
 
-<section class="sand" aria-labelledby="d-h"><div class="wrap"><span class="eyebrow">What it does</span><h2 id="d-h">The handy parts of the app, in your glasses</h2>
+<section class="sand" aria-labelledby="d-h"><div class="wrap"><svg class="shipart" style="margin-bottom:50px" viewBox="0 0 760 120" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M40 60 C40 34 70 22 110 22 H600 C650 22 700 40 728 60 C700 80 650 98 600 98 H110 C70 98 40 86 40 60 Z"/><path d="M90 40 H590 M90 80 H590" opacity=".6"/><rect x="140" y="48" width="60" height="24" rx="4"/><rect x="250" y="44" width="90" height="32" rx="16"/><circle cx="420" cy="60" r="12"/><path d="M410 60 h20 M420 50 v20" opacity=".7"/><rect x="480" y="48" width="70" height="24" rx="4"/><path d="M600 60 h80" stroke-dasharray="4 6"/><path d="M20 60 h14 M732 60 h14" opacity=".5"/></svg><span class="eyebrow">What it does</span><h2 id="d-h">The handy parts of the app, in your glasses</h2>
  <div class="does">
   <div class="c rv"><div class="k">1</div><h3>Pick your cruise line</h3><p>Swipe through the 10 cruise lines and press to open one.</p></div>
   <div class="c rv d1"><div class="k">2</div><h3>Pick your ship</h3><p>Choose from that line's ships. 167 ships in total.</p></div>
@@ -274,7 +308,7 @@ footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;
  <a class="btn gold" href="https://hub.evenrealities.com/hub/com.pause.decklumos" rel="noopener">Open Even Hub</a>
 </div></div></section>
 
-<section id="faq" aria-labelledby="fq-h"><div class="wrap"><div style="text-align:center"><span class="eyebrow">Questions</span><h2 id="fq-h">G2 questions</h2></div>
+<section id="faq" aria-labelledby="fq-h"><p class="hudline" aria-hidden="true">FWD · · · AFT</p><div class="wrap" style="margin-top:60px"><div style="text-align:center"><span class="eyebrow">Questions</span><h2 id="fq-h">G2 questions</h2></div>
  <div class="faq">
   <details open><summary>Do I need G2 glasses to use Decklumos?</summary><p>No. Decklumos works right on your phone. The glasses are an optional extra.</p></details>
   <details><summary>Which glasses does it work with?</summary><p>Even Realities G2 glasses.</p></details>
