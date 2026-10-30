@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow"><title>Decklumos — From stern to bow, know where to go</title>
-<meta name="description" content="Deck-by-deck maps, port guides, trip plans and trivia for 167 ships across 10 cruise lines. Free, offline, no account. On your phone and Even Realities G2 glasses.">
+<meta name="description" content="Deck-by-deck maps, port guides, trip plans and trivia for 167 ships across 10 cruise lines. Free, offline, no account. All on your phone.">
 <meta name="theme-color" content="#0B1F3A">
 <link rel="preload" as="image" href="hero-maldives.jpg" media="(min-width:761px)"><link rel="preload" as="image" href="hero-maldives-m.jpg" media="(max-width:760px)">
 <link rel="preload" as="font" type="font/woff2" href="Fredoka.woff2" crossorigin>
@@ -94,23 +94,23 @@ section{padding:120px 0}
 /* devices */
 .dev{background:radial-gradient(1200px 600px at 20% 0%,#1d4a7a 0%,var(--navy) 60%);color:#fff;overflow:hidden}
 .dev .lead{color:rgba(255,255,255,.8)}.dev .eyebrow{color:var(--gold)}
-.devgrid{display:grid;grid-template-columns:1fr 1.2fr;gap:70px;align-items:center;margin-top:60px}
-.phones{position:relative;height:640px;width:100%}
-.phone{position:absolute;width:290px;border-radius:46px;padding:12px;background:#0a0f18;box-shadow:0 40px 80px -30px rgba(0,0,0,.8),inset 0 0 0 2px #2a3240;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
-.phone img{border-radius:36px;width:100%}
-.phone::before{content:"";position:absolute;top:22px;left:50%;width:90px;height:24px;margin-left:-45px;background:#0a0f18;border-radius:14px;z-index:1}
-.phone.a{left:0;top:40px;z-index:2}.phone.b{left:210px;top:0;transform:scale(.88);opacity:.95}
-.phone.a:hover{transform:translateY(-10px)}.phone.b:hover{transform:scale(.88) translateY(-10px)}
-.g2{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:28px;backdrop-filter:blur(8px)}
-.g2 .lens{border-radius:18px;overflow:hidden;background:#000;aspect-ratio:2/1;box-shadow:0 0 0 1px rgba(76,255,140,.15),0 0 60px -10px rgba(76,255,140,.25)}
-.g2 video{width:100%;height:100%;object-fit:cover;display:block}
-.g2 .row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
-.g2 .row button{border:1px solid rgba(255,255,255,.18);background:transparent;color:#fff;border-radius:12px;padding:10px 6px;font:600 13px Inter;cursor:pointer;transition:background .2s}
-.g2 .row button[aria-pressed=true],.g2 .row button:hover{background:var(--gold);color:var(--navy);border-color:var(--gold)}
-.g2 p{color:rgba(255,255,255,.72);font-size:15px;margin:16px 0 0}
-.screens{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
-.screens button{border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;border-radius:999px;padding:9px 16px;font:600 14px Inter;cursor:pointer}
-.screens button[aria-pressed=true]{background:#fff;color:var(--navy)}
+.appgrid{display:grid;grid-template-columns:1fr 420px;gap:70px;align-items:center;margin:60px auto 0;max-width:1060px}
+.feats{display:grid;gap:12px}
+.feats button{display:block;text-align:left;width:100%;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#fff;border-radius:20px;padding:18px 22px;cursor:pointer;font:inherit;transition:background .25s,transform .25s,border-color .25s}
+.feats button:hover{transform:translateX(6px);border-color:rgba(255,255,255,.4)}
+.feats button b{display:block;font:600 21px Fredoka}.feats button span{display:block;color:rgba(255,255,255,.75);font-size:15.5px;margin-top:2px}
+.feats button[aria-pressed=true]{background:#fff;color:var(--navy);border-color:#fff}.feats button[aria-pressed=true] span{color:var(--t2)}
+.bigphone{display:flex;justify-content:center}
+.bigphone .phone{position:relative;width:360px;border-radius:54px;padding:14px;background:#0a0f18;box-shadow:0 50px 100px -30px rgba(0,0,0,.85),0 0 0 2px #2a3240 inset,0 0 120px -20px rgba(217,164,65,.35)}
+.bigphone .phone img{border-radius:42px;width:100%;transition:opacity .25s}
+.bigphone .phone::before{content:"";position:absolute;top:26px;left:50%;width:100px;height:28px;margin-left:-50px;background:#0a0f18;border-radius:16px;z-index:1}
+.taps{list-style:none;padding:0;margin:80px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.taps li{display:flex;gap:16px;align-items:flex-start;padding:24px;border-radius:20px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.taps li>span{flex:none;width:44px;height:44px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;font:600 22px Fredoka}
+.taps b{font:600 20px Fredoka}.taps p{margin:2px 0 0;color:rgba(255,255,255,.75);font-size:15.5px}
+.g2s{padding:90px 0}.g2box{max-width:980px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;background:var(--sand);border:1px solid var(--line);border-radius:var(--r);padding:30px}
+.g2box .lens{border-radius:16px;overflow:hidden;background:#000;aspect-ratio:2/1}.g2box video{width:100%;height:100%;object-fit:cover;display:block}
+.g2box h2{font-size:30px}.g2box p{color:var(--t2);margin:10px 0 0}.g2box .eyebrow{margin-bottom:10px}
 /* carousel */
 .ports{background:var(--sand);overflow:hidden}
 .phead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
@@ -162,7 +162,7 @@ section{padding:120px 0}
 .contact{text-align:center;margin-top:90px;padding:56px 28px;border-radius:var(--r);background:var(--sand)}.contact h2{font-size:32px}.contact p{color:var(--t2)}
 footer{background:var(--navy);color:rgba(255,255,255,.72);padding:56px 0 40px;font-size:14px}footer .row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
 footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;color:rgba(255,255,255,.55);margin-top:20px}footer .cr{font-size:12.5px;color:rgba(255,255,255,.55)}
-@media (max-width:1000px){.story,.story.flip,.devgrid,.deckbox{grid-template-columns:1fr;gap:44px}.story.flip .media{order:0}.feat{grid-template-columns:1fr 1fr}.top nav{display:none}}
+@media (max-width:1000px){.story,.story.flip,.devgrid,.deckbox{grid-template-columns:1fr;gap:44px}.story.flip .media{order:0}.appgrid{grid-template-columns:1fr 360px;gap:40px}.feat{grid-template-columns:1fr 1fr}.top nav{display:none}}
 @media (max-width:760px){
  section{padding:84px 0}.wrap{padding:0 22px}
  .hero .bg{background-image:url(hero-maldives-m.jpg);background-position:30% 60%}
@@ -170,7 +170,7 @@ footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;
  .cue{display:none}.chips{margin-top:28px}
  .stats .wrap{grid-template-columns:1fr 1fr;padding:0}.stat{padding:36px 10px;border-bottom:1px solid rgba(255,255,255,.1)}.stat:nth-child(2){border-right:0}
  .feat{grid-template-columns:1fr}.opts{grid-template-columns:1fr}.quiz{padding:26px 20px}
- .phones{height:430px;width:100%;max-width:340px;margin:0 auto}.phone{width:200px;border-radius:34px;padding:8px}.phone img{border-radius:27px}.phone::before{top:16px;width:64px;height:18px;margin-left:-32px}.phone.b{left:136px}
+ .appgrid{grid-template-columns:1fr;gap:40px}.bigphone{order:-1}.bigphone .phone{width:270px;border-radius:42px;padding:10px}.bigphone .phone img{border-radius:33px}.bigphone .phone::before{top:19px;width:76px;height:21px;margin-left:-38px}.taps{grid-template-columns:1fr;margin-top:50px}.g2box{grid-template-columns:1fr;padding:20px}
  .card{flex-basis:78vw;height:420px}.arrows{display:none}
  .ship{padding:26px 14px}.legend .x{display:none}.spot{width:38px;height:38px;font-size:17px}.hull{aspect-ratio:2.6/1}
  .band{min-height:80vh}.band::before{background:linear-gradient(180deg,rgba(6,22,44,.25),rgba(6,22,44,.85))}.band .in{align-self:flex-end;padding-bottom:96px}
@@ -181,13 +181,13 @@ footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;
 </style></head><body id="top">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top" id="hdr"><div class="wrap"><a class="brand" href="#top"><span class="dot" aria-hidden="true"></span>Decklumos</a>
-<nav aria-label="Main"><a href="#decks">Deck maps</a><a href="#devices">Phone &amp; G2</a><a href="#ports">Ports</a><a href="#faq">FAQ</a></nav>
+<nav aria-label="Main"><a href="#decks">Deck maps</a><a href="#app">The app</a><a href="#ports">Ports</a><a href="#faq">FAQ</a></nav>
 <a class="btn gold" href="#join">Join the waitlist</a></div></header>
 <main id="main">
 <section class="hero" aria-label="Welcome"><div class="bg" data-par="0.25" role="img" aria-label="Turquoise lagoon and palm-lined beach"></div><div class="shimmer" aria-hidden="true"></div>
  <div class="in"><div class="wrap">
   <h1>Your ship, <em>stern to bow.</em></h1>
-  <p>Every deck, every venue and every port, right in your pocket and on your G2 glasses. So you spend less time lost and more time on vacation.</p>
+  <p>Every deck, every venue and every port, right on your phone. Search a venue, find your cabin, plan your day. A few taps and you know where to go.</p>
   <div class="ctas"><a class="btn gold" href="#join">Get on board early →</a><a class="btn glass" href="#decks">Explore a deck</a></div>
   <div class="chips"><span class="chip"><b>167</b> ships</span><span class="chip"><b>10</b> cruise lines</span><span class="chip">Works offline</span><span class="chip">Free · no account</span></div>
  </div></div>
@@ -226,18 +226,24 @@ footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;
  </div>
 </div></section>
 
-<section class="dev" id="devices" aria-labelledby="dv-h"><div class="wrap">
- <span class="eyebrow">Phone &amp; glasses</span><h2 id="dv-h">In your pocket. Or right in front of you.</h2>
- <p class="lead">Decklumos works great on your phone. If you own Even Realities G2 glasses, see your plans in your field of view, hands free.</p>
- <div class="devgrid">
-  <div class="phones rv"><div class="phone a"><img id="ph-a" src="app-home.jpg" alt="Decklumos home screen" width="585" height="1266"></div><div class="phone b" aria-hidden="true"><img src="app-deck-found.jpg" alt="" width="585" height="1266" loading="lazy"></div></div>
-  <div class="rv d1">
-   <div class="screens" role="group" aria-label="App screens"><button aria-pressed="true" data-s="app-home.jpg" data-a="Decklumos home screen">Home</button><button aria-pressed="false" data-s="app-deck-found.jpg" data-a="A venue found on a deck">Find a venue</button><button aria-pressed="false" data-s="app-ports.jpg" data-a="Port guides">Ports</button><button aria-pressed="false" data-s="app-cabin.jpg" data-a="Your cabin">Cabin</button><button aria-pressed="false" data-s="app-trivia-answer.jpg" data-a="Cruise trivia">Trivia</button></div>
-   <div class="g2" style="margin-top:30px"><div class="lens"><video id="g2v" autoplay muted loop playsinline preload="metadata" poster="../assets/anim-3-find-your-way-poster.jpg"><source src="../assets/anim-3-find-your-way.mp4" type="video/mp4"></video></div>
-   <div class="row" role="group" aria-label="G2 views"><button aria-pressed="false" data-v="anim-1-cruise-line">Cruise line</button><button aria-pressed="false" data-v="anim-2-ship">Ship</button><button aria-pressed="true" data-v="anim-3-find-your-way">Find your way</button><button aria-pressed="false" data-v="anim-4-plan-your-trip">My trip</button></div>
-   <p>Real views from Decklumos on Even Realities G2.</p></div>
+<section class="dev" id="app" aria-labelledby="dv-h"><div class="wrap">
+ <div style="text-align:center"><span class="eyebrow">The app</span><h2 id="dv-h">Easy from the first tap.</h2>
+ <p class="lead" style="margin:20px auto 0">Everything you need on board, in one simple app. Tap a feature to see the real screen.</p></div>
+ <div class="appgrid">
+  <div class="feats rv" role="group" aria-label="App features">
+   <button aria-pressed="true" data-s="app-deck-found.jpg" data-a="Decklumos showing a venue found on a deck map"><b>🔍 Search a venue</b><span>Type a name and see which deck it's on, front to back.</span></button>
+   <button aria-pressed="false" data-s="app-cabin.jpg" data-a="Decklumos cabin screen"><b>🛏️ Find your cabin</b><span>Save your cabin and find your way back to it.</span></button>
+   <button aria-pressed="false" data-s="app-home.jpg" data-a="Decklumos home screen with My Trips"><b>🗓️ Plan your trip</b><span>Keep your sailing and day plans in one place.</span></button>
+   <button aria-pressed="false" data-s="app-ports.jpg" data-a="Decklumos port guides"><b>⚓ Port guides</b><span>Get to know each stop before you step off.</span></button>
+   <button aria-pressed="false" data-s="app-trivia-answer.jpg" data-a="Decklumos cruise trivia"><b>🧠 Cruise trivia</b><span>Fun questions for sea days with the whole crew.</span></button>
   </div>
+  <div class="bigphone rv d1"><div class="phone"><img id="ph-a" src="app-deck-found.jpg" alt="Decklumos showing a venue found on a deck map" width="585" height="1266"></div></div>
  </div>
+ <ol class="taps">
+  <li class="rv"><span>1</span><div><b>Pick your cruise line</b><p>Choose from 10 cruise lines.</p></div></li>
+  <li class="rv d1"><span>2</span><div><b>Pick your ship</b><p>167 ships with deck-by-deck maps.</p></div></li>
+  <li class="rv d2"><span>3</span><div><b>Find your way</b><p>Search a venue and go. No signal needed.</p></div></li>
+ </ol>
 </div></section>
 
 <section class="ports" id="ports" aria-labelledby="pt-h" style="padding-bottom:90px"><div class="wrap phead"><div><span class="eyebrow">Port guides</span><h2 id="pt-h">Where will you wake up tomorrow?</h2></div>
@@ -256,7 +262,7 @@ footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;
 <section class="sand" style="background:#fff"><div class="wrap"><div class="story flip">
  <div class="media rv"><img src="aerial-shore.jpg" alt="Aerial view of waves on a turquoise shore" loading="lazy" width="1200" height="674"><div class="float"><span class="ic" aria-hidden="true">🗓️</span>Plan your day, port by port</div></div>
  <div class="rv d1"><span class="eyebrow">Plan the fun</span><h2>Your trip, all in one place.</h2>
- <p class="lead">Add your sailing, keep your plans for each day and glance at them on your phone or G2 glasses.</p>
+ <p class="lead">Add your sailing, keep your plans for each day and check them anytime, right on your phone.</p>
  <ul class="ticks"><li>Port guides for where you're headed</li><li>Your cabin, saved and easy to find</li><li>No account, no sign-up</li></ul></div>
 </div></div></section>
 
@@ -265,7 +271,7 @@ footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;
   <div class="f rv"><div class="ic" aria-hidden="true">🗺️</div><h3>Every deck</h3><p>Deck-by-deck maps for 167 ships across 10 cruise lines.</p></div>
   <div class="f rv d1"><div class="ic" aria-hidden="true">📶</div><h3>Works offline</h3><p>Maps, ports and trips are built in. No Wi-Fi package needed.</p></div>
   <div class="f rv d2"><div class="ic" aria-hidden="true">🎁</div><h3>Free, no account</h3><p>Download it and go. Nothing to sign up for.</p></div>
-  <div class="f rv"><div class="ic" aria-hidden="true">🕶️</div><h3>G2 ready</h3><p>See your plans on Even Realities G2 glasses, hands free.</p></div>
+  <div class="f rv"><div class="ic" aria-hidden="true">🛏️</div><h3>Find your cabin</h3><p>Save your cabin and always find your way back.</p></div>
   <div class="f rv d1"><div class="ic" aria-hidden="true">⚓</div><h3>Port guides</h3><p>Get to know each stop before you step off the ship.</p></div>
   <div class="f rv d2"><div class="ic" aria-hidden="true">🧠</div><h3>Cruise trivia</h3><p>Fun questions for sea days with the whole crew.</p></div>
  </div></div></section>
@@ -278,6 +284,10 @@ footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;
   <div class="opts"><button class="opt" data-ok="0">A day at a beach port</button><button class="opt" data-ok="1">A day with no port stop</button><button class="opt" data-ok="0">The first day of a cruise</button><button class="opt" data-ok="0">A day for swimming lessons</button></div><p id="qres" aria-live="polite"></p></div>
 </div></section>
 
+<section class="g2s" aria-labelledby="g2-h"><div class="wrap"><div class="g2box rv">
+ <div class="lens"><video autoplay muted loop playsinline preload="none" poster="../assets/anim-3-find-your-way-poster.jpg" aria-label="Decklumos shown on Even Realities G2 glasses"><source src="../assets/anim-3-find-your-way.mp4" type="video/mp4"></video></div>
+ <div><span class="eyebrow">Optional extra</span><h2 id="g2-h">Got Even Realities G2 glasses?</h2><p>Decklumos works there too. A nice bonus, never required.</p></div>
+</div></div></section>
 <section class="cta" id="join" aria-labelledby="wl-h"><div class="bg" data-par="0.15" role="img" aria-label="A cruise ship on the horizon at sunset"></div>
  <div class="in wrap"><span class="eyebrow" style="color:var(--gold)">Boarding soon</span><h2 id="wl-h">Come aboard early.</h2><p class="sub">Join the waitlist for early access and a first look at new port guides.</p>
  <div class="wlcard">
@@ -291,11 +301,12 @@ footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;
 
 <section id="faq" aria-labelledby="fq-h"><div class="wrap"><div style="text-align:center"><span class="eyebrow">Questions</span><h2 id="fq-h">Quick answers before you sail</h2></div>
  <div class="faq">
-  <details open><summary>What is Decklumos?</summary><p>Decklumos puts every deck of your ship in your pocket and on your G2 glasses, with venues, port guides and your trip plans.</p></details>
-  <details><summary>Do I need Even Realities G2 glasses to use Decklumos?</summary><p>No, Decklumos works directly on your phone. If you own Even Realities G2 glasses, you can see your travel plans in your field of vision.</p></details>
+  <details open><summary>What is Decklumos?</summary><p>Decklumos puts every deck of your ship in your pocket, with venues, port guides and your trip plans.</p></details>
+  
   <details><summary>Does Decklumos work offline?</summary><p>Yes! Deck maps, port guides and your trips are built into the app, so they work with no Wi-Fi or signal. Cruise News needs a connection to load the latest stories.</p></details>
   <details><summary>Which cruise ships does Decklumos support?</summary><p>Decklumos supports 167 ships across 10 cruise lines, including Royal Caribbean, Carnival, Celebrity Cruises, Disney Cruise Line, MSC Cruises, Norwegian Cruise Line, and more. Check the app to see if your ship is supported.</p></details>
   <details><summary>Is Decklumos free to download?</summary><p>Yes! Decklumos is free.</p></details>
+  <details><summary>Do I need anything besides my phone?</summary><p>No, Decklumos works right on your phone. If you also have Even Realities G2 glasses, it works there too.</p></details>
  </div>
  <div class="contact rv"><h2>Missing your ship or found a mistake?</h2><p>Email the Owners. We read every message and we'd love to hear from you.</p><a class="btn navy" href="mailto:support@decklumos.com">support@decklumos.com</a></div>
 </div></section>
@@ -316,9 +327,8 @@ function show(s){document.querySelectorAll('.spot').forEach(function(x){x.classL
 document.querySelectorAll('.spot').forEach(function(s){s.setAttribute('aria-label',s.dataset.t);s.addEventListener('click',function(){show(s)})});
 tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x){x.setAttribute('aria-selected','false')});t.setAttribute('aria-selected','true');gs.forEach(function(g){g.classList.toggle('hidden',g.dataset.g!==t.dataset.d)});show(gs[+t.dataset.d].querySelector('.spot'))})});
 // screens
-var pa=document.getElementById('ph-a');document.querySelectorAll('.screens button').forEach(function(b,i,all){b.addEventListener('click',function(){all.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');pa.src=b.dataset.s;pa.alt=b.dataset.a})});
-var v=document.getElementById('g2v');document.querySelectorAll('.g2 .row button').forEach(function(b,i,all){b.addEventListener('click',function(){all.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');v.poster='../assets/'+b.dataset.v+'-poster.jpg';v.src='../assets/'+b.dataset.v+'.mp4';if(!rm)v.play().catch(function(){})})});
-if(rm){v.removeAttribute('autoplay');v.pause()}
+var pa=document.getElementById('ph-a');document.querySelectorAll('.feats button').forEach(function(b,i,all){b.addEventListener('click',function(){all.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');pa.src=b.dataset.s;pa.alt=b.dataset.a})});
+if(rm)document.querySelectorAll('video').forEach(function(v){v.removeAttribute('autoplay');v.pause()});
 // carousel
 var tr=document.getElementById('track');function mv(d){tr.scrollBy({left:d*(tr.querySelector('.card').offsetWidth+22),behavior:rm?'auto':'smooth'})}document.getElementById('pv').onclick=function(){mv(-1)};document.getElementById('nx').onclick=function(){mv(1)};
 // waitlist
