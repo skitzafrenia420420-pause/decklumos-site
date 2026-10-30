@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow"><title>Decklumos — From stern to bow, know where to go</title>
-<meta name="description" content="Deck-by-deck maps, port guides, trip plans and trivia for 167 ships across 10 cruise lines. Free, offline, no account. All on your phone.">
+<meta name="description" content="Deck-by-deck maps, port guides, trip plans and trivia for 167 ships across 10 cruise lines. Free, offline, account optional. All on your phone.">
 <meta name="theme-color" content="#0B1F3A">
 <link rel="preload" as="image" href="hero-maldives.jpg" media="(min-width:761px)"><link rel="preload" as="image" href="hero-maldives-m.jpg" media="(max-width:760px)">
 <link rel="preload" as="font" type="font/woff2" href="Fredoka.woff2" crossorigin>
@@ -178,18 +178,30 @@ footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;
  .top .btn{display:none}.credit{font-size:10px;left:16px}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+
+.menub{display:none;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.14);color:#fff;cursor:pointer;place-items:center;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.menub span,.menub span::before,.menub span::after{display:block;width:18px;height:2px;border-radius:2px;background:currentColor;position:relative;transition:transform .25s,background .25s}
+.menub span::before,.menub span::after{content:"";position:absolute;left:0}.menub span::before{top:-6px}.menub span::after{top:6px}
+.top.scrolled .menub,.top.open .menub{color:var(--navy);border-color:var(--line);background:#fff}
+.top.open .menub span{background:transparent}.top.open .menub span::before{transform:translateY(6px) rotate(45deg)}.top.open .menub span::after{transform:translateY(-6px) rotate(-45deg)}
+.top nav a.cur{color:var(--gold)}.top.scrolled nav a.cur{color:var(--goldD)}
+.top nav a.g2l{font-weight:700}
+@media (max-width:1000px){.menub{display:grid}.top.open{background:#fff;box-shadow:0 10px 30px -14px rgba(11,31,58,.35)}.top.open .brand{color:var(--navy)}
+ .top.open nav{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#fff;padding:6px 22px 18px;box-shadow:0 18px 30px -18px rgba(11,31,58,.35)}
+ .top.open nav a{color:var(--navy);padding:14px 4px;border-bottom:1px solid var(--line);font-size:17px}.top.open nav a:last-child{border-bottom:0}.top.open nav a.cur{color:var(--goldD)}}
+.g2box a.more{display:inline-block;margin-top:14px;font-weight:650;color:var(--goldD);text-decoration:none}.g2box a.more:hover{text-decoration:underline}
 </style></head><body id="top">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top" id="hdr"><div class="wrap"><a class="brand" href="#top"><span class="dot" aria-hidden="true"></span>Decklumos</a>
-<nav aria-label="Main"><a href="#decks">Deck maps</a><a href="#app">The app</a><a href="#ports">Ports</a><a href="#faq">FAQ</a></nav>
-<a class="btn gold" href="#join">Join the waitlist</a></div></header>
+<nav aria-label="Main" id="mnav"><a href="#decks">Deck maps</a><a href="#app">The app</a><a href="#ports">Ports</a><a href="#faq">FAQ</a><a class="g2l" href="g2/">G2</a></nav>
+<a class="btn gold" href="#join">Join the waitlist</a><button class="menub" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><span></span></button></div></header>
 <main id="main">
 <section class="hero" aria-label="Welcome"><div class="bg" data-par="0.25" role="img" aria-label="Turquoise lagoon and palm-lined beach"></div><div class="shimmer" aria-hidden="true"></div>
  <div class="in"><div class="wrap">
   <h1>Your ship, <em>stern to bow.</em></h1>
   <p>Every deck, every venue and every port, right on your phone. Search a venue, find your cabin, plan your day. A few taps and you know where to go.</p>
   <div class="ctas"><a class="btn gold" href="#join">Get on board early →</a><a class="btn glass" href="#decks">Explore a deck</a></div>
-  <div class="chips"><span class="chip"><b>167</b> ships</span><span class="chip"><b>10</b> cruise lines</span><span class="chip">Works offline</span><span class="chip">Free · no account</span></div>
+  <div class="chips"><span class="chip"><b>167</b> ships</span><span class="chip"><b>10</b> cruise lines</span><span class="chip">Works offline</span><span class="chip">Free · account optional</span></div>
  </div></div>
  <a class="cue" href="#stats" aria-label="Scroll down"></a>
  <p class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Addu_City,_Maldives_(Unsplash_MvT9xneoOGU).jpg">Addu City, Maldives</a> · Unsplash via Wikimedia Commons (CC0)</p>
@@ -199,7 +211,7 @@ footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;
  <div class="stat rv"><div class="n" data-count="167">167</div><div class="l">ships with deck maps</div></div>
  <div class="stat rv d1"><div class="n" data-count="10">10</div><div class="l">cruise lines</div></div>
  <div class="stat rv d2"><div class="n">0</div><div class="l">Wi-Fi needed</div></div>
- <div class="stat rv d3"><div class="n">$0</div><div class="l">free, no account</div></div>
+ <div class="stat rv d3"><div class="n">$0</div><div class="l">free, account optional</div></div>
 </div></section>
 
 <section id="decks"><div class="wrap"><div class="story">
@@ -263,14 +275,14 @@ footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;
  <div class="media rv"><img src="aerial-shore.jpg" alt="Aerial view of waves on a turquoise shore" loading="lazy" width="1200" height="674"><div class="float"><span class="ic" aria-hidden="true">🗓️</span>Plan your day, port by port</div></div>
  <div class="rv d1"><span class="eyebrow">Plan the fun</span><h2>Your trip, all in one place.</h2>
  <p class="lead">Add your sailing, keep your plans for each day and check them anytime, right on your phone.</p>
- <ul class="ticks"><li>Port guides for where you're headed</li><li>Your cabin, saved and easy to find</li><li>No account, no sign-up</li></ul></div>
+ <ul class="ticks"><li>Port guides for where you're headed</li><li>Your cabin, saved and easy to find</li><li>No sign-up needed (account optional)</li></ul></div>
 </div></div></section>
 
 <section class="sand" aria-labelledby="ft-h"><div class="wrap" style="text-align:center"><span class="eyebrow">Why you'll love it</span><h2 id="ft-h">Made for life on board</h2>
  <div class="feat" style="text-align:left">
   <div class="f rv"><div class="ic" aria-hidden="true">🗺️</div><h3>Every deck</h3><p>Deck-by-deck maps for 167 ships across 10 cruise lines.</p></div>
   <div class="f rv d1"><div class="ic" aria-hidden="true">📶</div><h3>Works offline</h3><p>Maps, ports and trips are built in. No Wi-Fi package needed.</p></div>
-  <div class="f rv d2"><div class="ic" aria-hidden="true">🎁</div><h3>Free, no account</h3><p>Download it and go. Nothing to sign up for.</p></div>
+  <div class="f rv d2"><div class="ic" aria-hidden="true">🎁</div><h3>Free, account optional</h3><p>Download it and go. You don't need an account to use anything.</p></div>
   <div class="f rv"><div class="ic" aria-hidden="true">🛏️</div><h3>Find your cabin</h3><p>Save your cabin and always find your way back.</p></div>
   <div class="f rv d1"><div class="ic" aria-hidden="true">⚓</div><h3>Port guides</h3><p>Get to know each stop before you step off the ship.</p></div>
   <div class="f rv d2"><div class="ic" aria-hidden="true">🧠</div><h3>Cruise trivia</h3><p>Fun questions for sea days with the whole crew.</p></div>
@@ -286,7 +298,7 @@ footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;
 
 <section class="g2s" aria-labelledby="g2-h"><div class="wrap"><div class="g2box rv">
  <div class="lens"><video autoplay muted loop playsinline preload="none" poster="../assets/anim-3-find-your-way-poster.jpg" aria-label="Decklumos shown on Even Realities G2 glasses"><source src="../assets/anim-3-find-your-way.mp4" type="video/mp4"></video></div>
- <div><span class="eyebrow">Optional extra</span><h2 id="g2-h">Got Even Realities G2 glasses?</h2><p>Decklumos works there too. A nice bonus, never required.</p></div>
+ <div><span class="eyebrow">Optional extra</span><h2 id="g2-h">Got Even Realities G2 glasses?</h2><p>Decklumos works there too. A nice bonus, never required.</p><a class="more" href="g2/">See what it does on G2 →</a></div>
 </div></div></section>
 <section class="cta" id="join" aria-labelledby="wl-h"><div class="bg" data-par="0.15" role="img" aria-label="A cruise ship on the horizon at sunset"></div>
  <div class="in wrap"><span class="eyebrow" style="color:var(--gold)">Boarding soon</span><h2 id="wl-h">Come aboard early.</h2><p class="sub">Join the waitlist for early access and a first look at new port guides.</p>
@@ -306,6 +318,7 @@ footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;
   <details><summary>Does Decklumos work offline?</summary><p>Yes! Deck maps, port guides and your trips are built into the app, so they work with no Wi-Fi or signal. Cruise News needs a connection to load the latest stories.</p></details>
   <details><summary>Which cruise ships does Decklumos support?</summary><p>Decklumos supports 167 ships across 10 cruise lines, including Royal Caribbean, Carnival, Celebrity Cruises, Disney Cruise Line, MSC Cruises, Norwegian Cruise Line, and more. Check the app to see if your ship is supported.</p></details>
   <details><summary>Is Decklumos free to download?</summary><p>Yes! Decklumos is free.</p></details>
+  <details><summary>Do I need an account?</summary><p>No. Everything in Decklumos works without signing in. Creating an account is optional.</p></details>
   <details><summary>Do I need anything besides my phone?</summary><p>No, Decklumos works right on your phone. If you also have Even Realities G2 glasses, it works there too.</p></details>
  </div>
  <div class="contact rv"><h2>Missing your ship or found a mistake?</h2><p>Email the Owners. We read every message and we'd love to hear from you.</p><a class="btn navy" href="mailto:support@decklumos.com">support@decklumos.com</a></div>
@@ -319,6 +332,8 @@ footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;
 (function(){
 var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 var h=document.getElementById('hdr');function sc(){h.classList.toggle('scrolled',scrollY>40)}sc();addEventListener('scroll',sc,{passive:true});
+var mb=document.querySelector('.menub');mb.addEventListener('click',function(){var o=h.classList.toggle('open');mb.setAttribute('aria-expanded',o)});document.querySelectorAll('#mnav a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open');mb.setAttribute('aria-expanded','false')})});
+
 if('IntersectionObserver' in window&&!rm){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.rv').forEach(function(el){io.observe(el)})}else document.querySelectorAll('.rv').forEach(function(el){el.classList.add('on')});
 if(!rm){var ps=[].slice.call(document.querySelectorAll('[data-par]')),tk=0;function par(){tk=0;ps.forEach(function(el){var r=el.parentNode.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;var y=(r.top+r.height/2-innerHeight/2)*-parseFloat(el.dataset.par),c=r.height*.09;y=Math.max(-c,Math.min(c,y));if(el.parentNode.classList.contains('hero'))y=Math.max(0,-r.top)*parseFloat(el.dataset.par);el.style.translate='0 '+y.toFixed(1)+'px'})}addEventListener('scroll',function(){if(!tk){tk=1;requestAnimationFrame(par)}},{passive:true});par()}
 // deck
