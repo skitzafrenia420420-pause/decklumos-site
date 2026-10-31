@@ -1,0 +1,528 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><base href="../test-redesign/"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>Decklumos — From stern to bow, know where to go</title>
+<meta name="description" content="Deck-by-deck maps, port guides, trip plans and trivia for 167 ships across 10 cruise lines. Free, offline, account optional. All on your phone.">
+<meta name="theme-color" content="#0B1F3A">
+<link rel="preload" as="image" href="img/hero-ship.jpg" media="(min-width:761px)"><link rel="preload" as="image" href="img/hero-ship-m.jpg" media="(max-width:760px)">
+<link rel="preload" as="font" type="font/woff2" href="Fredoka.woff2" crossorigin>
+<style>
+@font-face{font-family:Fredoka;src:url(Fredoka.woff2) format("woff2");font-weight:300 700;font-display:swap}
+@font-face{font-family:Inter;src:url(Inter-Variable.woff2) format("woff2");font-weight:100 900;font-display:swap}
+:root{--navy:#14405F;--navy2:#1d5578;--gold:#F2A65A;--goldD:#a85a14;--goldL:#FDE8D2;--sand:#FFF9F1;--sea:#0e7c86;--aqua:#3fc1c9;--t2:#4a5568;--line:#e8e1d3;--sh:0 20px 50px -20px rgba(11,31,58,.35);--r:24px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:400 17px/1.6 Inter,system-ui,sans-serif;color:var(--navy);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip}html{overflow-x:hidden;overflow-x:clip}
+img{max-width:100%;height:auto;display:block}a{color:inherit}
+h1,h2,h3{font-family:Fredoka,Inter,sans-serif;font-weight:600;line-height:1.08;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(34px,4.6vw,58px)}h3{font-size:24px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+section{padding:120px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:700 13px Inter;letter-spacing:.16em;text-transform:uppercase;color:var(--goldD);margin-bottom:16px}
+.eyebrow::before{content:"";width:28px;height:2px;background:currentColor;border-radius:2px}
+.lead{font-size:20px;color:var(--t2);max-width:620px;margin:20px 0 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 30px;border-radius:999px;border:0;cursor:pointer;font:650 17px Inter;text-decoration:none;transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-3px)}
+.btn.gold{background:var(--gold);color:var(--navy);box-shadow:0 12px 30px -10px rgba(217,164,65,.8)}.btn.gold:hover{background:#e6b65a;box-shadow:0 18px 40px -12px rgba(217,164,65,.9)}
+.btn.glass{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}.btn.glass:hover{background:rgba(255,255,255,.24)}
+.btn.navy{background:var(--navy);color:#fff}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;padding:10px 16px;z-index:100}.skip:focus{left:8px}
+
+/* header */
+.top{position:fixed;inset:0 0 auto;z-index:50;transition:background .35s,box-shadow .35s,padding .35s;padding:22px 0}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1360px}
+.brand{display:flex;align-items:center;gap:10px;font:600 26px Fredoka;color:#fff;text-decoration:none;transition:color .35s}
+.brand .dot{width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(217,164,65,.28)}
+.top nav{display:flex;gap:30px}.top nav a{color:rgba(255,255,255,.92);text-decoration:none;font-weight:550;font-size:15.5px;transition:color .35s}.top nav a:hover{color:var(--gold)}
+.top .btn{min-height:46px;padding:0 22px;font-size:15.5px}
+.top.scrolled{background:rgba(255,255,255,.86);backdrop-filter:saturate(1.6) blur(16px);-webkit-backdrop-filter:saturate(1.6) blur(16px);box-shadow:0 8px 30px -14px rgba(11,31,58,.3);padding:12px 0}
+.top.scrolled .brand,.top.scrolled nav a{color:var(--navy)}
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#0a3a52}
+/* Hero photo: 'Celestyal Journey docked off of Mykonos', CC0 1.0 public domain dedication (no attribution required). Source: https://commons.wikimedia.org/wiki/File:Celestyal_Journey_docked_off_of_Mykonos.jpg */
+.hero .bg{position:absolute;inset:0;background:url(../test-redesign-calm/calm-day-at-sea.jpg) 50% 55%/cover;filter:brightness(1.06) saturate(1.3) sepia(.12) contrast(1.03)}
+
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 55% 50% at 50% 34%,rgba(10,42,72,.42) 0%,rgba(10,42,72,0) 75%),linear-gradient(180deg,rgba(10,42,72,.28) 0%,rgba(10,42,72,.12) 45%,rgba(10,42,72,.3) 100%)}
+.hero .shimmer{position:absolute;inset:auto 0 0;height:45%;z-index:1;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.13) 45%,transparent 60%);background-size:250% 100%;display:none;mix-blend-mode:overlay;pointer-events:none}
+@keyframes sh{from{background-position:150% 0}to{background-position:-100% 0}}
+.hero .in{position:relative;z-index:2;padding:0 0 120px;width:100%}
+.hero h1{font-size:clamp(52px,8.4vw,120px);font-weight:600;max-width:11ch;text-shadow:0 4px 40px rgba(0,0,0,.25)}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .in p{font-size:clamp(18px,1.6vw,22px);max-width:560px;margin:24px 0 36px;color:rgba(255,255,255,.94)}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:40px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-weight:600;font-size:14.5px}
+.chip b{color:var(--gold)}
+.credit{position:absolute;z-index:2;right:16px;bottom:10px;margin:0;max-width:calc(100% - 32px);text-align:right;font-size:11px;line-height:1.4;color:rgba(255,255,255,.75)}.credit a{color:inherit}
+.cue{position:absolute;z-index:2;left:50%;bottom:28px;width:26px;height:42px;border:2px solid rgba(255,255,255,.7);border-radius:14px;transform:translateX(-50%)}
+.cue::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:#fff;animation:cue 1.8s ease-in-out infinite}
+@keyframes cue{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(14px)}}
+/* stats */
+.stats{background:var(--navy);color:#fff;padding:0;position:relative;overflow:hidden}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:54px 20px;text-align:center;border-right:1px solid rgba(255,255,255,.1)}.stat:last-child{border:0}
+.stat .n{font:600 clamp(44px,5vw,68px)/1 Fredoka;color:var(--gold)}.stat .l{margin-top:10px;color:rgba(255,255,255,.82);font-weight:500}
+/* reveal */
+.rv{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.on{opacity:1;transform:none}.rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}
+/* story */
+.story{display:grid;grid-template-columns:1.15fr 1fr;gap:80px;align-items:center}
+.story.flip{grid-template-columns:1fr 1.15fr}.story.flip .media{order:2}
+.media{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);aspect-ratio:5/4}
+.media img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}.media:hover img{transform:scale(1.05)}
+.media .float{position:absolute;left:22px;bottom:22px;right:22px;display:flex;gap:12px;align-items:center;padding:14px 18px;border-radius:18px;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-weight:600;box-shadow:0 10px 30px -10px rgba(0,0,0,.3)}
+.float .ic{flex:none;width:40px;height:40px;border-radius:12px;background:var(--gold);display:grid;place-items:center}
+.ticks{list-style:none;padding:0;margin:28px 0 0}.ticks li{padding:12px 0 12px 40px;position:relative;border-bottom:1px solid var(--line);font-weight:500}
+.ticks li::before{content:"";position:absolute;left:0;top:13px;width:24px;height:24px;border-radius:50%;background:var(--goldL)}
+.ticks li::after{content:"";position:absolute;left:7px;top:20px;width:10px;height:5px;border-left:2.5px solid var(--goldD);border-bottom:2.5px solid var(--goldD);transform:rotate(-45deg)}
+.sand{background:var(--sand)}
+/* deck map */
+.deck{background:linear-gradient(180deg,#fff,var(--sand))}
+.deckbox{margin-top:56px;display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:stretch}
+.ship{position:relative;background:linear-gradient(180deg,#eaf6f7,#d4eef0);border-radius:var(--r);padding:40px 30px;box-shadow:var(--sh);overflow:hidden}
+.tabs{display:flex;gap:8px;margin-bottom:26px;flex-wrap:wrap}
+.tabs button{font:600 15px Inter;border:0;border-radius:999px;padding:10px 18px;background:#fff;color:var(--navy);cursor:pointer;transition:background .2s,transform .2s}
+.tabs button:hover{transform:translateY(-2px)}.tabs button[aria-selected=true]{background:var(--navy);color:#fff}
+.hull{position:relative;width:100%;aspect-ratio:4/1}
+.hull svg{position:absolute;inset:0;width:100%;height:100%}
+.spot{position:absolute;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;border:0;background:#fff;box-shadow:0 6px 18px -4px rgba(11,31,58,.45);cursor:pointer;display:grid;place-items:center;font-size:20px;transition:transform .25s,background .25s}
+.spot::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--gold);opacity:0;animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{opacity:.8;transform:scale(.8)}100%{opacity:0;transform:scale(1.5)}}
+.spot:hover,.spot.act{transform:translate(-50%,-50%) scale(1.15);background:var(--gold)}
+.hidden{display:none}
+.legend{display:flex;justify-content:space-between;margin-top:18px;font:700 12px Inter;letter-spacing:.14em;color:var(--sea);text-transform:uppercase}
+.info{background:var(--navy);color:#fff;border-radius:var(--r);padding:34px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--sh)}
+.info .k{font:700 12px Inter;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.info h3{font-size:30px;margin:12px 0}.info p{color:rgba(255,255,255,.82);margin:0}
+.info small{display:block;margin-top:24px;color:rgba(255,255,255,.6);font-size:13px}
+/* devices */
+.dev{background:radial-gradient(1200px 600px at 20% 0%,#1d4a7a 0%,var(--navy) 60%);color:#fff;overflow:hidden}
+.dev .lead{color:rgba(255,255,255,.8)}.dev .eyebrow{color:var(--gold)}
+.appgrid{display:grid;grid-template-columns:1fr 420px;gap:70px;align-items:center;margin:60px auto 0;max-width:1060px}
+.feats{display:grid;gap:12px}
+.feats button{display:block;text-align:left;width:100%;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#fff;border-radius:20px;padding:18px 22px;cursor:pointer;font:inherit;transition:background .25s,transform .25s,border-color .25s}
+.feats button:hover{transform:translateX(6px);border-color:rgba(255,255,255,.4)}
+.feats button b{display:block;font:600 21px Fredoka}.feats button span{display:block;color:rgba(255,255,255,.75);font-size:15.5px;margin-top:2px}
+.feats button[aria-pressed=true]{background:#fff;color:var(--navy);border-color:#fff}.feats button[aria-pressed=true] span{color:var(--t2)}
+.bigphone{display:flex;justify-content:center}
+.bigphone .phone{position:relative;width:360px;border-radius:54px;padding:14px;background:#0a0f18;box-shadow:0 50px 100px -30px rgba(0,0,0,.85),0 0 0 2px #2a3240 inset,0 0 120px -20px rgba(217,164,65,.35)}
+.bigphone .phone img{border-radius:42px;width:100%;transition:opacity .25s}
+.bigphone .phone::before{content:"";position:absolute;top:26px;left:50%;width:100px;height:28px;margin-left:-50px;background:#0a0f18;border-radius:16px;z-index:1}
+.taps{list-style:none;padding:0;margin:80px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.taps li{display:flex;gap:16px;align-items:flex-start;padding:24px;border-radius:20px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.taps li>span{flex:none;width:44px;height:44px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;font:600 22px Fredoka}
+.taps b{font:600 20px Fredoka}.taps p{margin:2px 0 0;color:rgba(255,255,255,.75);font-size:15.5px}
+.g2s{padding:90px 0}.g2box{max-width:980px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;background:var(--sand);border:1px solid var(--line);border-radius:var(--r);padding:30px}
+.g2box .lens{border-radius:16px;overflow:hidden;background:#000;aspect-ratio:2/1}.g2box video{width:100%;height:100%;object-fit:cover;display:block}
+.g2box h2{font-size:30px}.g2box p{color:var(--t2);margin:10px 0 0}.g2box .eyebrow{margin-bottom:10px}
+/* carousel */
+.ports{background:var(--sand);overflow:hidden}
+.phead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
+.arrows{display:flex;gap:10px}.arrows button{width:54px;height:54px;border-radius:50%;border:1.5px solid var(--navy);background:#fff;cursor:pointer;font-size:22px;color:var(--navy);transition:background .2s,color .2s}.arrows button:hover{background:var(--navy);color:#fff}
+.track{display:flex;gap:22px;overflow-x:auto!important;scroll-snap-type:x mandatory;padding:50px max(28px,calc((100vw - 1240px)/2 + 28px)) 30px;scrollbar-width:none;scroll-padding:0 max(28px,calc((100vw - 1240px)/2 + 28px))}
+.track::-webkit-scrollbar{display:none}
+.card{flex:0 0 330px;height:460px;position:relative;border-radius:var(--r);overflow:hidden;scroll-snap-align:start;color:#fff;box-shadow:var(--sh);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.card:hover{transform:translateY(-10px)}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s}.card:hover img{transform:scale(1.07)}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(6,22,44,.85))}
+.card .t{position:absolute;z-index:1;left:24px;right:24px;bottom:24px}.card .t span{font:700 12px Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.card h3{font-size:28px;margin-top:6px}
+/* features */
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+.f{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:34px;transition:transform .35s,box-shadow .35s}
+.f:hover{transform:translateY(-8px);box-shadow:var(--sh)}
+.f .ic{width:58px;height:58px;border-radius:18px;background:var(--goldL);display:grid;place-items:center;font-size:28px;margin-bottom:22px}
+.f h3{font-size:23px;margin-bottom:8px}.f p{margin:0;color:var(--t2)}
+/* wide band */
+.band{position:relative;min-height:72vh;display:flex;align-items:center;color:#fff;overflow:hidden;padding:0}
+.band .bg{position:absolute;inset:-12% 0;background:url(deck-sea-day.jpg) center/cover;will-change:transform}
+.band::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(6,22,44,.85),rgba(6,22,44,.35) 55%,rgba(6,22,44,0) 80%)}
+.band .in{position:relative;z-index:2}.band h2{max-width:13ch}.band p{max-width:520px;font-size:20px;color:rgba(255,255,255,.9)}
+/* trivia */
+.quiz{max-width:860px;margin:50px auto 0;background:#fff;border-radius:var(--r);padding:40px;box-shadow:var(--sh);text-align:left}
+.quiz .q{font:600 26px Fredoka;margin-bottom:22px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.opt{border:2px solid var(--line);background:#fff;border-radius:16px;padding:16px 18px;font:600 16px Inter;color:var(--navy);text-align:left;cursor:pointer;transition:border-color .2s,transform .2s,background .2s}
+.opt:hover{border-color:var(--gold);transform:translateY(-2px)}.opt.win{background:#e3f5e8;border-color:#2e9b57}.opt.miss{border-color:#d4553f;background:#fdecea}.opt.dim{opacity:.45}
+#qres{min-height:28px;margin-top:16px;font-weight:600}#qres .good{color:#1f7a42}#qres .try{color:#b5402c}
+/* cta */
+.cta{position:relative;padding:160px 0;color:#fff;overflow:hidden;text-align:center}
+.cta .bg{position:absolute;inset:-10% 0;background:url(cta-cruise-sunset.jpg) center 60%/cover;will-change:transform}
+.cta::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(6,22,44,.55),rgba(6,22,44,.35) 50%,rgba(6,22,44,.75))}
+.cta .in{position:relative;z-index:2}
+.cta h2{font-size:clamp(42px,6.4vw,88px);max-width:14ch;margin:0 auto}
+.cta .sub{font-size:20px;max-width:560px;margin:20px auto 40px;color:rgba(255,255,255,.92)}
+.wlcard{max-width:620px;margin:0 auto;padding:30px;border-radius:28px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);text-align:left;box-shadow:0 30px 60px -20px rgba(0,0,0,.5)}
+.wlcard label{display:block;font-weight:600;font-size:14.5px;margin:0 0 6px}
+.wlcard input{width:100%;height:54px;border-radius:14px;border:0;padding:0 18px;font:500 16px Inter;color:var(--navy);margin-bottom:16px;background:#fff}
+.wlcard .btn{width:100%}.wl-hp{position:absolute;left:-9999px}
+.wl-err{color:#ffd6cf;min-height:22px;margin:10px 0 0;font-weight:600}.wl-ok{font:600 22px Fredoka;text-align:center;margin:0}
+.cta .credit{right:16px;bottom:12px}
+/* faq */
+.faq{max-width:860px;margin:50px auto 0}
+.faq details{border-bottom:1px solid var(--line)}.faq summary{cursor:pointer;list-style:none;padding:22px 44px 22px 0;font:600 21px Fredoka;position:relative}
+.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:"+";position:absolute;right:4px;top:14px;width:34px;height:34px;border-radius:50%;background:var(--goldL);display:grid;place-items:center;font:500 22px Inter;color:var(--goldD);transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}.faq p{margin:0 0 22px;color:var(--t2)}
+.contact{text-align:center;margin-top:90px;padding:56px 28px;border-radius:var(--r);background:var(--sand)}.contact h2{font-size:32px}.contact p{color:var(--t2)}
+footer{background:var(--navy);color:rgba(255,255,255,.72);padding:56px 0 40px;font-size:14px}footer .row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer nav{display:flex;gap:24px}footer a{color:#fff}footer .d{font-size:12.5px;color:rgba(255,255,255,.55);margin-top:20px}footer .cr{font-size:12.5px;color:rgba(255,255,255,.55)}
+@media (max-width:1000px){.story,.story.flip,.devgrid,.deckbox{grid-template-columns:1fr;gap:44px}.story.flip .media{order:0}.appgrid{grid-template-columns:1fr 360px;gap:40px}.feat{grid-template-columns:1fr 1fr}.top nav{display:none}}
+@media (max-width:760px){
+ section{padding:84px 0}.wrap{padding:0 22px}
+ .hero .bg{background-image:url(../test-redesign-calm/calm-day-at-sea-m.jpg);background-position:50% 55%}
+ .hero .in{padding-bottom:96px}.hero h1{font-size:54px}.hero .ctas .btn{flex:1 1 100%}
+ .cue{display:none}.chips{margin-top:28px}
+ .stats .wrap{grid-template-columns:1fr 1fr;padding:0}.stat{padding:36px 10px;border-bottom:1px solid rgba(255,255,255,.1)}.stat:nth-child(2){border-right:0}
+ .feat{grid-template-columns:1fr}.opts{grid-template-columns:1fr}.quiz{padding:26px 20px}
+ .appgrid{grid-template-columns:1fr;gap:40px}.bigphone{order:-1}.bigphone .phone{width:270px;border-radius:42px;padding:10px}.bigphone .phone img{border-radius:33px}.bigphone .phone::before{top:19px;width:76px;height:21px;margin-left:-38px}.taps{grid-template-columns:1fr;margin-top:50px}.g2box{grid-template-columns:1fr;padding:20px}
+ .card{flex-basis:78vw;height:420px}.arrows{display:none}
+ .ship{padding:26px 14px}.legend .x{display:none}.spot{width:38px;height:38px;font-size:17px}.hull{aspect-ratio:2.6/1}
+ .band{min-height:80vh}.band::before{background:linear-gradient(180deg,rgba(6,22,44,.25),rgba(6,22,44,.85))}.band .in{align-self:flex-end;padding-bottom:96px}
+ .cta{padding:110px 0}.cta .bg{background-image:url(cta-cruise-sunset-m.jpg)}.wlcard{padding:22px}
+ .top .btn{display:none}.credit{font-size:10px;left:16px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+
+.menub{display:none;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.14);color:#fff;cursor:pointer;place-items:center;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.menub span,.menub span::before,.menub span::after{display:block;width:18px;height:2px;border-radius:2px;background:currentColor;position:relative;transition:transform .25s,background .25s}
+.menub span::before,.menub span::after{content:"";position:absolute;left:0}.menub span::before{top:-6px}.menub span::after{top:6px}
+.top.scrolled .menub,.top.open .menub{color:var(--navy);border-color:var(--line);background:#fff}
+.top.open .menub span{background:transparent}.top.open .menub span::before{transform:translateY(6px) rotate(45deg)}.top.open .menub span::after{transform:translateY(-6px) rotate(-45deg)}
+.top nav a.cur{color:var(--gold)}.top.scrolled nav a.cur{color:var(--goldD)}
+.top nav a.g2l{font-weight:700}
+@media (max-width:1000px){.menub{display:grid}.top.open{background:#fff;box-shadow:0 10px 30px -14px rgba(11,31,58,.35)}.top.open .brand{color:var(--navy)}
+ .top.open nav{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#fff;padding:6px 22px 18px;box-shadow:0 18px 30px -18px rgba(11,31,58,.35)}
+ .top.open nav a{color:var(--navy);padding:14px 4px;border-bottom:1px solid var(--line);font-size:17px}.top.open nav a:last-child{border-bottom:0}.top.open nav a.cur{color:var(--goldD)}}
+.g2box a.more{display:inline-block;margin-top:14px;font-weight:650;color:var(--goldD);text-decoration:none}.g2box a.more:hover{text-decoration:underline}
+.hcred{position:absolute;right:12px;bottom:8px;z-index:3;margin:0;font-size:11px;color:rgba(255,255,255,.85);background:rgba(6,22,44,.45);padding:3px 8px;border-radius:6px}.hcred a{color:#fff}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.phero{background:linear-gradient(160deg,#0B1F3A,#132d52 60%,#0e4b5a);color:#fff;padding:150px 0 70px}
+.phero h1{font-size:clamp(40px,6vw,72px)}.phero p{font-size:20px;max-width:640px;opacity:.9;margin:18px 0 0}.phero .eyebrow{color:var(--gold)}
+.crumbs{font-size:14px;opacity:.85;margin-bottom:14px}.crumbs a{color:var(--goldL)}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}.rgrid .card{flex:none;height:380px;width:auto}
+.rgrid .card .t small{display:block;font:600 15px Inter;color:var(--goldL);margin-top:6px}
+.plist{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.pc{display:block;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 10px 30px -22px rgba(11,31,58,.5);transition:transform .25s}.pc:hover{transform:translateY(-3px)}
+.pc h3{font-size:24px}.pc .c{font-size:14px;color:var(--t2);margin:4px 0 10px}.pc p{margin:0;color:var(--t2);font-size:15.5px}.pc .fr{margin-top:14px;font-weight:700;color:var(--sea)}.pc .fr.no{color:var(--t2);font-weight:500}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:30px}.kv div{background:var(--sand);border-radius:18px;padding:20px}.kv b{display:block;font:700 12px Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--goldD);margin-bottom:6px}
+.todo{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:12px}.todo li{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}.todo li b{color:var(--sea)}
+.stbl{width:100%;border-collapse:collapse;margin-top:24px;font-size:15.5px}.stbl th,.stbl td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}.stbl th{font:700 12px Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--t2)}
+.stbl a{color:var(--sea);font-weight:700;white-space:nowrap}.src{font-size:14px;color:var(--t2);margin-top:14px}
+@media(max-width:760px){.stbl thead{display:none}.stbl tr{display:block;border-bottom:1px solid var(--line);padding:10px 0}.stbl td{display:block;border:0;padding:2px 0}}
+.rhero{background-size:cover;background-position:center;color:#fff;padding:72px 0 56px!important;min-height:300px}.rhero a{color:#fff}.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px}.pcx{display:flex;flex-direction:column;background:#fff;border-radius:16px;overflow:hidden;text-decoration:none;color:#10243a;border-top:5px solid var(--ac);box-shadow:0 4px 18px rgba(6,22,44,.08);transition:transform .2s,box-shadow .2s,background-color .3s}.pcx:hover,.pcx:focus-visible{background-color:color-mix(in srgb,var(--ac) 15%,#fff);transform:translateY(-4px);box-shadow:0 12px 28px rgba(6,22,44,.16)}.pcx img,.pcx .noimg{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}.pcx .noimg{display:flex;align-items:center;justify-content:center;font-size:42px;background:color-mix(in srgb,var(--ac) 15%,#fff)}.pcx .pb{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}.pcx h3{margin:0;font-size:1.25rem}.pcx .c{color:#40546a;font-size:.9rem}.pcx p{margin:4px 0 8px;font-size:.95rem;line-height:1.45}.pcx .chip{align-self:flex-start;background:var(--ac);color:#fff;border-radius:999px;padding:5px 12px;font-size:.88rem}.pcx .chip b{color:#fff}.pcx .chip.no{background:#e7ecf1;color:#40546a}.pcx .go{margin-top:auto;padding-top:8px;font-weight:700;color:var(--ac)}@media(prefers-reduced-motion:reduce){.pcx{transition:none}.pcx:hover{transform:none}}
+.stool{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin:24px 0 0}.lfil{display:flex;flex-wrap:wrap;gap:10px}.lfil button[disabled]{border-color:#c9d2db;color:#7a8896;background:#f1f4f7;cursor:not-allowed}.lfil small{font-size:.75rem}.ssort{font-weight:600;color:#10243a}.ssort select{margin-left:8px;min-height:44px;border:2px solid #0e5aa7;border-radius:10px;padding:6px 10px;font:inherit;background:#fff}.lfil button{border:2px solid #0e5aa7;background:#fff;color:#0e3a66;border-radius:999px;padding:6px 14px;font:inherit;cursor:pointer;min-height:44px}.lfil button[aria-pressed=true]{background:#0e5aa7;color:#fff}.lfil .shipb{background:none!important;color:inherit!important;padding:0}.more[hidden]{display:none}.sc[hidden]{display:none}.bestp{background:#0a7d43;color:#fff;font-weight:700;font-size:.8rem;padding:3px 10px;border-radius:999px}.psrc{font-size:.8rem;color:#40546a}.also{margin:6px 0 0;font-size:.85rem}.also a{color:#0e5aa7}.more{text-align:center;margin:18px 0}
+.scards{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:16px}
+.sc{display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;border-radius:22px;padding:18px 22px;border:1px solid var(--line);box-shadow:0 10px 30px -24px rgba(11,31,58,.6)}
+.sc.t0{background:#eaf7f8}.sc.t1{background:#fdf3e1}.sc.t2{background:#eef1fb}.sc.t3{background:#fbeee9}
+.sd{display:flex;flex-direction:column;align-items:center;justify-content:center;width:84px;height:92px;border-radius:18px;background:var(--navy);color:#fff;line-height:1.1}.sd span{font:700 12px Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--goldL)}.sd b{font:600 34px Fredoka}
+.sb h3{font-size:22px;margin:8px 0 6px}.shipb{display:inline-block;font:700 13px Inter;border-radius:999px;padding:5px 12px;color:#fff}.lc-carnival{background:#0e5aa7}.lc-other{background:var(--sea)}
+.sm{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:15px;color:#2d3a4f}.sm i{font-style:normal}
+.sp{display:flex;flex-direction:column;align-items:flex-end;gap:10px}.pchip{background:var(--gold);color:var(--navy);font:600 26px Fredoka;border-radius:999px;padding:6px 18px;white-space:nowrap}.pchip small{font:600 13px Inter}
+.bookp{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;background:#e8604c;color:#fff;font-weight:700;text-decoration:none;white-space:nowrap;transition:transform .2s}.bookp:hover{transform:translateY(-2px);background:#d44f3b}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media(max-width:760px){.sc{grid-template-columns:auto 1fr;gap:14px;padding:16px}.sd{width:64px;height:74px}.sd b{font-size:26px}.sp{grid-column:1/-1;flex-direction:row;justify-content:space-between;align-items:center}.pchip{font-size:22px}}
+/* deals */
+.flash{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px 12px;background:rgba(11,31,58,.72);border:1px solid rgba(217,164,65,.7);color:#fff;text-decoration:none;border-radius:999px;padding:8px 18px 8px 8px;margin-bottom:22px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.flash .tg{background:var(--gold);color:var(--navy);font:800 12px Inter;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:6px 12px}
+.flash b{font:600 20px Fredoka,Inter}.flash small{opacity:.8;font-size:13px}
+.deals{background:var(--navy);color:#fff;padding:90px 0}.deals h2{color:#fff}.deals .lead{color:#cfd8e6}
+.dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.dc{position:relative;display:flex;flex-direction:column;border-radius:22px;overflow:hidden;background:#132d52;text-decoration:none;color:#fff;box-shadow:var(--sh);transition:transform .3s}.dc:hover{transform:translateY(-4px)}
+.dc .im{height:170px;background-size:cover;background-position:center}.dc .bd{padding:20px 22px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+.dc .rk{position:absolute;top:14px;left:14px;background:rgba(11,31,58,.85);font:800 12px Inter;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:6px 12px}
+.dc h3{font-size:26px}.dc .pr{font:600 30px Fredoka;color:var(--gold)}.dc .pr span{font:500 15px Inter;color:#cfd8e6}
+.dc .mt{font-size:14.5px;color:#cfd8e6}.dc .go{margin-top:auto;padding-top:10px;font-weight:700;color:var(--goldL)}
+.ptag{display:inline-block;background:var(--aqua);color:var(--navy);font:800 11.5px Inter;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:5px 10px;margin-right:6px}.ptag.end{background:var(--goldL)}
+.hrow{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:22px}
+.hc{display:block;text-decoration:none;border:1px solid rgba(255,255,255,.22);border-radius:18px;padding:16px 18px;color:#fff}.hc:hover{border-color:var(--gold)}.hc b{display:block;font:600 21px Fredoka}.hc span{font-size:14px;color:#cfd8e6}.hc em{font-style:normal;color:var(--gold);font-weight:700}
+.dsrc{font-size:13.5px;color:#aebbd0;margin-top:26px}.dsrc a{color:#fff}
+.nyl{display:grid;gap:10px;margin-top:20px}.nyl[hidden],.flash[hidden]{display:none}.nyl a{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;text-decoration:none;color:#fff;border-bottom:1px solid rgba(255,255,255,.15);padding:12px 0}.nyl a b{color:var(--gold)}
+.explore{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}.ex{display:block;text-decoration:none;border-radius:20px;padding:26px;background:var(--sand);border:1px solid var(--line);transition:transform .25s}.ex:hover{transform:translateY(-3px)}.ex h3{font-size:24px}.ex p{margin:6px 0 0;color:var(--t2);font-size:15.5px}.ex .go{display:block;margin-top:12px;font-weight:700;color:var(--sea)}
+@media(max-width:1000px){.dgrid{grid-template-columns:1fr 1fr}.explore{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.dgrid,.explore{grid-template-columns:1fr}.flash b{font-size:17px}}
+</style><style id="wlm-css">
+.wlm{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:18px}.wlm[hidden]{display:none}
+.wlm-bd{position:absolute;inset:0;background:rgba(6,16,32,.66);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.wlm-box{position:relative;width:100%;max-width:460px;max-height:calc(100vh - 36px);overflow:auto;background:#fff;color:#0B1F3A;border-radius:24px;padding:34px 30px 28px;box-shadow:0 30px 80px -20px rgba(0,0,0,.55);text-align:left}
+.wlm-box .eyebrow{color:#9a6c1c}.wlm-box h2{font-size:34px;margin:0}.wlm-box p.s{color:#4a5568;margin:10px 0 18px;font-size:16px}
+.wlm-x{position:absolute;top:12px;right:12px;width:44px;height:44px;border-radius:50%;border:0;background:#f3efe6;color:#0B1F3A;font-size:26px;line-height:1;cursor:pointer}.wlm-x:hover{background:#e8e1d3}
+.wlm label{display:block;font-weight:600;font-size:15px;margin:12px 0 6px}.wlm input[type=email],.wlm input[type=text]{width:100%;min-height:50px;border:1.5px solid #d8cfbd;border-radius:14px;padding:0 14px;font:inherit;font-size:16px;color:#0B1F3A;background:#fff}
+.wlm input:focus{border-color:#D9A441;outline:3px solid rgba(217,164,65,.35);outline-offset:0}
+.wlm .btn{width:100%;display:inline-flex;margin-top:18px}.wlm .wl-err{color:#b3261e}.wlm .wl-ok{font:600 24px Fredoka,Inter;text-align:center;padding:14px 0 4px}.wlm .wl-ok small{display:block;font:400 16px Inter;color:#4a5568;margin-top:8px}
+body.wlm-open{overflow:hidden}
+</style><style id="r5-css">
+.hero .in h1{font-size:clamp(38px,5.4vw,68px)}
+.hjobs{display:grid;grid-template-columns:1.45fr 1fr;gap:18px;margin-top:26px;max-width:940px}
+.hfind{background:rgba(255,255,255,.96);color:#14405F;border-radius:22px;padding:22px;box-shadow:0 18px 40px -18px rgba(0,0,0,.45);text-align:left}
+.hfind h2{font-size:22px;margin:0 0 12px;color:#14405F}
+.hfind label{display:block;font-size:13px;font-weight:700;color:#3b5368;margin-bottom:10px}
+.hfind select{display:block;width:100%;margin-top:5px;padding:11px 12px;border:1.5px solid #d9e3ea;border-radius:12px;font:inherit;font-size:15px;color:#14405F;background:#fff}
+.hf2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hfind .btn{width:100%;justify-content:center;margin-top:4px}
+.hfind small{display:block;margin-top:10px;color:#56697a;font-size:12.5px}.hfind small a{color:#0e7c86;font-weight:700}
+.hferr{color:#b3261e;font-size:13px;margin:0;min-height:0}
+.hmap{display:flex;flex-direction:column;gap:6px;justify-content:center;background:rgba(255,255,255,.16);border:1.5px solid rgba(255,255,255,.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:22px;padding:22px;color:#fff;text-decoration:none}
+.hmap .ic{font-size:34px}.hmap b{font-size:22px;font-family:Fredoka,sans-serif}.hmap i{font-style:normal;font-weight:700;color:#FDE8D2;margin-top:6px}
+.hmap:hover{background:rgba(255,255,255,.24)}
+.ppn{font-size:12px;opacity:.8;font-weight:500}.dc .ppn{margin:-2px 0 6px}.sp .ppn{display:block;font-size:11.5px;color:#56697a;margin-top:2px}
+.lsoon{align-self:center;font-size:13px;color:#56697a;font-style:italic;padding:0 6px}
+.seeship{display:inline-block;margin:6px 0;font-weight:700;color:#0e7c86}
+@media(max-width:760px){.hjobs{grid-template-columns:1fr}.hero .in h1{font-size:40px}.hmap{padding:18px}.hmap .ic{font-size:26px}}
+</style>
+<style id="pk-css">.pkl.pkc [role=option] .pkr{display:none}.pkl.pkc [role=option]{padding-top:9px;padding-bottom:9px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:2px 10px;flex-direction:row;min-height:0}.pkl.pkc [role=option] .pkp{margin:0;font-size:14px}.pkmore{padding:8px 12px;font-size:14px;color:#5b6b78}
+.pk{margin-bottom:12px}.pk>label{display:block;font-size:14px;font-weight:700;color:#3b5368;margin-bottom:6px}
+.pkbox{position:relative}
+#hf-q{width:100%;box-sizing:border-box;min-height:52px;padding:12px 48px 12px 14px;border:1.5px solid #d9e3ea;border-radius:14px;font:inherit;font-size:17px;color:#14405F;background:#fff}
+#hf-q:focus{outline:3px solid #F2A65A;outline-offset:1px;border-color:#F2A65A}
+.pkx{position:absolute;right:4px;top:4px;width:44px;height:44px;border:0;border-radius:10px;background:transparent;font-size:26px;line-height:1;color:#56697a;cursor:pointer}
+.pkx:hover,.pkx:focus-visible{background:#FDE8D2;color:#14405F}
+.pkl{position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:30;margin:0;padding:6px;list-style:none;background:#fff;border:1.5px solid #d9e3ea;border-radius:14px;box-shadow:0 18px 40px -12px rgba(20,40,60,.45);max-height:min(460px,62vh);overflow-y:auto;overscroll-behavior:auto;-webkit-overflow-scrolling:touch}
+.pkl[hidden]{display:none}
+.pkl li{white-space:normal;overflow-wrap:anywhere}
+.pkl [role=option]{min-height:48px;padding:10px 12px;border-radius:10px;cursor:pointer;color:#14405F;display:flex;flex-direction:column;gap:2px}
+.pkl [role=option] b{font-size:16px}
+.pkl .pkr{font-size:13px;color:#56697a}.pkl .pkp{font-size:13px;color:#a85a14;font-weight:600}
+.pkl [role=option]:hover,.pkl [role=option].on{background:#FDE8D2}
+.pkg{padding:10px 12px 4px;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#56697a}
+.pkno{padding:12px;font-size:14px;color:#3b5368;line-height:1.45}
+.pksug,.pkchips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;align-items:center}
+.pksug button,.pkchips button{min-height:40px;padding:8px 14px;border:1.5px solid #F2A65A;border-radius:999px;background:#FFF9F1;color:#14405F;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.pksug button:hover,.pkchips button:hover,.pkchips button:focus-visible{background:#FDE8D2}
+.pkcl{font-size:13px;font-weight:700;color:#56697a}
+.flash{border-radius:18px!important;max-width:100%;box-sizing:border-box}
+.flash small,.flash b{overflow-wrap:anywhere}
+.hfind,.hmap{min-width:0;box-sizing:border-box}
+.hfind small{overflow-wrap:anywhere}
+@media(max-width:360px){.hf2{grid-template-columns:1fr}.hfind{padding:18px}}
+</style><style id="tr-css">.trend{background:var(--sand);padding:72px 0 64px}.trend h2{margin:0 0 8px}.trend .lead{margin:0 0 26px;color:#4a5a66}
+.tgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}.tt{display:flex;flex-direction:column;gap:6px;padding:24px;border-radius:22px;background:#fff;border:1.5px solid var(--line);color:var(--navy);text-decoration:none;box-shadow:0 14px 34px -22px rgba(20,40,60,.5);transition:transform .2s,box-shadow .2s;min-width:0;overflow-wrap:anywhere}
+.tt.big{background:linear-gradient(150deg,#14405F,#0e7c86);color:#fff;border:0}.tt:hover{transform:translateY(-3px)}.tt .tl{font:700 13px Inter;letter-spacing:.12em;text-transform:uppercase;color:#9a6c1c}.tt.big .tl{color:var(--gold)}
+.tt b{font:600 22px/1.25 Fredoka,Inter,sans-serif}.tt .tp{font:700 28px/1.1 Fredoka,Inter,sans-serif;color:#c46d12}.tt.big .tp{color:#FFD9A8}.tt .tn{font-size:15px;opacity:.85}.tt .go{margin-top:auto;padding-top:8px;font-weight:700;font-size:15px}
+@media(max-width:900px){.tgrid{grid-template-columns:1fr 1fr}.tt:not(.big){grid-column:1/-1}}@media(max-width:560px){.tgrid{grid-template-columns:1fr}.trend{padding:52px 0 44px}.tt{padding:20px}}
+.trend h3{margin:34px 0 12px;font-size:22px;color:var(--navy)}.fchips{display:flex;flex-wrap:wrap;gap:10px}.fchips a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 16px;border-radius:999px;background:#fff;border:1.5px solid var(--line);color:var(--navy);font-weight:600;text-decoration:none}.fchips a:hover{border-color:var(--gold)}.fchips span{font-size:13px;color:#6b7a86;font-weight:500}.tsrc{margin-top:18px;font-size:14px;color:#5b6b78}
+.snt,.pnight{display:inline-block;margin-left:8px;padding:2px 10px;border-radius:999px;background:#FDE8D2;color:#8a4a0c;font-weight:700;font-size:.9em;white-space:nowrap}
+.sfil{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px}.sfil a{min-height:44px;display:inline-flex;align-items:center;padding:8px 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--navy);font-weight:600;text-decoration:none}.sfil a[aria-current]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.slist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}.slist a{display:flex;flex-direction:column;gap:4px;height:100%;padding:18px;border-radius:18px;background:#fff;border:1.5px solid var(--line);color:var(--navy);text-decoration:none;overflow-wrap:anywhere}.slist a:hover{border-color:var(--gold)}.slist .sd,.slist .ss{font-size:14px;color:#5b6b78}.slist em{font-style:normal;font:700 22px Fredoka,Inter,sans-serif;color:#c46d12}.slist .spr{margin-top:6px}.slist .sgo{margin-top:auto;padding-top:8px;font-weight:700;font-size:14px}@media(max-width:700px){.sc .sp{flex-wrap:wrap;justify-content:flex-start;gap:8px 12px}.sc .sp .ppn{white-space:nowrap}}@media(min-width:0px){.phero.pcompact{padding:96px 0 22px}.pcompact h1{font-size:clamp(32px,4.6vw,52px)}.pcompact p{font-size:17px;margin-top:8px}.pcompact .eyebrow{margin-bottom:6px}.pfrom{font:600 24px Fredoka,Inter,sans-serif;color:#FFD9A8}.pbt{opacity:.85;font-size:15px}.pglink{display:inline-block;margin-left:6px;color:#fff;font-weight:700;font-size:15px;text-decoration:underline}.pcompact .crumbs{margin-bottom:6px}}.gpills{display:grid;gap:12px;margin-top:14px}.gpill{display:flex;align-items:center;gap:14px;padding:14px 22px 14px 14px;border-radius:999px;background:linear-gradient(90deg,#FFF4E6,#FDE8D2);border:1.5px solid #f5cf9f;color:var(--navy);text-decoration:none;flex-wrap:wrap;overflow-wrap:anywhere}.gpill:hover{border-color:var(--gold)}.gpi{width:46px;height:46px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:22px;flex:none}.gpt{display:flex;flex-direction:column;flex:1 1 200px;min-width:0}.gpt span{font-size:14px;color:#5b6b78}.gpp{display:flex;flex-direction:column;align-items:flex-end}.gpp b{font:600 20px Fredoka,Inter,sans-serif;color:#c46d12}.gpp span{font-size:13px;font-weight:700;color:#8a4a0c}@media(max-width:560px){.gpill{border-radius:24px}.gpp{align-items:flex-start;margin-left:60px}}.more .bookp{white-space:normal;max-width:100%;text-align:center}.sdays{margin-top:-6px}.sdays a{font-size:.9rem}.hero .in .wrap{text-align:center}.hero .in .wrap>p{margin-left:auto;margin-right:auto}.hero .flash{margin-left:auto;margin-right:auto}.hjobs{display:flex!important;justify-content:center;grid-template-columns:none!important}.hjobs .hfind{width:100%;max-width:580px;margin:0 auto;text-align:left}.hjobs{margin-left:auto!important;margin-right:auto!important}.hero .in h1{margin-left:auto;margin-right:auto}.hero .in .wrap>p{margin-left:auto!important;margin-right:auto!important}.car{position:relative;margin-top:28px}.ctrk{display:flex!important;gap:18px;overflow-x:auto!important;scroll-snap-type:x mandatory;scroll-padding:0 2px;padding:4px 2px 14px;margin-top:0!important;grid-template-columns:none!important;scrollbar-width:thin}.ctrk:focus-visible{outline:3px solid var(--gold);outline-offset:4px;border-radius:12px}
+.cc{flex:0 0 300px;scroll-snap-align:start;display:flex;flex-direction:column;background:#fff;color:#14304f;border-radius:22px;overflow:hidden;text-decoration:none;box-shadow:0 10px 30px rgba(6,22,44,.18)}
+.cc .im{height:170px;background-size:cover;background-position:center}.cc .hcol{display:flex;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-size:30px;font-weight:600;color:#fff}.cc .hph{position:relative;display:flex;align-items:flex-end;padding:12px 16px}.cc .hph span{font-family:Fredoka,sans-serif;font-size:24px;font-weight:600;color:#fff;background:rgba(10,30,55,.55);padding:4px 14px;border-radius:999px}.hc0{background:linear-gradient(135deg,#f6a04d,#e8664a)}.hc1{background:linear-gradient(135deg,#2bb3c0,#1f6fb2)}.hc2{background:linear-gradient(135deg,#f2c14e,#f08a4b)}.hc3{background:linear-gradient(135deg,#3fbf8f,#1f8a8f)}
+.cc .cb{padding:16px 18px 18px;display:flex;flex-direction:column;gap:4px;flex:1}.cc h3{margin:0;font-size:22px;color:#14304f}.cc .cs{margin:0;font-size:.92rem;color:#4a5d73}.cc .cd{margin:0;font-size:.92rem;color:#4a5d73}.cc .cp{margin:10px 0 12px;font-family:Fredoka,sans-serif;font-size:30px;font-weight:600;color:#e07a2e}.cc .cp small{font-size:15px;color:#4a5d73;font-weight:500}
+.cc .cbtn{margin-top:auto;display:block;text-align:center;background:#14304f;color:#fff;border-radius:999px;padding:12px;font-weight:600}.cc:hover .cbtn,.cc:focus-visible .cbtn{background:#e07a2e}
+.carb{position:absolute;top:40%;z-index:2;width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:#14304f;font-size:28px;line-height:1;box-shadow:0 6px 18px rgba(6,22,44,.25);cursor:pointer}.carb.prev{left:-20px}.carb.next{right:-20px}.carb:disabled{opacity:0;pointer-events:none}.carb:focus-visible{outline:3px solid var(--gold)}
+@media(max-width:700px){.carb{display:none}.cc{flex-basis:80%}}
+@media all{/* left-align text on all widths (Pause, Oct 30); buttons stay centered, hero search card stays a centered block */
+main,main section,main .wrap,.hero .in,.cta,.contact,.stat,.wl-ok,.more,.wlcard,.phero,main [style*="text-align:center"]{text-align:left!important}
+.hero .in h1,main .lead,main section h2{margin-left:0!important}
+main .btn,main button,main .bookp,main .cbtn,main .ship .hull,main .ship .legend{text-align:center!important}
+.hero .hjobs{text-align:center!important}.hero .hfind{text-align:left!important;margin-left:auto!important;margin-right:auto!important}
+}
+/* LITE preview: fewer choices, less scrolling */
+.hero .in h1,.hero .in p{max-width:none!important;margin-left:0!important;width:auto!important}.hero .in .wrap{display:block!important}.hero .in .wrap>p{margin:0 0 4px!important}.hfind{padding:18px 20px!important}.hfind h2{margin-bottom:6px!important}.cc .im{height:130px!important}#deals .dsrc{margin-top:10px!important}
+@media(min-width:761px){.hero .in{padding:96px 0 28px!important}}
+#trend,#holw,#nyl,.sand,.cue,.pkchips,.hf2,#flash,#deals .wrap>div[style*="margin-top:40px"],.hcred{display:none!important}
+.hero{min-height:0!important;height:auto!important}.hero .in{padding:120px 0 44px!important;min-height:0!important}.hero .in h1{font-size:44px!important;margin-bottom:8px!important}.hjobs{grid-template-columns:1fr!important;max-width:560px!important;margin-top:16px!important}
+#deals{padding:48px 0 56px!important}#deals h2{font-size:32px!important}#deals .lead{margin-top:6px!important}#deals .car{margin-top:18px!important}
+@media(max-width:760px){.hero .in{padding:96px 0 32px!important}.hero .in h1{font-size:34px!important}#deals{padding:36px 0 40px!important}}
+</style></head><body id="top">
+<a class="skip" href="../test-redesign-calm-lite/#main">Skip to content</a>
+<header class="top" id="hdr"><div class="wrap"><a class="brand" href="../test-redesign-calm-lite/#top"><span class="dot" aria-hidden="true"></span>Decklumos</a>
+<nav aria-label="Main" id="mnav"><a href="deck-maps/">Deck Maps</a><a href="ports/">Ports</a><a href="faq/">FAQ</a></nav>
+<a class="btn gold" href="../test-redesign-calm-lite/#join">Join the waitlist</a><button class="menub" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><span></span></button></div></header>
+<main id="main">
+<section class="hero" aria-label="Welcome"><div class="bg" role="img" aria-label="A cruise ship at anchor on a calm blue sea"></div><div class="shimmer" aria-hidden="true"></div>
+ <div class="in"><div class="wrap">
+  <a class="flash" id="flash" hidden></a>
+  <h1>Find your cruise. <em>Then find your way.</em></h1>
+  <p>Pick a port you'd love to visit and we'll show you real sailings.</p>
+  <div class="hjobs">
+   <form class="hfind" id="hfind" action="ports/port/" method="get" hidden aria-labelledby="hf-h">
+    <h2 id="hf-h">🔎 Find your cruise</h2>
+    <div class="pk"><label for="hf-q" id="hf-ql">Port you'd love to visit</label>
+     <div class="pkbox"><input id="hf-q" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="hf-list" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" placeholder="Try Cozumel, Grand Cayman, Alaska…"><button type="button" class="pkx" aria-label="Clear port" hidden>×</button>
+      <ul id="hf-list" class="pkl" role="listbox" aria-labelledby="hf-ql" hidden></ul></div>
+     <input type="hidden" name="id" id="hf-port"><div class="pkchips" aria-label="Popular ports"></div></div>
+    <div class="hf2"><label>When<select name="m" id="hf-m"></select></label><label>Cruise line<select name="l" id="hf-l"></select></label></div>
+    <p class="hferr" id="hf-err" aria-live="polite"></p>
+    <button class="btn gold" type="submit">Show me sailings →</button>
+    <small>Real fares from carnival.com, a person before taxes.</small>
+   </form>
+  </div>
+ </div></div>
+ <a class="cue" href="../test-redesign-calm-lite/#deals" aria-label="Scroll down"></a>
+ </section>
+
+<section class="trend" id="trend" aria-labelledby="tr-h" hidden><div class="wrap">
+ <span class="eyebrow">Trending deals</span><h2 id="tr-h">Fares worth a happy little look</h2><p class="lead">Tap a tile to see your next vacation</p>
+ <div class="tgrid" id="tgrid"></div>
+ <h3>Sailing from near you</h3><div class="fchips" id="fchips"></div>
+ <p class="tsrc" id="tsrc"></p>
+</div></section>
+<section class="deals" id="deals" aria-labelledby="dl-h" hidden><div class="wrap">
+ <h2 id="dl-h">Today's best fares</h2><p class="lead">Tap one to book on the cruise line's site.</p>
+ <div class="car" data-car><button class="carb prev" type="button" aria-label="Previous fares">‹</button><div class="dgrid ctrk" id="dgrid" tabindex="0" role="region" aria-label="Fresh fares, scroll sideways"></div><button class="carb next" type="button" aria-label="More fares">›</button></div>
+ <div id="holw" hidden><h3 style="margin-top:56px;font-size:30px;color:#fff">Cruise over the holidays</h3><div class="car" data-car><button class="carb prev" type="button" aria-label="Previous holiday sailings">‹</button><div class="hrow ctrk" id="hrow" tabindex="0" role="region" aria-label="Holiday sailings, scroll sideways"></div><button class="carb next" type="button" aria-label="More holiday sailings">›</button></div></div>
+ <div style="margin-top:40px;display:flex;gap:14px;flex-wrap:wrap"><button class="btn gold" id="nyb" type="button" aria-expanded="false" aria-controls="nyl" style="width:auto;display:inline-flex"></button><a class="btn glass" href="ports/" style="width:auto;display:inline-flex">Browse ports →</a></div>
+ <div class="nyl" id="nyl" hidden></div>
+ <p class="dsrc" id="dsrc"></p>
+</div></section>
+<section class="sand" aria-labelledby="ex-h" style="padding:80px 0"><div class="wrap"><span class="eyebrow">Look around</span><h2 id="ex-h">We've got you, on board and ashore.</h2>
+ <div class="explore"><a class="ex" href="deck-maps/"><h3>Deck Maps</h3><p>Every deck and venue for 167 ships.</p><span class="go">See the maps →</span></a><a class="ex" href="deck-maps/#app"><h3>The App</h3><p>Real screens: search, cabin, port days.</p><span class="go">Look inside →</span></a><a class="ex" href="ports/"><h3>Ports</h3><p>Local tips plus real upcoming sailings.</p><span class="go">Pick a region →</span></a><a class="ex" href="faq/"><h3>FAQ</h3><p>Offline, free, account optional.</p><span class="go">Get answers →</span></a></div>
+ <p style="margin-top:22px"><a href="g2/" style="color:var(--sea);font-weight:700">Got Even Realities G2 glasses? See Decklumos on G2 →</a></p>
+</div></section>
+
+</main>
+<div class="wlm" id="wlm" hidden><div class="wlm-bd" data-wlclose></div><div class="wlm-box" role="dialog" aria-modal="true" aria-labelledby="wlm-h"><button class="wlm-x" type="button" data-wlclose aria-label="Close">×</button>
+ <span class="eyebrow">Boarding soon</span><h2 id="wlm-h">Join the waitlist</h2><p class="s">Early access and a first look at new port guides. Just your email; the ship is optional.</p>
+ <form id="wl-form" novalidate><div class="wl-hp" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+  <label for="wl-email">Email</label><input id="wl-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+  <label for="wl-ship">What ship are you sailing next? <span style="opacity:.75;font-weight:400">(optional)</span></label><input id="wl-ship" type="text" name="ship" maxlength="120" autocomplete="off">
+  <button class="btn gold" type="submit">Join the waitlist</button><p id="wl-err" class="wl-err" role="alert"></p></form>
+ <div id="wl-ok" class="wl-ok" role="status" hidden>You're on the list! 🎉<small>We'll email you first when Decklumos opens up. See you on board.</small><button class="btn gold" type="button" data-wlclose>Done</button></div>
+</div></div>
+<footer><div class="wrap"><div class="row"><img src="../assets/logo.png" alt="Decklumos" style="height:40px;width:auto"><nav><a href="/privacy/">Privacy Policy</a><a href="/support/">Contact</a></nav></div>
+<p>From stern to bow, know where to go. © 2026 Decklumos · Fonts: Fredoka (<a href="LICENSE-Fredoka-OFL.txt">OFL</a>) and Inter (<a href="LICENSE-Inter-OFL.txt">OFL</a>)</p>
+<p class="cr">Cruise ship photos via Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Pool_Area_Mariner_of_the_Seas_2024.jpg" target="_blank" rel="noopener noreferrer">Pool Area, Mariner of the Seas</a> by Larry D. Moore (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>), <a href="https://commons.wikimedia.org/wiki/File:Pool_Deck_on_the_Celebrity_Beyond_(54357888481).jpg" target="_blank" rel="noopener noreferrer">Pool Deck on the Celebrity Beyond</a> by slgckgc (<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>), <a href="https://commons.wikimedia.org/wiki/File:Cruise_ship_Independence_of_the_Seas_R01.jpg" target="_blank" rel="noopener noreferrer">Independence of the Seas</a> by Marc Ryckaert (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>), <a href="https://commons.wikimedia.org/wiki/File:P%26O_Cruises_-_MV_Aurora_-_Promenade_Deck.JPG" target="_blank" rel="noopener noreferrer">MV Aurora promenade deck</a> by Gary Bembridge (<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>), <a href="https://commons.wikimedia.org/wiki/File:Cruise_ship_tender._Diamond_Princess._Akaroa._NZ_(23631999042).jpg" target="_blank" rel="noopener noreferrer">Diamond Princess tender, Akaroa</a> by Bernard Spragg (CC0). Other photos, CC0/public domain: <a href="https://commons.wikimedia.org/wiki/File:Cruise_ship_blues_(Unsplash).jpg" target="_blank" rel="noopener noreferrer">Cruise ship blues</a>, <a href="https://commons.wikimedia.org/wiki/File:Amber_Cove_Sunrise_(31647461387).jpg" target="_blank" rel="noopener noreferrer">Amber Cove Sunrise</a>, <a href="https://commons.wikimedia.org/wiki/File:Flying_over_Stanlel_Cay_(3425540229).jpg" target="_blank" rel="noopener noreferrer">Staniel Cay</a>, <a href="https://commons.wikimedia.org/wiki/File:Hubbard_Glacier_Alaska.jpg" target="_blank" rel="noopener noreferrer">Hubbard Glacier</a>, <a href="https://commons.wikimedia.org/wiki/File:Amalfi_Coast_(247891371).jpeg" target="_blank" rel="noopener noreferrer">Amalfi Coast</a>, <a href="https://commons.wikimedia.org/wiki/File:Nyhavn_17_Copenhagen_Denmark.jpg" target="_blank" rel="noopener noreferrer">Nyhavn</a>, <a href="https://commons.wikimedia.org/wiki/File:Tulum_2001_by_Gary_Todd_01.jpg" target="_blank" rel="noopener noreferrer">Tulum</a>.</p>
+<p class="d">Decklumos is an independent app. It is not affiliated with, endorsed by, or sponsored by any cruise line. All ship and venue information comes from publicly available sources. Venue positions are approximate. Not for navigation or emergencies. Always follow crew directions in an emergency.</p></div></footer>
+<script>
+(function(){
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var h=document.getElementById('hdr');function sc(){h.classList.toggle('scrolled',scrollY>40)}sc();addEventListener('scroll',sc,{passive:true});
+var mb=document.querySelector('.menub');mb.addEventListener('click',function(){var o=h.classList.toggle('open');mb.setAttribute('aria-expanded',o)});document.querySelectorAll('#mnav a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open');mb.setAttribute('aria-expanded','false')})});
+
+if('IntersectionObserver' in window&&!rm){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.rv').forEach(function(el){io.observe(el)})}else document.querySelectorAll('.rv').forEach(function(el){el.classList.add('on')});
+if(!rm){var ps=[].slice.call(document.querySelectorAll('[data-par]')),tk=0;function par(){tk=0;ps.forEach(function(el){var r=el.parentNode.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;var y=(r.top+r.height/2-innerHeight/2)*-parseFloat(el.dataset.par),c=r.height*.09;y=Math.max(-c,Math.min(c,y));if(el.parentNode.classList.contains('hero'))y=Math.max(0,-r.top)*parseFloat(el.dataset.par);el.style.translate='0 '+y.toFixed(1)+'px'})}addEventListener('scroll',function(){if(!tk){tk=1;requestAnimationFrame(par)}},{passive:true});par()}
+// deck
+var tabs=document.querySelectorAll('.tabs button'),gs=document.querySelectorAll('.dg'),K=document.getElementById('dk-k'),T=document.getElementById('dk-t'),P=document.getElementById('dk-p');
+function show(s){document.querySelectorAll('.spot').forEach(function(x){x.classList.remove('act')});s.classList.add('act');K.textContent=s.dataset.k;T.textContent=s.dataset.t;P.textContent=s.dataset.p}
+document.querySelectorAll('.spot').forEach(function(s){s.setAttribute('aria-label',s.dataset.t);s.addEventListener('click',function(){show(s)})});
+tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x){x.setAttribute('aria-selected','false')});t.setAttribute('aria-selected','true');gs.forEach(function(g){g.classList.toggle('hidden',g.dataset.g!==t.dataset.d)});show(gs[+t.dataset.d].querySelector('.spot'))})});
+// screens
+var pa=document.getElementById('ph-a');document.querySelectorAll('.feats button').forEach(function(b,i,all){b.addEventListener('click',function(){all.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');pa.src=b.dataset.s;pa.alt=b.dataset.a})});
+if(rm)document.querySelectorAll('video').forEach(function(v){v.removeAttribute('autoplay');v.pause()});
+// carousel
+var tr=document.getElementById('track'),pvb=document.getElementById('pv'),nxb=document.getElementById('nx');function mv(d){var c=tr&&tr.querySelector('.card');if(c)tr.scrollBy({left:d*(c.offsetWidth+22),behavior:rm?'auto':'smooth'})}if(tr&&pvb&&nxb&&pvb.tagName==='BUTTON'){pvb.onclick=function(){mv(-1)};nxb.onclick=function(){mv(1)}}
+// waitlist
+var f=document.getElementById('wl-form'),e=document.getElementById('wl-err'),ok=document.getElementById('wl-ok'),b=f.querySelector('button');
+f.addEventListener('submit',function(ev){ev.preventDefault();e.textContent='';var em=f.email.value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){e.textContent='Please enter a valid email address.';f.email.focus();return}b.disabled=true;
+fetch('https://decklumos-waitlist.skitzafrenia420420.workers.dev/signup',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email:em,ship:f.ship.value.trim(),honeypot:f.website.value})}).then(function(r){return r.json().then(function(j){return{s:r.status,j:j}})}).then(function(x){if(x.j&&x.j.ok){f.hidden=true;ok.hidden=false}else{e.textContent=x.s===429?'Too many tries. Please try again in a bit.':'Please check your email and try again.';b.disabled=false}}).catch(function(){e.textContent='Something went wrong. Please try again.';b.disabled=false})});
+// quiz
+var res=document.getElementById('qres'),opts=document.querySelectorAll('.opt');
+opts.forEach(function(o){o.addEventListener('click',function(){opts.forEach(function(x){x.classList.remove('miss')});if(o.dataset.ok==='1'){opts.forEach(function(x){if(x!==o)x.classList.add('dim')});o.classList.add('win');res.innerHTML='<span class="good">Correct! A day with no port. 🌊</span> <a href="../test-redesign-calm/" id="qa">Play again</a>';document.getElementById('qa').onclick=function(ev){ev.preventDefault();opts.forEach(function(x){x.classList.remove('dim','win')});res.textContent='';opts[0].focus()}}else{o.classList.add('miss');res.innerHTML='<span class="try">Not quite. Try again!</span>'}})});
+})();
+</script><script>var DK={};
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function fd(d,o){return new Date(d+'T12:00:00').toLocaleDateString('en-US',o||{month:'short',day:'numeric',year:'numeric'})}
+function ck(s){return new Date(s).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}
+function fresh(S){var t=new Date(S.checked).getTime();return isNaN(t)?false:(Date.now()-t)<=7*864e5}
+function getJ(u){return fetch(u,{cache:'no-cache'}).then(function(r){return r.json()})}
+function srcLine(S){return 'Prices and dates from <a href="https://www.carnival.com/" target="_blank" target="_blank" rel="noopener noreferrer">carnival.com</a>, checked '+ck(S.checked)+'. Per person for 2 guests, taxes and fees not included. Prices change; confirm before you book. Decklumos is not affiliated with any cruise line.'}
+/* promo tags + timers: only when the source supplied them */
+function promoHtml(p){if(!p)return '';var h='<span class="ptag">'+esc(p.text)+'</span>';if(p.limited)h+='<span class="ptag">Limited time</span>';if(p.ends){var e=new Date(p.ends),ms=e-new Date();if(ms>0){if(/T\d/.test(p.ends))h+='<span class="ptag end" data-end="'+esc(p.ends)+'"></span>';else if(ms<3*864e5)h+='<span class="ptag end">Deal ends soon</span>'}}return h}
+function tick(){document.querySelectorAll('[data-end]').forEach(function(el){var ms=new Date(el.dataset.end)-new Date();if(ms<=0){el.remove();return}var d=Math.floor(ms/864e5),hh=Math.floor(ms/36e5)%24,m=Math.floor(ms/6e4)%60;el.textContent='Ends in '+(d?d+'d ':'')+hh+'h '+m+'m'})}
+setInterval(tick,30000);
+function heroFind(S){var F=document.getElementById('hfind');if(!F)return;getJ('data/ports.json').then(function(P){var hid=document.getElementById('hf-port'),q=document.getElementById('hf-q'),L=document.getElementById('hf-list'),X=F.querySelector('.pkx'),CH=F.querySelector('.pkchips'),PK=F.querySelector('.pk'),ms=document.getElementById('hf-m'),ls=document.getElementById('hf-l'),er=document.getElementById('hf-err'),M={},LN={},A=[],fr=fresh(S)!==false,act=-1,cur=[];
+ var AL={'george-town-cayman':'grand cayman cayman islands','charlotte-amalie':'st thomas saint thomas usvi virgin islands','philipsburg':'st maarten sint maarten saint martin','oranjestad':'aruba','ocho-rios':'jamaica','san-juan':'puerto rico','roatan':'honduras','nassau':'bahamas','civitavecchia':'rome italy','naples':'italy','santorini':'greece','mykonos':'greece','dubrovnik':'croatia','valletta':'malta','palma':'mallorca majorca spain','barcelona':'spain','belize-city-bz':'belize','costa-maya':'mexico','progreso-mx':'merida mexico','puerto-lim-n-cr':'costa rica','victoria-ca':'british columbia canada','amsterdam-nl':'netherlands holland','copenhagen-dk':'denmark','stockholm-se':'sweden','tallinn-ee':'estonia','helsinki-fi':'finland'};
+ function nz(t){return String(t||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()}
+ P.regions.forEach(function(R){R.ports.forEach(function(id){var x=S.ports[id];if(!(x&&x.total&&x.cheapest&&P.ports[id]))return;(x.sailings||[]).forEach(function(r){M[r.date.slice(0,7)]=1;LN[r.line]=1});LN[x.cheapest.line]=1;var nm=P.ports[id].name;A.push({id:id,name:nm,region:R.name,total:x.total,price:x.cheapest.price,n:nz(nm),h:nz(nm+' '+R.name+' '+(AL[id]||'')+' '+id.replace(/-/g,' '))})})});
+ ms.innerHTML='<option value="">Any month</option>'+Object.keys(M).sort().map(function(k){return '<option value="'+k+'">'+fd(k+'-01',{month:'long',year:'numeric'})+'</option>'}).join('');
+ ls.innerHTML='<option value="">Any line</option>'+Object.keys(LN).sort().map(function(l){return '<option value="'+esc(l)+'">'+esc(l)+'</option>'}).join('');
+ var pop=A.slice().sort(function(a,b){return b.total-a.total}).slice(0,5);
+ function price(a){return fr?(L.classList.contains('pkc')?'<span class="pkp">from $'+a.price+' a person</span>':'<span class="pkp">Cheapest sailing stopping here: from $'+a.price+' a person</span>'):''}
+ function score(a,t){if(!t)return 1;if(a.n.indexOf(t)===0)return 4;var w=t.split(' '),hw=a.h.split(' ');var ok=w.every(function(x){return hw.some(function(y){return y.indexOf(x)===0})});if(ok)return 3;return a.h.indexOf(t)>=0?2:0}
+ function open(){L.hidden=false;q.setAttribute('aria-expanded','true')}
+ function close(){L.hidden=true;q.setAttribute('aria-expanded','false');q.removeAttribute('aria-activedescendant');act=-1}
+ function mark(i){act=i;[].forEach.call(L.querySelectorAll('[role=option]'),function(o,k){o.classList.toggle('on',k===i);o.setAttribute('aria-selected',k===i?'true':'false');if(k===i){q.setAttribute('aria-activedescendant',o.id);o.scrollIntoView({block:'nearest'})}})}
+ function render(){var t=nz(q.value),h='',lastR='';cur=A.map(function(a){return [score(a,t),a]}).filter(function(x){return x[0]>0});
+  if(!t){cur=pop.map(function(a){return [1,a]})}else cur.sort(function(a,b){return b[0]-a[0]||b[1].total-a[1].total});var more=Math.max(0,cur.length-6);cur=cur.slice(0,6).map(function(x){return x[1]});L.classList.toggle('pkc',!t);if(!t)h='<li class="pkg" role="presentation">Popular ports</li>';
+  if(!cur.length){h='<li class="pkno" role="presentation"><b>No ports match “'+esc(q.value)+'”.</b> Try a port, island or country name, or one of these:<span class="pksug">'+pop.map(function(a){return '<button type="button" data-id="'+a.id+'">'+esc(a.name)+'</button>'}).join('')+'</span></li>'}
+  else cur.forEach(function(a,i){h+='<li role="option" id="pko-'+i+'" data-i="'+i+'" aria-selected="false"><b>'+esc(a.name)+'</b><span class="pkr">'+esc(a.region)+' · '+a.total+(a.total===1?' sailing':' sailings')+'</span>'+price(a)+'</li>'});if(more)h+='<li class="pkmore" role="presentation">'+more+' more ports match. Keep typing to narrow it down.</li>';
+  L.innerHTML=h;open();act=-1;if(t&&cur.length)mark(0)}
+ function pick(a){hid.value=a.id;q.value=a.name;X.hidden=false;er.textContent='';close()}
+ function byId(id){for(var i=0;i<A.length;i++)if(A[i].id===id)return A[i]}
+ CH.innerHTML='<span class="pkcl">Popular:</span>'+pop.map(function(a){return '<button type="button" data-id="'+a.id+'">'+esc(a.name)+'</button>'}).join('');
+ CH.onclick=function(e){var b=e.target.closest('button');if(b){pick(byId(b.dataset.id));q.focus();close()}};
+ q.addEventListener('focus',function(){if(!hid.value)render()});
+ q.addEventListener('click',function(){if(L.hidden)render()});
+ q.addEventListener('input',function(){hid.value='';X.hidden=!q.value;render()});
+ q.addEventListener('keydown',function(e){var n=cur.length;if(e.key==='ArrowDown'){e.preventDefault();if(L.hidden)render();else if(n)mark((act+1)%n)}else if(e.key==='ArrowUp'){e.preventDefault();if(n)mark((act-1+n)%n)}else if(e.key==='Enter'){if(!L.hidden&&act>=0&&cur[act]){e.preventDefault();pick(cur[act])}}else if(e.key==='Escape'){if(!L.hidden){e.preventDefault();close()}}else if(e.key==='Tab')close()});
+ L.addEventListener('mousedown',function(e){e.preventDefault()});
+ L.addEventListener('click',function(e){var s=e.target.closest('.pksug button');if(s){pick(byId(s.dataset.id));return}var o=e.target.closest('[role=option]');if(o)pick(cur[+o.dataset.i])});
+ X.onclick=function(){q.value='';hid.value='';X.hidden=true;q.focus();render()};
+ document.addEventListener('pointerdown',function(e){if(!PK.contains(e.target))close()});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!L.hidden)close()});
+ F.onsubmit=function(e){if(!hid.value&&q.value){var t=nz(q.value),m=A.map(function(a){return [score(a,t),a]}).filter(function(x){return x[0]>0}).sort(function(a,b){return b[0]-a[0]||b[1].total-a[1].total});if(m.length)pick(m[0][1])}
+  if(!hid.value){e.preventDefault();er.textContent=q.value?'We couldn\'t find that port. Pick one from the list.':'Type or pick a port first and we\'ll show you every sailing we found.';q.focus();render();return}
+  [ms,ls].forEach(function(x){if(!x.value)x.disabled=true});setTimeout(function(){ms.disabled=ls.disabled=false},0)};F.hidden=false}).catch(function(){})}
+function sailRows(D){return D.rows.map(function(r){return {date:r[0],nights:r[1],price:r[2],pn:r[3],from:D.froms[r[4]],title:r[5],ship:r[6],url:r[7]}})}
+function isoDay(t){var d=new Date(t);return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}
+function sailSets(R){var td=isoDay(Date.now()),lim=isoDay(Date.now()+60*864e5),up=R.filter(function(r){return r.date>=td});
+ return {all:up,soon:up.filter(function(r){return r.date<=lim}).sort(function(a,b){return a.price-b.price||a.date.localeCompare(b.date)}),
+ value:up.filter(function(r){return r.pn<=60}).sort(function(a,b){return a.pn-b.pn||a.price-b.price}),
+ weekend:up.filter(function(r){return r.nights>=2&&r.nights<=4}).sort(function(a,b){return a.price-b.price||a.date.localeCompare(b.date)})}}
+function minP(a){return a.reduce(function(m,r){return Math.min(m,r.price)},1e9)}
+function trending(){var T=document.getElementById('trend');if(!T)return;getJ('data/all-sailings.json?v='+Date.now()).then(function(D){if(!D||!D.rows||fresh(D)===false)return;var R=sailRows(D),X=sailSets(R);if(!X.all.length)return;
+ function tile(k,lab,line,sub,big){var a=X[k];if(!a.length)return '';return '<a class="tt'+(big?' big':'')+'" href="sailings/?f='+k+'"><span class="tl">'+lab+'</span><b>'+a.length+' '+line+'</b><span class="tp">from $'+(k==='value'?a[0].pn+' a night':minP(a)+' a person')+'</span><span class="tn">'+sub(a)+'</span><span class="go">See them all →</span></a>'}
+ document.getElementById('tgrid').innerHTML=tile('soon','Leaving soon','sailings in the next 60 days',function(a){return 'Cheapest first, all within two months'},1)+tile('value','Best value per night','sailings under $60 a night',function(a){return 'Top pick: '+a[0].nights+' nights for $'+a[0].price+' a person'},1)+tile('weekend','Weekend getaways','short trips of 2 to 4 nights',function(a){return 'Great for a first cruise'},0);
+ var C={};X.all.forEach(function(r){C[r.from]=(C[r.from]||0)+1});var F=Object.keys(C).sort(function(a,b){return C[b]-C[a]}).slice(0,10);
+ document.getElementById('fchips').innerHTML=F.map(function(f){return '<a href="sailings/?from='+encodeURIComponent(f)+'">'+esc(f)+' <span>'+C[f]+'</span></a>'}).join('');
+ document.getElementById('tsrc').textContent='From '+X.all.length+' Carnival sailings we checked on carnival.com on '+fd(isoDay(new Date(D.checked).getTime()))+'. Prices are before taxes.';T.hidden=false}).catch(function(){})}
+function sailingsPage(){var el=document.getElementById('slist');if(!el)return;var u=new URLSearchParams(location.search),f=u.get('f')||'',fr=u.get('from')||'',n=40;
+ getJ('data/all-sailings.json?v='+Date.now()).then(function(D){var h1=document.getElementById('ph1'),pp=document.getElementById('php');if(!D||!D.rows||fresh(D)===false){h1.textContent='Fares are taking a nap';pp.textContent="These fares are more than a week old, so we've hidden them for now. Check back soon!";return}
+ var X=sailSets(sailRows(D)),L,t,s;
+ if(fr){L=X.all.filter(function(r){return r.from===fr}).sort(function(a,b){return a.date.localeCompare(b.date)||a.price-b.price});t='Sailing from '+fr;s=L.length+' sailings, soonest first'}
+ else if(f==='soon'){var dd=[30,60,90].indexOf(+u.get('d'))>=0?+u.get('d'):60,td0=isoDay(Date.now()),lm=function(k){return isoDay(Date.now()+k*864e5)},cnt=function(k){return X.all.filter(function(r){return r.date>=td0&&r.date<=lm(k)}).length};L=X.all.filter(function(r){return r.date>=td0&&r.date<=lm(dd)}).sort(function(a,b){return a.price-b.price||a.date.localeCompare(b.date)});t='Leaving soon';s=L.length+(L.length===1?' sailing':' sailings')+' in the next '+dd+' days, cheapest first';setTimeout(function(){var nv=document.getElementById('sfil');nv.insertAdjacentHTML('afterend','<nav class="sfil sdays" aria-label="How soon">'+[30,60,90].map(function(k){return '<a href="sailings/?f=soon&amp;d='+k+'"'+(k===dd?' aria-current="page"':'')+'>Next '+k+' days ('+cnt(k)+')</a>'}).join('')+'</nav>')},0)}
+ else if(X[f]&&f!=='all'){L=X[f];t={soon:'Leaving soon',value:'Best value per night',weekend:'Weekend getaways'}[f];s={soon:L.length+' sailings in the next 60 days, cheapest first',value:L.length+' sailings under $60 a night, best value first',weekend:L.length+' trips of 2 to 4 nights, cheapest first'}[f]}
+ else{L=X.all.slice().sort(function(a,b){return a.price-b.price});t='All sailings';s=L.length+' sailings, cheapest first'}
+ document.title=t+' · Decklumos';h1.textContent=t;pp.textContent=s+'. Prices are before taxes, checked on carnival.com '+fd(isoDay(new Date(D.checked).getTime()))+'.';
+ document.getElementById('sfil').innerHTML=[['soon','Leaving soon'],['value','Best value per night'],['weekend','Weekend getaways'],['','All sailings']].map(function(x){var on=!fr&&(x[0]===f||(!x[0]&&!X[f]));return '<a href="sailings/'+(x[0]?'?f='+x[0]:'')+'"'+(on?' aria-current="page"':'')+'>'+x[1]+'</a>'}).join('');
+ function draw(){el.innerHTML=L.slice(0,n).map(function(r){return '<li><a href="'+esc(bookUrl(r))+'" target="_blank" rel="noopener noreferrer"><span class="sd">'+fd(r.date)+' · '+r.nights+' nights</span><b>'+esc(r.title)+'</b><span class="ss">'+esc(r.ship)+' · from '+esc(r.from)+'</span><span class="spr"><em>from $'+r.price+'</em> a person <span class="snt">$'+r.pn+' a night</span></span><span class="sgo">Book on Carnival ↗<span class="sr"> (opens in a new tab)</span></span></a></li>'}).join('')||'<li class="none">No sailings here right now. Try another one above!</li>';var m=document.getElementById('smore');m.hidden=L.length<=n;m.textContent='Show more ('+(L.length-n)+' left)'}
+ document.getElementById('smore').onclick=function(){n+=40;draw()};draw()}).catch(function(){})}
+var BOOK={Carnival:function(r){var u=r.url||'';return /^https:\/\/www\.carnival\.com\/booking\?.*sailingID=\d+/.test(u)&&/sailDate=\d{8}/.test(u)?u:u}};
+function bookUrl(r,line){var f=BOOK[line||r.source||r.line||'Carnival'];return f?f(r):r.url}
+/* Holiday photos, all Wikimedia Commons, no attribution required:
+ Thanksgiving  CC0 https://commons.wikimedia.org/wiki/File:Pumpkin_Picking_(Unsplash).jpg
+ Christmas     Public domain https://commons.wikimedia.org/wiki/File:Christmas_tree_and_presents_outside_Astir_Beach,_Vouliagmeni,_Athens,_Greece,_Christmas_2009.jpg
+ New Year's    CC0 https://commons.wikimedia.org/wiki/File:Fireworks_over_water_(Unsplash).jpg
+ Easter        CC0 https://commons.wikimedia.org/wiki/File:Pastel_eggs_for_Easter_(Unsplash).jpg
+ Fourth of July CC0 https://commons.wikimedia.org/wiki/File:Fireworks_in_Sevierville,_Tennessee_on_4th_of_July_-_1.jpg */
+function holImg(n){var m={'Thanksgiving':'thanksgiving','Christmas':'christmas',"New Year's":'new-years','Easter':'easter','Fourth of July':'fourth-of-july'};return 'hol-'+(m[n]||'new-years')+'.jpg'}
+function carCard(u,top,name,b){var d1=fd(b.date,{month:'short',day:'numeric'}),d2=fd(b.end,{month:'short',day:'numeric',year:'numeric'});return '<a class="cc" href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+top+'<div class="cb"><h3>'+esc(name)+'</h3><p class="cs">'+esc(b.ship)+' · '+esc(String(b.title||'').replace(/^\d+-Day /,''))+'</p><p class="cd">'+d1+' – '+d2+'</p><p class="cp">from $'+b.price+' <small>a person</small></p><span class="cbtn">Book on Carnival ↗</span><span class="sr"> (opens in a new tab)</span></div></a>'}
+function carInit(){[].forEach.call(document.querySelectorAll('[data-car]'),function(c){if(c.dataset.ok)return;c.dataset.ok=1;var t=c.querySelector('.ctrk'),p=c.querySelector('.prev'),n=c.querySelector('.next');if(!t||!p||!n)return;var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;function go(k){t.scrollBy({left:k*t.clientWidth*.85,behavior:rm?'auto':'smooth'})}function up(){p.disabled=t.scrollLeft<4;n.disabled=t.scrollLeft+t.clientWidth>=t.scrollWidth-4}p.onclick=function(){go(-1)};n.onclick=function(){go(1)};t.addEventListener('scroll',up,{passive:true});addEventListener('resize',up);setTimeout(up,50)})}
+function homeDeals(){getJ('data/sailings.json?v='+Date.now()).then(function(S){var D=S.deals;heroFind(S);if(!D||!D.regions.length||fresh(S)===false)return;
+ var f=D.fromPerNight,fl=document.getElementById('flash');
+ if(f){fl.href=bookUrl(f.sailing);fl.target='_blank';fl.rel='noopener noreferrer';fl.innerHTML='<span class="tg">Today\'s best</span><b>Cruises from $'+f.value+' a night</b><small>'+esc(f.sailing.nights)+'-night '+esc(f.sailing.title.replace(/^\d+-Day /,''))+' · carnival.com, checked '+ck(S.checked)+'</small>';fl.hidden=false}
+ document.getElementById('dgrid').innerHTML=D.regions.map(function(g,i){var b=g.best;return carCard(bookUrl(b),'<div class="im" style="background-image:url('+esc(g.img)+')" role="img" aria-label="'+esc(g.name)+'"></div>',g.name,b)}).join('');carInit();
+ if(D.holidays&&D.holidays.length){document.getElementById('hrow').innerHTML=D.holidays.map(function(h,i){var b=h.best;return carCard(b.url,'<div class="im hph" style="background-image:url('+holImg(h.holiday)+')" role="img" aria-label="'+esc(h.holiday)+' photo"><span>'+esc(h.holiday)+'</span></div>',h.holiday+' '+h.day.slice(0,4),b)}).join('');carInit();document.getElementById('holw').hidden=false}
+ var ny=D.nextYear,nb=document.getElementById('nyb'),nl=document.getElementById('nyl');
+ if(ny&&ny.picks.length){nb.textContent='Browse '+ny.year+' cruises';nl.innerHTML=ny.picks.map(function(b){return '<a href="'+esc(b.url)+'" target="_blank" rel="noopener noreferrer"><span>'+fd(b.date)+' · '+esc(b.title)+' · '+esc(b.ship)+'</span><b>from $'+b.price+' <small>a person, before taxes</small>'+(b.perNight?' <span class="pnight">$'+b.perNight+' a night</span>':'')+' ↗</b></a>'}).join('');nb.onclick=function(){var o=nl.hidden;nl.hidden=!o;nb.setAttribute('aria-expanded',o)}}else nb.remove();
+ document.getElementById('dsrc').innerHTML=srcLine(S)+(D.dropped.length?' Not shown (no live fares right now): '+D.dropped.map(esc).join(', ')+'.':'');
+ document.getElementById('deals').hidden=false;tick()}).catch(function(){})}
+function q(k){return new URLSearchParams(location.search).get(k)}
+function portsPage(){Promise.all([getJ('data/ports.json'),getJ('data/sailings.json?v='+Date.now()),getJ('data/photos.json').catch(function(){return {}})]).then(function(a){var P=a[0],S=a[1],PH=a[2]||{},r=q('r'),v=document.getElementById('pv');
+ var R=P.regions.filter(function(x){return x.id===r})[0];
+ if(!R){v.innerHTML='<div class="rgrid">'+P.regions.map(function(g){var d=(S.deals.regions.filter(function(x){return x.id===g.id})[0]);return '<a class="card" href="ports/?r='+g.id+'"><img src="'+g.img+'" alt="'+esc(g.name)+'" loading="lazy"><div class="t"><span>'+g.ports.length+' ports</span><h3>'+esc(g.name)+'</h3>'+(d?'<small>Sailings from $'+d.best.perNight+' a night</small>':'')+'</div></a>'}).join('')+'</div>';document.getElementById('psrc').innerHTML='Region photos: Wikimedia Commons (credits in the footer). '+srcLine(S);return}
+ document.title=R.name+' ports · Decklumos';document.getElementById('ph1').textContent=R.name;document.getElementById('php').textContent=R.ports.length+' ports. Tap one for local tips and real upcoming sailings.';document.getElementById('crumbs').innerHTML='<a href="ports/">All regions</a> › '+esc(R.name);
+ var hs=document.getElementById('ph1').closest('section,header')||document.getElementById('ph1').parentNode;hs.classList.add('rhero');hs.style.backgroundImage='linear-gradient(90deg,rgba(6,22,44,.78),rgba(6,22,44,.35)),url('+R.img+')';var RT={caribbean:'#0e8a8f',bahamas:'#1f9bd1',alaska:'#2f6f9f',mexico:'#d0602f',europe:'#6b4fb3',mediterranean:'#6b4fb3','northern-europe':'#3c5a8a'};var ac=RT[R.id]||'#0e5aa7';
+ v.innerHTML='<div class="pgrid" style="--ac:'+ac+'">'+R.ports.map(function(id){var p=P.ports[id],s=S.ports[id],f=PH[id];return '<a class="pcx" href="ports/guide/?id='+id+'">'+(f?'<img src="'+f.img+'" alt="" loading="lazy" width="720" height="405">':'<div class="noimg" aria-hidden="true">⚓</div>')+'<div class="pb"><h3>'+esc(p.name)+'</h3><div class="c">'+esc(p.country)+'</div><p>'+esc(p.summary)+'</p>'+(s&&s.cheapest?'<span class="chip"><b>'+s.total+' sailings</b> · from $'+s.cheapest.price+'</span>':'<span class="chip no">No sailings found in our sources</span>')+'<span class="go">Explore port <i aria-hidden="true">→</i></span></div></a>'}).join('')+'</div>';
+ var cr=R.ports.filter(function(id){return PH[id]}).map(function(id){var f=PH[id];return esc(P.ports[id].name)+': <a href="'+esc(f.page)+'" target="_blank" rel="noopener noreferrer">'+esc(f.artist||'Wikimedia Commons')+'</a> ('+esc(f.license)+')'}).join(' · ');
+ document.getElementById('psrc').innerHTML='Port info from <a href="https://en.wikivoyage.org/" target="_blank" target="_blank" rel="noopener noreferrer">Wikivoyage</a> (CC BY-SA). Photos via Wikimedia Commons, all opening in a new tab: '+cr+'. Region photo credit in the footer. '+srcLine(S)})}
+function portPage(){var _id=(q('id')||'').replace(/[^a-z0-9\-]/g,'');Promise.all([getJ('data/ports.json'),getJ('data/sailings.json?v='+Date.now()),getJ('data/sailings/'+_id+'.json?v='+Date.now()).catch(function(){return null})]).then(function(a){var P=a[0],S=a[1],id=q('id'),p=P.ports[id],el=document.getElementById('pp');if(a[2]&&S.ports[id])S.ports[id].sailings=a[2].sailings;
+ if(!p){document.getElementById('ph1').textContent='Port not found';el.innerHTML='<a href="ports/">See all ports →</a>';return}
+ var G=/\/ports\/guide\//.test(location.pathname),s0=S.ports[id],fr0=fresh(S)!==false&&s0&&s0.total&&s0.cheapest,ey=document.querySelector('.phero .eyebrow');document.getElementById('ph1').textContent=p.name;if(G){document.title=p.name+' port guide · Decklumos';document.getElementById('php').textContent=p.summary}else{document.title=p.name+' cruises and prices · Decklumos';if(ey)ey.textContent='Sailings and prices';var hs0=document.querySelector('.phero');if(hs0)hs0.classList.add('pcompact');el.parentNode.style.paddingTop='18px';document.getElementById('php').innerHTML=(fr0?'<b class="pfrom">from $'+s0.cheapest.price+' a person</b> <span class="pbt">before taxes · '+s0.total+(s0.total===1?' sailing stops':' sailings stop')+' here</span>':'Sailings that stop here')+' <a class="pglink" href="ports/guide/?id='+id+'">Port guide →</a>'}document.getElementById('crumbs').innerHTML='<a href="ports/">All regions</a> › <a href="ports/?r='+p.regionId+'">'+esc(p.regionName)+'</a> › '+esc(p.name);
+ var t=p.tips||{},h='<span class="eyebrow">Port info</span><h2>Good to know</h2><div class="kv"><div><b>Country</b>'+esc(p.country)+'</div><div><b>Currency</b>'+esc(p.currency)+'</div><div><b>Language</b>'+esc(p.language)+'</div><div><b>Where ships dock</b>'+esc(t.pierToTown||p.pier)+'</div>'+(t.money?'<div><b>Money</b>'+esc(t.money)+'</div>':'')+(t.safety?'<div><b>Stay safe</b>'+esc(t.safety)+'</div>':'')+'</div>';
+ h+='<h2 style="margin-top:70px">Things to do</h2><ul class="todo">'+p.highlights.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+(t.sight?'<li><b>Sight:</b> '+esc(t.sight)+'</li>':'')+(t.food?'<li><b>Eat:</b> '+esc(t.food)+'</li>':'')+(t.history?'<li><b>History:</b> '+esc(t.history)+'</li>':'')+'</ul>'+(p.tip?'<p class="lead" style="max-width:none"><b>Tip:</b> '+esc(p.tip)+'</p>':'');
+ var srcs=(t.sources||[p.source]).map(function(s){return '<a href="'+esc(s.url)+'">'+esc((s.site||'Wikivoyage')+': '+s.title)+'</a>'}).join(', ');h+='<p class="src">Sources: '+srcs+' (CC BY-SA). Info may change; check locally.</p>';
+ if(G){if(fr0&&s0.sailings&&s0.sailings.length){var ch=s0.sailings.slice().sort(function(a,b){return a.price-b.price||a.date.localeCompare(b.date)}).slice(0,3);h+='<h2 style="margin-top:60px">Cheapest sailings stopping here</h2><div class="gpills">'+ch.map(function(r){return '<a class="gpill" href="'+esc(bookUrl(r))+'" target="_blank" rel="noopener noreferrer"><span class="gpi" aria-hidden="true">🚢</span><span class="gpt"><b>'+esc(r.ship)+'</b><span>'+r.nights+' nights · '+fd(r.date)+' · from '+esc(r.from)+'</span></span><span class="gpp"><b>from $'+r.price+' a person</b><span>$'+r.perNight+' a night</span></span><span class="sr"> (opens carnival.com in a new tab)</span></a>'}).join('')+'</div><p class="src">Prices before taxes, from '+esc(ch[0].source)+'.</p>'}h+='<p class="more" style="margin-top:28px"><a class="bookp" href="ports/port/?id='+id+'">See sailings and prices'+(fr0?', from $'+s0.cheapest.price+' a person':'')+' →</a></p>';el.innerHTML=h;return}h='';var s=S.ports[id];
+ if(s&&s.sailings.length){var LC={'Carnival Cruise Line':'lc-carnival'};var G={},O=[];s.sailings.forEach(function(r){var k=r.ship+'|'+r.date;if(!G[k]){G[k]=[];O.push(k)}G[k].push(r)});var rows=O.map(function(k){return G[k].slice().sort(function(x,y){return x.price-y.price})});var multi=rows.filter(function(g){var u={};g.forEach(function(r){u[r.source]=1});return Object.keys(u).length>1}).length;
+function card(g,i){var r=g[0],d=new Date(r.date+'T12:00:00'),e=new Date(r.end+'T12:00:00'),best=g.length>1&&g[1].source!==r.source&&g[1].price>r.price;var also=g.slice(1).filter(function(x){return x.source!==r.source}).map(function(x){return '<a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">also on '+esc(x.source)+' for $'+x.price+'<span class="sr"> (opens in a new tab)</span></a>'}).join(' · ');return '<li class="sc t'+(i%4)+'" data-line="'+esc(r.line)+'" data-p="'+r.price+'" data-d="'+r.date+'" data-s="'+esc(r.ship)+'" data-n="'+r.nights+'"'+(i>=4?' hidden':'')+'><div class="sd" aria-hidden="true"><span>'+d.toLocaleDateString('en-US',{month:'short'})+'</span><b>'+d.getDate()+'</b><span>'+d.getFullYear()+'</span></div><div class="sb"><span class="shipb '+(LC[r.line]||'lc-other')+'">🚢 '+esc(r.ship)+' · '+esc(r.line)+'</span><h3>'+esc(r.title)+'</h3><div class="sm"><span><i aria-hidden="true">📅</i> '+d.toLocaleDateString('en-US',{month:'short',day:'numeric'})+' – '+e.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})+'</span><span><i aria-hidden="true">🌙</i> '+r.nights+' nights</span><span><i aria-hidden="true">⚓</i> From '+esc(r.from)+'</span></div>'+(also?'<p class="also">'+also+'</p>':'')+'</div><div class="sp">'+(best?'<span class="bestp">Best price</span>':'')+'<span class="pchip"><small>from</small> $'+r.price+'</span><span class="ppn">a person, before taxes</span>'+(r.perNight?'<span class="pnight">$'+r.perNight+' a night</span>':'')+''+(SHIPMAP[r.ship]?'<a class="seeship" href="'+esc(SHIPMAP[r.ship])+'">See the ship →</a>':'')+'<a class="bookp" href="'+esc(bookUrl(r))+'" target="_blank" rel="noopener noreferrer">Book on '+esc(r.source)+' ↗<span class="sr"> (opens in a new tab)</span></a></div></li>'}
+function monSel(rows){var u={};rows.forEach(function(g){u[g[0].date.slice(0,7)]=1});var ks=Object.keys(u).sort();return '<label class="ssort">Month <select id="smon"><option value="">Any month</option>'+ks.map(function(k){return '<option value="'+k+'">'+fd(k+'-01',{month:'short',year:'numeric'})+'</option>'}).join('')+'</select></label>'}
+var SHIPMAP={};/* ship name -> deck-maps/ URL; add only ships with a real published map page */
+var LN={};rows.forEach(function(g){LN[g[0].line]=(LN[g[0].line]||0)+1});var AL=[['Royal Caribbean','Royal Caribbean International'],['Carnival','Carnival Cruise Line'],['NCL','Norwegian Cruise Line'],['MSC','MSC Cruises'],['Princess','Princess Cruises'],['Celebrity','Celebrity Cruises'],['Viking ocean','Viking Ocean Cruises'],['Viking river','Viking River Cruises'],['Disney','Disney Cruise Line'],['Virgin','Virgin Voyages']];h+='<div class="stool"><div class="lfil" role="group" aria-label="Filter by cruise line"><button type="button" aria-pressed="true" data-l="">All lines ('+rows.length+')</button>'+AL.map(function(x){var n=LN[x[1]]||0;return n?'<button type="button" aria-pressed="false" data-l="'+esc(x[1])+'">'+esc(x[0])+' ('+n+')</button>':''}).join('')+'<span class="lsoon">More lines soon</span></div>'+monSel(rows)+'<label class="ssort">Sort by <select id="ssort"><option value="p">Cheapest first</option><option value="-p">Most expensive first</option><option value="d">Soonest departure</option><option value="s">Ship A–Z</option><option value="n">Shortest trip</option><option value="-n">Longest trip</option></select></label></div>';h+='<ul class="scards" id="scl">'+rows.map(card).join('')+'</ul>'+(rows.length>4?'<p class="more"><button type="button" class="bookp" id="smore">Show more sailings</button></p>':'')+'<p class="src" id="scount" aria-live="polite">Showing '+Math.min(4,rows.length)+' of '+rows.length+' upcoming sailings.'+(multi?' '+multi+' compared across sources.':'')+' '+srcLine(S)+'</p>';setTimeout(function(){var ul=document.getElementById('scl');if(!ul)return;var L='',M=q('m')||'',N=4,bt=document.getElementById('smore'),sel=document.getElementById('ssort');var smon=document.getElementById('smon');if(smon){if(M&&!smon.querySelector('option[value="'+M+'"]'))M='';smon.value=M;smon.onchange=function(){M=smon.value;N=4;ap()}}var QL=q('l');if(QL){[].forEach.call(document.querySelectorAll('.lfil button'),function(x){if(x.getAttribute('data-l')===QL){L=QL;[].forEach.call(document.querySelectorAll('.lfil button'),function(y){y.setAttribute('aria-pressed',y===x?'true':'false')})}})}function ap(){var k=sel.value,dir=k[0]==='-'?-1:1,f=k.replace('-',''),li=[].slice.call(ul.children);li.sort(function(x,y){var a=x.getAttribute('data-'+f),b=y.getAttribute('data-'+f);if(f==='p'||f==='n'){a=+a;b=+b}var c=a<b?-1:a>b?1:0;return c*dir||(x.getAttribute('data-d')<y.getAttribute('data-d')?-1:1)});li.forEach(function(e,i){ul.appendChild(e);e.className=e.className.replace(/ t\d/,' t'+(i%4))});var m=0,tot=0;li.forEach(function(e){var ok=(!L||e.getAttribute('data-line')===L)&&(!M||e.getAttribute('data-d').slice(0,7)===M);if(ok)tot++;e.hidden=!(ok&&m<N);if(ok&&m<N)m++});if(bt)bt.parentNode.hidden=m>=tot;var sc=document.getElementById('scount');sc.innerHTML=sc.innerHTML.replace(/Showing \d+ of \d+/,'Showing '+m+' of '+tot)}sel.onchange=function(){N=4;ap()};[].forEach.call(document.querySelectorAll('.lfil button:not([disabled])'),function(b){b.onclick=function(){L=b.getAttribute('data-l');N=4;[].forEach.call(document.querySelectorAll('.lfil button:not([disabled])'),function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});ap()}});if(bt)bt.onclick=function(){var first=N;N+=10;ap();var v=ul.querySelectorAll('li:not([hidden])');if(v[first])v[first].querySelector('a.bookp').focus()};ap()},0)}
+ else h+='<p class="lead">No sailings found in our sources for this port right now. We only list sailings we can confirm.</p>';
+ el.innerHTML=h})}
+
+(function(){function fx(){[].forEach.call(document.querySelectorAll('a[href^="http"]'),function(a){if(!/(^|\.)decklumos\.com$/.test(a.hostname)&&a.target!=='_blank'){a.target='_blank';a.rel='noopener noreferrer'}})}fx();try{new MutationObserver(fx).observe(document.documentElement,{childList:true,subtree:true})}catch(e){}})();
+
+homeDeals();trending();sailingsPage();</script><script>(function(){var m=document.getElementById('wlm'),box=m.querySelector('.wlm-box'),last=null;
+function foc(){return [].slice.call(box.querySelectorAll('a[href],button,input:not([tabindex="-1"])')).filter(function(x){return x.offsetParent!==null})}
+function open(ev){if(ev)ev.preventDefault();last=document.activeElement;m.hidden=false;document.body.classList.add('wlm-open');var h=document.getElementById('hdr');if(h)h.classList.remove('open');setTimeout(function(){var e=document.getElementById('wl-email');(e&&e.offsetParent?e:foc()[0]).focus()},30)}
+function close(){m.hidden=true;document.body.classList.remove('wlm-open');if(last&&last.focus)last.focus()}
+document.querySelectorAll('a[href$="#join"],[data-wlopen]').forEach(function(a){a.setAttribute('aria-haspopup','dialog');a.addEventListener('click',open)});
+m.querySelectorAll('[data-wlclose]').forEach(function(x){x.addEventListener('click',close)});
+document.addEventListener('keydown',function(e){if(m.hidden)return;if(e.key==='Escape'){e.preventDefault();close()}else if(e.key==='Tab'){var f=foc(),a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}});
+if(location.hash==='#join')open();window.wlOpen=open})();</script></body></html>
