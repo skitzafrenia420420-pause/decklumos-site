@@ -402,7 +402,20 @@ body.hxlock,html.hxlock{overflow:visible!important}
 .cnst{margin:4px 0 0;font:500 13px Inter,sans-serif;color:#7a6a58;text-align:left}
 @media (max-width:760px){.cnews{padding:26px 0 22px}.cnews h2{font-size:24px}.cnc{width:80%;padding:16px 16px 12px}.cnc h3{font-size:17.5px}.cnc p{font-size:13.5px}}
 @media (prefers-reduced-motion:reduce){.cnc{transition:none}}
-</style><style id="r31-css">.cnv{-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}</style><style id="r30-css">.cnc{border-radius:30px;padding:24px 28px 20px;box-shadow:0 22px 50px -18px rgba(6,22,44,.32),0 6px 16px -8px rgba(6,22,44,.14)}@media (max-width:760px){.cnc{border-radius:28px;padding:20px 20px 14px}}</style></head><body id="top">
+</style><style id="r31-css">.cnv{-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}</style><style id="r33-css">
+.cnews{background:linear-gradient(135deg,#0e7b80 0%,#0b6672 100%);color:#fff;padding:44px 0 36px;position:relative}
+.cnews h2{color:#fff;font-size:36px;letter-spacing:.2px}
+.cnsub{margin:4px 0 0;font:500 16px/1.3 Inter,sans-serif;color:#fff;opacity:.95;text-align:left}
+.cnb{background:rgba(255,255,255,.16);border:1.5px solid rgba(255,255,255,.75);color:#fff}
+.cnb:hover:not(:disabled){background:rgba(255,255,255,.28);border-color:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.25)}
+.cnb:disabled{opacity:.45}
+.cnb:focus-visible,.cnc a:focus-visible{outline-color:#fff}
+.cnc{border-top:6px solid var(--gold,#12CBE4);box-shadow:0 26px 54px -18px rgba(0,0,0,.45),0 6px 16px -8px rgba(0,0,0,.2)}
+.cnm{color:#5c4424}
+.cnm::before{content:"NEWS";width:auto;height:auto;border-radius:999px;padding:3px 9px;background:var(--gold,#12CBE4);color:#14405F;font:800 10.5px/1.2 Inter,sans-serif;letter-spacing:.8px;margin-right:4px}
+.cnst{color:#fff}
+@media (max-width:760px){.cnews{padding:32px 0 26px}.cnews h2{font-size:30px}.cnsub{font-size:14.5px}.cnc{border-top-width:5px}}
+</style><style id="r30-css">.cnc{border-radius:30px;padding:24px 28px 20px;box-shadow:0 22px 50px -18px rgba(6,22,44,.32),0 6px 16px -8px rgba(6,22,44,.14)}@media (max-width:760px){.cnc{border-radius:28px;padding:20px 20px 14px}}</style></head><body id="top">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top" id="hdr"><div class="wrap"><a class="brand" href="/test-redesign-turquoise/#top"><span class="dot" aria-hidden="true"></span>Decklumos</a>
 <nav aria-label="Main" id="mnav"><a href="deck-maps/">Deck Maps</a><a href="deck-maps/#app">App</a><a href="ports/">Ports</a><a href="faq/">FAQ</a><a class="g2l" href="g2/">G2</a></nav>
@@ -433,7 +446,7 @@ body.hxlock,html.hxlock{overflow:visible!important}
  </section>
 <section class="cnews" id="cnews" aria-labelledby="cn-h" hidden>
  <div class="wrap">
-  <div class="cnhd"><h2 id="cn-h">Cruise News</h2><div class="cnar"><button type="button" class="cnb" id="cn-p" aria-label="Previous story">&#8249;</button><button type="button" class="cnb" id="cn-n" aria-label="Next story">&#8250;</button></div></div>
+  <div class="cnhd"><div><h2 id="cn-h">Cruise News</h2><p class="cnsub">Fresh from the cruise world</p></div><div class="cnar"><button type="button" class="cnb" id="cn-p" aria-label="Previous story">&#8249;</button><button type="button" class="cnb" id="cn-n" aria-label="Next story">&#8250;</button></div></div>
   <div class="cnv" id="cn-v" aria-roledescription="carousel" aria-label="Cruise News"><div class="cnt" id="cn-t"></div></div>
   <p class="cnst" id="cn-s" aria-live="polite"></p>
  </div>
