@@ -35,7 +35,7 @@ section{padding:120px 0}
 .top.scrolled{background:rgba(255,255,255,.86);backdrop-filter:saturate(1.6) blur(16px);-webkit-backdrop-filter:saturate(1.6) blur(16px);box-shadow:0 8px 30px -14px rgba(11,31,58,.3);padding:12px 0}
 .top.scrolled .brand,.top.scrolled nav a{color:var(--navy)}
 /* hero */
-.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#0a3a52}
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:visible;z-index:3;background:#0a3a52}
 .hero .bg{position:absolute;inset:0;background:url(img/hero-pool.jpg) center 55%/cover;filter:saturate(.8) brightness(.85)}
 
 .hero::before{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 62% 75% at 22% 48%,rgba(28,20,24,.5) 0%,rgba(28,20,24,0) 72%),linear-gradient(90deg,rgba(34,26,30,.6) 0%,rgba(34,26,30,.42) 50%,rgba(34,26,30,.3) 100%),linear-gradient(180deg,rgba(34,26,30,.35) 0%,rgba(34,26,30,.15) 40%,rgba(30,24,30,.6) 100%)}
@@ -340,7 +340,7 @@ body.wlm-open{overflow:hidden}
 #hfind .hxcal{position:fixed;left:0;right:0;bottom:0;z-index:1001;margin:0;max-width:none;border:0;border-radius:20px 20px 0 0;padding:8px 16px 0;max-height:85vh;overflow:auto;box-shadow:0 -12px 40px rgba(0,0,0,.3)}
 .hxft{display:block;position:sticky;bottom:0;background:#fff;padding:10px 0 calc(12px + env(safe-area-inset-bottom));margin-top:6px}.hxft .btn{width:100%;justify-content:center;margin:0}
 #hfind .hxbk{display:block;position:fixed;inset:0;background:rgba(10,30,45,.45);z-index:1000}
-body.hxlock{overflow:hidden}}
+}
 </style><style id="r24-css">
 .hero .hjobs{margin-left:0!important;margin-right:0!important;justify-content:flex-start!important;text-align:left!important;max-width:880px!important}
 .hero .hjobs .hfind{margin-left:0!important;margin-right:0!important}
@@ -464,8 +464,8 @@ function heroFind(S){var F=document.getElementById('hfind');if(!F)return;getJ('d
   h='<div class="hxch"><button type="button" class="hxar" data-s="-1" aria-label="Previous month"'+(i<=0?' disabled':'')+'>\u2039</button><b>'+ml(cm)+'</b><button type="button" class="hxar" data-s="1" aria-label="Next month"'+(i>=L.length-1?' disabled':'')+'>\u203a</button><button type="button" class="hxclr">Clear</button></div><div class="hxg">'+['S','M','T','W','T','F','S'].map(function(w){return '<span class="hw" aria-hidden="true">'+w+'</span>'}).join('');
   for(var q=0;q<f0;q++)h+='<span></span>';for(var g=1;g<=nd;g++){var k=cm+'-'+('0'+g).slice(-2),lb=fd(k,{month:'long',day:'numeric'});h+=A[k]?'<button type="button" class="hxd'+(k===hd.value?' on':'')+'" data-d="'+k+'" aria-pressed="'+(k===hd.value)+'" aria-label="'+lb+', sailings available">'+g+'</button>':'<span class="hxn" aria-label="'+lb+', no sailings">'+g+'</span>'}
   cal.innerHTML='<div class="hxtop"><span class="hxhd" aria-hidden="true"></span><button type="button" class="hxdone">Done</button></div>'+h+'</div><div class="hxft"><button class="btn gold" type="submit">'+esc(go.textContent)+'</button></div>'}
- function op(){cm=hd.value?hd.value.slice(0,7):ms.value;draw();cal.hidden=false;bk.hidden=!mob();db.setAttribute('aria-expanded','true');document.body.classList.toggle('hxlock',mob());var f=cal.querySelector('.hxd.on')||cal.querySelector('.hxd')||cal.querySelector('.hxclr');if(f)f.focus({preventScroll:mob()})}
- function cl(r){if(cal.hidden)return;cal.hidden=bk.hidden=true;db.setAttribute('aria-expanded','false');document.body.classList.remove('hxlock');if(r)db.focus({preventScroll:true})}
+ function op(){cm=hd.value?hd.value.slice(0,7):ms.value;draw();cal.hidden=false;bk.hidden=!mob();db.setAttribute('aria-expanded','true');var f=cal.querySelector('.hxd.on')||cal.querySelector('.hxd')||cal.querySelector('.hxclr');if(f)f.focus({preventScroll:mob()})}
+ function cl(r){if(cal.hidden)return;cal.hidden=bk.hidden=true;db.setAttribute('aria-expanded','false');if(r)db.focus({preventScroll:true})}
  db.onclick=function(){cal.hidden?op():cl()};
  ms.onchange=function(){nt='';if(hd.value&&hd.value.slice(0,7)!==ms.value)setDay('');upd();if(ms.value)op();else cl()};
  fs.onchange=function(){var pm=ms.value;months();nt=pm&&!ms.value?'No sailings from '+(fs.value?fs.value.split(',')[0]:'there')+' in '+fd(pm+'-01',{month:'long'})+', so we switched to Any month.':'';if(hd.value&&!pr().some(function(r){return r.date===hd.value}))setDay('');upd();if(!cal.hidden)draw()};
