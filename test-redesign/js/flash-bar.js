@@ -3,7 +3,7 @@
   if(document.getElementById('flash'))return; // home renders its own
   var hero=document.querySelector('main > section.phero, main > section.ghero, main > section');
   if(!hero)return;
-  var css='.flashbar{display:flex;justify-content:flex-start;margin:0 0 22px}'+
+  var css='.flashbar{display:flex!important;justify-content:flex-start;margin-bottom:22px!important;position:relative;z-index:2}'+
   '.flashbar .flash{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px 12px;background:rgba(11,31,58,.72);border:1px solid rgba(255,77,77,.9);box-shadow:0 0 0 3px rgba(255,77,77,.18);color:#fff;text-decoration:none;border-radius:18px;padding:8px 18px 8px 8px;max-width:100%;box-sizing:border-box;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}'+
   '.flashbar .flash .tg{background:#FF4D4D;color:#fff;font:800 12px Inter,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:6px 12px}'+
   '.flashbar .flash b{font:600 17px Fredoka,Inter,sans-serif;overflow-wrap:anywhere}'+
@@ -19,8 +19,8 @@
     var st=document.createElement('style');st.id='flashbar-css';st.textContent=css;document.head.appendChild(st);
     var a=document.createElement('a');a.className='flash';a.id='flash';a.href=f.sailing.url;a.target='_blank';a.rel='noopener noreferrer';
     a.innerHTML='<span class="tg">Today\'s best</span><b>Cruises from $'+f.value+' a night</b><small>'+esc(f.sailing.nights)+'-night '+esc(f.sailing.title.replace(/^\d+-Day /,''))+' · carnival.com, checked '+ck(S.checked)+'</small>';
-    var w=document.createElement('div');w.className='flashbar';w.appendChild(a);
-    var tgt=hero.querySelector('.wrap')||hero;tgt.insertBefore(w,tgt.firstChild);
+    var w=document.createElement('div');w.className='wrap flashbar';w.appendChild(a);
+    hero.insertBefore(w,hero.firstChild);
     document.body.classList.add('has-flash');
   }).catch(function(){});
 })();
