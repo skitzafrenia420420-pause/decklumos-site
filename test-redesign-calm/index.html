@@ -311,6 +311,35 @@ main,main section,main .wrap,.hero .in,.cta,.contact,.stat,.wl-ok,.more,.wlcard,
 main .btn,main button,main .bookp,main .cbtn,main .ship .hull,main .ship .legend{text-align:center!important}
 .hero .hjobs{text-align:center!important}.hero .hfind{text-align:left!important;margin-left:auto!important;margin-right:auto!important}
 }
+</style><style id="hx-css">
+@media(min-width:701px){#hfind.hfind{width:min(880px,100%);max-width:880px;box-sizing:border-box}#hfind .hxday svg{flex:none}}
+#hfind .hxt{display:flex;align-items:center;gap:8px}
+#hfind .hxr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr) auto;gap:12px;align-items:end}
+#hfind .hxf{display:block;margin:0!important;font-size:13px;font-weight:700;color:#3b5368}
+#hfind .hxf>span{display:block}
+#hfind .hxr select{box-sizing:border-box;height:46px;margin-top:5px;padding:0 12px}
+#hfind .hxday{box-sizing:border-box;display:flex;align-items:center;gap:8px;width:100%;height:46px;margin-top:5px;padding:0 12px;border:1.5px solid #d9e3ea;border-radius:12px;background:#fff;font:inherit;font-size:15px;font-weight:400;color:#14405F;cursor:pointer;text-align:left;white-space:nowrap;overflow:hidden}
+#hfind .hxgo{width:auto!important;margin:0!important;height:46px;white-space:nowrap;padding:0 20px}
+#hfind .hxhelp{margin:10px 0 0!important;font-size:13px;color:#2b7383;max-width:none!important}
+#hfind .hxcal{margin-top:12px;background:#fff;border:1.5px solid #c2ecf4;border-radius:16px;padding:6px 10px 10px;max-width:360px;box-sizing:border-box}
+#hfind .hxcal[hidden],#hfind .hxbk[hidden]{display:none!important}
+.hxch{display:flex;align-items:center;gap:2px}.hxch b{flex:1;text-align:center;font-size:15px;color:#14405F}
+.hxar{width:44px;height:44px;border:0;border-radius:50%;background:transparent;color:#0b5868;font-size:26px;line-height:1;cursor:pointer}.hxar:hover{background:#eefafc}.hxar:disabled{opacity:.3;cursor:default}
+.hxclr{height:44px;border:0;background:none;color:#0e7c86;font:600 14px Inter,sans-serif;padding:0 4px 0 8px;cursor:pointer}
+.hxg{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center}
+.hxg .hw{font-size:12px;font-weight:700;color:#4a9cad;padding:4px 0}
+.hxd,.hxn{height:40px;display:flex;align-items:center;justify-content:center;border-radius:10px;font-size:15px;position:relative}
+.hxn{color:#b4bec6}
+.hxd{border:0;background:none;color:#14405F;font:500 15px Inter,sans-serif;cursor:pointer;padding:0}
+.hxd::after{content:"";position:absolute;bottom:4px;left:50%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#00A3C4}
+.hxd:hover{background:#eefafc}.hxd.on{background:#0b5868;color:#fff}.hxd.on::after{background:#fff}
+.hxd:focus-visible,.hxar:focus-visible,.hxclr:focus-visible,.hxday:focus-visible{outline:2px solid #00A3C4;outline-offset:2px}
+.hxft,.hxbk{display:none}
+@media(max-width:700px){#hfind .hxr{grid-template-columns:1fr}#hfind .hxgo{width:100%!important;justify-content:center}
+#hfind .hxcal{position:fixed;left:0;right:0;bottom:0;z-index:1001;margin:0;max-width:none;border:0;border-radius:20px 20px 0 0;padding:8px 16px 0;max-height:85vh;overflow:auto;box-shadow:0 -12px 40px rgba(0,0,0,.3)}
+.hxft{display:block;position:sticky;bottom:0;background:#fff;padding:10px 0 calc(12px + env(safe-area-inset-bottom));margin-top:6px}.hxft .btn{width:100%;justify-content:center;margin:0}
+#hfind .hxbk{display:block;position:fixed;inset:0;background:rgba(10,30,45,.45);z-index:1000}
+body.hxlock{overflow:hidden}}
 </style></head><body id="top">
 <a class="skip" href="../test-redesign-calm/#main">Skip to content</a>
 <header class="top" id="hdr"><div class="wrap"><a class="brand" href="../test-redesign-calm/#top"><span class="dot" aria-hidden="true"></span>Decklumos</a>
@@ -324,12 +353,17 @@ main .btn,main button,main .bookp,main .cbtn,main .ship .hull,main .ship .legend
   <p>Hi! We're Decklumos. We'll help you compare real sailings, then show you every deck of your ship so you're never lost on board.</p>
   <div class="hjobs">
    <form class="hfind" id="hfind" action="sailings/" method="get" hidden aria-labelledby="hf-h">
-    <h2 id="hf-h">🔎 Find your cruise</h2>
-    <div class="hf2 hf1"><label>Departing from<select name="from" id="hf-f"><option value="">Any port</option></select></label></div>
-    <div class="hf2 hf1"><label>When<select name="m" id="hf-m"><option value="">Any month</option></select></label></div>
-    <p class="hferr" id="hf-err" aria-live="polite"></p>
-    <button class="btn gold" type="submit">Show me sailings →</button>
-    <small>Real fares from carnival.com, a person before taxes. More lines soon. <a href="../test-redesign-calm/#deals">Today's best fares ↓</a></small>
+    <h2 id="hf-h" class="hxt"><svg class="hxi" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00A3C4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><path d="M12 7.5V21M8 11h8M4.5 14a7.5 7.5 0 0 0 15 0"/></svg>Find your cruise</h2>
+    <div class="hxr">
+     <label class="hxf">Departing from<select name="from" id="hf-f"><option value="">Any port</option></select></label>
+     <label class="hxf">Month<select name="m" id="hf-m"><option value="">Any month</option></select></label>
+     <div class="hxf"><span id="hf-dl">Day</span><button type="button" class="hxday" id="hf-db" aria-haspopup="dialog" aria-expanded="false" aria-controls="hf-cal" aria-labelledby="hf-dl hf-dt"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0e7c86" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span id="hf-dt">Any day</span></button></div>
+     <button class="btn gold hxgo" type="submit" id="hf-go">Show all sailings</button>
+    </div>
+    <input type="hidden" name="d" id="hf-d">
+    <div class="hxbk" id="hf-bk" hidden></div>
+    <div class="hxcal" id="hf-cal" role="dialog" aria-label="Pick a sailing day" hidden></div>
+    <p class="hxhelp" id="hf-help" aria-live="polite"></p>
    </form>
   </div>
  </div></div>
@@ -405,11 +439,28 @@ function srcLine(S){return 'Prices and dates from <a href="https://www.carnival.
 function promoHtml(p){if(!p)return '';var h='<span class="ptag">'+esc(p.text)+'</span>';if(p.limited)h+='<span class="ptag">Limited time</span>';if(p.ends){var e=new Date(p.ends),ms=e-new Date();if(ms>0){if(/T\d/.test(p.ends))h+='<span class="ptag end" data-end="'+esc(p.ends)+'"></span>';else if(ms<3*864e5)h+='<span class="ptag end">Deal ends soon</span>'}}return h}
 function tick(){document.querySelectorAll('[data-end]').forEach(function(el){var ms=new Date(el.dataset.end)-new Date();if(ms<=0){el.remove();return}var d=Math.floor(ms/864e5),hh=Math.floor(ms/36e5)%24,m=Math.floor(ms/6e4)%60;el.textContent='Ends in '+(d?d+'d ':'')+hh+'h '+m+'m'})}
 setInterval(tick,30000);
-function heroFind(S){var F=document.getElementById('hfind');if(!F)return;getJ('data/all-sailings.json?v='+Date.now()).then(function(D){if(!D||!D.rows||fresh(D)===false)return;var fs=document.getElementById('hf-f'),ms=document.getElementById('hf-m'),er=document.getElementById('hf-err'),td=isoDay(Date.now()),R=sailRows(D).filter(function(r){return r.date>=td}),FR={};
+function heroFind(S){var F=document.getElementById('hfind');if(!F)return;getJ('data/all-sailings.json?v='+Date.now()).then(function(D){if(!D||!D.rows||fresh(D)===false)return;
+ var $=function(i){return document.getElementById(i)},fs=$('hf-f'),ms=$('hf-m'),hd=$('hf-d'),db=$('hf-db'),dt=$('hf-dt'),cal=$('hf-cal'),bk=$('hf-bk'),hp=$('hf-help'),go=$('hf-go'),td=isoDay(Date.now()),R=sailRows(D).filter(function(r){return r.date>=td}),FR={},cm='',mob=function(){return matchMedia('(max-width:700px)').matches},sd=function(k){return fd(k,{weekday:'short',month:'short',day:'numeric'})},ml=function(k){return fd(k+'-01',{month:'long',year:'numeric'})};
  R.forEach(function(r){FR[r.from]=1});fs.innerHTML='<option value="">Any port</option>'+Object.keys(FR).sort().map(function(x){return '<option value="'+esc(x)+'">'+esc(x)+'</option>'}).join('');
- function months(){var M={},cur=ms.value;R.forEach(function(r){if(!fs.value||r.from===fs.value)M[r.date.slice(0,7)]=1});ms.innerHTML='<option value="">Any month</option>'+Object.keys(M).sort().map(function(k){return '<option value="'+k+'">'+fd(k+'-01',{month:'long',year:'numeric'})+'</option>'}).join('');if(cur&&!M[cur]){ms.value='';er.textContent='No sailings from '+fs.value+' in '+fd(cur+'-01',{month:'long',year:'numeric'})+', so When is back to Any month.'}else{ms.value=cur;er.textContent=''}}
- months();fs.onchange=months;
- F.onsubmit=function(){[fs,ms].forEach(function(x){if(!x.value)x.disabled=true});setTimeout(function(){fs.disabled=ms.disabled=false},0)};F.hidden=false}).catch(function(){})}
+ function pr(){return R.filter(function(r){return !fs.value||r.from===fs.value})}
+ function mlist(){var M={};pr().forEach(function(r){M[r.date.slice(0,7)]=1});return Object.keys(M).sort()}
+ function months(){var L=mlist(),cur=ms.value;ms.innerHTML='<option value="">Any month</option>'+L.map(function(k){return '<option value="'+k+'">'+fd(k+'-01',{month:'short',year:'numeric'})+'</option>'}).join('');ms.value=L.indexOf(cur)>=0?cur:''}
+ function upd(){var L=pr().filter(function(r){return (!ms.value||r.date.slice(0,7)===ms.value)&&(!hd.value||r.date===hd.value)}),n=L.length;hp.textContent=n+(n===1?' sailing':' sailings')+(fs.value?' from '+fs.value.split(',')[0]:'')+(hd.value?' on '+sd(hd.value):ms.value?' in '+fd(ms.value+'-01',{month:'long'}):'');go.textContent=!fs.value&&!ms.value&&!hd.value?'Show all sailings':'Show me sailings'}
+ function setDay(k){hd.value=k;dt.textContent=k?sd(k):'Any day';db.classList.toggle('set',!!k);upd()}
+ function draw(){var L=mlist();if(L.indexOf(cm)<0)cm=L[0]||'';if(!cm){cal.innerHTML='<p class="hxhelp">No sailings from this port right now.</p>';return}var A={};pr().forEach(function(r){if(r.date.slice(0,7)===cm)A[r.date]=1});var y=+cm.slice(0,4),mo=+cm.slice(5,7),f0=new Date(y,mo-1,1).getDay(),nd=new Date(y,mo,0).getDate(),i=L.indexOf(cm),
+  h='<div class="hxch"><button type="button" class="hxar" data-s="-1" aria-label="Previous month"'+(i<=0?' disabled':'')+'>\u2039</button><b>'+ml(cm)+'</b><button type="button" class="hxar" data-s="1" aria-label="Next month"'+(i>=L.length-1?' disabled':'')+'>\u203a</button><button type="button" class="hxclr">Clear</button></div><div class="hxg">'+['S','M','T','W','T','F','S'].map(function(w){return '<span class="hw" aria-hidden="true">'+w+'</span>'}).join('');
+  for(var q=0;q<f0;q++)h+='<span></span>';for(var g=1;g<=nd;g++){var k=cm+'-'+('0'+g).slice(-2),lb=fd(k,{month:'long',day:'numeric'});h+=A[k]?'<button type="button" class="hxd'+(k===hd.value?' on':'')+'" data-d="'+k+'" aria-pressed="'+(k===hd.value)+'" aria-label="'+lb+', sailings available">'+g+'</button>':'<span class="hxn" aria-label="'+lb+', no sailings">'+g+'</span>'}
+  cal.innerHTML=h+'</div><div class="hxft"><button class="btn gold" type="submit">Show me sailings</button></div>'}
+ function op(){cm=hd.value?hd.value.slice(0,7):ms.value;draw();cal.hidden=false;bk.hidden=!mob();db.setAttribute('aria-expanded','true');document.body.classList.toggle('hxlock',mob());var f=cal.querySelector('.hxd.on')||cal.querySelector('.hxd')||cal.querySelector('.hxclr');if(f)f.focus({preventScroll:mob()})}
+ function cl(r){if(cal.hidden)return;cal.hidden=bk.hidden=true;db.setAttribute('aria-expanded','false');document.body.classList.remove('hxlock');if(r)db.focus({preventScroll:true})}
+ db.onclick=function(){cal.hidden?op():cl()};
+ ms.onchange=function(){if(hd.value&&hd.value.slice(0,7)!==ms.value)setDay('');upd();if(ms.value)op();else cl()};
+ fs.onchange=function(){months();if(hd.value&&!pr().some(function(r){return r.date===hd.value}))setDay('');upd();if(!cal.hidden)draw()};
+ cal.onclick=function(e){var b=e.target.closest('button');if(!b||b.type==='submit')return;if(b.dataset.s){var L=mlist(),j=L.indexOf(cm)+ +b.dataset.s;if(L[j]){cm=L[j];draw();var a=cal.querySelector('.hxar[data-s="'+b.dataset.s+'"]');(a&&!a.disabled?a:cal.querySelector('.hxd')).focus()}return}if(b.classList.contains('hxclr')){setDay('');cl(1);return}if(b.dataset.d){ms.value=b.dataset.d.slice(0,7);setDay(b.dataset.d);cl(1)}};
+ document.addEventListener('pointerdown',function(e){if(!cal.hidden&&!cal.contains(e.target)&&!db.contains(e.target)&&e.target!==ms)cl()});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!cal.hidden)cl(1)});
+ F.onsubmit=function(){[fs,ms,hd].forEach(function(x){if(!x.value)x.disabled=true});setTimeout(function(){fs.disabled=ms.disabled=hd.disabled=false},0)};
+ months();setDay('');F.hidden=false}).catch(function(){})}
 function sailRows(D){return D.rows.map(function(r){return {date:r[0],nights:r[1],price:r[2],pn:r[3],from:D.froms[r[4]],title:r[5],ship:r[6],url:r[7]}})}
 function isoDay(t){var d=new Date(t);return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}
 function sailSets(R){var td=isoDay(Date.now()),lim=isoDay(Date.now()+60*864e5),up=R.filter(function(r){return r.date>=td});
