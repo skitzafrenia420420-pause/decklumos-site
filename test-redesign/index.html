@@ -337,16 +337,16 @@ body.wlm-open{overflow:hidden}
  <a class="cue" href="#deals" aria-label="Scroll down"></a>
  </section>
 
+<section class="deals" id="holsec" aria-label="Cruise over the holidays" hidden style="padding:20px 0 80px"><div class="wrap">
+ <div id="holw" hidden><h3 style="margin-top:56px;font-size:30px;color:#fff">Cruise over the holidays</h3><div class="car" data-car><button class="carb prev" type="button" aria-label="Previous holiday sailings">‹</button><div class="hrow ctrk" id="hrow" tabindex="0" role="region" aria-label="Holiday sailings, scroll sideways"></div><button class="carb next" type="button" aria-label="More holiday sailings">›</button></div></div>
+</div></section>
 <section class="trend" id="trend" aria-labelledby="tr-h" hidden><div class="wrap">
  <span class="eyebrow">Trending deals</span><h2 id="tr-h">Fares worth a happy little look</h2><p class="lead">Tap a tile to see your next vacation</p>
  <div class="tgrid" id="tgrid"></div>
- <h3>Sailing from near you</h3><div class="fchips" id="fchips"></div>
- <p class="tsrc" id="tsrc"></p>
 </div></section>
 <section class="deals" id="deals" aria-labelledby="dl-h" hidden><div class="wrap">
  <span class="eyebrow">Fresh fares</span><h2 id="dl-h">The best fares we found today</h2><p class="lead">We checked live fares for every region and ranked them by price per night. Tap one and you'll book right on the cruise line's site. We don't sell cruises, we just help you find a good one.</p>
  <div class="car" data-car><button class="carb prev" type="button" aria-label="Previous fares">‹</button><div class="dgrid ctrk" id="dgrid" tabindex="0" role="region" aria-label="Fresh fares, scroll sideways"></div><button class="carb next" type="button" aria-label="More fares">›</button></div>
- <div id="holw" hidden><h3 style="margin-top:56px;font-size:30px;color:#fff">Cruise over the holidays</h3><div class="car" data-car><button class="carb prev" type="button" aria-label="Previous holiday sailings">‹</button><div class="hrow ctrk" id="hrow" tabindex="0" role="region" aria-label="Holiday sailings, scroll sideways"></div><button class="carb next" type="button" aria-label="More holiday sailings">›</button></div></div>
  <div style="margin-top:40px;display:flex;gap:14px;flex-wrap:wrap"><button class="btn gold" id="nyb" type="button" aria-expanded="false" aria-controls="nyl" style="width:auto;display:inline-flex"></button><a class="btn glass" href="ports/" style="width:auto;display:inline-flex">Browse ports →</a></div>
  <div class="nyl" id="nyl" hidden></div>
  <p class="dsrc" id="dsrc"></p>
@@ -356,6 +356,10 @@ body.wlm-open{overflow:hidden}
  <p style="margin-top:22px"><a href="g2/" style="color:var(--sea);font-weight:700">Got Even Realities G2 glasses? See Decklumos on G2 →</a></p>
 </div></section>
 
+<section class="trend" id="nearsec" aria-label="Sailing from near you" hidden><div class="wrap">
+ <h3>Sailing from near you</h3><div class="fchips" id="fchips"></div>
+ <p class="tsrc" id="tsrc"></p>
+</div></section>
 </main>
 <div class="wlm" id="wlm" hidden><div class="wlm-bd" data-wlclose></div><div class="wlm-box" role="dialog" aria-modal="true" aria-labelledby="wlm-h"><button class="wlm-x" type="button" data-wlclose aria-label="Close">×</button>
  <span class="eyebrow">Boarding soon</span><h2 id="wlm-h">Join the waitlist</h2><p class="s">Early access and a first look at new port guides. Just your email; the ship is optional.</p>
@@ -423,7 +427,7 @@ function trending(){var T=document.getElementById('trend');if(!T)return;getJ('da
  document.getElementById('tgrid').innerHTML=tile('soon','Leaving soon','sailings in the next 60 days',function(a){return 'Cheapest first, all within two months'},1)+tile('value','Best value per night','sailings under $60 a night',function(a){return 'Top pick: '+a[0].nights+' nights for $'+a[0].price+' a person'},1)+tile('weekend','Weekend getaways','short trips of 2 to 4 nights',function(a){return 'Great for a first cruise'},0);
  var C={};X.all.forEach(function(r){C[r.from]=(C[r.from]||0)+1});var F=Object.keys(C).sort(function(a,b){return C[b]-C[a]}).slice(0,10);
  document.getElementById('fchips').innerHTML=F.map(function(f){return '<a href="sailings/?from='+encodeURIComponent(f)+'">'+esc(f)+' <span>'+C[f]+'</span></a>'}).join('');
- document.getElementById('tsrc').textContent='From '+X.all.length+' Carnival sailings we checked on carnival.com on '+fd(isoDay(new Date(D.checked).getTime()))+'. Prices are before taxes.';T.hidden=false}).catch(function(){})}
+ document.getElementById('tsrc').textContent='From '+X.all.length+' Carnival sailings we checked on carnival.com on '+fd(isoDay(new Date(D.checked).getTime()))+'. Prices are before taxes.';T.hidden=false;document.getElementById('nearsec').hidden=false}).catch(function(){})}
 function sailingsPage(){var el=document.getElementById('slist');if(!el)return;var u=new URLSearchParams(location.search),f=u.get('f')||'',fr=u.get('from')||'',n=40;
  getJ('data/all-sailings.json?v='+Date.now()).then(function(D){var h1=document.getElementById('ph1'),pp=document.getElementById('php');if(!D||!D.rows||fresh(D)===false){h1.textContent='Fares are taking a nap';pp.textContent="These fares are more than a week old, so we've hidden them for now. Check back soon!";return}
  var X=sailSets(sailRows(D)),L,t,s;
@@ -450,7 +454,7 @@ function homeDeals(){getJ('data/sailings.json?v='+Date.now()).then(function(S){v
  var f=D.fromPerNight,fl=document.getElementById('flash');
  if(f){fl.href=bookUrl(f.sailing);fl.target='_blank';fl.rel='noopener noreferrer';fl.innerHTML='<span class="tg">Today\'s best</span><b>Cruises from $'+f.value+' a night</b><small>'+esc(f.sailing.nights)+'-night '+esc(f.sailing.title.replace(/^\d+-Day /,''))+' · carnival.com, checked '+ck(S.checked)+'</small>';fl.hidden=false}
  document.getElementById('dgrid').innerHTML=D.regions.map(function(g,i){var b=g.best;return carCard(bookUrl(b),'<div class="im" style="background-image:url('+esc(g.img)+')" role="img" aria-label="'+esc(g.name)+'"></div>',g.name,b)}).join('');carInit();
- if(D.holidays&&D.holidays.length){document.getElementById('hrow').innerHTML=D.holidays.map(function(h,i){var b=h.best;return carCard(b.url,'<div class="im hph" style="background-image:url('+holImg(h.holiday)+')" role="img" aria-label="'+esc(h.holiday)+' photo"><span>'+esc(h.holiday)+'</span></div>',h.holiday+' '+h.day.slice(0,4),b)}).join('');carInit();document.getElementById('holw').hidden=false}
+ if(D.holidays&&D.holidays.length){document.getElementById('hrow').innerHTML=D.holidays.map(function(h,i){var b=h.best;return carCard(b.url,'<div class="im hph" style="background-image:url('+holImg(h.holiday)+')" role="img" aria-label="'+esc(h.holiday)+' photo"><span>'+esc(h.holiday)+'</span></div>',h.holiday+' '+h.day.slice(0,4),b)}).join('');carInit();document.getElementById('holw').hidden=false;document.getElementById('holsec').hidden=false}
  var ny=D.nextYear,nb=document.getElementById('nyb'),nl=document.getElementById('nyl');
  if(ny&&ny.picks.length){nb.textContent='Browse '+ny.year+' cruises';nl.innerHTML=ny.picks.map(function(b){return '<a href="'+esc(b.url)+'" target="_blank" rel="noopener noreferrer"><span>'+fd(b.date)+' · '+esc(b.title)+' · '+esc(b.ship)+'</span><b>from $'+b.price+' <small>a person, before taxes</small>'+(b.perNight?' <span class="pnight">$'+b.perNight+' a night</span>':'')+' ↗</b></a>'}).join('');nb.onclick=function(){var o=nl.hidden;nl.hidden=!o;nb.setAttribute('aria-expanded',o)}}else nb.remove();
  document.getElementById('dsrc').innerHTML=srcLine(S)+(D.dropped.length?' Not shown (no live fares right now): '+D.dropped.map(esc).join(', ')+'.':'');
