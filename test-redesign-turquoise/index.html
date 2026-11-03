@@ -457,10 +457,21 @@ body.hxlock,html.hxlock{overflow:visible!important}
 .wlm .r37fine{margin:10px 0 0;font:500 13px Inter,sans-serif;color:#5c3a2a;text-align:left}
 @media (max-width:480px){.wlm-box{padding:24px 20px 18px;border-radius:28px}.wlm-box h2{font-size:26px}}
 @media (prefers-reduced-motion:reduce){.wlm-box{animation:none}}
+</style><style id="r42-css">
+.top .wrap{justify-content:flex-start}
+.top nav{gap:10px;margin:0 auto 0 26px}
+.top nav a{font-size:17px;font-weight:650;padding:7px 14px;border-radius:999px;transition:color .35s,background .25s}
+.top nav a.g2l{font-weight:650}
+.top nav a[aria-current=page]{background:rgba(45,212,191,.22);color:#fff;box-shadow:inset 0 0 0 1.5px rgba(94,234,212,.55)}
+.top.scrolled nav a[aria-current=page],.top.open nav a[aria-current=page]{background:#d9f6f1;color:#0d5c58;box-shadow:inset 0 0 0 1.5px #8fded3}
+.top .menub,.top .btn{margin-left:auto}.top nav~.btn{margin-left:0}
+@media (max-width:1100px){.top nav{gap:4px;margin-left:16px}.top nav a{padding:7px 10px;font-size:16px}}
+.top.open nav{width:210px;gap:2px}
+.top.open nav a{font-size:16.5px;font-weight:650;border-radius:12px;padding:0 14px}
 </style></head><body id="top">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top" id="hdr"><div class="wrap"><a class="brand" href="/test-redesign-turquoise/#top"><span class="dot" aria-hidden="true"></span>Decklumos</a>
-<nav aria-label="Main" id="mnav"><a href="deck-maps/">App</a><a href="ports/">Ports</a><a href="faq/">FAQ</a><a class="g2l" href="g2/">G2</a></nav>
+<nav aria-label="Main" id="mnav"><a href="deck-maps/">App</a><a class="g2l" href="g2/">Smart Glasses G2</a><a href="ports/">Ports</a><a href="faq/">FAQ</a></nav>
 <a class="btn gold" href="/test-redesign-turquoise/#join">Join the newsletter</a><button class="menub" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><span></span></button></div></header>
 <main id="main">
 <section class="hero" aria-label="Welcome"><a class="flash" id="flash" hidden></a><div class="bg" role="img" aria-label="Sunny pool deck with a water slide on a cruise ship at sea"></div><div class="shimmer" aria-hidden="true"></div>
@@ -701,4 +712,4 @@ function sc(){var h=document.documentElement;if(h.scrollTop/(h.scrollHeight-inne
 function ex(e){if(!e.relatedTarget&&e.clientY<=0)show()}
 var t=setTimeout(show,15000);function off(){clearTimeout(t);removeEventListener('scroll',sc);document.removeEventListener('mouseout',ex)}
 addEventListener('scroll',sc,{passive:true});if(matchMedia('(pointer:fine)').matches)document.addEventListener('mouseout',ex);
-document.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('a[href$="#join"],[data-wlopen]')){L.setItem(K,'opened');off()}},true)}catch(e){}})();</script></body></html>
+document.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('a[href$="#join"],[data-wlopen]')){L.setItem(K,'opened');off()}},true)}catch(e){}})();</script><script id="r42-js">(function(){var p=location.pathname.replace(/index\.html$/,'');document.querySelectorAll('#mnav a').forEach(function(a){var q=new URL(a.href,location.href).pathname;if(q!=='/test-redesign/'&&p.indexOf(q)===0){a.setAttribute('aria-current','page')}else if(a.getAttribute('aria-current')==='page'&&q!==p){a.removeAttribute('aria-current')}})})();</script></body></html>
