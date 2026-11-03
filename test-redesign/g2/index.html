@@ -273,11 +273,29 @@ body.hud .btn.glass{border-color:var(--hline)}
 .wlm input:focus{border-color:#00A3C4;outline:3px solid rgba(0,163,196,.35);outline-offset:0}
 .wlm .btn{width:100%;display:inline-flex;margin-top:18px}.wlm .wl-err{color:#b3261e}.wlm .wl-ok{font:600 24px Fredoka,Inter;text-align:center;padding:14px 0 4px}.wlm .wl-ok small{display:block;font:400 16px Inter;color:#4a5568;margin-top:8px}
 body.wlm-open{overflow:hidden}
-</style><style>footer.slim{padding:28px 0 26px}footer.slim nav{gap:18px;flex-wrap:wrap;font-size:14px}footer.slim .d{margin-top:12px}.ib{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%%;background:rgba(0,0,0,.45);color:#fff!important;font-size:12px;text-decoration:none}</style></head><body id="top" class="hud">
+</style><style>footer.slim{padding:28px 0 26px}footer.slim nav{gap:18px;flex-wrap:wrap;font-size:14px}footer.slim .d{margin-top:12px}.ib{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%%;background:rgba(0,0,0,.45);color:#fff!important;font-size:12px;text-decoration:none}</style><style id="r25-css">
+.faq summary{display:block;min-height:44px;-webkit-tap-highlight-color:transparent}
+@media (max-width:760px){.credpg a{display:inline-block;min-height:44px;line-height:44px;padding:0 3px}}
+@media (max-width:1000px){body.hud .top.scrolled,body.hud .top.open{background:rgba(5,8,6,.94);box-shadow:0 1px 0 var(--hline),0 10px 30px -14px #000}
+body.hud .top.scrolled .brand,body.hud .top.scrolled nav a,body.hud .top.open .brand{color:#fff}
+body.hud .top.scrolled .menub,body.hud .top.open .menub{color:#fff;background:var(--hcard);border-color:var(--hline)}
+body.hud .top.open nav{background:var(--hcard);border-color:var(--hline)}
+body.hud .top.open nav a{color:#e9f3ea}
+body.hud .top.open nav a:hover,body.hud .top.open nav a:active{background:rgba(0,255,0,.1)}
+body.hud .top.open nav a[aria-current],body.hud .top.open nav a.cur{color:var(--hgt)}}
+</style><script id="r25-theme">(function(){var T={green:['#3DDC84','#22B566','34,181,102'],turquoise:['#6FDCD8','#2BB5B0','43,181,176'],bahamas:0,calm:['#F2A65A','#e6b65a','217,164,65'],'calm-lite':['#F2A65A','#e6b65a','217,164,65']};
+var m=location.pathname.match(/^\/test-redesign-([a-z-]+)\//),v=m?m[1]:new URLSearchParams(location.search).get('theme');if(!v||!(v in T))return;window.DTHEME=v;var c=T[v];
+function rs(){if(m||!c)return;[].forEach.call(document.querySelectorAll('style'),function(s){if(s.dataset.th)return;s.dataset.th=1;s.textContent=s.textContent.replace(/#12CBE4/gi,c[0]).replace(/#00A3C4/gi,c[1]).replace(/0,\s*163,\s*196/g,c[2])});[].forEach.call(document.querySelectorAll('[stroke="#00A3C4"],[stroke="#12CBE4"]'),function(e){e.setAttribute('stroke',c[1])})}
+function fx(a){var h=a.getAttribute('href');if(!h||/^(mailto|tel|javascript):/i.test(h))return;var u;try{u=new URL(a.href)}catch(e){return}if(u.origin!==location.origin)return;var p=u.pathname;if(!/^\/test-redesign\//.test(p)||(p===location.pathname&&u.search===location.search))return;if(p==='/test-redesign/'||p==='/test-redesign/index.html'){u.pathname='/test-redesign-'+v+'/';u.searchParams.delete('theme')}else u.searchParams.set('theme',v);var n=u.pathname+u.search+u.hash;if(n!==h)a.setAttribute('href',n)}
+function ff(f){if(f.querySelector('input[name=theme]'))return;var u;try{u=new URL(f.action)}catch(e){return}if((f.method||'get').toLowerCase()!=='get'||u.origin!==location.origin||!/^\/test-redesign\//.test(u.pathname))return;var i=document.createElement('input');i.type='hidden';i.name='theme';i.value=v;f.appendChild(i)}
+function all(){rs();[].forEach.call(document.querySelectorAll('a[href]'),fx);[].forEach.call(document.querySelectorAll('form[action]'),ff)}
+rs();document.addEventListener('DOMContentLoaded',function(){all();new MutationObserver(function(L){L.forEach(function(r){if(r.type==='attributes'){if(r.target.tagName==='A')fx(r.target);return}r.addedNodes.forEach(function(n){if(n.nodeType!==1)return;if(n.tagName==='A')fx(n);if(n.querySelectorAll){[].forEach.call(n.querySelectorAll('a[href]'),fx);[].forEach.call(n.querySelectorAll('form[action]'),ff)}})})}).observe(document.body,{subtree:true,childList:true,attributes:true,attributeFilter:['href']})});
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(a)fx(a)},true)})();</script>
+</head><body id="top" class="hud">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top" id="hdr"><div class="wrap"><a class="brand" href="../"><span class="dot" aria-hidden="true"></span>Decklumos</a>
 <nav aria-label="Main" id="mnav"><a href="../deck-maps/">Deck Maps</a><a href="../deck-maps/#app">App</a><a href="../ports/">Ports</a><a href="../faq/">FAQ</a><a class="g2l" href="./" aria-current="page">G2</a></nav>
-<a class="btn gold" href="#join">Join the newsletter</a><button class="menub" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><span></span></button></div></header>
+<a class="btn gold" href="/test-redesign/#join">Join the newsletter</a><button class="menub" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><span></span></button></div></header>
 <main id="main">
 <section class="ghero" aria-labelledby="g-h"><div class="wrap gg">
  <div><span class="eyebrow">Decklumos on G2</span><h1 id="g-h">Your ship, <em>in view.</em></h1>
