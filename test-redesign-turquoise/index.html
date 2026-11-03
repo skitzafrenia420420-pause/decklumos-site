@@ -341,6 +341,17 @@ body.wlm-open{overflow:hidden}
 .hxft{display:block;position:sticky;bottom:0;background:#fff;padding:10px 0 calc(12px + env(safe-area-inset-bottom));margin-top:6px}.hxft .btn{width:100%;justify-content:center;margin:0}
 #hfind .hxbk{display:block;position:fixed;inset:0;background:rgba(10,30,45,.45);z-index:1000}
 body.hxlock{overflow:hidden}}
+</style><style id="r24-css">
+.hero .hjobs{margin-left:0!important;margin-right:0!important;justify-content:flex-start!important;text-align:left!important;max-width:880px!important}
+.hero .hjobs .hfind{margin-left:0!important;margin-right:0!important}
+.hero .in>.wrap>p{text-align:left!important;margin-left:0!important;margin-right:0!important}
+#hfind .hxhelp[hidden]{display:none!important}
+.hxtop{display:none}
+@media(min-width:701px){#hfind{position:relative}#hfind .hxcal{position:absolute;z-index:80;top:calc(100% + 8px);left:0;width:360px;margin:0;box-shadow:0 18px 40px rgba(11,31,58,.28)}}
+@media(max-width:700px){.hxtop{display:flex;align-items:center;justify-content:center;position:relative;height:40px}.hxhd{width:40px;height:5px;border-radius:3px;background:#cfd8de}.hxdone{position:absolute;right:0;top:0;height:44px;min-width:44px;border:0;background:none;color:#0b5868;font:700 15px Inter,sans-serif;cursor:pointer}}
+.menub{min-width:44px;min-height:44px;touch-action:manipulation;flex:none}
+.rhero{padding-top:132px!important}.crumbs,#crumbs{scroll-margin-top:110px}
+.tdo li.ph .tx{display:block;font-size:15px;padding:15px;margin:6px -8px -8px;border-radius:14px;background:linear-gradient(180deg,rgba(6,22,44,.45),rgba(6,22,44,.88))}
 </style></head><body id="top">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top" id="hdr"><div class="wrap"><a class="brand" href="#top"><span class="dot" aria-hidden="true"></span>Decklumos</a>
@@ -435,34 +446,36 @@ function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return
 function fd(d,o){return new Date(d+'T12:00:00').toLocaleDateString('en-US',o||{month:'short',day:'numeric',year:'numeric'})}
 function ck(s){return new Date(s).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}
 function fresh(S){var t=new Date(S.checked).getTime();return isNaN(t)?false:(Date.now()-t)<=7*864e5}
-function getJ(u){return fetch(u,{cache:'no-cache'}).then(function(r){return r.json()})}
+function getJ(u){return fetch(u,{cache:'no-cache'}).then(function(r){return r.json()}).then(function(j){return /sailings/.test(u)?noPast(j):j})}
+function noPast(j){var t=new Date(),T=t.getFullYear()+'-'+('0'+(t.getMonth()+1)).slice(-2)+'-'+('0'+t.getDate()).slice(-2),D=/^\d{4}-\d{2}-\d{2}$/;(function w(o){if(Array.isArray(o)){for(var i=o.length-1;i>=0;i--){var e=o[i];if(e&&typeof e==='object'&&(Array.isArray(e)?D.test(e[0])&&e[0]<T:D.test(e.date)&&e.date<T))o.splice(i,1);else w(e)}}else if(o&&typeof o==='object')for(var k in o)w(o[k])})(j);return j}
 function srcLine(S){return 'Prices from carnival.com, checked '+ck(S.checked)+'.'}
 /* promo tags + timers: only when the source supplied them */
 function promoHtml(p){if(!p)return '';var h='<span class="ptag">'+esc(p.text)+'</span>';if(p.limited)h+='<span class="ptag">Limited time</span>';if(p.ends){var e=new Date(p.ends),ms=e-new Date();if(ms>0){if(/T\d/.test(p.ends))h+='<span class="ptag end" data-end="'+esc(p.ends)+'"></span>';else if(ms<3*864e5)h+='<span class="ptag end">Deal ends soon</span>'}}return h}
 function tick(){document.querySelectorAll('[data-end]').forEach(function(el){var ms=new Date(el.dataset.end)-new Date();if(ms<=0){el.remove();return}var d=Math.floor(ms/864e5),hh=Math.floor(ms/36e5)%24,m=Math.floor(ms/6e4)%60;el.textContent='Ends in '+(d?d+'d ':'')+hh+'h '+m+'m'})}
 setInterval(tick,30000);
 function heroFind(S){var F=document.getElementById('hfind');if(!F)return;getJ('data/all-sailings.json?v='+Date.now()).then(function(D){if(!D||!D.rows||fresh(D)===false)return;
- var $=function(i){return document.getElementById(i)},fs=$('hf-f'),ms=$('hf-m'),hd=$('hf-d'),db=$('hf-db'),dt=$('hf-dt'),cal=$('hf-cal'),bk=$('hf-bk'),hp=$('hf-help'),go=$('hf-go'),td=isoDay(Date.now()),R=sailRows(D).filter(function(r){return r.date>=td}),FR={},cm='',mob=function(){return matchMedia('(max-width:700px)').matches},sd=function(k){return fd(k,{weekday:'short',month:'short',day:'numeric'})},ml=function(k){return fd(k+'-01',{month:'long',year:'numeric'})};
+ var $=function(i){return document.getElementById(i)},fs=$('hf-f'),ms=$('hf-m'),hd=$('hf-d'),db=$('hf-db'),dt=$('hf-dt'),cal=$('hf-cal'),bk=$('hf-bk'),hp=$('hf-help'),go=$('hf-go'),td=isoDay(Date.now()),R=sailRows(D).filter(function(r){return r.date>=td}),FR={},cm='',nt='',mob=function(){return matchMedia('(max-width:700px)').matches},sd=function(k){return fd(k,{weekday:'short',month:'short',day:'numeric'})},ml=function(k){return fd(k+'-01',{month:'long',year:'numeric'})};
  R.forEach(function(r){FR[r.from]=1});fs.innerHTML='<option value="">Any port</option>'+Object.keys(FR).sort().map(function(x){return '<option value="'+esc(x)+'">'+esc(x)+'</option>'}).join('');
  function pr(){return R.filter(function(r){return !fs.value||r.from===fs.value})}
  function mlist(){var M={};pr().forEach(function(r){M[r.date.slice(0,7)]=1});return Object.keys(M).sort()}
  function months(){var L=mlist(),cur=ms.value;ms.innerHTML='<option value="">Any month</option>'+L.map(function(k){return '<option value="'+k+'">'+fd(k+'-01',{month:'short',year:'numeric'})+'</option>'}).join('');ms.value=L.indexOf(cur)>=0?cur:''}
- function upd(){var L=pr().filter(function(r){return (!ms.value||r.date.slice(0,7)===ms.value)&&(!hd.value||r.date===hd.value)}),n=L.length;hp.textContent=n+(n===1?' sailing':' sailings')+(fs.value?' from '+fs.value.split(',')[0]:'')+(hd.value?' on '+sd(hd.value):ms.value?' in '+fd(ms.value+'-01',{month:'long'}):'');go.textContent=!fs.value&&!ms.value&&!hd.value?'Show all sailings':'Show me sailings'}
+ function upd(){var L=pr().filter(function(r){return (!ms.value||r.date.slice(0,7)===ms.value)&&(!hd.value||r.date===hd.value)}),n=L.length;var c=n.toLocaleString('en-US');go.textContent=!fs.value&&!ms.value&&!hd.value?'Show all '+c+' sailings':'Show '+c+(n===1?' sailing':' sailings');var g2=cal.querySelector('.hxft .btn');if(g2)g2.textContent=go.textContent;hp.textContent=nt;hp.hidden=!nt}
  function setDay(k){hd.value=k;dt.textContent=k?sd(k):'Any day';db.classList.toggle('set',!!k);upd()}
  function draw(){var L=mlist();if(L.indexOf(cm)<0)cm=L[0]||'';if(!cm){cal.innerHTML='<p class="hxhelp">No sailings from this port right now.</p>';return}var A={};pr().forEach(function(r){if(r.date.slice(0,7)===cm)A[r.date]=1});var y=+cm.slice(0,4),mo=+cm.slice(5,7),f0=new Date(y,mo-1,1).getDay(),nd=new Date(y,mo,0).getDate(),i=L.indexOf(cm),
   h='<div class="hxch"><button type="button" class="hxar" data-s="-1" aria-label="Previous month"'+(i<=0?' disabled':'')+'>\u2039</button><b>'+ml(cm)+'</b><button type="button" class="hxar" data-s="1" aria-label="Next month"'+(i>=L.length-1?' disabled':'')+'>\u203a</button><button type="button" class="hxclr">Clear</button></div><div class="hxg">'+['S','M','T','W','T','F','S'].map(function(w){return '<span class="hw" aria-hidden="true">'+w+'</span>'}).join('');
   for(var q=0;q<f0;q++)h+='<span></span>';for(var g=1;g<=nd;g++){var k=cm+'-'+('0'+g).slice(-2),lb=fd(k,{month:'long',day:'numeric'});h+=A[k]?'<button type="button" class="hxd'+(k===hd.value?' on':'')+'" data-d="'+k+'" aria-pressed="'+(k===hd.value)+'" aria-label="'+lb+', sailings available">'+g+'</button>':'<span class="hxn" aria-label="'+lb+', no sailings">'+g+'</span>'}
-  cal.innerHTML=h+'</div><div class="hxft"><button class="btn gold" type="submit">Show me sailings</button></div>'}
+  cal.innerHTML='<div class="hxtop"><span class="hxhd" aria-hidden="true"></span><button type="button" class="hxdone">Done</button></div>'+h+'</div><div class="hxft"><button class="btn gold" type="submit">'+esc(go.textContent)+'</button></div>'}
  function op(){cm=hd.value?hd.value.slice(0,7):ms.value;draw();cal.hidden=false;bk.hidden=!mob();db.setAttribute('aria-expanded','true');document.body.classList.toggle('hxlock',mob());var f=cal.querySelector('.hxd.on')||cal.querySelector('.hxd')||cal.querySelector('.hxclr');if(f)f.focus({preventScroll:mob()})}
  function cl(r){if(cal.hidden)return;cal.hidden=bk.hidden=true;db.setAttribute('aria-expanded','false');document.body.classList.remove('hxlock');if(r)db.focus({preventScroll:true})}
  db.onclick=function(){cal.hidden?op():cl()};
- ms.onchange=function(){if(hd.value&&hd.value.slice(0,7)!==ms.value)setDay('');upd();if(ms.value)op();else cl()};
- fs.onchange=function(){months();if(hd.value&&!pr().some(function(r){return r.date===hd.value}))setDay('');upd();if(!cal.hidden)draw()};
- cal.onclick=function(e){var b=e.target.closest('button');if(!b||b.type==='submit')return;if(b.dataset.s){var L=mlist(),j=L.indexOf(cm)+ +b.dataset.s;if(L[j]){cm=L[j];draw();var a=cal.querySelector('.hxar[data-s="'+b.dataset.s+'"]');(a&&!a.disabled?a:cal.querySelector('.hxd')).focus()}return}if(b.classList.contains('hxclr')){setDay('');cl(1);return}if(b.dataset.d){ms.value=b.dataset.d.slice(0,7);setDay(b.dataset.d);cl(1)}};
+ ms.onchange=function(){nt='';if(hd.value&&hd.value.slice(0,7)!==ms.value)setDay('');upd();if(ms.value)op();else cl()};
+ fs.onchange=function(){var pm=ms.value;months();nt=pm&&!ms.value?'No sailings from '+(fs.value?fs.value.split(',')[0]:'there')+' in '+fd(pm+'-01',{month:'long'})+', so we switched to Any month.':'';if(hd.value&&!pr().some(function(r){return r.date===hd.value}))setDay('');upd();if(!cal.hidden)draw()};
+ cal.onclick=function(e){var b=e.target.closest('button');if(!b||b.type==='submit')return;if(b.dataset.s){var L=mlist(),j=L.indexOf(cm)+ +b.dataset.s;if(L[j]){cm=L[j];draw();var a=cal.querySelector('.hxar[data-s="'+b.dataset.s+'"]');(a&&!a.disabled?a:cal.querySelector('.hxd')).focus()}return}if(b.classList.contains('hxdone')){cl(1);return}if(b.classList.contains('hxclr')){setDay('');cl(1);return}if(b.dataset.d){ms.value=b.dataset.d.slice(0,7);setDay(b.dataset.d);cl(1)}};
  document.addEventListener('pointerdown',function(e){if(!cal.hidden&&!cal.contains(e.target)&&!db.contains(e.target)&&e.target!==ms)cl()});
  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!cal.hidden)cl(1)});
  F.onsubmit=function(){[fs,ms,hd].forEach(function(x){if(!x.value)x.disabled=true});setTimeout(function(){fs.disabled=ms.disabled=hd.disabled=false},0)};
- months();setDay('');F.hidden=false}).catch(function(){})}
+ var ty=0;cal.addEventListener('touchstart',function(e){ty=e.target.closest('.hxtop')?e.touches[0].clientY:-1},{passive:true});cal.addEventListener('touchend',function(e){if(ty>=0&&e.changedTouches[0].clientY-ty>60)cl()},{passive:true});
+ var Q=new URLSearchParams(location.search);if(FR[Q.get('from')])fs.value=Q.get('from');months();if(mlist().indexOf(Q.get('m'))>=0)ms.value=Q.get('m');var q=Q.get('d');setDay(q&&pr().some(function(r){return r.date===q})?q:'');if(hd.value)ms.value=hd.value.slice(0,7);upd();F.hidden=false}).catch(function(){})}
 function sailRows(D){return D.rows.map(function(r){return {date:r[0],nights:r[1],price:r[2],pn:r[3],from:D.froms[r[4]],title:r[5],ship:r[6],url:r[7]}})}
 function isoDay(t){var d=new Date(t);return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}
 function sailSets(R){var td=isoDay(Date.now()),lim=isoDay(Date.now()+60*864e5),up=R.filter(function(r){return r.date>=td});
