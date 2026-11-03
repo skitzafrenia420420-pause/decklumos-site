@@ -319,6 +319,16 @@ body.hxlock,html.hxlock{overflow:visible!important}
 .r40 .contact h2{font-size:22px;margin:0 0 6px;color:#14405F}.r40 .contact p{color:#14405F;margin:0 0 14px}
 .r40 .contact .btn{border-radius:999px}
 @media (prefers-reduced-motion:reduce){.r40 .faq summary::after{transition:none}}
+</style><style id="r41-css">
+#cfm .btn{width:100%;justify-content:center;min-height:56px;margin-top:12px;border-radius:999px;background:#B23A1E!important;color:#fff!important;font:700 18px Inter,sans-serif;border:0;box-shadow:0 12px 26px -10px rgba(178,58,30,.75)}
+#cfm .btn:hover{background:#962f17!important}#cfm .btn:focus-visible{outline:3px solid #14405F;outline-offset:3px}
+#cfm .cf-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+#cfm .cf-l{display:block;font:600 14px Inter,sans-serif;color:#14405F;margin:10px 0 6px}
+#cfm textarea{width:100%;box-sizing:border-box;min-height:110px;border:2px solid #fff;border-radius:22px;padding:14px 18px;font:400 16px/1.45 Inter,sans-serif;background:#fff;resize:vertical;color:#14405F}
+#cfm textarea:focus{border-color:#14405F;outline:3px solid rgba(20,64,95,.25)}
+#cfm input[type=email]{width:100%;box-sizing:border-box}
+#cfm .wl-err a{color:#14405F;font-weight:700}
+@media (max-width:480px){#cfm .wlm-box{max-height:calc(100dvh - 24px);overflow:auto}}
 </style></head><body id="top"><a class="skip" href="#main">Skip to content</a>
 <header class="top" id="hdr"><div class="wrap"><a class="brand" href="./"><img class="bmark" src="/test-redesign/img/icons/ship-outline-72.png" srcset="/test-redesign/img/icons/ship-outline-72.png 2x,/test-redesign/img/icons/ship-outline-108.png 3x" width="69" height="36" alt="" aria-hidden="true">Decklumos</a>
 <nav aria-label="Main" id="mnav"><a href="deck-maps/">App</a><a href="ports/">Ports</a><a href="faq/">FAQ</a><a class="g2l" href="g2/">G2</a></nav>
@@ -332,7 +342,7 @@ body.hxlock,html.hxlock{overflow:visible!important}
   <details><summary>Do I need anything besides my phone?</summary><p>No. If you have Even Realities G2 glasses, the app works on them too.</p></details>
   <details><summary>What's in the newsletter?</summary><p>Cruise deals and news, now and then. Unsubscribe anytime.</p></details>
  </div>
- <div class="contact"><h2>Missing your ship or found a mistake?</h2><p>Email the Owners. We read every message and we'd love to hear from you.</p><a class="btn navy" href="mailto:support@decklumos.com">Email us</a></div>
+ <div class="contact"><h2>Missing your ship or found a mistake?</h2><p>Email the Owners. We read every message and we'd love to hear from you.</p><a class="btn navy" href="mailto:support@decklumos.com" data-cfopen>Email us</a></div>
 </div></section>
 </main>
 <div class="wlm" id="wlm" hidden><div class="wlm-bd" data-wlclose></div><div class="wlm-box" role="dialog" aria-modal="true" aria-labelledby="wlm-h"><button class="wlm-x" type="button" data-wlclose aria-label="Close">×</button>
@@ -343,6 +353,30 @@ body.hxlock,html.hxlock{overflow:visible!important}
   <button class="btn gold" type="submit">Join the newsletter</button><p id="wl-err" class="wl-err" role="alert"></p><p class="r37fine">Unsubscribe anytime.</p></form>
  <div id="wl-ok" class="wl-ok" role="status" hidden>Thanks, you're in! 🎉<small>Watch your inbox for cruise deals and news from Decklumos.</small><button class="btn gold" type="button" data-wlclose>Done</button></div>
 </div></div>
+<div class="wlm" id="cfm" hidden><div class="wlm-bd" data-cfclose></div><div class="wlm-box" role="dialog" aria-modal="true" aria-labelledby="cfm-h"><button class="wlm-x" type="button" data-cfclose aria-label="Close">×</button>
+ <span class="eyebrow">Contact</span><h2 id="cfm-h">Send us a message</h2><p class="s">Missing ship, a mistake, or just hello. We read every message.</p>
+ <form id="cf-form" novalidate><input type="text" name="_honey" class="cf-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <label for="cf-email" class="cf-l">Your email</label><input id="cf-email" type="email" name="email" required autocomplete="email" placeholder="Your email address">
+  <label for="cf-msg" class="cf-l">Message</label><textarea id="cf-msg" name="message" required maxlength="3000" rows="4" placeholder="Your message"></textarea>
+  <button class="btn" type="submit">Send message</button><p id="cf-err" class="wl-err" role="alert"></p></form>
+ <div id="cf-ok" class="wl-ok" role="status" hidden>Thanks, message sent! 💌<small>We'll reply to your email soon.</small><button class="btn" type="button" data-cfclose>Done</button></div>
+</div></div>
+<script id="r41-js">(function(){var m=document.getElementById('cfm'),f=document.getElementById('cf-form'),e=document.getElementById('cf-err'),ok=document.getElementById('cf-ok'),b=f.querySelector('button[type=submit]'),last=null;
+function fo(){return [].filter.call(m.querySelectorAll('button,input:not([tabindex="-1"]),textarea,a[href]'),function(x){return x.offsetParent!==null})}
+function open(ev){if(ev)ev.preventDefault();last=document.activeElement;m.hidden=false;document.body.classList.add('wlm-open');setTimeout(function(){(f.hidden?ok.querySelector('button'):f.email).focus()},30)}
+function close(){m.hidden=true;document.body.classList.remove('wlm-open');if(last&&last.focus)last.focus()}
+document.querySelectorAll('[data-cfopen]').forEach(function(a){a.addEventListener('click',open)});
+m.querySelectorAll('[data-cfclose]').forEach(function(x){x.addEventListener('click',close)});
+document.addEventListener('keydown',function(k){if(m.hidden)return;if(k.key==='Escape'){close();return}if(k.key==='Tab'){var l=fo(),a=l[0],z=l[l.length-1];if(k.shiftKey&&document.activeElement===a){k.preventDefault();z.focus()}else if(!k.shiftKey&&document.activeElement===z){k.preventDefault();a.focus()}}});
+var FB=' Or email <a href="mailto:support@decklumos.com">support@decklumos.com</a>.';
+f.addEventListener('submit',function(ev){ev.preventDefault();e.textContent='';var em=f.email.value.trim(),ms=f.message.value.trim();
+if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){e.textContent='Please enter a valid email address.';f.email.focus();return}
+if(ms.length<2){e.textContent='Please write a short message.';f.message.focus();return}
+if(f._honey.value){f.hidden=true;ok.hidden=false;return}
+b.disabled=true;b.textContent='Sending…';
+fetch('https://formsubmit.co/ajax/support@decklumos.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:em,message:ms,_replyto:em,_subject:'Decklumos website message',_template:'table',_captcha:'false',_honey:''})})
+.then(function(r){return r.json()}).then(function(j){if(j&&(j.success===true||j.success==='true')){f.hidden=true;ok.hidden=false;ok.querySelector('button').focus()}else throw 0})
+.catch(function(){e.innerHTML='Sorry, that didn\'t send.'+FB;b.disabled=false;b.textContent='Send message'})})})();</script>
 <footer class="slim"><div class="wrap"><div class="row"><span class="fmark"><img src="/test-redesign/img/icons/ship-outline-72.png" srcset="/test-redesign/img/icons/ship-outline-72.png 2x,/test-redesign/img/icons/ship-outline-108.png 3x" width="69" height="36" alt="">Decklumos</span><nav><a href="/privacy/">Privacy</a><a href="/support/">Contact</a><a href="/test-redesign/credits/">Photo credits &amp; info</a></nav></div><p class="d">Independent app, not affiliated with any cruise line. © 2026 Decklumos</p></div></footer>
 <script>
 (function(){
