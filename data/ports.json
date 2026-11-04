@@ -1,0 +1,1697 @@
+{
+ "regions": [
+  {
+   "id": "caribbean",
+   "name": "Caribbean",
+   "img": "port-caribbean.jpg",
+   "ports": [
+    "cozumel",
+    "george-town-cayman",
+    "roatan",
+    "philipsburg",
+    "charlotte-amalie",
+    "san-juan",
+    "ocho-rios",
+    "oranjestad"
+   ]
+  },
+  {
+   "id": "bahamas",
+   "name": "Bahamas",
+   "img": "port-bahamas.jpg",
+   "ports": [
+    "nassau",
+    "freeport",
+    "bimini-bs",
+    "celebration-key-bs",
+    "half-moon-cay-bs",
+    "perfect-day-at-cococay-bs",
+    "princess-cays-bs"
+   ]
+  },
+  {
+   "id": "alaska",
+   "name": "Alaska",
+   "img": "port-alaska.jpg",
+   "ports": [
+    "juneau-us",
+    "ketchikan-us",
+    "skagway-us",
+    "sitka-us",
+    "icy-strait-point-us",
+    "victoria-ca"
+   ]
+  },
+  {
+   "id": "mediterranean",
+   "name": "Mediterranean",
+   "img": "port-mediterranean.jpg",
+   "ports": [
+    "barcelona",
+    "civitavecchia",
+    "naples",
+    "santorini",
+    "mykonos",
+    "dubrovnik",
+    "valletta",
+    "palma"
+   ]
+  },
+  {
+   "id": "northern-europe",
+   "name": "Northern Europe",
+   "img": "port-northern-europe.jpg",
+   "ports": [
+    "amsterdam-nl",
+    "bergen-no",
+    "copenhagen-dk",
+    "geiranger-no",
+    "stockholm-se",
+    "tallinn-ee",
+    "helsinki-fi"
+   ]
+  },
+  {
+   "id": "mexico",
+   "name": "Mexico & Central America",
+   "img": "port-mexico-central-america.jpg",
+   "ports": [
+    "cabo-san-lucas-mx",
+    "puerto-vallarta-mx",
+    "ensenada-mx",
+    "mazatl-n-mx",
+    "progreso-mx",
+    "belize-city-bz",
+    "costa-maya",
+    "puerto-lim-n-cr"
+   ]
+  }
+ ],
+ "ports": {
+  "cozumel": {
+   "id": "cozumel",
+   "name": "Cozumel",
+   "country": "Mexico",
+   "region": "Caribbean",
+   "currency": "Mexican peso (US dollar common)",
+   "language": "Spanish",
+   "summary": "A Caribbean island off the Yucat\u00e1n, best known for world-class reef diving and snorkelling.",
+   "pier": "Several piers sit south of San Miguel town; on very busy days some ships anchor and tender to downtown.",
+   "highlights": [
+    "Reef snorkelling and diving along the west coast",
+    "San Miguel's waterfront and plaza",
+    "The wild, windswept east coast beaches"
+   ],
+   "tip": "Taxis use fixed fares by zone; ask the price first.",
+   "lat": 20.4321,
+   "lon": -86.9207,
+   "source": {
+    "title": "Cozumel",
+    "url": "https://en.wikivoyage.org/wiki/Cozumel",
+    "revid": 5380853,
+    "fetched": "2026-10-21",
+    "osm": "https://www.openstreetmap.org/relation/11914633"
+   },
+   "regionId": "caribbean",
+   "regionName": "Caribbean",
+   "tips": {
+    "pierToTown": "Carnival and Royal Caribbean ships mostly use the pair of piers about two miles south of downtown San Miguel; on busy days some ships anchor and tender to the downtown docks. There's no public transit out of town: walk, rent a car or take a taxi (about M$30\u201360 within town).",
+    "money": "Prices are in pesos (M$); tourist spots also quote US$. Low-fee ATMs downtown: Banco Azteca, Banamex, Santander, Banorte. Tipping is like the US: 10\u201315% on meals. Bars may add 15% to the bill.",
+    "food": "Mayan and Yucat\u00e1n specialties, like the slow, sweet-marinated Mayan pork at Casa Denis near the main square, the self-declared oldest restaurant in Cozumel.",
+    "sight": "San Gervasio, the island's most extensive Maya site, inland a few km north of the cross-island highway (car or taxi).",
+    "safety": "Pushy touts at the docks sell car rentals and tours; beware timeshare pitches. Most tourist accidents involve scooters, so rent one only if experienced. East-coast surf and undertow are dangerous. Fake silver: look for the .925 stamp; a magnet sticks to fakes.",
+    "history": "From about 1250 CE Cozumel was an important Maya port and pilgrimage centre. Juan de Grijalva's 1518 expedition was the first Spanish visit; Hern\u00e1n Cort\u00e9s stopped the next year.",
+    "sources": [
+     {
+      "site": "Wikivoyage",
+      "title": "Cozumel",
+      "revid": 5380853,
+      "url": "https://en.wikivoyage.org/wiki/Cozumel"
+     },
+     {
+      "site": "Wikivoyage",
+      "title": "Mexico",
+      "revid": 5399339,
+      "url": "https://en.wikivoyage.org/wiki/Mexico"
+     },
+     {
+      "site": "Wikipedia",
+      "title": "Cozumel",
+      "revid": 1378535034,
+      "url": "https://en.wikipedia.org/wiki/Cozumel"
+     }
+    ]
+   }
+  },
+  "george-town-cayman": {
+   "id": "george-town-cayman",
+   "name": "George Town, Grand Cayman",
+   "country": "Cayman Islands",
+   "region": "Caribbean",
+   "currency": "Cayman dollar (US dollar accepted)",
+   "language": "English",
+   "summary": "The capital of the Cayman Islands on Grand Cayman, compact and busy on multi-ship days.",
+   "pier": "Ships anchor offshore and tender guests to the George Town waterfront.",
+   "highlights": [
+    "Seven Mile Beach",
+    "Stingray City sandbar in the North Sound",
+    "Snorkelling right off the George Town shoreline"
+   ],
+   "tip": "Tender lines grow late in the day; head back early.",
+   "lat": 19.2954,
+   "lon": -81.3808,
+   "source": {
+    "title": "Grand Cayman",
+    "url": "https://en.wikivoyage.org/wiki/Grand_Cayman",
+    "revid": 5367907,
+    "fetched": "2026-10-21",
+    "osm": "https://www.openstreetmap.org/relation/13777970"
+   },
+   "regionId": "caribbean",
+   "regionName": "Caribbean",
+   "tips": {
+    "pierToTown": "There are no berths: cruise ships anchor offshore and tender passengers to the harbour dock in downtown George Town. Taxis wait at the docks. Seven Mile Beach is not within walking distance.",
+    "food": "The national dish is turtle stew, from the world's only green sea turtle farm. Restaurant food is expensive on Grand Cayman, even fast food.",
+    "sight": "Stingray City, the island's most famous excursion: feed and pet large rays in waist-deep water at the sandbar. In town, the National Museum is in the historic Old Courts Building (US$15).",
+    "history": "George Town, named after King George III, is the capital of the Cayman Islands. The remains of Fort George, built in 1790 to protect the harbour, stand on Harbour Drive.",
+    "sources": [
+     {
+      "site": "Wikivoyage",
+      "title": "Grand Cayman",
+      "revid": 5367907,
+      "url": "https://en.wikivoyage.org/wiki/Grand_Cayman"
+     },
+     {
+      "site": "Wikipedia",
+      "title": "George Town, Cayman Islands",
+      "revid": 1380216058,
+      "url": "https://en.wikipedia.org/wiki/George_Town,_Cayman_Islands"
+     }
+    ]
+   }
+  },
+  "roatan": {
+   "id": "roatan",
+   "name": "Roat\u00e1n",
+   "country": "Honduras",
+   "region": "Caribbean",
+   "currency": "Honduran lempira (US dollar widely accepted)",
+   "language": "Spanish and English",
+   "summary": "The largest of Honduras' Bay Islands, set on an ancient coral reef with excellent diving.",
+   "pier": "Ships use the piers near Coxen Hole and at Mahogany Bay; West Bay beach is a taxi ride away.",
+   "highlights": [
+    "West Bay beach and snorkelling",
+    "West End village",
+    "Diving the Mesoamerican reef"
+   ],
+   "tip": "Roads are winding and slow; budget extra return time.",
+   "lat": 16.349,
+   "lon": -86.4978,
+   "source": {
+    "title": "Roat\u00e1n",
+    "url": "https://en.wikivoyage.org/wiki/Roat%C3%A1n",
+    "revid": 5382376,
+    "fetched": "2026-10-21",
+    "osm": "https://www.openstreetmap.org/relation/5989963"
+   },
+   "regionId": "caribbean",
+   "regionName": "Caribbean",
+   "tips": {
+    "pierToTown": "Cruise ships use Coxen Hole, the island's largest town, or Mahogany Bay outside French Harbour. At Mahogany Bay the lines discourage leaving the private beach compound except by taxi or tour.",
+    "money": "Prices of food, goods and services can double or more when cruise ships are in port; if you want to shop, it pays to wait until they leave.",
+    "food": "Seafood abounds: West End beach restaurants serve food of a very high standard, and a top quality lobster dinner can be found for around US$10.",
+    "sight": "Roat\u00e1n Butterfly Garden: 15\u201320 species in a 3,000 sq ft enclosure, Sun\u2013Fri 9 AM\u20135 PM, US$7 adults. Roat\u00e1n has some of the best snorkel and dive spots in the Caribbean.",
+    "history": "The Bay Islands' first people were likely related to mainland tribes. Columbus visited neighbouring Guanaja on his fourth voyage (1502\u20131504), and the Bay of Honduras later drew settlers, pirates and traders.",
+    "sources": [
+     {
+      "site": "Wikivoyage",
+      "title": "Roat\u00e1n",
+      "revid": 5382376,
+      "url": "https://en.wikivoyage.org/wiki/Roat%C3%A1n"
+     },
+     {
+      "site": "Wikipedia",
+      "title": "Roat\u00e1n",
+      "revid": 1378393295,
+      "url": "https://en.wikipedia.org/wiki/Roat%C3%A1n"
+     }
+    ]
+   }
+  },
+  "philipsburg": {
+   "id": "philipsburg",
+   "name": "Philipsburg",
+   "country": "Sint Maarten",
+   "region": "Caribbean",
+   "currency": "US dollar (Antillean guilder also used)",
+   "language": "English and Dutch",
+   "summary": "The capital of Dutch Sint Maarten: duty-free shopping with a town beach right by the port.",
+   "pier": "The cruise pier is a short walk or water-taxi ride along the bay to Front Street.",
+   "highlights": [
+    "Great Bay beach and boardwalk",
+    "Front Street shops",
+    "Maho Beach, where planes land just overhead"
+   ],
+   "tip": "The island is shared with French Saint-Martin; you can cross freely.",
+   "lat": 18.0251,
+   "lon": -63.0483,
+   "source": {
+    "title": "Philipsburg",
+    "url": "https://en.wikivoyage.org/wiki/Philipsburg",
+    "revid": 5373034,
+    "fetched": "2026-10-21",
+    "osm": "https://www.openstreetmap.org/node/265616624"
+   },
+   "regionId": "caribbean",
+   "regionName": "Caribbean",
+   "tips": {
+    "pierToTown": "Most visitors arrive at the A.C. Wathey cruise terminal, only a 10-minute walk from town. The Emmaplein bus terminal, the island's main one, is right where cruise and ferry visitors arrive.",
+    "money": "Shopping is duty free, and prices are often lower than on surrounding islands. Front Street is known for upscale jewellery and clothing shops.",
+    "food": "The boardwalk has many restaurants for lunch, several of which stay open after the cruise ships leave.",
+    "sight": "The boardwalk along Great Bay Beach, Front Street, and Fort Amsterdam. Old Street is an often-photographed alley between Front Street and Backstreet.",
+    "history": "Founded around 1733 by Scotsman John Philips to centralise trade. Fort Amsterdam and Fort Willem date from the 17th and 18th centuries; the boardwalk was built in 2006 for the growing cruise trade.",
+    "sources": [
+     {
+      "site": "Wikivoyage",
+      "title": "Philipsburg",
+      "revid": 5373034,
+      "url": "https://en.wikivoyage.org/wiki/Philipsburg"
+     },
+     {
+      "site": "Wikipedia",
+      "title": "Philipsburg, Sint Maarten",
+      "revid": 1377366978,
+      "url": "https://en.wikipedia.org/wiki/Philipsburg,_Sint_Maarten"
+     }
+    ]
+   }
+  },
+  "charlotte-amalie": {
+   "id": "charlotte-amalie",
+   "name": "Charlotte Amalie, St. Thomas",
+   "country": "U.S. Virgin Islands",
+   "region": "Caribbean",
+   "currency": "US dollar",
+   "language": "English",
+   "summary": "The capital of the US Virgin Islands on St. Thomas, a deep-water harbour town of steep streets.",
+   "pier": "Ships use Havensight or Crown Bay; downtown is a taxi or long walk away.",
+   "highlights": [
+    "Downtown shops and historic steps",
+    "Magens Bay beach",
+    "Ferry to St. John for snorkelling"
+   ],
+   "tip": "Taxis charge per person; shared open-air taxis are common.",
+   "lat": 18.3369,
+   "lon": -64.9622,
+   "source": {
+    "title": "Saint Thomas",
+    "url": "https://en.wikivoyage.org/wiki/Saint_Thomas",
+    "revid": 5355868,
+    "fetched": "2026-10-21",
+    "osm": "https://www.openstreetmap.org/relation/255299"
+   },
+   "regionId": "caribbean",
+   "regionName": "Caribbean",
+   "tips": {
+    "pierToTown": "Most ships dock at the West Indian Company Dock by Havensight Mall, nearly two miles from downtown; some use Crown Bay, a bit farther. Open-air \"safari\" cabs run to downtown for $4 per person each way.",
+    "money": "U.S. currency is used everywhere and ATMs are easy to find. Goods are imported duty free, so shopping is a big draw; check your customs allowance before buying.",
+    "safety": "Traffic drives on the left and most streets have no sidewalks. Taxis charge per person, so agree the price before you get in. At night, take taxis and avoid walking alone.",
+    "history": "Founded by the Danes in 1666 as Taphus (\"tap house\") and renamed in 1691 for Queen Charlotte Amalie, wife of King Christian V. Its deep harbour was once a haven for pirates, including Blackbeard.",
+    "sources": [
+     {
+      "site": "Wikivoyage",
+      "title": "Saint Thomas",
+      "revid": 5355868,
+      "url": "https://en.wikivoyage.org/wiki/Saint_Thomas"
+     },
+     {
+      "site": "Wikipedia",
+      "title": "Charlotte Amalie, U.S. Virgin Islands",
+      "revid": 1380219878,
+      "url": "https://en.wikipedia.org/wiki/Charlotte_Amalie,_U.S._Virgin_Islands"
+     }
+    ]
+   }
+  },
+  "san-juan": {
+   "id": "san-juan",
+   "name": "San Juan",
+   "country": "Puerto Rico",
+   "region": "Caribbean",
+   "currency": "US dollar",
+   "language": "Spanish and English",
+   "summary": "Puerto Rico's capital, founded in 1521, with a walled, colourful old town.",
+   "pier": "Ships dock beside Old San Juan, so its streets and forts are right outside.",
+   "highlights": [
+    "Castillo San Felipe del Morro",
+    "Old San Juan's blue cobbled streets",
+    "Castillo San Crist\u00f3bal"
+   ],
+   "tip": "Old San Juan is hilly; wear good shoes.",
+   "lat": 18.3842,
+   "lon": -66.0534,
+   "source": {
+    "title": "San Juan",
+    "url": "https://en.wikivoyage.org/wiki/San_Juan",
+    "revid": 5392438,
+    "fetched": "2026-10-21",
+    "osm": "https://www.openstreetmap.org/relation/4468264"
+   },
+   "regionId": "caribbean",
+   "regionName": "Caribbean",
+   "tips": {
+    "pierToTown": "Cruise ships dock right by Old San Juan. A separate pier next to the old Pan American airport, used mostly by Royal Caribbean for turnarounds, must be reached by car or taxi.",
+    "sight": "The San Juan National Historic Site, a UNESCO World Heritage Site since 1983, with the forts of El Morro and San Crist\u00f3bal, and La Fortaleza, the governor's home.",
+    "safety": "Old San Juan, Condado and Isla Verde tend to be very safe, with a 24-hour police presence in the Old City. Taxis have set rates between tourist zones and should use the meter otherwise.",
+    "history": "Juan Ponce de Le\u00f3n founded the first settlement, Caparra, in 1508; the city on the islet was founded in 1521. El Morro repelled Drake and withstood the Dutch attack of 1625. It is the oldest city under U.S. jurisdiction.",
+    "sources": [
+     {
+      "site": "Wikivoyage",
+      "title": "San Juan",
+      "revid": 5400113,
+      "url": "https://en.wikivoyage.org/wiki/San_Juan"
+     },
+     {
+      "site": "Wikipedia",
+      "title": "San Juan, Puerto Rico",
+      "revid": 1380916089,
+      "url": "https://en.wikipedia.org/wiki/San_Juan,_Puerto_Rico"
+     }
+    ]
+   }
+  },
+  "ocho-rios": {
+   "id": "ocho-rios",
+   "name": "Ocho Rios",
+   "country": "Jamaica",
+   "region": "Caribbean",
+   "currency": "Jamaican dollar (US dollar common)",
+   "language": "English",
+   "summary": "A lively resort town on Jamaica's north coast, packed with waterfalls and attractions.",
+   "pier": "Ships dock at two piers close to town; most sights are a short taxi ride away.",
+   "highlights": [
+    "Dunn's River Falls",
+    "Mystic Mountain",
+    "Turtle River Park and the town beach"
+   ],
+   "tip": "Use licensed taxis (red PP plates) and agree the fare first.",
+   "lat": 18.4081,
+   "lon": -77.1011,
+   "source": {
+    "title": "Ocho Rios",
+    "url": "https://en.wikivoyage.org/wiki/Ocho_Rios",
+    "revid": 5260855,
+    "fetched": "2026-10-21",
+    "osm": "https://www.openstreetmap.org/node/290801759"
+   },
+   "regionId": "caribbean",
+   "regionName": "Caribbean",
+   "tips": {
+    "pierToTown": "Two piers serve cruise ships. The main pier is nearest downtown, with vendors just outside the secure area. The James Bond pier farther west has almost no services and a long walk to town, but taxis line the sidewalk.",
+    "food": "Steamed fish at Fishermen's Beach, and jerk chicken: smoked spicy meat done over a spice wood fire.",
+    "sight": "Dunn's River Falls, 5 km from Ocho Rios. Fern Gully, a 3-mile gorge with over 540 varieties of fern, was formed by a 1907 earthquake.",
+    "safety": "Taxis called by hotels are safe but expensive; have one called for you rather than getting into an unmarked taxi.",
+    "history": "The Ta\u00edno called Jamaica Xamayca, land of wood and water. After Columbus landed in 1494, the Spanish named the area Las Chorreras (the waterfalls), probably the origin of the name Ocho Rios.",
+    "sources": [
+     {
+      "site": "Wikivoyage",
+      "title": "Ocho Rios",
+      "revid": 5260855,
+      "url": "https://en.wikivoyage.org/wiki/Ocho_Rios"
+     },
+     {
+      "site": "Wikipedia",
+      "title": "Ocho Rios",
+      "revid": 1379179444,
+      "url": "https://en.wikipedia.org/wiki/Ocho_Rios"
+     }
+    ]
+   }
+  },
+  "oranjestad": {
+   "id": "oranjestad",
+   "name": "Oranjestad",
+   "country": "Aruba",
+   "region": "Caribbean",
+   "currency": "Aruban florin (US dollar widely accepted)",
+   "language": "Dutch and Papiamento",
+   "summary": "Aruba's capital, with Dutch-style buildings, a harbourside promenade and steady trade winds.",
+   "pier": "The cruise terminal is in the heart of town beside the marina.",
+   "highlights": [
+    "Downtown shops and the free tram",
+    "Eagle Beach",
+    "Arikok National Park"
+   ],
+   "tip": "Aruba is dry and sunny; bring sun protection.",
+   "lat": 12.5201,
+   "lon": -70.0371,
+   "source": {
+    "title": "Oranjestad",
+    "url": "https://en.wikivoyage.org/wiki/Oranjestad",
+    "revid": 5354610,
+    "fetched": "2026-10-21",
+    "osm": "https://www.openstreetmap.org/relation/14034189"
+   },
+   "regionId": "caribbean",
+   "regionName": "Caribbean",
+   "tips": {
+    "pierToTown": "A tram links the cruise terminal with the city centre along the main street; tickets cost US$1. A taxi ride usually costs only US$8\u201315.",
+    "sight": "Fort Zoutman (1798), the island's oldest building, houses the Historical Museum of Aruba; you can climb the Willem III Tower ($15).",
+    "safety": "Crime is not much of a worry: locals don't pressure tourists into stores, and panhandlers are not an issue.",
+    "history": "European settlers set up modest plantations along Aruba's south coast from 1754, and urban development began around 1795\u201396 as trade restrictions eased.",
+    "sources": [
+     {
+      "site": "Wikivoyage",
+      "title": "Oranjestad",
+      "revid": 5354610,
+      "url": "https://en.wikivoyage.org/wiki/Oranjestad"
+     },
+     {
+      "site": "Wikipedia",
+      "title": "Oranjestad",
+      "revid": 1378079494,
+      "url": "https://en.wikipedia.org/wiki/Oranjestad"
+     }
+    ]
+   }
+  },
+  "nassau": {
+   "id": "nassau",
+   "name": "Nassau",
+   "country": "Bahamas",
+   "region": "Bahamas",
+   "currency": "Bahamian dollar (US dollar widely accepted)",
+   "language": "English",
+   "summary": "The Bahamas' capital: a relaxed, low-rise city with pastel colonial buildings and a busy harbourfront.",
+   "pier": "Ships berth at Prince George Wharf, right on the edge of downtown, so the centre is a short walk.",
+   "highlights": [
+    "Bay Street shops and the Straw Market",
+    "Queen's Staircase and Fort Fincastle",
+    "Beaches across the bridge on Paradise Island or at Junkanoo Beach"
+   ],
+   "tip": "Agree taxi fares before you get in; many are set per person by zone.",
+   "lat": 25.0782,
+   "lon": -77.3383,
+   "source": {
+    "title": "Nassau",
+    "url": "https://en.wikivoyage.org/wiki/Nassau",
+    "revid": 5354149,
+    "fetched": "2026-10-21",
+    "osm": "https://www.openstreetmap.org/node/115664268"
+   },
+   "regionId": "bahamas",
+   "regionName": "Bahamas",
+   "tips": {
+    "pierToTown": "Up to seven ships dock at Prince George Wharf, next to downtown, and downtown distances are short enough to walk. Jitneys (minibuses) leave from Bay Street: $1, exact fare, until about 6 PM. Water taxi to Paradise Island from under the bridge: $6 round trip, until 6 PM.",
+    "money": "The Bahamian dollar is tied 1:1 to the US dollar, and US dollars are accepted everywhere at par; many shops give change in US$.",
+    "food": "Potters' Cay, under the Paradise Island bridge: stalls making fresh conch salad, conch fritters and other Bahamian seafood. Downtown holes-in-the-wall do fish, sides and dessert for around $8.",
+    "sight": "Fort Fincastle (1793), on a hill just south of town with cannons on display; tours daily 8 AM\u20133 PM. The 66-step Queen's Staircase, named after Queen Victoria, is beside it.",
+    "safety": "Licensed taxis have yellow plates; they rarely use the meter, so agree the fare first. Only ride licensed taxis: some criminals pose as drivers. Touts push jet-ski and booze-cruise trips. Most Cuban cigars sold here are fake.",
+    "history": "Founded in 1670 as Charles Town and rebuilt as Nassau in 1695. It became a pirates' den under Blackbeard until Governor Woodes Rogers restored British control from 1718.",
+    "sources": [
+     {
+      "site": "Wikivoyage",
+      "title": "Nassau",
+      "revid": 5354149,
+      "url": "https://en.wikivoyage.org/wiki/Nassau"
+     },
+     {
+      "site": "Wikivoyage",
+      "title": "Bahamas",
+      "revid": 5393522,
+      "url": "https://en.wikivoyage.org/wiki/Bahamas"
+     },
+     {
+      "site": "Wikipedia",
+      "title": "Nassau, Bahamas",
+      "revid": 1380021837,
+      "url": "https://en.wikipedia.org/wiki/Nassau,_Bahamas"
+     }
+    ]
+   }
+  },
+  "freeport": {
+   "id": "freeport",
+   "name": "Freeport",
+   "country": "Bahamas",
+   "region": "Bahamas",
+   "currency": "Bahamian dollar (US dollar widely accepted)",
+   "language": "English",
+   "summary": "The main town on Grand Bahama, a planned free-trade city still rebuilding after Hurricane Dorian (2019).",
+   "pier": "The cruise port is outside town, so plan on a taxi or a tour to reach the beaches and shops.",
+   "highlights": [
+    "Lucayan National Park's caves and beach",
+    "Port Lucaya Marketplace",
+    "Snorkelling and quiet beaches along the south shore"
+   ],
+   "tip": "Check what has reopened since the hurricane before you set out.",
+   "lat": 26.5357,
+   "lon": -78.6954,
+   "source": {
+    "title": "Freeport (Bahamas)",
+    "url": "https://en.wikivoyage.org/wiki/Freeport_(Bahamas)",
+    "revid": 5271415,
+    "fetched": "2026-10-21",
+    "osm": "https://www.openstreetmap.org/relation/3776653"
+   },
+   "regionId": "bahamas",
+   "regionName": "Bahamas",
+   "tips": {
+    "pierToTown": "Taxis wait at the sea port. There is no such thing as a \"service fee\" or bag fee: you pay only the fare, plus a tip if deserved. Local minibuses cost $1 anywhere on the island and often wait until full.",
+    "money": "Bahamian dollars are equal in value to the US dollar, and US currency is accepted everywhere. Check your bill: some restaurants already include a 15% service charge; if not, 15% is the standard tip.",
+    "food": "Conch is the Bahamian classic: conch salad, citrus-infused and served cold; cracked conch, lightly batter-fried; and conch fritters with dipping sauce.",
+    "sight": "Port Lucaya Marketplace: duty-free shopping in over 80 stores overlooking the Bell Channel Bay marina. Nature lovers can head to the Rand Nature Centre or Lucayan National Park.",
+    "safety": "Areas that cater to tourists are heavily policed, but don't venture outside them alone. Ignore taxi drivers who ask for extra \"fees\".",
+    "history": "Freeport began in 1955, when the government granted financier Wallace Groves 50,000 acres of pineyard and swamp to develop as a free trade zone. It is now the second most populous city in the Bahamas.",
+    "sources": [
+     {
+      "site": "Wikivoyage",
+      "title": "Grand Bahama",
+      "revid": 5271417,
+      "url": "https://en.wikivoyage.org/wiki/Grand_Bahama"
+     },
+     {
+      "site": "Wikipedia",
+      "title": "Freeport, Bahamas",
+      "revid": 1374414411,
+      "url": "https://en.wikipedia.org/wiki/Freeport,_Bahamas"
+     }
+    ]
+   }
+  },
+  "bimini-bs": {
+   "id": "bimini-bs",
+   "name": "The Beach Club at Bimini",
+   "country": "Bahamas",
+   "region": "Private islands",
+   "currency": "Bahamian dollar (US dollar widely accepted)",
+   "language": "English",
+   "summary": "Bimini lies about 50 miles east of Miami; Virgin Voyages' adults-only Beach Club sits at Resorts World Bimini on North Bimini.",
+   "pier": "Ships dock at the Resorts World Bimini pier; free trams run every few minutes to the Beach Club.",
+   "highlights": [
+    "Two lagoon-style pools with live DJ and pool volleyball",
+    "Private beach with loungers, daybeds and hammocks",
+    "Alice Town, North Bimini's main town, and Resorts World casino"
+   ],
+   "tip": "Food, soda, water and Wi-Fi are included at the Beach Club; cocktails, cabanas and excursions cost extra.",
+   "lat": 25.7333,
+   "lon": -79.25,
+   "source": {
+    "title": "Bimini",
+    "url": "en.wikivoyage.org/wiki/Bimini",
+    "revid": 5395159,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "state": "Bahamas",
+   "regionId": "bahamas",
+   "regionName": "Bahamas"
+  },
+  "celebration-key-bs": {
+   "id": "celebration-key-bs",
+   "name": "Celebration Key",
+   "country": "Bahamas",
+   "region": "Private islands",
+   "currency": "Bahamian dollar (US dollar widely accepted)",
+   "language": "English",
+   "summary": "Carnival's exclusive destination on the south side of Grand Bahama, opened July 19, 2025, with five themed 'portals' and more than 30 places to eat and drink.",
+   "pier": "Ships dock at a 2,200 ft pier that leads into Paradise Plaza and the 10-story Suncastle.",
+   "highlights": [
+    "Starfish Lagoon: big family freshwater lagoon, Suncastle waterslides",
+    "Calypso Lagoon: DJ island, swim-up bar, swings bar (part 13+)",
+    "Lokono Cove: Bahamian-made goods; Pearl Cove Beach Club (18+, fee)"
+   ],
+   "tip": "Mile-long white-sand beach; Pearl Cove, cabanas and excursions cost extra.",
+   "lat": null,
+   "lon": null,
+   "source": {
+    "title": "Celebration Key Destination Guide",
+    "url": "www.carnival.com/~/media/Images/celebration-key/destination-guide/celebration-key-destination-guide-accessible.pdf",
+    "revid": null,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "state": "Bahamas",
+   "regionId": "bahamas",
+   "regionName": "Bahamas"
+  },
+  "half-moon-cay-bs": {
+   "id": "half-moon-cay-bs",
+   "name": "RelaxAway, Half Moon Cay",
+   "country": "Bahamas",
+   "region": "Private islands",
+   "currency": "Bahamian dollar (US dollar widely accepted)",
+   "language": "English",
+   "summary": "Carnival Corporation's private island (Little San Salvador), between Eleuthera and Cat Island; only about 50 of its 2,400 acres are developed.",
+   "pier": "A new pier opened June 1, 2026, so Carnival ships now dock; Holland America guests still tender to the south side.",
+   "highlights": [
+    "A long white-sand beach with free loungers and umbrellas",
+    "Horseback riding, including into the surf",
+    "Stingray encounters, kayaking and snorkeling"
+   ],
+   "tip": "Cabanas, daybeds and most excursions cost extra; the island is also an important waterfowl nesting area, so stay on paths.",
+   "lat": 24.574,
+   "lon": -75.952,
+   "source": {
+    "title": "Little San Salvador Island",
+    "url": "en.wikipedia.org/wiki/Little_San_Salvador_Island",
+    "revid": 1381171964,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "state": "Bahamas",
+   "regionId": "bahamas",
+   "regionName": "Bahamas"
+  },
+  "perfect-day-at-cococay-bs": {
+   "id": "perfect-day-at-cococay-bs",
+   "name": "Perfect Day at CocoCay",
+   "country": "Bahamas",
+   "region": "Private islands",
+   "currency": "Bahamian dollar (US dollar widely accepted)",
+   "language": "English",
+   "summary": "Royal Caribbean's private island in the Berry Islands (Little Stirrup Cay), about 55 miles north of Nassau, rebuilt and renamed in 2019.",
+   "pier": "A pier on the north side lets ships dock directly; trams link Arrivals Plaza with the beaches.",
+   "highlights": [
+    "Chill Island beaches and Oasis Lagoon, the Caribbean's largest freshwater pool",
+    "Thrill Waterpark with Daredevil's Peak and a wave pool (day pass)",
+    "Up, Up and Away helium balloon to 450 ft and a 1,600 ft zip line"
+   ],
+   "tip": "Lunch at Chill Grill, Skipper's Grill and the Snack Shacks is included; Thrill Waterpark, Hideaway Beach (18+) and Coco Beach Club need paid passes.",
+   "lat": 25.8167,
+   "lon": -77.9333,
+   "source": {
+    "title": "CocoCay",
+    "url": "en.wikipedia.org/wiki/CocoCay",
+    "revid": 1377585154,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "state": "Bahamas",
+   "regionId": "bahamas",
+   "regionName": "Bahamas"
+  },
+  "princess-cays-bs": {
+   "id": "princess-cays-bs",
+   "name": "Princess Cays",
+   "country": "Bahamas",
+   "region": "Private islands",
+   "currency": "US dollar",
+   "language": "English",
+   "summary": "Carnival Corporation's beach resort at the southern end of Eleuthera, used by Princess and Carnival; despite the name, it's not on separate islands.",
+   "pier": "Ships anchor offshore and tender guests to the beach.",
+   "highlights": [
+    "Swimming and snorkeling off the beach",
+    "Kayaking, banana boats, parasailing and waverunners",
+    "Volleyball and basketball courts; cabanas to rent"
+   ],
+   "tip": "US dollars are used; watersports and cabanas cost extra.",
+   "lat": 24.637,
+   "lon": -76.1751,
+   "source": {
+    "title": "Princess Cays",
+    "url": "en.wikipedia.org/wiki/Princess_Cays",
+    "revid": 1377104339,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "state": "Bahamas",
+   "regionId": "bahamas",
+   "regionName": "Bahamas"
+  },
+  "juneau-us": {
+   "id": "juneau-us",
+   "name": "Juneau",
+   "country": "United States",
+   "region": "Alaska",
+   "currency": "US dollar",
+   "language": "English",
+   "summary": "Alaska's capital, reachable only by sea or air, between mountains and the Gastineau Channel.",
+   "pier": "Ships dock just south of downtown, an easy walk into town.",
+   "highlights": [
+    "Mendenhall Glacier",
+    "Mount Roberts Tramway",
+    "Whale-watching trips"
+   ],
+   "tip": "Several thousand visitors arrive almost every day May\u2013September; buses at the docks run to Mendenhall Glacier.",
+   "lat": 58.302,
+   "lon": -134.4197,
+   "source": {
+    "title": "Juneau",
+    "url": "en.wikivoyage.org/wiki/Juneau",
+    "revid": 5406032,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "regionId": "alaska",
+   "regionName": "Alaska"
+  },
+  "ketchikan-us": {
+   "id": "ketchikan-us",
+   "name": "Ketchikan",
+   "country": "United States",
+   "region": "Alaska",
+   "currency": "US dollar",
+   "language": "English",
+   "summary": "Alaska's 'First City' on the Inside Passage, known for totem poles and Creek Street.",
+   "pier": "Ships dock right downtown; a free shuttle loops downtown and all berths in about 20 minutes.",
+   "highlights": [
+    "Creek Street boardwalk",
+    "Totem Heritage Center and Saxman totems",
+    "Misty Fjords flightseeing"
+   ],
+   "tip": "The visitors bureau by berth 2 has free maps and tour info. Bring rain gear.",
+   "lat": 55.3477,
+   "lon": -131.6643,
+   "source": {
+    "title": "Ketchikan",
+    "url": "en.wikivoyage.org/wiki/Ketchikan",
+    "revid": 5407026,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "regionId": "alaska",
+   "regionName": "Alaska"
+  },
+  "skagway-us": {
+   "id": "skagway-us",
+   "name": "Skagway",
+   "country": "United States",
+   "region": "Alaska",
+   "currency": "US dollar",
+   "language": "English",
+   "summary": "A Klondike Gold Rush town at the head of Lynn Canal, a few blocks wide and easy to walk.",
+   "pier": "Ships dock at the edge of town; local SMART buses also run from the docks to Broadway.",
+   "highlights": [
+    "Klondike Gold Rush National Historical Park",
+    "White Pass & Yukon Route railway",
+    "Broadway's historic false-front buildings"
+   ],
+   "tip": "The White Pass round trip enters Canada, but you don't need a passport for it because you stay on the train.",
+   "lat": 59.4583,
+   "lon": -135.3139,
+   "source": {
+    "title": "Skagway",
+    "url": "en.wikivoyage.org/wiki/Skagway",
+    "revid": 5387067,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "regionId": "alaska",
+   "regionName": "Alaska"
+  },
+  "sitka-us": {
+   "id": "sitka-us",
+   "name": "Sitka",
+   "country": "United States",
+   "region": "Alaska",
+   "currency": "US dollar",
+   "language": "English",
+   "summary": "Former Russian capital of Alaska on Baranof Island; the 1867 transfer to the US took place on Castle Hill.",
+   "pier": "Most large ships dock at Old Sitka Dock, about 6 miles north; a free shuttle runs downtown. Otherwise ships anchor and tender.",
+   "highlights": [
+    "Sitka National Historical Park totem trail",
+    "St. Michael's Cathedral and Castle Hill",
+    "Alaska Raptor Center"
+   ],
+   "tip": "Allow time for the shuttle back from downtown.",
+   "lat": 57.0533,
+   "lon": -135.3347,
+   "source": {
+    "title": "Sitka",
+    "url": "en.wikivoyage.org/wiki/Sitka",
+    "revid": 5387063,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "regionId": "alaska",
+   "regionName": "Alaska"
+  },
+  "icy-strait-point-us": {
+   "id": "icy-strait-point-us",
+   "name": "Icy Strait Point (Hoonah)",
+   "country": "United States",
+   "region": "Alaska",
+   "currency": "US dollar",
+   "language": "English",
+   "summary": "Alaska's only privately owned cruise destination, near Hoonah on Chichagof Island, owned by the Native Huna Totem Corporation.",
+   "pier": "Cruise passengers arrive at the destination next to Hoonah.",
+   "highlights": [
+    "ZipRider zip line",
+    "Whale watching in Icy Strait",
+    "Tlingit culture and Hoonah village"
+   ],
+   "tip": "Huna Totem Corporation is owned by about 1,350 Alaska Natives with ties to Hoonah.",
+   "lat": 58.12933,
+   "lon": -135.4632,
+   "source": {
+    "title": "Icy Strait Point",
+    "url": "en.wikipedia.org/wiki/Icy_Strait_Point",
+    "revid": 1374839599,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "regionId": "alaska",
+   "regionName": "Alaska"
+  },
+  "victoria-ca": {
+   "id": "victoria-ca",
+   "name": "Victoria",
+   "country": "Canada",
+   "region": "Alaska",
+   "currency": "Canadian dollar",
+   "language": "English",
+   "summary": "British Columbia's capital on Vancouver Island, with British-style architecture, Chinatown and First Nations culture.",
+   "pier": "Ships dock at Ogden Point, about 2.5 km southwest of the Inner Harbour; walk the waterfront or take a shuttle.",
+   "highlights": [
+    "Inner Harbour and the Parliament Buildings",
+    "Butchart Gardens",
+    "Fisherman's Wharf"
+   ],
+   "tip": "The cruise season runs April\u2013October, with over 200 large-ship calls a year.",
+   "lat": 48.4283,
+   "lon": -123.3647,
+   "source": {
+    "title": "Victoria (British Columbia)",
+    "url": "en.wikivoyage.org/wiki/Victoria_(British_Columbia)",
+    "revid": 5404091,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "regionId": "alaska",
+   "regionName": "Alaska"
+  },
+  "barcelona": {
+   "id": "barcelona",
+   "name": "Barcelona",
+   "country": "Spain",
+   "region": "Mediterranean",
+   "currency": "Euro",
+   "language": "Spanish and Catalan",
+   "summary": "Spain's second city and the capital of Catalonia: architecture, beaches and food.",
+   "pier": "Large ships dock 1-2 km southwest of the old town; a port shuttle runs to the Columbus monument.",
+   "highlights": [
+    "Sagrada Fam\u00edlia",
+    "The Gothic Quarter and La Rambla",
+    "Park G\u00fcell"
+   ],
+   "tip": "Book Sagrada Fam\u00edlia tickets ahead and watch for pickpockets.",
+   "lat": 41.3826,
+   "lon": 2.1771,
+   "source": {
+    "title": "Barcelona",
+    "url": "https://en.wikivoyage.org/wiki/Barcelona",
+    "revid": 5394455,
+    "fetched": "2026-10-21",
+    "osm": "https://www.openstreetmap.org/relation/347950"
+   },
+   "regionId": "mediterranean",
+   "regionName": "Mediterranean",
+   "tips": {
+    "pierToTown": "Large cruise ships dock 1\u20132 km southwest of the city; many lines run shuttle buses to the south end of La Rambla. The city is very walkable.",
+    "food": "Tapas are everywhere. A menu offering \"tapes\", the Catalan spelling, usually means a place locals use; skip the tourist tapas bars on the Barceloneta seafront for the backstreets.",
+    "sight": "The works of Antoni Gaud\u00ed, especially the Sagrada Fam\u00edlia, Barcelona's symbol, are UNESCO World Heritage Sites.",
+    "safety": "Pickpockets are common, and wallets and passports are favourite targets. Be wary of strangers who approach you in your language asking for help or a petition signature.",
+    "history": "Tradition credits Phoenician or Carthaginian settlers with founding the city; it was the Roman town Barcino more than 2,000 years ago. The 1992 Olympics turned it into a major tourist destination.",
+    "sources": [
+     {
+      "site": "Wikivoyage",
+      "title": "Barcelona",
+      "revid": 5399008,
+      "url": "https://en.wikivoyage.org/wiki/Barcelona"
+     },
+     {
+      "site": "Wikipedia",
+      "title": "Barcelona",
+      "revid": 1380796801,
+      "url": "https://en.wikipedia.org/wiki/Barcelona"
+     }
+    ]
+   }
+  },
+  "civitavecchia": {
+   "id": "civitavecchia",
+   "name": "Civitavecchia",
+   "country": "Italy",
+   "region": "Mediterranean",
+   "currency": "Euro",
+   "language": "Italian",
+   "summary": "Rome's cruise port.",
+   "pier": "A port shuttle takes guests to the gate; the train to Rome takes about an hour.",
+   "highlights": [
+    "Rome's highlights by train or tour",
+    "Civitavecchia's seafront and fort",
+    "Tarquinia's Etruscan tombs nearby"
+   ],
+   "tip": "Allow a large buffer for the train back to the ship.",
+   "lat": 42.0938,
+   "lon": 11.7922,
+   "source": {
+    "title": "Civitavecchia",
+    "url": "https://en.wikivoyage.org/wiki/Civitavecchia",
+    "revid": 5269874,
+    "fetched": "2026-10-21",
+    "osm": "https://www.openstreetmap.org/relation/41764"
+   },
+   "regionId": "mediterranean",
+   "regionName": "Mediterranean",
+   "tips": {
+    "pierToTown": "A free shuttle takes cruise passengers to the port entrance, within easy walking distance of shops and the train station. Regional FR5 trains run to Rome.",
+    "food": "The main street between the train station and the harbour has plenty of restaurants, pizzerias and bars at fairly low prices.",
+    "sight": "The 16th-century fortress built with the help of Michelangelo, and the National Archaeological Museum with finds from the Roman port.",
+    "history": "Emperor Trajan greatly enlarged the harbour in the early 2nd century, then called Centum Cellae. After Saracen raids, the town was rebuilt in 889 as Civitas Vetus, the \"ancient town\".",
+    "sources": [
+     {
+      "site": "Wikivoyage",
+      "title": "Civitavecchia",
+      "revid": 5269874,
+      "url": "https://en.wikivoyage.org/wiki/Civitavecchia"
+     },
+     {
+      "site": "Wikipedia",
+      "title": "Civitavecchia",
+      "revid": 1375422674,
+      "url": "https://en.wikipedia.org/wiki/Civitavecchia"
+     }
+    ]
+   }
+  },
+  "naples": {
+   "id": "naples",
+   "name": "Naples",
+   "country": "Italy",
+   "region": "Mediterranean",
+   "currency": "Euro",
+   "language": "Italian",
+   "summary": "An ancient, vibrant port city and a base for Pompeii, Vesuvius and the Amalfi Coast.",
+   "pier": "Ships dock at Stazione Marittima in the city centre near Piazza Municipio.",
+   "highlights": [
+    "Historic centre and pizza",
+    "Pompeii or Herculaneum by train",
+    "Castel dell'Ovo and the seafront"
+   ],
+   "tip": "Trains to Pompeii are busy; start early.",
+   "lat": 40.8359,
+   "lon": 14.2488,
+   "source": {
+    "title": "Naples",
+    "url": "https://en.wikivoyage.org/wiki/Naples",
+    "revid": 5385544,
+    "fetched": "2026-10-21",
+    "osm": "https://www.openstreetmap.org/relation/40767"
+   },
+   "regionId": "mediterranean",
+   "regionName": "Mediterranean",
+   "tips": {
+    "pierToTown": "Cruise ships dock at the Stazione Marittima, a large terminal in the city centre near Piazza Municipio. Distances in the historic centre are small and easy to walk.",
+    "food": "Naples is the home of pizza: the art of the Neapolitan pizzaiolo is on UNESCO's intangible heritage list. Fresh mozzarella di bufala is also typical of the region.",
+    "sight": "The historic centre is a UNESCO World Heritage Site. Pompeii and Herculaneum and Vesuvius, the only active volcano on the European continent, are nearby.",
+    "safety": "Only take licensed taxis: they have the city crest on the door and a meter, and must display set fares. Avoid the Quartieri Spagnoli and the Sanit\u00e0 after dark.",
+    "history": "Greek settlers founded Parthenope in the 8th century BC, and the town was refounded as Neapolis (\"new city\") in the 6th century BC. It is one of the oldest continuously inhabited cities in the world.",
+    "sources": [
+     {
+      "site": "Wikivoyage",
+      "title": "Naples",
+      "revid": 5385544,
+      "url": "https://en.wikivoyage.org/wiki/Naples"
+     },
+     {
+      "site": "Wikipedia",
+      "title": "Naples",
+      "revid": 1381612890,
+      "url": "https://en.wikipedia.org/wiki/Naples"
+     }
+    ]
+   }
+  },
+  "santorini": {
+   "id": "santorini",
+   "name": "Santorini",
+   "country": "Greece",
+   "region": "Mediterranean",
+   "currency": "Euro",
+   "language": "Greek",
+   "summary": "A volcanic island famous for cliff-top white villages over a flooded caldera.",
+   "pier": "Ships anchor and tender to the old port below Fira; reach the top by cable car, steps or donkey.",
+   "highlights": [
+    "Fira's caldera views",
+    "Oia village",
+    "Ancient Akrotiri"
+   ],
+   "tip": "Cable car lines are long on busy days; tenders may pause in bad weather.",
+   "lat": 36.4071,
+   "lon": 25.4567,
+   "source": {
+    "title": "Santorini",
+    "url": "https://en.wikivoyage.org/wiki/Santorini",
+    "revid": 5265713,
+    "fetched": "2026-10-21",
+    "osm": "https://www.openstreetmap.org/relation/453964"
+   },
+   "regionId": "mediterranean",
+   "regionName": "Mediterranean",
+   "tips": {
+    "pierToTown": "Big ships anchor in the caldera west of Fira, and boats take passengers to the old port below the town. From there, take the cable car (\u20ac10 each way) or walk the 588 zigzag steps.",
+    "sight": "The caldera views and clifftop white villages, and the ancient ruins of Akrotiri and Thera. The Fira to Oia hiking trail is famous.",
+    "safety": "In bad weather, cruise ships may delay or cancel the shuttle boats. The steps up from the old port are narrow, slippery with donkey droppings, and shared with the donkeys.",
+    "history": "The Minoan eruption, about 3,600 years ago, was one of the largest in recorded history and left today's water-filled caldera. It is often linked to the legend of Atlantis.",
+    "sources": [
+     {
+      "site": "Wikivoyage",
+      "title": "Santorini",
+      "revid": 5265713,
+      "url": "https://en.wikivoyage.org/wiki/Santorini"
+     },
+     {
+      "site": "Wikipedia",
+      "title": "Santorini",
+      "revid": 1381652799,
+      "url": "https://en.wikipedia.org/wiki/Santorini"
+     }
+    ]
+   }
+  },
+  "mykonos": {
+   "id": "mykonos",
+   "name": "Mykonos",
+   "country": "Greece",
+   "region": "Mediterranean",
+   "currency": "Euro",
+   "language": "Greek",
+   "summary": "A lively Cycladic island with whitewashed lanes and windmills.",
+   "pier": "Most ships dock at Tourlos; a sea bus or shuttle runs to the old town.",
+   "highlights": [
+    "Little Venice",
+    "The windmills",
+    "Island beaches"
+   ],
+   "tip": "The old town's lanes are a maze; save a pin to your meeting point.",
+   "lat": 37.4514,
+   "lon": 25.3923,
+   "source": {
+    "title": "Mykonos",
+    "url": "https://en.wikivoyage.org/wiki/Mykonos",
+    "revid": 5354053,
+    "fetched": "2026-10-21",
+    "osm": "https://www.openstreetmap.org/relation/531115"
+   },
+   "regionId": "mediterranean",
+   "regionName": "Mediterranean",
+   "tips": {
+    "pierToTown": "Almost all cruise ships dock at the new port in Tourlos, though some use the old port. A cruise shuttle bus runs to Mykonos Town, stopping near the northern bus station.",
+    "food": "Gyros, souvlaki and crepe shops all over town let you eat well for a few euros. Most restaurants post their prices at the entrance.",
+    "sight": "The windmills, built by the Venetians in the 16th century, and Little Venice, where houses' balconies hang over the sea. Delos, the ancient sacred island, is a short boat trip away.",
+    "safety": "Mykonos is generally safe; the main danger is drunk driving. Rent a motorbike or quad only if experienced, as roads are narrow and twisty.",
+    "history": "Herodotus says Carians first lived here, followed by Ionians from Athens. Neighbouring Delos, meeting place of the Delian League, made Mykonos a supply stop, though it was a poor island in ancient times.",
+    "sources": [
+     {
+      "site": "Wikivoyage",
+      "title": "Mykonos",
+      "revid": 5354053,
+      "url": "https://en.wikivoyage.org/wiki/Mykonos"
+     },
+     {
+      "site": "Wikipedia",
+      "title": "Mykonos",
+      "revid": 1376827446,
+      "url": "https://en.wikipedia.org/wiki/Mykonos"
+     }
+    ]
+   }
+  },
+  "dubrovnik": {
+   "id": "dubrovnik",
+   "name": "Dubrovnik",
+   "country": "Croatia",
+   "region": "Mediterranean",
+   "currency": "Euro",
+   "language": "Croatian",
+   "summary": "A historic walled city on the southern Adriatic coast.",
+   "pier": "Most ships dock at Gru\u017e, 2.5 km from the Old Town; buses and taxis go to the Pile Gate. Some tender to the Old Port.",
+   "highlights": [
+    "Walk the city walls",
+    "Stradun, the main street",
+    "Cable car up Mount Sr\u0111"
+   ],
+   "tip": "Walls get hot and crowded; go early.",
+   "lat": 42.6491,
+   "lon": 18.094,
+   "source": {
+    "title": "Dubrovnik",
+    "url": "https://en.wikivoyage.org/wiki/Dubrovnik",
+    "revid": 5383411,
+    "fetched": "2026-10-21",
+    "osm": "https://www.openstreetmap.org/relation/8796464"
+   },
+   "regionId": "mediterranean",
+   "regionName": "Mediterranean",
+   "tips": {
+    "pierToTown": "Cruise ships usually dock at Port Gru\u017e, 2.5 km northwest of the Old Town; buses 1, 1A and 1B run there almost constantly. Some ships anchor offshore and tender straight to the Old Port.",
+    "money": "There are few ATMs outside the Old Town. Avoid Euronet machines in tourist areas, which may add fees.",
+    "sight": "The City Walls. Entry to the Old Town is free; you only pay to walk the walls. The Dubrovnik Pass, just \u20ac5 more, adds most museums and local buses.",
+    "safety": "A very safe city, but watch for pickpockets. Old Town streets are slippery, smoothed by centuries of footsteps.",
+    "history": "Probably founded in the 7th century as Ragusa by refugees from Epidaurum, it grew rich as the maritime Republic of Ragusa. It was besieged for seven months and shelled in 1991.",
+    "sources": [
+     {
+      "site": "Wikivoyage",
+      "title": "Dubrovnik",
+      "revid": 5383411,
+      "url": "https://en.wikivoyage.org/wiki/Dubrovnik"
+     },
+     {
+      "site": "Wikipedia",
+      "title": "Dubrovnik",
+      "revid": 1381462474,
+      "url": "https://en.wikipedia.org/wiki/Dubrovnik"
+     }
+    ]
+   }
+  },
+  "valletta": {
+   "id": "valletta",
+   "name": "Valletta",
+   "country": "Malta",
+   "region": "Mediterranean",
+   "currency": "Euro",
+   "language": "Maltese and English",
+   "summary": "Malta's compact 16th-century capital, a UNESCO site on a peninsula.",
+   "pier": "Ships dock at the Valletta Waterfront below the walls; a lift goes up to the city.",
+   "highlights": [
+    "St John's Co-Cathedral",
+    "Upper Barrakka Gardens",
+    "Grand Harbour views and the Three Cities"
+   ],
+   "tip": "The Barrakka lift saves the steep climb from the waterfront.",
+   "lat": 35.899,
+   "lon": 14.5137,
+   "source": {
+    "title": "Valletta",
+    "url": "https://en.wikivoyage.org/wiki/Valletta",
+    "revid": 5388036,
+    "fetched": "2026-10-21",
+    "osm": "https://www.openstreetmap.org/relation/7510580"
+   },
+   "regionId": "mediterranean",
+   "regionName": "Mediterranean",
+   "tips": {
+    "pierToTown": "The Barrakka Lift links the waterfront and the city level, 58 m in 23 seconds. The peninsula is only a couple of kilometres long and best explored on foot, though it's steep with stairs in places.",
+    "sight": "St. John's Co-Cathedral: plain outside, incredibly ornate inside, with a chapel for each langue of knights and a ceiling fresco by Mattia Preti. Mon\u2013Sat 9 AM\u20134:45 PM, closed Sun.",
+    "safety": "Most petty crime against travellers happens in Sliema and St. Julian's rather than in Valletta. Electric mini-cabs in town charge at most \u20ac5.",
+    "history": "After the Knights Hospitaller won the Great Siege of 1565, Grand Master Jean de Valette laid the city's foundation stone on 28 March 1566. It is named after him.",
+    "sources": [
+     {
+      "site": "Wikivoyage",
+      "title": "Valletta",
+      "revid": 5388036,
+      "url": "https://en.wikivoyage.org/wiki/Valletta"
+     },
+     {
+      "site": "Wikipedia",
+      "title": "Valletta",
+      "revid": 1381541439,
+      "url": "https://en.wikipedia.org/wiki/Valletta"
+     }
+    ]
+   }
+  },
+  "palma": {
+   "id": "palma",
+   "name": "Palma de Mallorca",
+   "country": "Spain",
+   "region": "Mediterranean",
+   "currency": "Euro",
+   "language": "Spanish and Catalan",
+   "summary": "The capital of Mallorca and the Balearic Islands, with a striking cathedral.",
+   "pier": "Ships dock along the bay; buses and taxis reach the centre in minutes.",
+   "highlights": [
+    "La Seu cathedral",
+    "The old town lanes",
+    "Bellver Castle"
+   ],
+   "tip": "Summer heat is strong; sightsee early.",
+   "lat": 39.5696,
+   "lon": 2.6501,
+   "source": {
+    "title": "Palma de Mallorca",
+    "url": "https://en.wikivoyage.org/wiki/Palma_de_Mallorca",
+    "revid": 5385895,
+    "fetched": "2026-10-21",
+    "osm": "https://www.openstreetmap.org/relation/341321"
+   },
+   "regionId": "mediterranean",
+   "regionName": "Mediterranean",
+   "tips": {
+    "pierToTown": "The ferry port is 2 km southwest of the town centre. EMT city buses cost \u20ac2 within the city and \u20ac3 to the sea port, paid on board.",
+    "sight": "La Seu, Palma's vast cathedral, built on the site of a mosque; construction began in 1229 and finished in 1601. The Royal Palace of La Almudaina is next door.",
+    "safety": "Take great care of valuables: the town centre has plenty of pickpockets, and flower sellers and street touts may work with them.",
+    "history": "Founded as a Roman camp on a Talaiotic settlement, then held by the Byzantines and the Moors, who called it Medina Mayurqa, before James I of Aragon took it in the 13th century.",
+    "sources": [
+     {
+      "site": "Wikivoyage",
+      "title": "Palma de Mallorca",
+      "revid": 5385895,
+      "url": "https://en.wikivoyage.org/wiki/Palma_de_Mallorca"
+     },
+     {
+      "site": "Wikipedia",
+      "title": "Palma de Mallorca",
+      "revid": 1379685465,
+      "url": "https://en.wikipedia.org/wiki/Palma_de_Mallorca"
+     }
+    ]
+   }
+  },
+  "amsterdam-nl": {
+   "id": "amsterdam-nl",
+   "name": "Amsterdam",
+   "country": "Netherlands",
+   "region": "Northern Europe",
+   "currency": "Euro",
+   "language": "Dutch",
+   "summary": "The Dutch capital of canals, museums and gabled houses.",
+   "pier": "Passenger Terminal Amsterdam, used only for cruise ships, is close to the city centre.",
+   "highlights": [
+    "A one-to-two-hour canal cruise",
+    "Rijksmuseum and Van Gogh Museum",
+    "Anne Frank House"
+   ],
+   "tip": "Canal cruises usually last one to two hours; you can also rent a pedal boat.",
+   "lat": 52.3667,
+   "lon": 4.9,
+   "source": {
+    "title": "Amsterdam",
+    "url": "en.wikivoyage.org/wiki/Amsterdam",
+    "revid": 5393566,
+    "fetched": "2026-10-28",
+    "osm": "www.openstreetmap.org/?mlat=52.3667&mlon=4.9"
+   },
+   "regionId": "northern-europe",
+   "regionName": "Northern Europe"
+  },
+  "bergen-no": {
+   "id": "bergen-no",
+   "name": "Bergen",
+   "country": "Norway",
+   "region": "Northern Europe",
+   "currency": "Norwegian krone",
+   "language": "Norwegian",
+   "summary": "Norway's second city, between seven mountains, and one of Europe's busiest cruise ports.",
+   "pier": "Bergen is one of Europe's busiest cruise ports; the centre is compact.",
+   "highlights": [
+    "Bryggen wharf, a UNESCO site",
+    "Fl\u00f8ibanen funicular to Mount Fl\u00f8yen",
+    "Fish Market"
+   ],
+   "tip": "It rains about 240 days a year in Bergen; bring a rain jacket.",
+   "lat": 60.3881,
+   "lon": 5.3319,
+   "source": {
+    "title": "Bergen",
+    "url": "en.wikivoyage.org/wiki/Bergen",
+    "revid": 5394922,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "regionId": "northern-europe",
+   "regionName": "Northern Europe"
+  },
+  "copenhagen-dk": {
+   "id": "copenhagen-dk",
+   "name": "Copenhagen",
+   "country": "Denmark",
+   "region": "Northern Europe",
+   "currency": "Danish krone",
+   "language": "Danish",
+   "summary": "Denmark's capital, with canals, palaces and the Tivoli Gardens.",
+   "pier": "The main cruise terminal is on Oceankaj in the north harbour; bus 27 runs to \u00d8sterport station.",
+   "highlights": [
+    "Nyhavn",
+    "Tivoli Gardens",
+    "The Little Mermaid and Kastellet"
+   ],
+   "tip": "Copenhagen is very bike-friendly; trains and metro are easy to use.",
+   "lat": 55.6762,
+   "lon": 12.5675,
+   "source": {
+    "title": "Copenhagen",
+    "url": "en.wikivoyage.org/wiki/Copenhagen",
+    "revid": 5400492,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "regionId": "northern-europe",
+   "regionName": "Northern Europe"
+  },
+  "geiranger-no": {
+   "id": "geiranger-no",
+   "name": "Geiranger",
+   "country": "Norway",
+   "region": "Northern Europe",
+   "currency": "Norwegian krone",
+   "language": "Norwegian",
+   "summary": "A tiny village at the head of the Geirangerfjord, a UNESCO-listed fjord and Norway's second-busiest cruise port.",
+   "pier": "Ships use the pier and jetwalk; when more than one ship is in, you may tender.",
+   "highlights": [
+    "Seven Sisters waterfall from the fjord",
+    "Dalsnibba and Flydalsjuvet viewpoints",
+    "Norwegian Fjord Centre"
+   ],
+   "tip": "About 200 people live here but thousands visit daily; book tours early.",
+   "lat": 62.0994,
+   "lon": 7.2064,
+   "source": {
+    "title": "Geiranger",
+    "url": "en.wikivoyage.org/wiki/Geiranger",
+    "revid": 5402689,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "regionId": "northern-europe",
+   "regionName": "Northern Europe"
+  },
+  "stockholm-se": {
+   "id": "stockholm-se",
+   "name": "Stockholm",
+   "country": "Sweden",
+   "region": "Northern Europe",
+   "currency": "Swedish krona",
+   "language": "Swedish",
+   "summary": "Sweden's capital, spread over islands where Lake M\u00e4laren meets the Baltic.",
+   "pier": "Ships dock at terminals in the city; some calls use Nyn\u00e4shamn, about 50 km south, so check yours.",
+   "highlights": [
+    "Gamla stan, the old town",
+    "Vasa Museum",
+    "City Hall"
+   ],
+   "tip": "Nyn\u00e4shamn calls are linked to Stockholm by SL commuter train line 43.",
+   "lat": 59.3294,
+   "lon": 18.0686,
+   "source": {
+    "title": "Stockholm",
+    "url": "en.wikivoyage.org/wiki/Stockholm",
+    "revid": 5406675,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "regionId": "northern-europe",
+   "regionName": "Northern Europe"
+  },
+  "tallinn-ee": {
+   "id": "tallinn-ee",
+   "name": "Tallinn",
+   "country": "Estonia",
+   "region": "Northern Europe",
+   "currency": "Euro",
+   "language": "Estonian",
+   "summary": "Estonia's capital, with one of Europe's best-preserved medieval old towns.",
+   "pier": "From the Old City Harbour, the Old Town is about a 15\u201320 minute walk.",
+   "highlights": [
+    "Old Town and Town Hall Square",
+    "Toompea Hill viewpoints",
+    "Kadriorg Palace"
+   ],
+   "tip": "Town Hall Square's town hall is the oldest in the Nordic and Baltic countries.",
+   "lat": 59.4372,
+   "lon": 24.7453,
+   "source": {
+    "title": "Tallinn",
+    "url": "en.wikivoyage.org/wiki/Tallinn",
+    "revid": 5406655,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "regionId": "northern-europe",
+   "regionName": "Northern Europe"
+  },
+  "helsinki-fi": {
+   "id": "helsinki-fi",
+   "name": "Helsinki",
+   "country": "Finland",
+   "region": "Northern Europe",
+   "currency": "Euro",
+   "language": "Finnish, Swedish",
+   "summary": "Finland's seaside capital, with neoclassical squares and Nordic design.",
+   "pier": "Ships use various harbour terminals around the city; trams serve the main harbours.",
+   "highlights": [
+    "Senate Square and Helsinki Cathedral",
+    "Suomenlinna sea fortress",
+    "Market Square"
+   ],
+   "tip": "Ferries to Suomenlinna leave from Market Square.",
+   "lat": 60.1708,
+   "lon": 24.9375,
+   "source": {
+    "title": "Helsinki",
+    "url": "en.wikivoyage.org/wiki/Helsinki",
+    "revid": 5406670,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "regionId": "northern-europe",
+   "regionName": "Northern Europe"
+  },
+  "cabo-san-lucas-mx": {
+   "id": "cabo-san-lucas-mx",
+   "name": "Cabo San Lucas",
+   "country": "Mexico",
+   "region": "Mexico & Central America",
+   "currency": "Mexican peso (US dollar often accepted in tourist areas)",
+   "language": "Spanish",
+   "summary": "A resort town at the southern tip of Baja California, where the Pacific meets the Sea of Cortez.",
+   "pier": "Ships anchor in the bay and tender guests to the marina.",
+   "highlights": [
+    "El Arco (the Arch) and Land's End by boat",
+    "Medano Beach",
+    "Whale watching in winter"
+   ],
+   "tip": "Ignore timeshare offers of free tours; the pitch can take up to 4 hours.",
+   "lat": 22.8897,
+   "lon": -109.9156,
+   "source": {
+    "title": "Cabo San Lucas",
+    "url": "en.wikivoyage.org/wiki/Cabo_San_Lucas",
+    "revid": 5396298,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "state": "Mexico",
+   "regionId": "mexico",
+   "regionName": "Mexico & Central America"
+  },
+  "puerto-vallarta-mx": {
+   "id": "puerto-vallarta-mx",
+   "name": "Puerto Vallarta",
+   "country": "Mexico",
+   "region": "Mexico & Central America",
+   "currency": "Mexican peso (US dollar often accepted in tourist areas)",
+   "language": "Spanish",
+   "summary": "A lively Pacific resort on Banderas Bay with a famous seaside Malec\u00f3n.",
+   "pier": "Ships dock at the Cruise Port, beside Marina Vallarta north of downtown; take a taxi or bus downtown.",
+   "highlights": [
+    "The Malec\u00f3n and its sculptures",
+    "Old Town and the Church of Our Lady of Guadalupe",
+    "Los Arcos marine park"
+   ],
+   "tip": "Agree taxi fares before you get in.",
+   "lat": 20.6458,
+   "lon": -105.2222,
+   "source": {
+    "title": "Puerto Vallarta",
+    "url": "en.wikivoyage.org/wiki/Puerto_Vallarta",
+    "revid": 5355363,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "state": "Mexico",
+   "regionId": "mexico",
+   "regionName": "Mexico & Central America"
+  },
+  "ensenada-mx": {
+   "id": "ensenada-mx",
+   "name": "Ensenada",
+   "country": "Mexico",
+   "region": "Mexico & Central America",
+   "currency": "Mexican peso (US dollar often accepted in tourist areas)",
+   "language": "Spanish",
+   "summary": "A busy Baja California port on Todos Santos Bay, a common stop on cruises from Long Beach.",
+   "pier": "Ensenada is a busy cruise port, visited by Mexican Riviera cruises from Long Beach.",
+   "highlights": [
+    "La Bufadora blowhole",
+    "Valle de Guadalupe wineries",
+    "Fish tacos and the fish market"
+   ],
+   "tip": "It's a popular weekend spot for Southern Californians, so it can be busy.",
+   "lat": 31.7833,
+   "lon": -116.6,
+   "source": {
+    "title": "Ensenada",
+    "url": "en.wikivoyage.org/wiki/Ensenada",
+    "revid": 5401718,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "state": "Mexico",
+   "regionId": "mexico",
+   "regionName": "Mexico & Central America"
+  },
+  "mazatl-n-mx": {
+   "id": "mazatl-n-mx",
+   "name": "Mazatl\u00e1n",
+   "country": "Mexico",
+   "region": "Mexico & Central America",
+   "currency": "Mexican peso (US dollar often accepted in tourist areas)",
+   "language": "Spanish",
+   "summary": "A Pacific port city in Sinaloa with a restored historic centre and a long seaside Malec\u00f3n.",
+   "pier": "Cruise ships dock at Mazatl\u00e1n's busy port.",
+   "highlights": [
+    "Historic centre and Plazuela Machado",
+    "The Malec\u00f3n",
+    "El Faro lighthouse hike"
+   ],
+   "tip": "Pulmon\u00edas, open-top taxis unique to Mazatl\u00e1n, are everywhere; agree the price first.",
+   "lat": 23.1833,
+   "lon": -106.4167,
+   "source": {
+    "title": "Mazatlan",
+    "url": "en.wikivoyage.org/wiki/Mazatlan",
+    "revid": 5385092,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "state": "Mexico",
+   "regionId": "mexico",
+   "regionName": "Mexico & Central America"
+  },
+  "progreso-mx": {
+   "id": "progreso-mx",
+   "name": "Progreso",
+   "country": "Mexico",
+   "region": "Mexico & Central America",
+   "currency": "Mexican peso",
+   "language": "Spanish",
+   "summary": "A Gulf of Mexico port city in Yucat\u00e1n, founded in 1811 to export sisal fibre.",
+   "pier": "Ships use the 6 km Muelle Altura pier, built long because the water is shallow.",
+   "highlights": [
+    "Xcamb\u00f3 archaeological site",
+    "Flamingo colony at Uaymit\u00fan",
+    "Museo del Meteorito"
+   ],
+   "tip": "Progreso is also the gateway to M\u00e9rida, inland.",
+   "lat": 21.28,
+   "lon": -89.67,
+   "source": {
+    "title": "Progreso",
+    "url": "en.wikivoyage.org/wiki/Progreso",
+    "revid": 5310176,
+    "fetched": "2026-10-28",
+    "osm": "www.openstreetmap.org/?mlat=21.28&mlon=-89.67"
+   },
+   "state": "Mexico",
+   "regionId": "mexico",
+   "regionName": "Mexico & Central America"
+  },
+  "belize-city-bz": {
+   "id": "belize-city-bz",
+   "name": "Belize City",
+   "country": "Belize",
+   "region": "Mexico & Central America",
+   "currency": "Belize dollar",
+   "language": "English",
+   "summary": "Belize's largest city, on a small peninsula, and the capital until a 1961 hurricane led to a move to Belmopan.",
+   "pier": "Cruise passengers arrive at the Tourist Village, which is open only when a ship is in town.",
+   "highlights": [
+    "The Museum of Belize",
+    "St John's Cathedral",
+    "Old Belize at Mile 5 on the Western Highway"
+   ],
+   "tip": "Tours are timed to fit cruise port hours; book through the Tourist Village or your ship.",
+   "lat": 17.5047,
+   "lon": -88.1867,
+   "source": {
+    "title": "Belize City",
+    "url": "en.wikivoyage.org/wiki/Belize_City",
+    "revid": 5394768,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "state": "Central America",
+   "regionId": "mexico",
+   "regionName": "Mexico & Central America"
+  },
+  "costa-maya": {
+   "id": "costa-maya",
+   "name": "Costa Maya (Mahahual)",
+   "country": "Mexico",
+   "region": "Caribbean",
+   "currency": "Mexican peso (US dollar common)",
+   "language": "Spanish",
+   "summary": "A cruise port beside the small beach village of Mahahual on Mexico's quiet southern Caribbean coast.",
+   "pier": "The port has its own shops and pools; Mahahual's beach strip is a short taxi ride or a longer walk.",
+   "highlights": [
+    "Mahahual's beachfront promenade",
+    "Chacchoben Maya ruins inland",
+    "Snorkelling on the nearby reef"
+   ],
+   "tip": "Ruins trips take most of the day; leave plenty of time to get back.",
+   "lat": 18.7309,
+   "lon": -87.6905,
+   "source": {
+    "title": "Costa Maya",
+    "url": "https://en.wikivoyage.org/wiki/Costa_Maya",
+    "revid": 5290612,
+    "fetched": "2026-10-21",
+    "osm": "https://www.openstreetmap.org/way/156527443"
+   },
+   "regionId": "mexico",
+   "regionName": "Mexico & Central America",
+   "tips": {
+    "pierToTown": "The cruise ship dock (Puerto Costa Maya) is just up the beach from the village of Mahahual. A seaside malecon, a pedestrian walkway lined with restaurants and shops, runs along the beach to the south end of the village.",
+    "money": "The town has several ATMs, but they often don't work or run out of cash, so cash is still the best option.",
+    "sight": "Costa Maya is the closest port to lesser-known Maya ruins such as Chacchoben and Kohunlich. The further south from the cruise dock you go, the quieter the town becomes.",
+    "history": "Hurricane Dean, a Category 5 storm, hit just north of Mahahual in August 2007, heavily damaging the cruise dock and much of the village. Holland America's Westerdam was the first ship back, on October 31, 2008.",
+    "sources": [
+     {
+      "site": "Wikivoyage",
+      "title": "Mahahual",
+      "revid": 5297267,
+      "url": "https://en.wikivoyage.org/wiki/Mahahual"
+     },
+     {
+      "site": "Wikipedia",
+      "title": "Costa Maya",
+      "revid": 1370044482,
+      "url": "https://en.wikipedia.org/wiki/Costa_Maya"
+     }
+    ]
+   }
+  },
+  "puerto-lim-n-cr": {
+   "id": "puerto-lim-n-cr",
+   "name": "Puerto Lim\u00f3n",
+   "country": "Costa Rica",
+   "region": "Mexico & Central America",
+   "currency": "Costa Rican col\u00f3n",
+   "language": "Spanish",
+   "summary": "Costa Rica's main Caribbean port, a regular stop for ships passing through the Panama Canal.",
+   "pier": "Ships dock at the commercial port in town.",
+   "highlights": [
+    "The old United Fruit headquarters",
+    "Boat trips to Tortuguero from nearby Mo\u00edn",
+    "Rainforest canals where sloths are often spotted"
+   ],
+   "tip": "Buy souvenirs in town rather than from the tour company.",
+   "lat": 10.0022,
+   "lon": -83.084,
+   "source": {
+    "title": "Puerto Lim\u00f3n",
+    "url": "en.wikivoyage.org/wiki/Puerto_Lim\u00f3n",
+    "revid": 5244193,
+    "fetched": "2026-10-28",
+    "osm": ""
+   },
+   "state": "Central America",
+   "regionId": "mexico",
+   "regionName": "Mexico & Central America"
+  }
+ }
+}

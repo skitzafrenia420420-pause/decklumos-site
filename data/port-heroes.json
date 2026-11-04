@@ -1,0 +1,310 @@
+{
+"cozumel": {
+"img": "port-hero/cozumel.jpg",
+"m": "port-hero/cozumel-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Arrecifes_de_Cozumel_National_Park.jpg",
+"license": "CC BY-SA 4.0",
+"artist": "Matthew T Rader"
+},
+"george-town-cayman": {
+"img": "port-hero/george-town-cayman.jpg",
+"m": "port-hero/george-town-cayman-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Sailboats,_Seven_Mile_Beach,_Grand_Cayman.jpg",
+"license": "CC BY-SA 4.0",
+"artist": "Blu28"
+},
+"roatan": {
+"img": "port-hero/roatan.jpg",
+"m": "port-hero/roatan-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:West_Bay_Beach_-Roatan_-Honduras-23May2009-c.jpg",
+"license": "CC BY 2.0",
+"artist": "Adalberto Hernandez Vega from Copan Ruinas, Honduras"
+},
+"charlotte-amalie": {
+"img": "port-hero/charlotte-amalie.jpg",
+"m": "port-hero/charlotte-amalie-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Magens_Bay,_St._Thomas,_USVI.jpg",
+"license": "CC BY 2.0",
+"artist": "dbking"
+},
+"san-juan": {
+"img": "port-hero/san-juan.jpg",
+"m": "port-hero/san-juan-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Puerto_Rico_%E2%80%94_San_Juan_%E2%80%94_unknown_turquoise_residential_building_with_flag.JPG",
+"license": "CC BY 2.0 de",
+"artist": "User:Mattes"
+},
+"ocho-rios": {
+"img": "port-hero/ocho-rios.jpg",
+"m": "port-hero/ocho-rios-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Jamaica_Ocho_Rios_Dunn%27s_River_Falls_1.jpg",
+"license": "CC BY-SA 4.0",
+"artist": "Dr. Thomas Liptak"
+},
+"oranjestad": {
+"img": "port-hero/oranjestad.jpg",
+"m": "port-hero/oranjestad-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Mangrove_tree_(Conocarpus_erectus)_at_Eagle_Beach,_Aruba_2019.jpg",
+"license": "CC BY-SA 4.0",
+"artist": "SIryn"
+},
+"nassau": {
+"img": "port-hero/nassau.jpg",
+"m": "port-hero/nassau-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Cabbage_Beach,_Bahamas.jpg",
+"license": "CC BY 4.0",
+"artist": "Coolcaesar"
+},
+"freeport": {
+"img": "port-hero/freeport.jpg",
+"m": "port-hero/freeport-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Taino_Beach,_Grand_Bahama_Island,_Bahamas.jpg",
+"license": "CC BY-SA 4.0",
+"artist": "Didier Moïse"
+},
+"perfect-day-at-cococay-bs": {
+"img": "port-hero/perfect-day-at-cococay-bs.jpg",
+"m": "port-hero/perfect-day-at-cococay-bs-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Chill_Island_CocoCay_Bahamas_2024.jpg",
+"license": "CC BY 4.0",
+"artist": "Larry D. Moore"
+},
+"juneau-us": {
+"img": "port-hero/juneau-us.jpg",
+"m": "port-hero/juneau-us-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Mendenhall_Glacier_Suicide_Basin_gf239.jpg",
+"license": "CC BY-SA 4.0",
+"artist": "Gillfoto"
+},
+"ketchikan-us": {
+"img": "port-hero/ketchikan-us.jpg",
+"m": "port-hero/ketchikan-us-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Calle_hist%C3%B3rica_Creek,_Ketchikan,_Alaska,_Estados_Unidos,_2017-08-16,_DD_52.jpg",
+"license": "CC BY-SA 4.0",
+"artist": "Diego Delso"
+},
+"skagway-us": {
+"img": "port-hero/skagway-us.jpg",
+"m": "port-hero/skagway-us-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Face_Mountain_Skagway.jpg",
+"license": "CC BY 2.0",
+"artist": "Kimberly Vardeman"
+},
+"sitka-us": {
+"img": "port-hero/sitka-us.jpg",
+"m": "port-hero/sitka-us-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Sitka_84_Elev_135.jpg",
+"license": "CC BY-SA 4.0",
+"artist": "Gillfoto"
+},
+"icy-strait-point-us": {
+"img": "port-hero/icy-strait-point-us.jpg",
+"m": "port-hero/icy-strait-point-us-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Icy_Strait_2.jpg",
+"license": "CC BY-SA 2.0",
+"artist": "pirateecu"
+},
+"victoria-ca": {
+"img": "port-hero/victoria-ca.jpg",
+"m": "port-hero/victoria-ca-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Butchart_gardens.JPG",
+"license": "CC BY-SA 1.0",
+"artist": "Marcus"
+},
+"barcelona": {
+"img": "port-hero/barcelona.jpg",
+"m": "port-hero/barcelona-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Sagrada_Familia_Barcelona_2.jpg",
+"license": "CC BY-SA 4.0",
+"artist": "kallerna"
+},
+"civitavecchia": {
+"img": "port-hero/civitavecchia.jpg",
+"m": "port-hero/civitavecchia-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Colosseum_of_Rome,_Italy.jpg",
+"license": "CC0",
+"artist": "Wilfredor"
+},
+"naples": {
+"img": "port-hero/naples.jpg",
+"m": "port-hero/naples-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Positano_(Italy)_03.jpg",
+"license": "CC BY 4.0",
+"artist": "Bernard Gagnon"
+},
+"santorini": {
+"img": "port-hero/santorini.jpg",
+"m": "port-hero/santorini-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Oia,_Santorini_(2600397727).jpg",
+"license": "CC BY-SA 2.0",
+"artist": "bongo vongo"
+},
+"mykonos": {
+"img": "port-hero/mykonos.jpg",
+"m": "port-hero/mykonos-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Little_Venice,_Mykonos,_2024.jpg",
+"license": "CC0",
+"artist": "Julian Lupyan"
+},
+"dubrovnik": {
+"img": "port-hero/dubrovnik.jpg",
+"m": "port-hero/dubrovnik-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Casco_viejo_de_Dubrovnik,_Croacia,_2014-04-14,_DD_04.JPG",
+"license": "CC BY-SA 3.0",
+"artist": "Diego Delso"
+},
+"valletta": {
+"img": "port-hero/valletta.jpg",
+"m": "port-hero/valletta-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Mount_Carmel_and_St_Pauls_Pro-Cathedral.jpg",
+"license": "CC BY-SA 4.0",
+"artist": "This photo was taken by Anton Zelenov.\nPlease credit this with : Photo : Anton Zelenov in the immediate vicinity of the image.\nIf you use one of my photos, please email me (account needed) or leave me a short message on my discussion page.\nIt would be greatly appreciated.\nDo not copy this image illegally by ignoring the terms of the license below, as it is not in the public domain.\n\nIf you would like special permission to use, license, or purchase the image please contact me to negotiate terms."
+},
+"palma": {
+"img": "port-hero/palma.jpg",
+"m": "port-hero/palma-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Catedral_de_Santa_Mar%C3%ADa,_Palma_de_Mallorca,_Espa%C3%B1a,_2022-10-06,_DD_16-18_HDR.jpg",
+"license": "CC BY-SA 4.0",
+"artist": "Diego Delso"
+},
+"amsterdam-nl": {
+"img": "port-hero/amsterdam-nl.jpg",
+"m": "port-hero/amsterdam-nl-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Colorful_windows_and_canal_houses_at_blue_hour_with_water_reflection_in_Damrak_Amsterdam_Netherlands.jpg",
+"license": "CC BY-SA 4.0",
+"artist": "Basile Morin"
+},
+"bergen-no": {
+"img": "port-hero/bergen-no.jpg",
+"m": "port-hero/bergen-no-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Bryggen,_Bergen,_Noruega,_2019-09-08,_DD_115-117_PAN.jpg",
+"license": "CC BY-SA 4.0",
+"artist": "Diego Delso"
+},
+"copenhagen-dk": {
+"img": "port-hero/copenhagen-dk.jpg",
+"m": "port-hero/copenhagen-dk-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Nyhavn,_Copenhagen,_20220618_1725_7350.jpg",
+"license": "CC BY-SA 4.0",
+"artist": "Jakub Hałun"
+},
+"geiranger-no": {
+"img": "port-hero/geiranger-no.jpg",
+"m": "port-hero/geiranger-no-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Geirangerfjord_from_%C3%98rnesvingen,_2013_June.jpg",
+"license": "CC BY-SA 3.0",
+"artist": "Ximonic (Simo Räsänen)"
+},
+"stockholm-se": {
+"img": "port-hero/stockholm-se.jpg",
+"m": "port-hero/stockholm-se-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Corner_between_S%C3%B6dra_Benickebrinken_and_%C3%96sterl%C3%A5nggatan_in_Gamla_Stan,_Stockholm,_Sweden,_2022_December.jpg",
+"license": "CC BY-SA 4.0",
+"artist": "Ximonic (Simo Räsänen)"
+},
+"tallinn-ee": {
+"img": "port-hero/tallinn-ee.jpg",
+"m": "port-hero/tallinn-ee-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Old_town_of_Tallinn_06-03-2012.jpg",
+"license": "CC BY-SA 3.0 ee",
+"artist": "Ivar Leidus (Iifar)"
+},
+"helsinki-fi": {
+"img": "port-hero/helsinki-fi.jpg",
+"m": "port-hero/helsinki-fi-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Helsinki_July_2013-27a.jpg",
+"license": "CC BY-SA 3.0",
+"artist": "Alvesgaspar"
+},
+"cabo-san-lucas-mx": {
+"img": "port-hero/cabo-san-lucas-mx.jpg",
+"m": "port-hero/cabo-san-lucas-mx-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:El_Arco_Cabo_San_Lucas_www.GeoTravellers.com_-_panoramio.jpg",
+"license": "CC BY-SA 3.0",
+"artist": "GeoTravellers"
+},
+"puerto-vallarta-mx": {
+"img": "port-hero/puerto-vallarta-mx.jpg",
+"m": "port-hero/puerto-vallarta-mx-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Puerto_Vallarta,_Jalisco,_Mexico_(March_2023)_-_112.jpg",
+"license": "CC BY-SA 4.0",
+"artist": "Another Believer"
+},
+"ensenada-mx": {
+"img": "port-hero/ensenada-mx.jpg",
+"m": "port-hero/ensenada-mx-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Las_bufadoras_(3).jpg",
+"license": "CC BY 4.0",
+"artist": "Ferfive"
+},
+"mazatl-n-mx": {
+"img": "port-hero/mazatl-n-mx.jpg",
+"m": "port-hero/mazatl-n-mx-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Playa_en_Mazatl%C3%A1n_33.jpg",
+"license": "CC0",
+"artist": "Wonderlane"
+},
+"progreso-mx": {
+"img": "port-hero/progreso-mx.jpg",
+"m": "port-hero/progreso-mx-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Progreso_Yucatan_Beach_2014_02.jpg",
+"license": "CC BY-SA 2.0",
+"artist": "Marysol*"
+},
+"belize-city-bz": {
+"img": "port-hero/belize-city-bz.jpg",
+"m": "port-hero/belize-city-bz-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Caye_Caulker_Belize_aerial_(20688990128).jpg",
+"license": "CC BY 2.0",
+"artist": "dronepicr"
+},
+"costa-maya": {
+"img": "port-hero/costa-maya.jpg",
+"m": "port-hero/costa-maya-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:BlueKay_Beach_en_Mahahual,_Mexico_(http-www.bluekaymahahual.com)_-_panoramio_(3).jpg",
+"license": "CC BY 3.0",
+"artist": "Juan Ortega"
+},
+"philipsburg": {
+"img": "port-hero/philipsburg.jpg",
+"m": "port-hero/philipsburg-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:St._Maarten_Philipsburg_Great_Bay_Beach.jpg",
+"license": "CC BY-SA 4.0",
+"artist": "Dr. Thomas Liptak"
+},
+"bimini-bs": {
+"img": "port-hero/bimini-bs.jpg",
+"m": "port-hero/bimini-bs-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Sunset_in_Bimini_-_panoramio_(1).jpg",
+"license": "CC BY-SA 3.0",
+"artist": "SerenityNow"
+},
+"celebration-key-bs": {
+"img": "port-hero/celebration-key-bs.jpg",
+"m": "port-hero/celebration-key-bs-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Port_Lucaya_Beach_-_panoramio.jpg",
+"license": "CC BY 3.0",
+"artist": "Pietro Valocchi"
+},
+"half-moon-cay-bs": {
+"img": "port-hero/half-moon-cay-bs.jpg",
+"m": "port-hero/half-moon-cay-bs-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Half_Moon_Cay_(12385755594).jpg",
+"license": "CC BY 2.0",
+"artist": "Jonathan Palombo"
+},
+"princess-cays-bs": {
+"img": "port-hero/princess-cays-bs.jpg",
+"m": "port-hero/princess-cays-bs-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Beach_scene_at_Current,_Eleuthera_(8222670396).jpg",
+"license": "CC BY 2.0",
+"artist": "Trish Hartmann from Tampa, Florida, USA"
+},
+"puerto-lim-n-cr": {
+"img": "port-hero/puerto-lim-n-cr.jpg",
+"m": "port-hero/puerto-lim-n-cr-m.jpg",
+"page": "https://commons.wikimedia.org/wiki/File:Playa_de_Punta_Uva,_Costa_Rica.jpg",
+"license": "CC BY-SA 3.0",
+"artist": "Jaimedelamata"
+}
+}
