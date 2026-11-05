@@ -328,7 +328,12 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 @media (max-width:1100px){.top nav{gap:4px;margin-left:16px}.top nav a{padding:7px 10px;font-size:16px}}
 .top.open nav{width:210px;gap:2px}
 .top.open nav a{font-size:16.5px;font-weight:650;border-radius:12px;padding:0 14px}
-</style></head><body id="top" class="hud">
+</style><style id="r51-css">
+.btn.r51f{position:fixed;z-index:60;right:max(20px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom));margin:0;padding:10px 16px;font-size:14.5px;border-radius:999px;box-shadow:0 10px 26px -8px rgba(0,0,0,.55);width:auto}
+body.wlm-open .btn.r51f{display:none}
+@media (max-width:600px){.btn.r51f{right:auto;left:50%;transform:translateX(-50%);bottom:max(14px,calc(env(safe-area-inset-bottom) + 8px));white-space:nowrap;font-size:14px;padding:9px 14px}}
+</style>
+</head><body id="top" class="hud">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top" id="hdr"><div class="wrap"><a class="brand" href="../"><img class="bmark" src="/img/icons/ship-outline-72.png" srcset="/img/icons/ship-outline-72.png 2x,/img/icons/ship-outline-108.png 3x" width="69" height="36" alt="" aria-hidden="true">Decklumos</a>
 <nav aria-label="Main" id="mnav"><a href="../deck-maps/">App</a><a class="g2l" href="./" aria-current="page">Smart Glasses G2</a><a href="../ports/">Ports</a><a href="../faq/">FAQ</a></nav>
@@ -343,7 +348,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
 <section class="sand" style="padding:100px 0" aria-labelledby="h-h"><div class="wrap"><div class="hub rv">
  <div><span class="eyebrow">Get it</span><h2 id="h-h">Find Decklumos on Even Hub</h2><p>Even Hub is where G2 apps live. Open it in the Even Realities app and look for Decklumos.</p></div>
- <a class="btn gold" href="https://hub.evenrealities.com/hub/com.pause.decklumos" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" rel="noopener noreferrer">Open Even Hub</a>
+ <a class="btn gold r51f" href="https://hub.evenrealities.com/hub/com.pause.decklumos" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" rel="noopener noreferrer">Open Even Hub</a>
 </div></div></section>
 
 <section id="see" aria-labelledby="s-h"><div class="wrap"><div style="text-align:center"><span class="eyebrow">See it in action</span><h2 id="s-h">Four screens, one swipe apart</h2><p class="lead" style="margin:20px auto 0">Tap a screen to watch the real G2 recording.</p></div>
